@@ -1,8 +1,33 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+.bg-list {
+    th.contact {
+        min-width: 110px;
+    }
+    th.price {
+        min-width: 80px;
+    }
+    th.name {
+        min-width: 120px;
+    }
+    th.condition {
+        max-width: 100px;
+    }
+    td {
+        font-size: 0.85rem;
+        padding: 8px;
+
+        a.btn,
+        button {
+            color: white;
+            font-size: 0.75rem;
+        }
+    }
+}
