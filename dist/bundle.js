@@ -6,9 +6,6 @@ var _objects = _interopRequireDefault(require("./objects.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 $(function () {
-  $('#first_section').html(_objects["default"].map(function (m) {
-    return m.nome;
-  }));
   console.log(_objects["default"].filter(function (m) {
     return m.nome === 'Lucas Medeiros';
   }));
@@ -25,7 +22,7 @@ var mentores = [{
   nome: 'Lucas Medeiros',
   skill: 'Web developer'
 }, {
-  nome: 'Bruno Machado',
+  nome: 'Marcelo Cristiano',
   skill: 'Designer'
 }];
 var _default = mentores;

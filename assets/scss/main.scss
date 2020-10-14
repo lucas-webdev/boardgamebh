@@ -1,9 +1,63 @@
-@import 'variables';
+@import "variables";
+@import "reset";
+@import "buttons";
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   background-color: $mainColor;
+  font-family: $mainFont;
+}
+
+.logo {
+  margin-bottom: $sectionMargin;
+}
+
+#wrapper_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $sectionPadding;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-weight: 300;
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+  text-align: center;
+  max-width: 200px;
+
+  &__text {
+    margin-bottom: $elementLargeMargin;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-weight: bold;
+      margin-bottom: $elementSmallMargin;
+    }
+  }
+}
+
+@media screen and (min-width: 762px) {
+  .intro {
+    max-width: 620px;
+
+    &__buttons {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
 }

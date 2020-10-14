@@ -6,11 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Base template</title>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <link rel="stylesheet" href="./dist/style/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&amp;display=swap" rel="stylesheet">
   </head>
   
   <body>
-    <section id="first_section">
-      Base template
+    <section id="wrapper_section">
+      <div class="logo">
+        <img src="https://lucascmedeiros.com.br/bgbh/assets/images/logo.jpg" alt="Logo BGBH" />
+      </div>
+      <section class="intro">
+        <div class="intro__text">
+          O NOSSO PORTAL AINDA ESTÁ EM CONSTRUÇÃO, MAS VOCÊ JÁ PODE APROVEITAR NOSSA
+          <b>PLANILHA DE TROCAS</b> EXCLUSIVA PARA JOGADORES DE 
+          <b>BELO HORIZONTE</b> E REGIÃO.
+        </div>
+        <div class="intro__buttons">
+          <a class="btn btn-blue" href="#">PLANILHA DE TROCAS</a>
+          <a class="btn btn-green" href="#">ADICIONAR JOGO</a>
+          <a class="btn btn-red" href="#">REMOVER JOGO</a>
+        </div>
+        <div class="intro__rules"></div>
+      </section>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/4.1.4/cash.min.js"></script>
     <script type="text/javascript" src="dist/bundle.js"></script>

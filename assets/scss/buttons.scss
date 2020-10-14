@@ -1,0 +1,26 @@
+.btn {
+  display: block;
+  width: auto;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 8px;
+
+  &.btn-blue {
+    background-color: #1e2290;
+    &:hover {
+      background-color: darken(#1e2290, 5%);
+    }
+  }
+  &.btn-green {
+    background-color: #009200;
+    &:hover {
+      background-color: darken(#009200, 5%);
+    }
+  }
+  &.btn-red {
+    background-color: #f03500;
+    &:hover {
+      background-color: darken(#f03500, 5%);
+    }
+  }
+}

@@ -4,7 +4,7 @@ const mentores = [
         skill: 'Web developer'
     },
     {
-        nome: 'Bruno Machado',
+        nome: 'Marcelo Cristiano',
         skill: 'Designer'
     }
 ];

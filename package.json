@@ -35,7 +35,8 @@
         "@babel/preset-es2015": "^7.0.0-beta.53",
         "babelify": "^10.0.0",
         "cash-dom": "^4.1.4",
-        "node-sass": "^4.12.0"
+        "node-sass": "^4.12.0",
+        "serve": "^11.3.2"
     },
     "browserify": {
         "transform": [
