@@ -1,0 +1,53 @@
+{
+    "name": "es6-app",
+    "version": "1.0.0",
+    "description": "Basic structure for html/es6 app",
+    "main": "index.js",
+    "scripts": {
+        "build": "browserify ./assets/scripts/index.js -o dist/assets/scripts/bundle.js && node-sass ./assets/scss/main.scss ./dist/assets/styles/main.css --output-style compressed",
+        "watch-js": "watchify ./assets/scripts/index.js -o dist/assets/scripts/bundle.js -v",
+        "watch-sass": "node-sass ./assets/scss/**/*.scss ./dist/assets/styles/main.css -w",
+        "compile-sass": "node-sass ./assets/scss/main.scss ./dist/assets/styles/main.css --output-style compressed"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lucas-webdev/es6-base-app.git"
+    },
+    "keywords": [
+        "es6",
+        "npm",
+        "babel"
+    ],
+    "author": "Lucas M",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lucas-webdev/es6-base-app/issues"
+    },
+    "homepage": "https://github.com/lucas-webdev/es6-base-app#readme",
+    "dependencies": {
+        "browserify": "^16.5.0",
+        "reading-time": "^1.2.0",
+        "watchify": "^3.11.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "@babel/preset-es2015": "^7.0.0-beta.53",
+        "babelify": "^10.0.0",
+        "cash-dom": "^4.1.4",
+        "node-sass": "^4.12.0",
+        "serve": "^11.3.2"
+    },
+    "browserify": {
+        "transform": [
+            [
+                "babelify",
+                {
+                    "presets": [
+                        "@babel/preset-env"
+                    ]
+                }
+            ]
+        ]
+    }
+}
