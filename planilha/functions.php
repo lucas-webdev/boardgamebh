@@ -21,7 +21,7 @@ function template_header($title)
         <head>
             <meta charset="utf-8">
             <title>$title</title>
-            <link href="../dist/assets/styles/style.css" rel="stylesheet" type="text/css">
+            <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
             <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@ function template_header($title)
         <body>
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <a class="navbar-brand" href="/bgbh">
-                <img src="../dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                <img src="dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 BoardgameBH
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
