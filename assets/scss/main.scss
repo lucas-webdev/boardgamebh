@@ -10,10 +10,16 @@ body {
   height: 100%;
   background-color: $mainColor;
   font-family: $mainFont;
+  background-image: url("https://lucascmedeiros.com.br/bgbh/assets/images/textura_verde.png");
+  background-size: cover;
 }
 
 .logo {
-  margin-bottom: $sectionMargin;
+  margin: $sectionMargin auto;
+  img {
+    width: 200px;
+    height: auto;
+  }
 }
 
 #wrapper_section {
@@ -48,6 +54,26 @@ body {
       margin-bottom: $elementSmallMargin;
     }
   }
+
+  &__rules {
+    font-size: 0.65rem;
+    a {
+      color: white;
+    }
+    &:hover {
+      a {
+        color: lighten($color: #fff, $amount: 0.2);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.advertisement {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  margin: $sectionMargin 0;
 }
 
 @media screen and (min-width: 762px) {

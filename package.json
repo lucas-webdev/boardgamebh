@@ -4,10 +4,10 @@
     "description": "Basic structure for html/es6 app",
     "main": "index.js",
     "scripts": {
-        "build": "browserify ./assets/scripts/index.js -o dist/bundle.js && node-sass sass/main.scss css/style.comp.css",
-        "watch-js": "watchify ./assets/scripts/index.js -o dist/bundle.js -v",
-        "watch-sass": "node-sass ./assets/scss/main.scss ./dist/style/main.css -w",
-        "compile-sass": "node-sass ./assets/scss/main.scss ./dist/style/main.css --output-style compressed"
+        "build": "browserify ./assets/scripts/index.js -o dist/assets/scripts/bundle.js && node-sass ./assets/scss/main.scss ./dist/assets/styles/main.css --output-style compressed",
+        "watch-js": "watchify ./assets/scripts/index.js -o dist/assets/scripts/bundle.js -v",
+        "watch-sass": "node-sass ./assets/scss/**/*.scss ./dist/assets/styles/main.css -w",
+        "compile-sass": "node-sass ./assets/scss/main.scss ./dist/assets/styles/main.css --output-style compressed"
     },
     "repository": {
         "type": "git",
