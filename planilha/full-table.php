@@ -36,6 +36,10 @@ $today = strtotime(date("Y-m-d"));
                 <i class="fas fa-plus-circle"></i>
                 Adicionar jogo
             </a>
+            <a class="btn btn-danger btn-sm" href="remove.php" title="Remover jogo">
+                <i class="fas fa-minus-circle"></i>
+                Remover jogo
+            </a>
         </div>
     </div>
     <div class="col-12">
