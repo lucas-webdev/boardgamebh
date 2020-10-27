@@ -86,15 +86,34 @@ body {
   text-decoration: none;
 }
 
-.bg-list .edit {
+.bg-list .edit,
+.confirm-delete {
   background-color: #0096ce;
 }
-.bg-list .edit:hover {
+.bg-list .edit:hover,
+.confirm-delete:hover {
   background-color: #006c95;
+  color: white;
+  text-decoration: none;
 }
-.bg-list .trash {
+.bg-list .trash,
+.cancel-delete {
   background-color: #b00000;
 }
-.bg-list .trash:hover {
+.bg-list .trash:hover,
+.cancel-delete:hover {
   background-color: #820000;
+  color: white;
+  text-decoration: none;
+}
+
+.confirm-delete,
+.cancel-delete {
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+}
+
+.games-to-remove {
+  margin-top: 25px;
 }

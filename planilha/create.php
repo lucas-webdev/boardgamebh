@@ -75,7 +75,7 @@ if (!empty($_POST)) {
 }
 ?>
 
-<?= template_header('Create') ?>
+<?= template_header('Adicionar jogo') ?>
 
 <form action="create.php" method="POST" class="add-new-bg" onsubmit="return validateForm()">
     <div class="row">
@@ -207,10 +207,17 @@ if (!empty($_POST)) {
 
         $('.alert-danger').empty();
 
-        if (bg === "" || owner === "" || owner_contact === "") {
+        if (bg == "") {
             $('input[name="name"').css('border-color', bg === '' ? '#ff3232' : '#ced4da');
-            $('input[name="owner"').css('border-color', owner === '' ? '#ff3232' : '#ced4da');
-            $('input[name="owner_contact"').css('border-color', owner_contact === '' ? '#ff3232' : '#ced4da');
+        }
+        if (owner == "") {
+            $('input[name="owner"').css('border-color', bg === '' ? '#ff3232' : '#ced4da');
+        }
+        if (owner_contact == "") {
+            $('input[name="owner_contact"').css('border-color', bg === '' ? '#ff3232' : '#ced4da');
+        }
+
+        if (bg === "" || owner === "" || owner_contact === "") {
             $('.alert-danger').append("Os campos <b>Jogo</b>, <b>Responsável</b> e <b>Whatsapp</b> são obrigatórios.<br />");
             errors++;
         }

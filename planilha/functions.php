@@ -38,8 +38,11 @@ function template_header($title)
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/bgbh">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bgbh">Site</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bgbh/planilha">Planilha <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/bgbh/create.php">Incluir jogos</a>

@@ -30,18 +30,19 @@ if (isset($_GET['id'])) {
         if (count($errors) === 0) {
             try {
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $stmt = $pdo->prepare('UPDATE `boardgames` SET (
-                    name = ?,
-                    negociation = ?,
-                    price = ?,
-                    condition = ?,
-                    edition = ?,
-                    language = ?,
-                    language_dependency = ?,
-                    description = ?,
-                    owner = ?,
-                    owner_contact = ?,
-                    wishlist = ?,
+                $stmt = $pdo->prepare('UPDATE `boardgames` SET 
+                    `name` = ?,
+                    `negociation` = ?,
+                    `price` = ?,
+                    `condition` = ?,
+                    `edition` = ?,
+                    `language` = ?,
+                    `language_dependency` = ?,
+                    `description` = ?,
+                    `owner` = ?,
+                    `owner_contact` = ?,
+                    `wishlist` = ?,
+                    `updated_at` = ?
                     WHERE id = ?');
 
                 $stmt->execute([
@@ -55,10 +56,10 @@ if (isset($_GET['id'])) {
                     $description,
                     $owner,
                     $owner_contact,
+                    date("Y-m-d H:i:s"),
                     $wishlist,
                     $_GET['id']
                 ]);
-                // date("Y-m-d H:i:s")
                 $msg = 'Jogo atualizado com sucesso!';
                 echo '<script>history.pushState({}, "", "")</script>';
             } catch (PDOException $e) {
@@ -74,7 +75,7 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<?= template_header('Update') ?>
+<?= template_header('Atualizar jogo') ?>
 <?php
 $stmt = $pdo->prepare('SELECT * FROM boardgames WHERE id = ?');
 $stmt->execute([$_GET['id']]);

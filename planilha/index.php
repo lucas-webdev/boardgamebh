@@ -1,5 +1,4 @@
 <?php
-// Your PHP code here.
 include 'functions.php';
 // Connect to MySQL database
 $pdo = pdo_connect_mysql();
@@ -8,21 +7,18 @@ $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] :
 // Number of records to show on each page
 $records_per_page = 200;
 
-$stmt = $pdo->prepare('SELECT * FROM boardgames ORDER BY name LIMIT :current_page, :record_per_page');
+// Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
+$stmt = $pdo->prepare('SELECT * FROM boardgames ORDER BY id LIMIT :current_page, :record_per_page');
 $stmt->bindValue(':current_page', ($page - 1) * $records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
 // Fetch the records so we can display them in our template.
 $boardgames = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// Get the total number of boardgames, this is so we can determine whether there should be a next and previous button
 $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
-
-$today = strtotime(date("Y-m-d"));
-
-// Home Page template below.
 ?>
 
-<?= template_header('Home') ?>
-
+<?= template_header('Lista de jogos') ?>
 <div class="row">
     <div class="col-lg-12 margin-tb mb-3">
         <div class="pull-left">
@@ -35,6 +31,10 @@ $today = strtotime(date("Y-m-d"));
             <a class="btn btn-success btn-sm" href="create.php" title="Adicionar jogo">
                 <i class="fas fa-plus-circle"></i>
                 Adicionar jogo
+            </a>
+            <a class="btn btn-danger btn-sm" href="remove.php" title="Remover jogo">
+                <i class="fas fa-minus-circle"></i>
+                Remover jogo
             </a>
         </div>
     </div>
