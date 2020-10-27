@@ -18,7 +18,7 @@ if (!empty($_POST)) {
     $deliver_region = isset($_POST['deliver_region']) ? $_POST['deliver_region'] : '';
     $wishlist = isset($_POST['wishlist']) ? $_POST['wishlist'] : '';
     $agreement = isset($_POST['agreement']) ? $_POST['agreement'] : '';
-    $created_at = DateTime::createFromFormat("Y-m-d", $_POST['created_at'])->format('Y-m-d H:i:s');
+    $created_at = date("Y-m-d H:i:s");
 
     if (strlen($name) < 2 || strlen($owner) < 3 || strlen($owner_contact) < 8) {
         $errors['required'] = 'required-fields';
@@ -204,12 +204,6 @@ if (!empty($_POST)) {
                 <small id="priceHelp" class="form-text text-muted">Adicione o link da sua lista na Ludopedia ou BGG caso possua.</small>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
-            <div class="form-group">
-                <label>Data de adição:</label>
-                <input type="date" name="created_at" class="form-control">
-            </div>
-        </div>
         <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Região de entrega:</label>
@@ -219,7 +213,7 @@ if (!empty($_POST)) {
                 <small id="priceHelp" class="form-text text-muted">Informe o bairro onde o jogo pode ser retirado.</small>
             </div>
         </div>
-        <div class="col-12">
+        <div class="col-12 col-lg-8">
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="agreement" name="agreement" class="form-control">
                 <label class="form-check-label terms" for="agreement">
