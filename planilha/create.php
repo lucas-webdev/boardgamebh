@@ -37,22 +37,54 @@ if (!empty($_POST)) {
         try {
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $pdo->prepare('INSERT INTO `boardgames` (
-        `name`,
-        `negociation`,
-        `price`,
-        `condition`,
-        `edition`,
-        `language`,
-        `language_dependency`,
-        `description`,
-        `owner`,
-        `owner_contact`,
-        `deliver_region`,
-        `wishlist`,
-        `created_at`
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+            `name`,
+            `negociation`,
+            `price`,
+            `condition`,
+            `edition`,
+            `language`,
+            `language_dependency`,
+            `description`,
+            `owner`,
+            `owner_contact`,
+            `deliver_region`,
+            `wishlist`,
+            `created_at`
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+
+            $stmt2 = $pdo->prepare('INSERT INTO `boardgames_bkp` (
+            `name`,
+            `negociation`,
+            `price`,
+            `condition`,
+            `edition`,
+            `language`,
+            `language_dependency`,
+            `description`,
+            `owner`,
+            `owner_contact`,
+            `deliver_region`,
+            `wishlist`,
+            `created_at`
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 
             $stmt->execute([
+                $name,
+                $negociation,
+                $price,
+                $condition,
+                $edition,
+                $language,
+                $language_dependency,
+                $description,
+                $owner,
+                $owner_contact,
+                $deliver_region,
+                $wishlist,
+                $created_at
+            ]);
+
+            $stmt2->execute([
                 $name,
                 $negociation,
                 $price,
