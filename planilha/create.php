@@ -167,7 +167,7 @@ if (!empty($_POST)) {
             <div class="form-group">
                 <label>Lista de desejos:</label>
                 <div class="input-group">
-                    <input type="text" name="wishlist" class="form-control" value="<?= $bg['wishlist'] ?>">
+                    <input type="text" name="wishlist" class="form-control">
                 </div>
                 <small id="priceHelp" class="form-text text-muted">Adicione o link da sua lista na Ludopedia ou BGG caso possua.</small>
             </div>
