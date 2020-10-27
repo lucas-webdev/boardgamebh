@@ -16,6 +16,7 @@ if (isset($_GET['id'])) {
         $description = isset($_POST['description']) ? $_POST['description'] : '';
         $owner = isset($_POST['owner']) ? $_POST['owner'] : '';
         $owner_contact = isset($_POST['owner_contact']) ? $_POST['owner_contact'] : '';
+        $deliver_region = isset($_POST['deliver_region']) ? $_POST['deliver_region'] : '';
         $wishlist = isset($_POST['wishlist']) ? $_POST['wishlist'] : '';
 
         if (strlen($name) < 2 || strlen($owner) < 3 || strlen($owner_contact) < 8) {
@@ -41,6 +42,7 @@ if (isset($_GET['id'])) {
                     `description` = ?,
                     `owner` = ?,
                     `owner_contact` = ?,
+                    `deliver_region` = ?
                     `wishlist` = ?,
                     `updated_at` = ?
                     WHERE id = ?');
@@ -56,8 +58,9 @@ if (isset($_GET['id'])) {
                     $description,
                     $owner,
                     $owner_contact,
-                    date("Y-m-d H:i:s"),
+                    $deliver_region,
                     $wishlist,
+                    date("Y-m-d H:i:s"),
                     $_GET['id']
                 ]);
                 $msg = 'Jogo atualizado com sucesso!';
@@ -128,7 +131,7 @@ if (!$bg) {
         </div>
         <div class="col-6 col-lg-4">
             <div class="form-group">
-                <label>Edição / Editora:</label>
+                <label>Editora:</label>
                 <input type="text" name="edition" class="form-control" value="<?= $bg['edition'] ?>">
             </div>
         </div>
@@ -170,11 +173,22 @@ if (!$bg) {
         </div>
         <div class="col-6 col-lg-4">
             <div class="form-group">
-                <label>Link wishlist:</label>
-                <input type="text" name="wishlist" class="form-control" value="<?= $bg['wishlist'] ?>">
+                <label>Lista de desejos:</label>
+                <div class="input-group">
+                    <input type="text" name="wishlist" class="form-control" value="<?= $bg['wishlist'] ?>">
+                </div>
+                <small id="priceHelp" class="form-text text-muted">Adicione o link da sua lista na Ludopedia ou BGG caso possua.</small>
             </div>
         </div>
-
+        <div class="col-12 col-lg-4">
+            <div class="form-group">
+                <label>Região de entrega:</label>
+                <div class="input-group">
+                    <input type="text" name="wishlist" class="form-control" value="<?= $bg['deliver_region'] ?>">
+                </div>
+                <small id="priceHelp" class="form-text text-muted">Informe o bairro onde o jogo pode ser retirado.</small>
+            </div>
+        </div>
         <div class="col-12">
             <small>Os campos com * são obrigatórios.</small>
         </div>

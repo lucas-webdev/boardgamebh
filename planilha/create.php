@@ -15,6 +15,7 @@ if (!empty($_POST)) {
     $description = isset($_POST['description']) ? $_POST['description'] : '';
     $owner = isset($_POST['owner']) ? $_POST['owner'] : '';
     $owner_contact = isset($_POST['owner_contact']) ? $_POST['owner_contact'] : '';
+    $deliver_region = isset($_POST['deliver_region']) ? $_POST['deliver_region'] : '';
     $wishlist = isset($_POST['wishlist']) ? $_POST['wishlist'] : '';
     $agreement = isset($_POST['agreement']) ? $_POST['agreement'] : '';
     $created_at = DateTime::createFromFormat("Y-m-d", $_POST['created_at'])->format('Y-m-d H:i:s');
@@ -46,9 +47,10 @@ if (!empty($_POST)) {
         `description`,
         `owner`,
         `owner_contact`,
+        `deliver_region`,
         `wishlist`,
         `created_at`
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 
             $stmt->execute([
                 $name,
@@ -61,6 +63,7 @@ if (!empty($_POST)) {
                 $description,
                 $owner,
                 $owner_contact,
+                $deliver_region,
                 $wishlist,
                 $created_at
             ]);
@@ -120,7 +123,7 @@ if (!empty($_POST)) {
         </div>
         <div class="col-6 col-lg-4">
             <div class="form-group">
-                <label>Edição / Editora:</label>
+                <label>Editora:</label>
                 <input type="text" name="edition" class="form-control">
             </div>
         </div>
@@ -162,14 +165,26 @@ if (!empty($_POST)) {
         </div>
         <div class="col-6 col-lg-4">
             <div class="form-group">
-                <label>Link wishlist:</label>
-                <input type="text" name="wishlist" class="form-control">
+                <label>Lista de desejos:</label>
+                <div class="input-group">
+                    <input type="text" name="wishlist" class="form-control" value="<?= $bg['wishlist'] ?>">
+                </div>
+                <small id="priceHelp" class="form-text text-muted">Adicione o link da sua lista na Ludopedia ou BGG caso possua.</small>
             </div>
         </div>
         <div class="col-6 col-lg-4">
             <div class="form-group">
                 <label>Data de adição:</label>
                 <input type="date" name="created_at" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="form-group">
+                <label>Região de entrega:</label>
+                <div class="input-group">
+                    <input type="text" name="wishlist" class="form-control">
+                </div>
+                <small id="priceHelp" class="form-text text-muted">Informe o bairro onde o jogo pode ser retirado.</small>
             </div>
         </div>
         <div class="col-12">

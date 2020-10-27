@@ -72,7 +72,7 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
                     <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                             <b>Preço:</b> <?= $bg['price'] ?> <br>
                             <span class='<?= $conditionClass ?>'></span><b>Condição:</b> <?= $bg['condition'] ?> </span><br>
-                            <b>Edição:</b> <?= ucwords($bg['edition']) ?> <br>
+                            <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
                             <b>Idioma:</b> <?= ucwords($bg['language']) ?> <br>
                             <b>Depend. Idioma:</b> <?= $bg['language_dependency'] ?> <br>
                             <b>Descrição:</b> <?= $bg['description'] ?> <br>
