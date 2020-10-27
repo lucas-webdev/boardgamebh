@@ -22,20 +22,7 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
 <div class="row">
     <div class="col-lg-12 margin-tb mb-3">
         <div class="pull-left">
-            <h2>PLANILHA DE TROCA E VENDA - BGBH</h2>
-        </div>
-        <div class="not-responsible">
-            <h6>Nenhuma venda ou troca utilizando a planilha é de responsabilidade da Boardgame BH</h6>
-        </div>
-        <div class="pull-right">
-            <a class="btn btn-success btn-sm" href="create.php" title="Adicionar jogo">
-                <i class="fas fa-plus-circle"></i>
-                Adicionar jogo
-            </a>
-            <a class="btn btn-danger btn-sm" href="remove.php" title="Remover jogo">
-                <i class="fas fa-minus-circle"></i>
-                Remover jogo
-            </a>
+            <h2>PLANILHA DE TROCA E VENDA - BGBH - HISTÓRICO</h2>
         </div>
     </div>
     <div class="col-12">
