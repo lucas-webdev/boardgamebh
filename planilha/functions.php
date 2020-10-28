@@ -20,6 +20,7 @@ function template_header($title)
     <html>
         <head>
             <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>$title</title>
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
             <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
@@ -28,7 +29,7 @@ function template_header($title)
             <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap" rel="stylesheet">
         </head>
         <body>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm navbar-dark">
             <a class="navbar-brand" href="/bgbh">
                 <img src="dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 BoardgameBH

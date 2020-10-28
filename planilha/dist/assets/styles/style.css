@@ -4,6 +4,14 @@ body {
   padding: 0;
 }
 
+.navbar {
+  background-color: #009287;
+}
+
+.navbar a {
+  color: white;
+}
+
 .not-responsible h6 {
   color: #e91616;
   font-weight: 600;
@@ -41,6 +49,10 @@ body {
 /* items */
 .bg-item {
   padding: 6px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.bg-item:last-child {
+  border-bottom: none;
 }
 .bg-item:nth-child(2n-1) {
   background-color: #f5f5f5;
@@ -51,12 +63,18 @@ body {
 .bg-item.added-recently {
   background-color: #ffe7b3;
 }
-.bg-item .lacrado {
+.bg-item .lacrado,
+.popover .lacrado {
   color: #007100;
   font-weight: 600;
 }
-.bg-item .avariado {
+.bg-item .avariado,
+.popover .avariado {
   color: #ff0909;
+}
+
+.btn-info {
+  font-weight: 600;
 }
 
 /* form */
@@ -116,4 +134,28 @@ body {
 
 .games-to-remove {
   margin-top: 25px;
+}
+
+.bg-fields:last-child {
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  button[type="submit"] {
+    margin-top: 15px;
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .action-buttons a {
+    margin: 8px 0;
+    font-size: 1.1rem;
+  }
+
+  .bg-fields:nth-child(2) {
+    min-width: 75px;
+  }
 }

@@ -120,7 +120,7 @@ if (!empty($_POST)) {
                 <input type="text" name="name" class="form-control" required>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Negociação:</label>
                 <select class="form-control" name="negociation">
@@ -130,7 +130,7 @@ if (!empty($_POST)) {
                 </select>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Preço:</label>
                 <div class="input-group">
@@ -142,7 +142,7 @@ if (!empty($_POST)) {
                 <small id="priceHelp" class="form-text text-muted">Obrigatório para venda.</small>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Condição:</label>
                 <select class="form-control" name="condition">
@@ -153,19 +153,19 @@ if (!empty($_POST)) {
                 </select>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Editora:</label>
                 <input type="text" name="edition" class="form-control">
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Idioma do jogo:</label>
                 <input type="text" name="language" class="form-control">
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Depend. de Idioma:</label>
                 <select class="form-control" name="language_dependency">
@@ -177,25 +177,25 @@ if (!empty($_POST)) {
                 </select>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Descrição:</label>
                 <textarea name="description" class="form-control"></textarea>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Responsável: *</label>
                 <input type="text" name="owner" class="form-control" required>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Whatsapp: *</label>
                 <input type="text" name="owner_contact" class="form-control celular" required>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Lista de desejos:</label>
                 <div class="input-group">
