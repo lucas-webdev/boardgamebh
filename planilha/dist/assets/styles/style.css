@@ -140,6 +140,20 @@ body {
   text-align: center;
 }
 
+.action-buttons .btn i {
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .action-buttons > .btn {
+    margin-right: 15px;
+  }
+
+  .action-buttons .btn {
+    padding: 8px 16px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   button[type="submit"] {
     margin-top: 15px;

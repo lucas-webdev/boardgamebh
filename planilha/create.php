@@ -208,7 +208,7 @@ if (!empty($_POST)) {
             <div class="form-group">
                 <label>Região de entrega:</label>
                 <div class="input-group">
-                    <input type="text" name="wishlist" class="form-control">
+                    <input type="text" name="deliver_region" class="form-control">
                 </div>
                 <small id="priceHelp" class="form-text text-muted">Informe o bairro onde o jogo pode ser retirado.</small>
             </div>
