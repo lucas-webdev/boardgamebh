@@ -226,7 +226,7 @@ if (!empty($_POST)) {
             <small>Os campos com * são obrigatórios.</small>
         </div>
         <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Adicionar jogo</button>
         </div>
     </div>
 </form>
