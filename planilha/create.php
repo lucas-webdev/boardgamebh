@@ -201,7 +201,7 @@ if (!empty($_POST)) {
                 <div class="input-group">
                     <input type="text" name="wishlist" class="form-control">
                 </div>
-                <small id="priceHelp" class="form-text text-muted">Adicione o link da sua lista na Ludopedia ou BGG caso possua.</small>
+                <small id="priceHelp" class="form-text text-muted">Adicione o link da sua wishlist na Ludopedia ou BGG caso possua.</small>
             </div>
         </div>
         <div class="col-12 col-lg-4">
@@ -224,6 +224,9 @@ if (!empty($_POST)) {
         </div>
         <div class="col-12">
             <small>Os campos com * são obrigatórios.</small>
+        </div>
+        <div class="col-12 not-responsible">
+            <h6>Nenhuma venda ou troca utilizando a planilha é de responsabilidade da Boardgame BH</h6>
         </div>
         <div class="col-12 text-center">
             <button type="submit" class="btn btn-primary">Adicionar jogo</button>

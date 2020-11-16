@@ -82,7 +82,8 @@ $today = strtotime(date("Y-m-d"));
                             <b>Descrição:</b> <?= $bg['description'] ?> <br>
                             <b>Responsável:</b> <?= ucwords($bg['owner']) ?> <br>
                             <b>Contato:</b> <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'><?= $bg['owner_contact'] ?></a><br>
-                            <b>Wishlist:</b> <?= printWishlist($bg['wishlist']) ?><br>
+                            <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>
+                            <b>Região de retirada:</b> <?= $bg['deliver_region'] ?><br>
                             ">
                         Info completa
                     </button>

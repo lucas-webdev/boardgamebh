@@ -63,6 +63,9 @@ body {
 .bg-item.added-recently {
   background-color: #ffe7b3;
 }
+.bg-item.added-longtime {
+  background-color: #ff9f9f;
+}
 .bg-item .lacrado,
 .popover .lacrado {
   color: #007100;
@@ -154,6 +157,36 @@ body {
   }
 }
 
+.legenda {
+  background: #e1e1e1;
+  padding: 8px;
+  font-size: 0.85rem;
+}
+
+.legenda > div {
+  padding: 4px 0;
+}
+
+.legenda > div:not(:last-child) {
+  border-bottom: 1px solid silver;
+}
+
+.legenda .square {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border: 1px solid black;
+}
+
+.num-bg {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+.num-bg h6 {
+  font-size: 0.9rem;
+}
+
 @media screen and (max-width: 991px) {
   button[type="submit"] {
     margin-top: 15px;
@@ -171,5 +204,13 @@ body {
 
   .bg-fields:nth-child(2) {
     min-width: 75px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .legenda {
+    position: absolute;
+    left: 75%;
+    top: 75px;
   }
 }

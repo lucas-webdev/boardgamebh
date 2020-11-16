@@ -16,6 +16,7 @@ $stmt->execute();
 $boardgames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Get the total number of boardgames, this is so we can determine whether there should be a next and previous button
 $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
+$num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn();
 ?>
 
 <?= template_header('Lista de jogos') ?>
@@ -27,19 +28,36 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
         <div class="not-responsible">
             <h6>Nenhuma venda ou troca utilizando a planilha é de responsabilidade da Boardgame BH</h6>
         </div>
-        <div class="pull-right action-buttons">
-            <a class="btn btn-success btn-sm" href="create.php" title="Adicionar jogo">
-                <i class="fas fa-plus-circle"></i>
-                Adicionar jogo
-            </a>
-            <a class="btn btn-danger btn-sm" href="remove.php" title="Remover jogo">
-                <i class="fas fa-minus-circle"></i>
-                Remover jogo
-            </a>
+        <div class="action-buttons d-flex justify-content-between">
+            <div>
+                <a class="btn btn-success btn-sm" href="create.php" title="Adicionar jogo">
+                    <i class="fas fa-plus-circle"></i>
+                    Adicionar jogo
+                </a>
+                <a class="btn btn-danger btn-sm" href="remove.php" title="Remover jogo">
+                    <i class="fas fa-minus-circle"></i>
+                    Remover jogo
+                </a>
+            </div>
+            <div class="legenda">
+                <div class="d-flex align-items-center">
+                    <span class="square bg-item added-today"></span>
+                    Jogos adicionados hoje
+                </div>
+                <div class="d-flex align-items-center">
+                    <span class="square bg-item added-recently"></span>
+                    Jogos adicionados há menos de 3 dias
+                </div>
+                <div class="d-flex align-items-center">
+                    <span class="square bg-item added-longtime"></span>
+                    Jogos adicionados há 60 dias ou mais
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-12">
-        <h6 style="margin-bottom: 8px">Total de jogos cadastrados: <?= $num_boardgames ?></h6>
+        <div class="num-bg">
+            <h6 style="margin-bottom: 5px">Total de jogos cadastrados: <?= $num_history ?></h6>
+            <h6 style="margin-bottom: 5px">Total de jogos disponíveis no momento: <?= $num_boardgames ?></h6>
+        </div>
     </div>
     <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
         <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
@@ -57,6 +75,8 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
                 $addedClass = 'added-today';
             if ($diffDays >= 1 && $diffDays <= 3)
                 $addedClass = 'added-recently';
+            if ($diffDays >= 60)
+                $addedClass = 'added-longtime';
             if ($bg['condition'] === "Lacrado")
                 $conditionClass = 'lacrado';
             if ($bg['condition'] === "Avariado")
@@ -77,7 +97,7 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
                             <b>Responsável:</b> <?= ucwords($bg['owner']) ?> <br>
                             <b>Contato:</b> <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'><?= $bg['owner_contact'] ?></a><br>
                             <b>Região de entrega:</b> <?= $bg['deliver_region'] ?> <br>
-                            <b>Wishlist:</b> <?= printWishlist($bg['wishlist']) ?><br>
+                            <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>
                             ">
                         + info
                     </button>

@@ -42,7 +42,7 @@ if (isset($_GET['id'])) {
                     `description` = ?,
                     `owner` = ?,
                     `owner_contact` = ?,
-                    `deliver_region` = ?
+                    `deliver_region` = ?,
                     `wishlist` = ?,
                     `updated_at` = ?
                     WHERE id = ?');
@@ -184,7 +184,7 @@ if (!$bg) {
             <div class="form-group">
                 <label>Região de entrega:</label>
                 <div class="input-group">
-                    <input type="text" name="wishlist" class="form-control" value="<?= $bg['deliver_region'] ?>">
+                    <input type="text" name="deliver_region" class="form-control" value="<?= $bg['deliver_region'] ?>">
                 </div>
                 <small id="priceHelp" class="form-text text-muted">Informe o bairro onde o jogo pode ser retirado.</small>
             </div>
