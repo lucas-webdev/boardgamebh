@@ -20,7 +20,6 @@ function template_header($title)
     <html>
         <head>
             <meta charset="utf-8">
-            <base href="http://localhost:8080/planilha/">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>$title</title>
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
