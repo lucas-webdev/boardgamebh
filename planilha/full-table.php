@@ -47,11 +47,10 @@ $today = strtotime(date("Y-m-d"));
     </div>
     <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
         <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
-            <div style="flex: 3">JOGO</div>
-            <div style="flex: 2">NEGOCIAÇÃO</div>
+            <div style="flex: 1.5">JOGO</div>
+            <div style="flex: 1.5">NEGOCIAÇÃO</div>
             <div style="flex: 1">PREÇO</div>
-            <div style="flex: 2">CONDIÇÃO</div>
-            <div style="flex: 2"></div>
+            <div style="flex: 1"></div>
         </div>
         <?php foreach ($boardgames as $bg) : ?>
             <?php
@@ -68,11 +67,10 @@ $today = strtotime(date("Y-m-d"));
                 $conditionClass = 'avariado';
             ?>
             <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $addedClass ?>">
-                <div style="flex: 3"><b><?= ucwords($bg['name']) ?></b></div>
-                <div style="flex: 2"><?= $bg['negociation'] ?></div>
+                <div style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
+                <div style="flex: 1.5"><?= $bg['negociation'] ?></div>
                 <div style="flex: 1"><?= $bg['price'] ?></div>
-                <div style="flex: 2"><span class="<?= $conditionClass ?>"><?= $bg['condition'] ?></span></div>
-                <div style="flex: 2" class="d-flex justify-content-center align-items-center">
+                <div style="flex: 1" class="d-flex justify-content-center align-items-center">
                     <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                             <b>Preço:</b> <?= $bg['price'] ?> <br>
                             <span class='<?= $conditionClass ?>'></span><b>Condição:</b> <?= $bg['condition'] ?> </span><br>
