@@ -14,6 +14,12 @@ body {
   background-size: cover;
 }
 
+body div#content1606197602 a.wp-block-button__link { color: white !important; }
+
+a[href="*"], a.wp-block-button__link, .wp-block-button__link, .botoes-planilha a {
+  color: white !important;
+}
+
 .logo {
   margin: $sectionMargin auto;
   img {

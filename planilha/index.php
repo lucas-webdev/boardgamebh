@@ -73,7 +73,7 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
             $diffDays = diffDaysFromToday($bg['created_at']);
             if ($diffDays == 0)
                 $addedClass = 'added-today';
-            if ($diffDays >= 1 && $diffDays <= 3)
+            if ($diffDays >= 1 && $diffDays <= 5)
                 $addedClass = 'added-recently';
             if ($diffDays >= 60)
                 $addedClass = 'added-longtime';
