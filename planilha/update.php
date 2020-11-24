@@ -47,7 +47,7 @@ if (isset($_GET['id'])) {
                     `updated_at` = ?
                     WHERE id = ?');
 
-                $stmt->execute([
+                $stmt->bindParam(
                     $name,
                     $negociation,
                     $price,
@@ -62,7 +62,9 @@ if (isset($_GET['id'])) {
                     $wishlist,
                     date("Y-m-d H:i:s"),
                     $_GET['id']
-                ]);
+                );
+                $stmt->execute();
+
                 $msg = 'Jogo atualizado com sucesso!';
                 echo '<script>history.pushState({}, "", "")</script>';
             } catch (PDOException $e) {
@@ -81,7 +83,8 @@ if (isset($_GET['id'])) {
 <?= template_header('Atualizar jogo') ?>
 <?php
 $stmt = $pdo->prepare('SELECT * FROM boardgames WHERE id = ?');
-$stmt->execute([$_GET['id']]);
+$stmt->bindParam($_GET['id']);
+$stmt->execute();
 $bg = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$bg) {
     exit('Não foi encontrado jogo com esse ID!');

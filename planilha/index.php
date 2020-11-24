@@ -42,15 +42,15 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
             <div class="legenda">
                 <div class="d-flex align-items-center">
                     <span class="square bg-item added-today"></span>
-                    Jogos adicionados hoje
+                    Jogos adicionados nas últimas 24h
                 </div>
                 <div class="d-flex align-items-center">
                     <span class="square bg-item added-recently"></span>
-                    Jogos adicionados há menos de 3 dias
+                    Jogos adicionados recentemente
                 </div>
                 <div class="d-flex align-items-center">
                     <span class="square bg-item added-longtime"></span>
-                    Jogos adicionados há 60 dias ou mais
+                    Jogos que precisam de recadastramento
                 </div>
             </div>
         </div>
@@ -97,8 +97,7 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
                             <b>Responsável:</b> <?= ucwords($bg['owner']) ?> <br>
                             <b>Contato:</b> <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'><?= $bg['owner_contact'] ?></a><br>
                             <b>Região de retirada/entrega:</b> <?= $bg['deliver_region'] ?> <br>
-                            <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>
-                            ">
+                            <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>">
                         + info
                     </button>
                 </div>

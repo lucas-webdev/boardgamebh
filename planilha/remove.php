@@ -17,18 +17,12 @@ if (!empty($_POST)) {
     if (count($errors) === 0) {
         try {
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $pdo->prepare('INSERT INTO `gamesToRemove` (
-        `name`,
-        `owner`,
-        `reason`
-        ) VALUES (?, ?, ?)');
+            $stmt = $pdo->prepare('INSERT INTO `gamesToRemove` (`name`,`owner`,`reason`) VALUES (?, ?, ?)');
 
-            $stmt->execute([
-                $name,
-                $owner,
-                $reason,
-            ]);
-            // date("Y-m-d H:i:s")
+            $stmt->bindParam($name, $owner, $reason);
+
+            $stmt->execute();
+
             $msg = 'Solicitação para remover jogo feita com sucesso! Seu jogo será removido em breve.';
             echo '<script>history.pushState({}, "", "")</script>';
         } catch (PDOException $e) {

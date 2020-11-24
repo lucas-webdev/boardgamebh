@@ -2,10 +2,10 @@
 date_default_timezone_set('America/Sao_Paulo');
 function pdo_connect_mysql()
 {
-    $DATABASE_HOST = 'mysql.lucascmedeiros.com.br';
-    $DATABASE_USER = 'lucascmedeirBGBH';
-    $DATABASE_PASS = 'f2C-e5';
-    $DATABASE_NAME = 'lucascmedeiroscombrbgbh';
+    $DATABASE_HOST = 'localhost';
+    $DATABASE_USER = 'bgbh';
+    $DATABASE_PASS = 'p9R@o9';
+    $DATABASE_NAME = 'bgbh_com_br';
     try {
         return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
     } catch (PDOException $exception) {
@@ -41,19 +41,19 @@ function template_header($title)
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/bgbh">Site</a>
+                        <a class="nav-link" href="/site">Site</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/bgbh/planilha">Planilha <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/planilha">Planilha <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/bgbh/planilha/create.php">Incluir jogos</a>
+                        <a class="nav-link" href="/planilha/create.php">Incluir jogos</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <main class="container-fluid p-3 py-4">
-    EOT;
+EOT;
 }
 function template_footer()
 {
@@ -75,7 +75,7 @@ function template_footer()
     </script>
     </body>
     </html>
-    EOT;
+EOT;
 }
 
 function formatCellphone($phone)

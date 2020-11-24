@@ -68,7 +68,7 @@ if (!empty($_POST)) {
             `created_at`
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 
-            $stmt->execute([
+            $stmt->bindParam(
                 $name,
                 $negociation,
                 $price,
@@ -82,9 +82,12 @@ if (!empty($_POST)) {
                 $deliver_region,
                 $wishlist,
                 $created_at
-            ]);
+            );
 
-            $stmt2->execute([
+
+            $stmt->execute();
+
+            $stmt2->bindParam(
                 $name,
                 $negociation,
                 $price,
@@ -98,8 +101,10 @@ if (!empty($_POST)) {
                 $deliver_region,
                 $wishlist,
                 $created_at
-            ]);
-            // date("Y-m-d H:i:s")
+            );
+
+            $stmt2->execute();
+
             $msg = 'Jogo adicionado com sucesso!';
             echo '<script>history.pushState({}, "", "")</script>';
         } catch (PDOException $e) {

@@ -6,7 +6,8 @@ $msg = '';
 if (isset($_GET['id'])) {
     // Select the record that is going to be deleted
     $stmt = $pdo->prepare('SELECT * FROM boardgames WHERE id = ?');
-    $stmt->execute([$_GET['id']]);
+    $stmt->bindParam($_GET['id']);
+    $stmt->execute();
     $boardgame = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$boardgame) {
         exit('Não existe boardgame com esse ID!');
@@ -16,7 +17,8 @@ if (isset($_GET['id'])) {
         if ($_GET['confirm'] == 'yes') {
             // User clicked the "Yes" button, delete record
             $stmt = $pdo->prepare('DELETE FROM boardgames WHERE id = ?');
-            $stmt->execute([$_GET['id']]);
+            $stmt->bindParam($_GET['id']);
+            $stmt->execute();
             $msg = 'Boardgame removido com sucesso!';
         } else {
             // User clicked the "No" button, redirect them back to the read page
