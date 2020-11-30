@@ -22,14 +22,14 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
 <?= template_header('Lista de jogos') ?>
 <div class="row">
     <div class="col-lg-12 margin-tb mb-3">
-        <div class="pull-left">
-            <h2>PLANILHA DE TROCA E VENDA - BGBH</h2>
+        <div class="sheet-title">
+            <h2>PLANILHA DE TROCAS & VENDAS - BGBH</h2>
         </div>
         <div class="not-responsible">
             <h6>Nenhuma venda ou troca utilizando a planilha é de responsabilidade da Boardgame BH</h6>
         </div>
         <div class="action-buttons d-flex justify-content-between">
-            <div>
+            <div class="d-flex buttons">
                 <a class="btn btn-success btn-sm" href="create.php" title="Adicionar jogo">
                     <i class="fas fa-plus-circle"></i>
                     Adicionar jogo
@@ -45,7 +45,7 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
                     Jogos adicionados nas últimas 24h
                 </div>
                 <div class="d-flex align-items-center">
-                    <span class="square bg-item added-recently"></span>
+                    <span class="square bg-item added-more-recently"></span>
                     Jogos adicionados recentemente
                 </div>
                 <div class="d-flex align-items-center">
@@ -73,7 +73,9 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
             $diffDays = diffDaysFromToday($bg['created_at']);
             if ($diffDays == 0)
                 $addedClass = 'added-today';
-            if ($diffDays >= 1 && $diffDays <= 5)
+            if ($diffDays >= 1 && $diffDays <= 2)
+                $addedClass = 'added-more-recently';
+            if ($diffDays >= 3 && $diffDays <= 4)
                 $addedClass = 'added-recently';
             if ($diffDays >= 60)
                 $addedClass = 'added-longtime';

@@ -4,12 +4,20 @@ body {
   padding: 0;
 }
 
+* {
+  font-family: Roboto;
+}
+
 .navbar {
   background-color: #009287;
 }
 
 .navbar a {
   color: white !important;
+}
+
+.sheet-title h2 {
+  font-weight: bold;
 }
 
 .not-responsible h6 {
@@ -41,6 +49,7 @@ body {
 
 a.btn {
   color: white !important;
+  font-size: 1rem;
 }
 
 /* table title */
@@ -64,8 +73,11 @@ a.btn {
 .bg-item.added-today {
   background-color: #fcff5c;
 }
+.bg-item.added-more-recently {
+  background-color: #ffedba;
+}
 .bg-item.added-recently {
-  background-color: #ffe7b3;
+  background-color: #fdf4da;
 }
 .bg-item.added-longtime {
   background-color: #ff9f9f;
@@ -151,16 +163,6 @@ a.btn {
   margin-right: 5px;
 }
 
-@media screen and (min-width: 992px) {
-  .action-buttons > .btn {
-    margin-right: 15px;
-  }
-
-  .action-buttons .btn {
-    padding: 8px 16px;
-  }
-}
-
 .legenda {
   border: 1px solid #009287;
   padding: 8px;
@@ -191,7 +193,27 @@ a.btn {
   font-size: 0.9rem;
 }
 
+@media screen and (min-width: 992px) {
+  .action-buttons .btn:first-of-type {
+    margin-right: 15px;
+  }
+
+  .action-buttons .btn {
+    padding: 8px 16px;
+  }
+
+  .legenda {
+    position: absolute;
+    left: 75%;
+    top: 10%;
+  }
+}
+
 @media screen and (max-width: 991px) {
+  .sheet-title h2 {
+    font-size: 1.3rem;
+  }
+
   button[type="submit"] {
     margin-top: 15px;
   }
@@ -201,20 +223,17 @@ a.btn {
     flex-direction: column;
   }
 
+  .action-buttons > .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .action-buttons a {
     margin: 8px 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .bg-fields:nth-child(2) {
     min-width: 75px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .legenda {
-    position: absolute;
-    left: 75%;
-    top: 75px;
   }
 }
