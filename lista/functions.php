@@ -30,7 +30,7 @@ function template_header($title)
         </head>
         <body>
         <nav class="navbar navbar-expand-sm navbar-dark">
-            <a class="navbar-brand" href="/planilha">
+            <a class="navbar-brand" href="/lista">
                 <img src="dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 BoardgameBH
             </a>
@@ -44,13 +44,13 @@ function template_header($title)
                         <a class="nav-link" href="/site">Site</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/planilha">Visualizar lista <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/lista">Visualizar lista <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/planilha/adicionar-jogo.php">Adicionar jogo</a>
+                        <a class="nav-link" href="/lista/adicionar-jogo.php">Adicionar jogo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/planilha/remover-jogo.php">Remover jogo</a>
+                        <a class="nav-link" href="/lista/remover-jogo.php">Remover jogo</a>
                     </li>
                 </ul>
             </div>

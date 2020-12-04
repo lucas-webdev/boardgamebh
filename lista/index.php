@@ -27,6 +27,13 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
         </div>
         <div class="not-responsible">
             <h6>Nenhuma venda ou troca utilizando a lista de trocas & vendas é de responsabilidade da Boardgame BH</h6>
+            <p class="regras-planilha">
+                <i class="far fa-file-alt"></i>
+                Confira as
+                <a href="/lista/regras-utilizacao-lista.html" target="_blank">
+                    regras de utilização da lista de trocas & vendas
+                </a>
+            </p>
         </div>
         <div class="action-buttons d-flex justify-content-between">
             <div class="d-flex buttons">

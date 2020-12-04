@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background: url("/planilha/dist/assets/images/base-site-branco.jpg");
+  background: url("/lista/dist/assets/images/base-site-branco.jpg");
   background-repeat: repeat;
   background-size: cover;
   background-attachment: fixed;
