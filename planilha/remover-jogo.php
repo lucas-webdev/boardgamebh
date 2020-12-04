@@ -19,7 +19,9 @@ if (!empty($_POST)) {
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $pdo->prepare('INSERT INTO `gamesToRemove` (`name`,`owner`,`reason`) VALUES (?, ?, ?)');
 
-            $stmt->bindParam($name, $owner, $reason);
+            $stmt->bindValue(1, $name, PDO::PARAM_STR);
+            $stmt->bindValue(1, $owner, PDO::PARAM_STR);
+            $stmt->bindValue(1, $reason, PDO::PARAM_STR);
 
             $stmt->execute();
 
@@ -42,7 +44,7 @@ try {
 
 <?= template_header('Remover jogo') ?>
 
-<form action="remove.php" method="POST" class="add-new-bg" onsubmit="return validateRemoveForm()">
+<form action="remover-jogo.php" method="POST" class="add-new-bg" onsubmit="return validateRemoveForm()">
     <div class="row">
         <div class="col-12">
             <div class="form-group">
@@ -70,7 +72,7 @@ try {
             <small>Os campos com * são obrigatórios.</small>
         </div>
         <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary">Solicitar remoção</button>
+            <button type="submit" class="btn btn-danger">Solicitar remoção</button>
         </div>
     </div>
 </form>

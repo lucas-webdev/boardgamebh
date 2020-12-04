@@ -32,11 +32,11 @@ $today = strtotime(date("Y-m-d"));
             <h6>Nenhuma venda ou troca utilizando a planilha é de responsabilidade da Boardgame BH</h6>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success btn-sm" href="create.php" title="Adicionar jogo">
+            <a class="btn btn-success btn-sm" href="adicionar-jogo.php" title="Adicionar jogo">
                 <i class="fas fa-plus-circle"></i>
                 Adicionar jogo
             </a>
-            <a class="btn btn-danger btn-sm" href="remove.php" title="Remover jogo">
+            <a class="btn btn-danger btn-sm" href="remover-jogo.php" title="Remover jogo">
                 <i class="fas fa-minus-circle"></i>
                 Remover jogo
             </a>

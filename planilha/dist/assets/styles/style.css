@@ -8,6 +8,17 @@ body {
   font-family: Roboto;
 }
 
+body {
+  background: url("/planilha/dist/assets/images/base-site-branco.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  margin-bottom: 50px;
+}
+
 .navbar {
   background-color: #009287;
 }

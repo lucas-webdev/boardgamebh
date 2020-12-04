@@ -68,47 +68,42 @@ if (!empty($_POST)) {
             `created_at`
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
 
-            $stmt->bindParam(
-                $name,
-                $negociation,
-                $price,
-                $condition,
-                $edition,
-                $language,
-                $language_dependency,
-                $description,
-                $owner,
-                $owner_contact,
-                $deliver_region,
-                $wishlist,
-                $created_at
-            );
-
+            $stmt->bindValue(1, $name, PDO::PARAM_STR);
+            $stmt->bindValue(2, $negociation, PDO::PARAM_STR);
+            $stmt->bindValue(3, $price, PDO::PARAM_STR);
+            $stmt->bindValue(4, $condition, PDO::PARAM_STR);
+            $stmt->bindValue(5, $edition, PDO::PARAM_STR);
+            $stmt->bindValue(6, $language, PDO::PARAM_STR);
+            $stmt->bindValue(7, $language_dependency, PDO::PARAM_STR);
+            $stmt->bindValue(8, $description, PDO::PARAM_STR);
+            $stmt->bindValue(9, $owner, PDO::PARAM_STR);
+            $stmt->bindValue(10, $owner_contact, PDO::PARAM_STR);
+            $stmt->bindValue(11, $deliver_region, PDO::PARAM_STR);
+            $stmt->bindValue(12, $wishlist, PDO::PARAM_STR);
+            $stmt->bindValue(13, $created_aT, PDO::PARAM_STR);
 
             $stmt->execute();
 
-            $stmt2->bindParam(
-                $name,
-                $negociation,
-                $price,
-                $condition,
-                $edition,
-                $language,
-                $language_dependency,
-                $description,
-                $owner,
-                $owner_contact,
-                $deliver_region,
-                $wishlist,
-                $created_at
-            );
+            $stmt2->bindValue(1, $name, PDO::PARAM_STR);
+            $stmt2->bindValue(2, $negociation, PDO::PARAM_STR);
+            $stmt2->bindValue(3, $price, PDO::PARAM_STR);
+            $stmt2->bindValue(4, $condition, PDO::PARAM_STR);
+            $stmt2->bindValue(5, $edition, PDO::PARAM_STR);
+            $stmt2->bindValue(6, $language, PDO::PARAM_STR);
+            $stmt2->bindValue(7, $language_dependency, PDO::PARAM_STR);
+            $stmt2->bindValue(8, $description, PDO::PARAM_STR);
+            $stmt2->bindValue(9, $owner, PDO::PARAM_STR);
+            $stmt2->bindValue(10, $owner_contact, PDO::PARAM_STR);
+            $stmt2->bindValue(11, $deliver_region, PDO::PARAM_STR);
+            $stmt2->bindValue(12, $wishlist, PDO::PARAM_STR);
+            $stmt2->bindValue(13, $created_aT, PDO::PARAM_STR);
 
             $stmt2->execute();
 
             $msg = 'Jogo adicionado com sucesso!';
             echo '<script>history.pushState({}, "", "")</script>';
         } catch (PDOException $e) {
-            echo 'Error: ' . $e->getMessage();
+            echo 'Error: ' . $e->getMessage() . $e->getLine();
         }
         // Output message
     }
@@ -117,7 +112,7 @@ if (!empty($_POST)) {
 
 <?= template_header('Adicionar jogo') ?>
 
-<form action="create.php" method="POST" class="add-new-bg" onsubmit="return validateForm()">
+<form action="adicionar-jogo.php" method="POST" class="add-new-bg" onsubmit="return validateForm()">
     <div class="row">
         <div class="col-12 col-lg-4">
             <div class="form-group">
@@ -167,7 +162,16 @@ if (!empty($_POST)) {
         <div class="col-12 col-lg-4">
             <div class="form-group">
                 <label>Idioma do jogo:</label>
-                <input type="text" name="language" class="form-control">
+                <select class="form-control" name="language">
+                    <option value="Português">Português</option>
+                    <option value="Inglês">Inglês</option>
+                    <option value="Espanhol">Espanhol</option>
+                    <option value="Alemão">Alemão</option>
+                    <option value="Outro">Outro</option>
+                </select>
+                <small id="priceHelp" class="form-text text-muted">
+                    Ao escolher a opção "Outro", informe o idioma na descrição
+                </small>
             </div>
         </div>
         <div class="col-12 col-lg-4">
@@ -231,10 +235,10 @@ if (!empty($_POST)) {
             <small>Os campos com * são obrigatórios.</small>
         </div>
         <div class="col-12 not-responsible">
-            <h6>Nenhuma venda ou troca utilizando a planilha é de responsabilidade da Boardgame BH</h6>
+            <h6>Nenhuma venda ou troca utilizando a <strong>lista de trocas & vendas</strong> é de responsabilidade da Boardgame BH</h6>
         </div>
         <div class="col-12 text-center">
-            <button type="submit" class="btn btn-primary">Adicionar jogo</button>
+            <button type="submit" class="btn btn-success">Adicionar jogo</button>
         </div>
     </div>
 </form>

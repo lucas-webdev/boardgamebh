@@ -47,22 +47,21 @@ if (isset($_GET['id'])) {
                     `updated_at` = ?
                     WHERE id = ?');
 
-                $stmt->bindParam(
-                    $name,
-                    $negociation,
-                    $price,
-                    $condition,
-                    $edition,
-                    $language,
-                    $language_dependency,
-                    $description,
-                    $owner,
-                    $owner_contact,
-                    $deliver_region,
-                    $wishlist,
-                    date("Y-m-d H:i:s"),
-                    $_GET['id']
-                );
+                $stmt->bindValue(1, $name, PDO::PARAM_STR);
+                $stmt->bindValue(2, $negociation, PDO::PARAM_STR);
+                $stmt->bindValue(3, $price, PDO::PARAM_STR);
+                $stmt->bindValue(4, $condition, PDO::PARAM_STR);
+                $stmt->bindValue(5, $edition, PDO::PARAM_STR);
+                $stmt->bindValue(6, $language, PDO::PARAM_STR);
+                $stmt->bindValue(7, $language_dependency, PDO::PARAM_STR);
+                $stmt->bindValue(8, $description, PDO::PARAM_STR);
+                $stmt->bindValue(9, $owner, PDO::PARAM_STR);
+                $stmt->bindValue(10, $owner_contact, PDO::PARAM_STR);
+                $stmt->bindValue(11, $deliver_region, PDO::PARAM_STR);
+                $stmt->bindValue(12, $wishlist, PDO::PARAM_STR);
+                $stmt->bindValue(13, date("Y-m-d H:i:s"), PDO::PARAM_STR);
+                $stmt->bindValue(14, $_GET['id'], PDO::PARAM_INT);
+
                 $stmt->execute();
 
                 $msg = 'Jogo atualizado com sucesso!';

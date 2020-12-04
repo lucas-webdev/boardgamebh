@@ -30,7 +30,7 @@ function template_header($title)
         </head>
         <body>
         <nav class="navbar navbar-expand-sm navbar-dark">
-            <a class="navbar-brand" href="/bgbh">
+            <a class="navbar-brand" href="/planilha">
                 <img src="dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 BoardgameBH
             </a>
@@ -44,10 +44,13 @@ function template_header($title)
                         <a class="nav-link" href="/site">Site</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/planilha">Planilha <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/planilha">Visualizar lista <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/planilha/create.php">Incluir jogos</a>
+                        <a class="nav-link" href="/planilha/adicionar-jogo.php">Adicionar jogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/planilha/remover-jogo.php">Remover jogo</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +62,7 @@ function template_footer()
 {
     echo <<<EOT
     </main>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
@@ -89,6 +92,17 @@ function diffDaysFromToday($date)
     $now = new DateTime();
 
     return $compareDate->diff($now)->format("%a");
+}
+
+function dateInRange($startDate, $endDate, $date)
+{
+    // Convert to timestamp
+    $start_ts = strtotime($startDate);
+    $end_ts = strtotime($endDate);
+    $user_ts = strtotime($date);
+
+    // Check that user date is between start & end
+    return (($user_ts >= $start_ts) && ($user_ts <= $end_ts));
 }
 
 function printWishlist($wishlist)
