@@ -176,7 +176,7 @@ if (!empty($_POST)) {
         </div>
         <div class="col-12 col-lg-4">
             <div class="form-group">
-                <label>Depend. de Idioma:</label>
+                <label>Dependência de Idioma:</label>
                 <select class="form-control" name="language_dependency">
                     <option value="Jogo em pt-br">Jogo em pt-br</option>
                     <option value="Alta dependência">Alta dependência</option>

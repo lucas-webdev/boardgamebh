@@ -1,10 +1,12 @@
 /* custom CSS */
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-size: 14px;
+    background: transparent url("http://bgbh.com.br/site/images/base-site-branco.jpg");
 }
 
 h2 {
@@ -15,22 +17,22 @@ h2 {
     font-weight: 800;
 }
 
-input[type="button"], 
+input[type="button"],
 input[type="submit"],
-.btn-primary  {
+.btn-primary {
     background: #058e86;
 }
 
-input[type="button"]:hover, 
+input[type="button"]:hover,
 input[type="submit"]:hover,
 .btn-primary:hover {
     background: #06afa4;
 }
 
-input[type="button"].icon:before, 
-input[type="submit"].icon:before, 
-input[type="reset"].icon:before, 
-button.icon:before, 
+input[type="button"].icon:before,
+input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+button.icon:before,
 .button.icon:before {
     top: 0;
 }
@@ -71,7 +73,8 @@ button.icon:before,
     line-height: 60px;
 }
 
-#nav li:hover, #nav li.active {
+#nav li:hover,
+#nav li.active {
     color: white;
 }
 
@@ -83,12 +86,8 @@ button.icon:before,
     max-width: 350px;
 }
 
-.wrapper.style1, .wrapper.style3 {
-    background: transparent url("http://bgbh.com.br/site/images/base-site-branco.jpg");
-}
-
 .wrapper.style2 {
-    background-color: #cecece;
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 3em 0;
 }
 
@@ -101,12 +100,12 @@ button.icon:before,
     font-size: 2.4em;
 }
 
-.box.feature1 header.first > p { 
+.box.feature1 header.first>p {
     font-weight: 300;
     font-size: 1.3em;
 }
 
-.box.feature1 header.first > p strong {
+.box.feature1 header.first>p strong {
     font-weight: 800;
 }
 
@@ -140,11 +139,16 @@ button.icon:before,
 .regras-planilha {
     font-size: 1.1em;
     letter-spacing: 0.1em;
-    font-weight: 600;
 }
 
 .regras-planilha a {
     text-decoration: underline;
+    font-weight: 600;
+}
+
+#desafios-e-torneios i,
+#grupos-whatsapp i {
+    color: #a7a7a7;
 }
 
 #grupos-whatsapp .box.excerpt {
@@ -153,12 +157,11 @@ button.icon:before,
     justify-content: center;
 }
 
-
 .siga-e-apoie {
     margin-top: 2em;
 }
 
-.redes-sociais ul{
+.redes-sociais ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -187,7 +190,7 @@ button.icon:before,
     color: #3B5998;
 }
 
-.apoie-o-projeto p{
+.apoie-o-projeto p {
     font-size: 1.2rem;
 }
 
@@ -205,7 +208,8 @@ button.icon:before,
     color: #fff;
 }
 
-.form-contato input, .form-contato textarea {
+.form-contato input,
+.form-contato textarea {
     margin-top: 5px;
 }
 
@@ -216,15 +220,13 @@ button.icon:before,
     #titleBar {
         top: 30px;
     }
-    #footer .row > .imp-medium {
+    #footer .row>.imp-medium {
         order: 1;
     }
-
     .banners-grandes .container img,
     .banner-pequeno img {
         max-width: 90%;
     }
-    
     .banners-grandes .container img:last-child {
         display: none;
     }
@@ -232,17 +234,45 @@ button.icon:before,
 
 @media screen and (max-width: 736px) {
     header h2 {
-        font-size: 1.7em !important;
+        font-size: 1.5em !important;
     }
-    .box.feature1 header.first > p {
-        font-size: 1.4em;
+    .box.feature1 header.first>p {
+        font-size: 1.2em;
     }
-    #desafios-e-torneios .image img{
+    #page-wrapper .box.feature1 .btn-planilha h3 {
+        font-size: 0.85em;
+        white-space: normal;
+        line-height: normal;
+    }
+    p.regras-planilha {
+        font-size: 0.9em;
+        line-height: normal;
+    }
+    .highlight.red {
+        font-size: 0.75em;
+        line-height: normal;
+    }
+    a.img-torneio.image.featured {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .secao-torneio footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0 25px;
+    }
+    .secao-torneio footer a {
+        width: auto;
+        padding: 12px;
+    }
+    #desafios-e-torneios .image img {
         width: 100%;
     }
-    #grupos-whatsapp .image img.auto-img{
+    #grupos-whatsapp .image img.auto-img {
         width: auto;
-        max-width: 100%;
+        max-width: 70%;
+        margin: 0 auto;
     }
     #grupos-whatsapp .box.excerpt {
         flex-direction: column;
@@ -251,7 +281,6 @@ button.icon:before,
         margin-left: 0;
         margin-top: 10px;
     }
-
     #grupos-whatsapp .box.excerpt header,
     #grupos-whatsapp .box.excerpt p {
         text-align: center;
@@ -265,21 +294,19 @@ button.icon:before,
 }
 
 @media screen and (min-width: 981px) {
-    .feature1 a.image.featured  img {
+    .feature1 a.image.featured img {
         max-width: 200px;
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
         filter: grayscale(100%);
         transition: all 0.4s ease;
     }
-    
     .feature1 a.image.featured img:hover {
         -webkit-filter: grayscale(0%);
-           -moz-filter: grayscale(0%);
-           filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        filter: grayscale(0%);
     }
-
-    .box.excerpt > div {
+    .box.excerpt>div {
         margin-left: 15px;
     }
 }

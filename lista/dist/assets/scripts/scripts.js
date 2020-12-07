@@ -3,6 +3,6 @@ $(function() {
         html: true
     });
     $(".popover-dismiss").popover({
-        trigger: "focus"
+        trigger: "click"
     });
 });

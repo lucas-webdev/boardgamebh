@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
 <?= template_header('Atualizar jogo') ?>
 <?php
 $stmt = $pdo->prepare('SELECT * FROM boardgames WHERE id = ?');
-$stmt->bindParam($_GET['id']);
+$stmt->bindParam(1, $_GET['id'], PDO::PARAM_INT);
 $stmt->execute();
 $bg = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$bg) {
@@ -124,10 +124,10 @@ if (!$bg) {
             <div class="form-group">
                 <label>Condição:</label>
                 <select class="form-control" name="condition">
-                    <option value="Lacrado" selected="<?= $bg['condition'] === "Lacrado" ?>">Lacrado</option>
-                    <option value="Ótimo estado (como novo)" selected="<?= $bg['condition'] === "Ótimo estado (como novo)" ?>">Ótimo estado (como novo)</option>
-                    <option value="Bom estado" selected="<?= $bg['condition'] === "Bom estado" ?>">Bom estado</option>
-                    <option value="Avariado" selected="<?= $bg['condition'] === "Avariado" ?>">Avariado</option>
+                    <option value="Lacrado" <?= $bg['condition'] === "Lacrado" ? "selected" : "" ?>>Lacrado</option>
+                    <option value="Ótimo estado (como novo)" <?= $bg['condition'] === "Ótimo estado (como novo)" ? "selected" : "" ?>>Ótimo estado (como novo)</option>
+                    <option value="Bom estado" <?= $bg['condition'] === "Bom estado" ? "selected" : "" ?>>Bom estado</option>
+                    <option value="Avariado" <?= $bg['condition'] === "Avariado" ? "selected" : "" ?>>Avariado</option>
                 </select>
             </div>
         </div>
@@ -140,18 +140,27 @@ if (!$bg) {
         <div class="col-6 col-lg-4">
             <div class="form-group">
                 <label>Idioma do jogo:</label>
-                <input type="text" name="language" class="form-control" value="<?= $bg['language'] ?>">
+                <select class="form-control" name="language">
+                    <option value="Português" <?= $bg['language'] === "Português" ? "selected" : "" ?>>Português</option>
+                    <option value="Inglês" <?= $bg['language'] === "Inglês" ? "selected" : "" ?>>Inglês</option>
+                    <option value="Espanhol" <?= $bg['language'] === "Espanhol" ? "selected" : "" ?>>Espanhol</option>
+                    <option value="Alemão" <?= $bg['language'] === "Alemão" ? "selected" : "" ?>>Alemão</option>
+                    <option value="Outro" <?= $bg['language'] === "Outro" ? "selected" : "" ?>>Outro</option>
+                </select>
+                <small id="priceHelp" class="form-text text-muted">
+                    Ao escolher a opção "Outro", informe o idioma na descrição
+                </small>
             </div>
         </div>
         <div class="col-6 col-lg-4">
             <div class="form-group">
-                <label>Depend. de Idioma:</label>
+                <label>Dependencia de Idioma:</label>
                 <select class="form-control" name="language_dependency">
-                    <option value="Jogo em pt-br" selected="<?= $bg['language_dependency'] === "Jogo em pt-br" ?>">Jogo em pt-br</option>
-                    <option value="Alta dependência" selected="<?= $bg['language_dependency'] === "Alta dependência" ?>">Alta dependência</option>
-                    <option value="Media dependência" selected="<?= $bg['language_dependency'] === "Media dependência" ?>">Media dependência</option>
-                    <option value="Pouca dependência" selected="<?= $bg['language_dependency'] === "Pouca dependência" ?>">Pouca dependência</option>
-                    <option value="Sem dependência" selected="<?= $bg['language_dependency'] === "Sem dependência" ?>">Sem dependência</option>
+                    <option value="Jogo em pt-br" <?= $bg['language_dependency'] === "Jogo em pt-br" ? "selected" : "" ?>>Jogo em pt-br</option>
+                    <option value="Alta dependência" <?= $bg['language_dependency'] === "Alta dependência" ? "selected" : "" ?>>Alta dependência</option>
+                    <option value="Media dependência" <?= $bg['language_dependency'] === "Media dependência" ? "selected" : "" ?>>Media dependência</option>
+                    <option value="Pouca dependência" <?= $bg['language_dependency'] === "Pouca dependência" ? "selected" : "" ?>>Pouca dependência</option>
+                    <option value="Sem dependência" <?= $bg['language_dependency'] === "Sem dependência" ? "selected" : "" ?>>Sem dependência</option>
                 </select>
             </div>
         </div>

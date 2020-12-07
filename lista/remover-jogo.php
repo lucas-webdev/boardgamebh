@@ -52,19 +52,20 @@ try {
                 <input type="text" name="name" class="form-control" required>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-6">
             <div class="form-group">
                 <label>Responsável: *</label>
                 <input type="text" name="owner" class="form-control" required>
             </div>
         </div>
-        <div class="col-6 col-lg-4">
+        <div class="col-12 col-lg-6">
             <div class="form-group">
                 <label>Motivo: *</label>
                 <select class="form-control" name="reason">
                     <option value="Troca pelo grupo">Troca pelo grupo</option>
                     <option value="Venda pelo grupo">Venda pelo grupo</option>
                     <option value="Negociação fora do grupo">Negociação fora do grupo</option>
+                    <option value="Desistência">Desistência</option>
                 </select>
             </div>
         </div>
@@ -78,7 +79,7 @@ try {
 </form>
 
 <div class="games-to-remove">
-    <h5> Lista de jogos a serem removidos </h5>
+    <h5> Jogos a serem removidos </h5>
     <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
         <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
             <div style="flex: 4">JOGO</div>
@@ -91,6 +92,26 @@ try {
                 <div style="flex: 4"><?= $bg['owner'] ?></div>
                 <div style="flex: 4"><?= $bg['reason'] ?></div>
             </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<hr />
+<div class="games-to-remove">
+    <h5> Histórico de negociações </h5>
+    <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
+        <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
+            <div style="flex: 4">JOGO</div>
+            <div style="flex: 4">RESPONSÁVEL</div>
+            <div style="flex: 4">MOTIVO</div>
+        </div>
+        <?php foreach ($gamesToRemove as $bg) : ?>
+            <?php if ($bg['reason'] == "Troca pelo grupo" || $bg['reason'] != "Venda pelo grupo") : ?>
+            <div class="d-inline-flex justify-content-start align-items-center bg-item">
+                <div style="flex: 4"><b><?= ucwords($bg['name']) ?></b></div>
+                <div style="flex: 4"><?= $bg['owner'] ?></div>
+                <div style="flex: 4"><?= $bg['reason'] ?></div>
+            </div>
+            <?php endif ?>
         <?php endforeach; ?>
     </div>
 </div>

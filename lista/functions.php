@@ -83,7 +83,7 @@ EOT;
 
 function formatCellphone($phone)
 {
-    return preg_replace('/[- )(]/', '', $phone);
+    return "55" . preg_replace('/[- )(]/', '', $phone);
 }
 
 function diffDaysFromToday($date)
