@@ -250,6 +250,12 @@ a.btn {
     .sheet-title h2 {
         font-size: 1.3rem;
     }
+    .not-responsible h6 {
+        font-size: 0.75em;
+    }
+    .regras-planilha{
+        font-size: 0.85em;
+    }
     button[type="submit"] {
         margin-top: 15px;
     }
