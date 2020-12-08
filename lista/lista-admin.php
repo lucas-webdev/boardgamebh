@@ -23,81 +23,82 @@ $today = strtotime(date("Y-m-d"));
 ?>
 
 <?= template_header('Admin') ?>
-    <div class="col-lg-12 margin-tb mb-3">
-        <div class="sheet-title">
-            <h2>LISTA DE TROCAS & VENDAS - BGBH</h2>
+<div class="col-lg-12 margin-tb mb-3">
+    <div class="sheet-title">
+        <h2>LISTA DE TROCAS & VENDAS - BGBH</h2>
+    </div>
+    <div class="not-responsible">
+        <h6>Nenhuma venda ou troca utilizando a lista de trocas & vendas é de responsabilidade da Boardgame BH</h6>
+        <p class="regras-planilha">
+            <i class="far fa-file-alt"></i>
+            Confira as
+            <a href="/lista/regras-utilizacao-lista.html" target="_blank">
+                regras de utilização
+            </a>
+            da lista de trocas & vendas
+        </p>
+    </div>
+    <div class="action-buttons d-flex justify-content-between">
+        <div class="d-flex buttons">
+            <a class="btn btn-success btn-sm" href="adicionar-jogo.php" title="Adicionar jogo">
+                <i class="fas fa-plus-circle"></i>
+                Adicionar jogo
+            </a>
+            <a class="btn btn-danger btn-sm" href="remover-jogo.php" title="Remover jogo">
+                <i class="fas fa-minus-circle"></i>
+                Remover jogo
+            </a>
         </div>
-        <div class="not-responsible">
-            <h6>Nenhuma venda ou troca utilizando a lista de trocas & vendas é de responsabilidade da Boardgame BH</h6>
-            <p class="regras-planilha">
-                <i class="far fa-file-alt"></i>
-                Confira as
-                <a href="/lista/regras-utilizacao-lista.html" target="_blank">
-                    regras de utilização
-                </a>
-                da lista de trocas & vendas
-            </p>
-        </div>
-        <div class="action-buttons d-flex justify-content-between">
-            <div class="d-flex buttons">
-                <a class="btn btn-success btn-sm" href="adicionar-jogo.php" title="Adicionar jogo">
-                    <i class="fas fa-plus-circle"></i>
-                    Adicionar jogo
-                </a>
-                <a class="btn btn-danger btn-sm" href="remover-jogo.php" title="Remover jogo">
-                    <i class="fas fa-minus-circle"></i>
-                    Remover jogo
-                </a>
+        <div class="legenda">
+            <div class="d-flex align-items-center">
+                <span class="square bg-item added-today"></span>
+                Jogos adicionados nas últimas 24h
             </div>
-            <div class="legenda">
-                <div class="d-flex align-items-center">
-                    <span class="square bg-item added-today"></span>
-                    Jogos adicionados nas últimas 24h
-                </div>
-                <div class="d-flex align-items-center">
-                    <span class="square bg-item added-more-recently"></span>
-                    Jogos adicionados recentemente
-                </div>
-                <div class="d-flex align-items-center">
-                    <span class="square bg-item added-longtime"></span>
-                    Jogos que precisam de recadastramento
-                </div>
+            <div class="d-flex align-items-center">
+                <span class="square bg-item added-more-recently"></span>
+                Jogos adicionados recentemente
             </div>
-        </div>
-        <div class="num-bg">
-            <h6 style="margin-bottom: 5px">Total de jogos cadastrados: <?= $num_history ?></h6>
-            <h6 style="margin-bottom: 5px">Total de jogos disponíveis no momento: <?= $num_boardgames ?></h6>
+            <div class="d-flex align-items-center">
+                <span class="square bg-item added-longtime"></span>
+                Jogos que precisam de recadastramento
+            </div>
         </div>
     </div>
-    <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
-        <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
-            <div style="flex: 1.5">JOGO</div>
-            <div style="flex: 1.5">NEGOCIAÇÃO</div>
-            <div style="flex: 1">PREÇO</div>
-            <div style="flex: 1"></div>
-        </div>
-        <?php foreach ($boardgames as $bg) : ?>
-            <?php
-            $addedClass = '';
-            $conditionClass = '';
-            $diffDays = diffDaysFromToday($bg['created_at']);
-            if ($diffDays == 0)
-                $addedClass = 'added-today';
-            if ($diffDays >= 1 && $diffDays <= 3)
-                $addedClass = 'added-recently';
-            if ($bg['condition'] === "Lacrado")
-                $conditionClass = 'lacrado';
-            if ($bg['condition'] === "Avariado")
-                $conditionClass = 'avariado';
-                $descricao = htmlspecialchars($bg['description']);
-            ?>
-            <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $addedClass ?>">
-                <div style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
-                <div style="flex: 1.5"><?= $bg['negociation'] ?></div>
-                <div style="flex: 1"><?= $bg['price'] ?></div>
-                <div style="flex: 1" class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" 
-                data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
+    <div class="num-bg">
+        <h6 style="margin-bottom: 5px">Total de jogos cadastrados: <?= $num_history ?></h6>
+        <h6 style="margin-bottom: 5px">Total de jogos disponíveis no momento: <?= $num_boardgames ?></h6>
+    </div>
+</div>
+<div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
+    <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
+        <div class="headers" style="flex: 1.5">Jogo</div>
+        <div class="headers" style="flex: 1.5">Negociação</div>
+        <div class="headers" style="flex: 1">Preço</div>
+        <div class="headers d-none d-lg-block" style="flex: 1">Condição</div>
+        <div class="headers" style="flex: 1"></div>
+    </div>
+    <?php foreach ($boardgames as $bg) : ?>
+        <?php
+        $addedClass = '';
+        $conditionClass = '';
+        $diffDays = diffDaysFromToday($bg['created_at']);
+        if ($diffDays == 0)
+            $addedClass = 'added-today';
+        if ($diffDays >= 1 && $diffDays <= 3)
+            $addedClass = 'added-recently';
+        if ($bg['condition'] === "Lacrado")
+            $conditionClass = 'lacrado';
+        if ($bg['condition'] === "Avariado")
+            $conditionClass = 'avariado';
+        $descricao = htmlspecialchars($bg['description']);
+        ?>
+        <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $addedClass ?>">
+            <div style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
+            <div style="flex: 1.5"><?= $bg['negociation'] ?></div>
+            <div style="flex: 1"><?= $bg['price'] ?></div>
+            <div class="bg-fields d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
+            <div style="flex: 1" class="d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> <?= $bg['price'] ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
@@ -107,23 +108,22 @@ $today = strtotime(date("Y-m-d"));
                         <b>Responsável:</b> <?= ucwords($bg['owner']) ?> <br>
                         <b>Contato:</b> <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'><?= $bg['owner_contact'] ?></a><br>
                         <b>Região de retirada/entrega:</b> <?= $bg['deliver_region'] ?> <br>
-                        <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>"
-                >
+                        <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>">
                     + info
                 </button>
-                    <a href="update.php?id=<?= $bg['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
-                    <a href="delete.php?id=<?= $bg['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
-                </div>
+                <a href="update.php?id=<?= $bg['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                <a href="delete.php?id=<?= $bg['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
             </div>
-        <?php endforeach; ?>
-    </div>
-    <div class="pagination">
-        <?php if ($page > 1) : ?>
-            <a href="read.php?page=<?= $page - 1 ?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
-        <?php endif; ?>
-        <?php if ($page * $records_per_page < $num_boardgames) : ?>
-            <a href="read.php?page=<?= $page + 1 ?>"><i class="fas fa-angle-double-right fa-sm"></i></a>
-        <?php endif; ?>
-    </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+<div class="pagination">
+    <?php if ($page > 1) : ?>
+        <a href="read.php?page=<?= $page - 1 ?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
+    <?php endif; ?>
+    <?php if ($page * $records_per_page < $num_boardgames) : ?>
+        <a href="read.php?page=<?= $page + 1 ?>"><i class="fas fa-angle-double-right fa-sm"></i></a>
+    <?php endif; ?>
+</div>
 
 <?= template_footer() ?>

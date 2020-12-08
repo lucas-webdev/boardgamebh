@@ -80,7 +80,7 @@ if (!empty($_POST)) {
             $stmt->bindValue(10, $owner_contact, PDO::PARAM_STR);
             $stmt->bindValue(11, $deliver_region, PDO::PARAM_STR);
             $stmt->bindValue(12, $wishlist, PDO::PARAM_STR);
-            $stmt->bindValue(13, $created_aT, PDO::PARAM_STR);
+            $stmt->bindValue(13, $created_at, PDO::PARAM_STR);
 
             $stmt->execute();
 
@@ -96,7 +96,7 @@ if (!empty($_POST)) {
             $stmt2->bindValue(10, $owner_contact, PDO::PARAM_STR);
             $stmt2->bindValue(11, $deliver_region, PDO::PARAM_STR);
             $stmt2->bindValue(12, $wishlist, PDO::PARAM_STR);
-            $stmt2->bindValue(13, $created_aT, PDO::PARAM_STR);
+            $stmt2->bindValue(13, $created_at, PDO::PARAM_STR);
 
             $stmt2->execute();
 

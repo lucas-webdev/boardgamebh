@@ -93,14 +93,13 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
             $conditionClass = 'avariado';
         $descricao = htmlspecialchars($bg['description']);
         ?>
-        <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $addedClass ?>">
+        <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $$bg['created_at'] ?> <?= $addedClass ?>">
             <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
             <div class="bg-fields" style="flex: 1.5"><?= $bg['negociation'] ?></div>
             <div class="bg-fields" style="flex: 1"><?= $bg['price'] ?></div>
-            <div class="bg-fields d-none d-lg-block" style="flex: 1"><?= $bg['condition'] ?></div>
+            <div class="bg-fields d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
             <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" 
-                data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
+                <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> <?= $bg['price'] ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
@@ -110,8 +109,7 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
                         <b>Responsável:</b> <?= ucwords($bg['owner']) ?> <br>
                         <b>Contato:</b> <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'><?= $bg['owner_contact'] ?></a><br>
                         <b>Região de retirada/entrega:</b> <?= $bg['deliver_region'] ?> <br>
-                        <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>"
-                >
+                        <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>">
                     + info
                 </button>
             </div>
