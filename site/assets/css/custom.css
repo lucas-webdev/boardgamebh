@@ -91,7 +91,8 @@ button.icon:before,
     max-width: 350px;
 }
 
-.wrapper.style1, .wrapper.style3 {
+.wrapper.style1,
+.wrapper.style3 {
     background: none;
 }
 
@@ -136,7 +137,7 @@ button.icon:before,
 }
 
 .aviso-responsabilidade {
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 300;
     letter-spacing: normal;
 }

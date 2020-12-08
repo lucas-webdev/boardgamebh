@@ -19,6 +19,15 @@ function template_header($title)
     <!DOCTYPE html>
     <html>
         <head>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJZZ67VE3C"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'G-SJZZ67VE3C');
+            </script>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>$title</title>
@@ -75,6 +84,29 @@ function template_footer()
     $('.celular').mask('(00) 0 0000-0000');
     $('.dinheiro').mask('#.##0,00', {reverse: true});
     $('.data').mask('00/00/0000');
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyDSkax_bQZESW9EJf3lsWcScjVG3W1RglI",
+        authDomain: "site-bgbh.firebaseapp.com",
+        projectId: "site-bgbh",
+        storageBucket: "site-bgbh.appspot.com",
+        messagingSenderId: "55901407241",
+        appId: "1:55901407241:web:31b7dfb0296a5e8b6b50d8",
+        measurementId: "G-SZ4NX75M8X"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
     </script>
     </body>
     </html>
