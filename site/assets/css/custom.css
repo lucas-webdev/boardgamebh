@@ -17,9 +17,24 @@ h2 {
 hr {
     width: 100%;
 }
+.d-flex {
+    display: flex;
+}
 
 .font-800 {
     font-weight: 800;
+}
+.font-red {
+    color: crimson;
+}
+.font-green {
+    color: #058e86;
+}
+.highlight {
+    font-weight: bold;
+}
+p strong {
+    color: inherit;
 }
 
 input[type="button"],
@@ -81,10 +96,6 @@ button.icon:before,
 #nav li:hover,
 #nav li.active {
     color: white;
-}
-
-.highlight {
-    font-weight: bold;
 }
 
 #banner img {
@@ -167,6 +178,21 @@ button.icon:before,
     justify-content: center;
 }
 
+#grupos-whatsapp header.titulos-grupos {
+    margin-bottom: 10px;
+}
+
+#grupos-whatsapp .imagem-grupos {
+    flex: 1
+}
+#grupos-whatsapp .descricao-grupos {
+    flex: 2;
+}
+
+p.font-red.restricoes-grupos {
+    margin-top: 5px;
+}
+
 .siga-e-apoie {
     margin-top: 2em;
 }
@@ -223,6 +249,16 @@ button.icon:before,
     margin-top: 5px;
 }
 
+.hidden-sm, .visible-md {
+    display: flex;
+}
+.visible-sm, .hidden-md {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+
+/* exceto desktop */
 @media screen and (max-width: 980px) {
     #page-wrapper {
         padding-top: 30px;
@@ -242,7 +278,14 @@ button.icon:before,
     }
 }
 
+/* só celular e tablet */
 @media screen and (max-width: 736px) {
+    .visible-sm {
+        display: flex;
+    }
+    .hidden-sm {
+        display: none;
+    }
     #page-wrapper .feature1 header h2 {
         font-size: 1.3em;
     }
@@ -300,18 +343,27 @@ button.icon:before,
     }
 }
 
+/* só celular */
 @media screen and (max-width: 360px) {
     #banner img {
         max-width: 250px;
     }
 }
 
+/* exceto celular */
 @media screen and (min-width: 737px) {
     hr.d-md-none {
         display: none;
     }
+    .visible-md {
+        display: flex;
+    }
+    .hidden-md {
+        display: none;
+    }
 }
 
+/* só desktop */
 @media screen and (min-width: 981px) {
     .feature1 a.image.featured img {
         max-width: 200px;

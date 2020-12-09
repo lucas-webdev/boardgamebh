@@ -30,11 +30,11 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
     </div>
     <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
         <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
-            <div style="flex: 3">JOGO</div>
-            <div style="flex: 2">NEGOCIAÇÃO</div>
-            <div style="flex: 1">PREÇO</div>
-            <div style="flex: 2">CONDIÇÃO</div>
-            <div style="flex: 2"></div>
+            <div class="headers" style="flex: 1.5">Jogo</div>
+            <div class="headers text-center" style="flex: 1.2">Negociação</div>
+            <div class="headers text-center" style="flex: 1">Preço</div>
+            <div class="headers text-center d-none d-lg-block" style="flex: 1">Condição</div>
+            <div class="headers" style="flex: 1"></div>
         </div>
         <?php foreach ($boardgames as $bg) : ?>
             <?php
@@ -50,25 +50,24 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
             if ($bg['condition'] === "Avariado")
                 $conditionClass = 'avariado';
             ?>
-            <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $addedClass ?>">
-                <div style="flex: 3"><b><?= ucwords($bg['name']) ?></b></div>
-                <div style="flex: 2"><?= $bg['negociation'] ?></div>
-                <div style="flex: 1"><?= $bg['price'] ?></div>
-                <div style="flex: 2"><span class="<?= $conditionClass ?>"><?= $bg['condition'] ?></span></div>
-                <div style="flex: 2" class="d-flex justify-content-center align-items-center">
+            <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $$bg['created_at'] ?> <?= $addedClass ?>">
+                <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
+                <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
+                <div class="bg-fields text-center" style="flex: 1"><?= $bg['price'] ?></div>
+                <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
+                <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
                     <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
-                            <b>Preço:</b> <?= $bg['price'] ?> <br>
-                            <span class='<?= $conditionClass ?>'></span><b>Condição:</b> <?= $bg['condition'] ?> </span><br>
-                            <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
-                            <b>Idioma:</b> <?= ucwords($bg['language']) ?> <br>
-                            <b>Depend. Idioma:</b> <?= $bg['language_dependency'] ?> <br>
-                            <b>Descrição:</b> <?= $bg['description'] ?> <br>
-                            <b>Responsável:</b> <?= ucwords($bg['owner']) ?> <br>
-                            <b>Contato:</b> <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'><?= $bg['owner_contact'] ?></a><br>
-                            <b>Região de entrega:</b> <?= $bg['deliver_region'] ?> <br>
-                            <b>Wishlist:</b> <?= printWishlist($bg['wishlist']) ?><br>
-                            ">
-                        Info completa
+                        <b>Preço:</b> <?= $bg['price'] ?> <br>
+                        <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
+                        <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
+                        <b>Idioma:</b> <?= ucwords($bg['language']) ?> <br>
+                        <b>Depend. Idioma:</b> <?= $bg['language_dependency'] ?> <br>
+                        <b>Descrição:</b> <?= $descricao ?> <br>
+                        <b>Responsável:</b> <?= ucwords($bg['owner']) ?> <br>
+                        <b>Contato:</b> <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'><?= $bg['owner_contact'] ?></a><br>
+                        <b>Região de retirada/entrega:</b> <?= $bg['deliver_region'] ?> <br>
+                        <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>">
+                        + info
                     </button>
                 </div>
             </div>

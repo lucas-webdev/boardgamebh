@@ -69,9 +69,9 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
 <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
     <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
         <div class="headers" style="flex: 1.5">Jogo</div>
-        <div class="headers" style="flex: 1.5">Negociação</div>
-        <div class="headers" style="flex: 1">Preço</div>
-        <div class="headers d-none d-lg-block" style="flex: 1">Condição</div>
+        <div class="headers text-center" style="flex: 1.2">Negociação</div>
+        <div class="headers text-center" style="flex: 1">Preço</div>
+        <div class="headers text-center d-none d-lg-block" style="flex: 1">Condição</div>
         <div class="headers" style="flex: 1"></div>
     </div>
     <?php foreach ($boardgames as $bg) : ?>
@@ -95,9 +95,9 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
         ?>
         <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $$bg['created_at'] ?> <?= $addedClass ?>">
             <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
-            <div class="bg-fields" style="flex: 1.5"><?= $bg['negociation'] ?></div>
-            <div class="bg-fields" style="flex: 1"><?= $bg['price'] ?></div>
-            <div class="bg-fields d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
+            <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
+            <div class="bg-fields text-center" style="flex: 1"><?= $bg['price'] ?></div>
+            <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
             <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
                 <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> <?= $bg['price'] ?> <br>
