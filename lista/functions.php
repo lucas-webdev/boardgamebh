@@ -28,9 +28,19 @@ function template_header($title)
             
             gtag('config', 'G-SJZZ67VE3C');
             </script>
+            <title>$title</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>$title</title>
+
+            <meta property="og:title" content="BGBH - O portal de jogos de tabuleiro de Belo Horizonte">
+            <meta property="og:site_name" content="BoardgameBH">
+            <meta property="og:url" content="http://www.bgbh.com.br/site">
+            <meta property="og:url" content="http://www.bgbh.com.br/site/">
+            <meta property="og:description"
+                content="O BoardgameBH é um projeto que tem como foco o crescimento e a visibilidade do Boardgame no país, promovendo e realizando ações de amplo interesse e com um público espalhado por todo país.">
+            <meta property="og:type" content="website">
+            <meta property="og:image" content="http://bgbh.com.br/site/images/logo-preto.png">
+
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
             <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -64,6 +74,14 @@ function template_header($title)
                 </ul>
             </div>
         </nav>
+        <section class="banner-ads">
+            <div class="col-12 d-none d-md-flex justify-content-center">
+                <img src="dist/assets/images/banner-pequeno.png" alt="banner" />
+            </div>
+            <div class="col-12 d-flex d-md-none justify-content-center">
+                <img src="dist/assets/images/banner-grande.png" alt="banner" />
+            </div>
+        </section>
         <main class="container-fluid p-3 py-4">
 EOT;
 }

@@ -7,6 +7,11 @@ html {
 body {
     font-size: 14px;
     background: transparent url("http://bgbh.com.br/site/images/base-site-branco.jpg");
+    color: #4e515a;
+}
+
+body footer,
+body footer p {
     color: #a3a6ad;
 }
 
@@ -20,6 +25,9 @@ hr {
 .d-flex {
     display: flex;
 }
+.d-flex.align-center{
+    align-items: center;
+}
 
 .font-800 {
     font-weight: 800;
@@ -28,7 +36,10 @@ hr {
     color: crimson;
 }
 .font-green {
-    color: #058e86;
+    color: #129b12;
+}
+.font-dark-red {
+    color: #880f1d;
 }
 .highlight {
     font-weight: bold;
@@ -250,7 +261,7 @@ p.font-red.restricoes-grupos {
 }
 
 .hidden-sm, .visible-md {
-    display: flex;
+    display: block;
 }
 .visible-sm, .hidden-md {
     display: none;
@@ -281,7 +292,7 @@ p.font-red.restricoes-grupos {
 /* só celular e tablet */
 @media screen and (max-width: 736px) {
     .visible-sm {
-        display: flex;
+        display: block;
     }
     .hidden-sm {
         display: none;
@@ -344,7 +355,7 @@ p.font-red.restricoes-grupos {
 }
 
 /* só celular */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
     #banner img {
         max-width: 250px;
     }
@@ -356,7 +367,7 @@ p.font-red.restricoes-grupos {
         display: none;
     }
     .visible-md {
-        display: flex;
+        display: block;
     }
     .hidden-md {
         display: none;

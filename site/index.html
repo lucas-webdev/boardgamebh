@@ -17,6 +17,17 @@
     <title>BGBH</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <meta property="og:title" content="BGBH - O portal de jogos de tabuleiro de Belo Horizonte">
+    <meta property="og:site_name" content="BoardgameBH">
+    <meta property="og:url" content="http://www.bgbh.com.br/site">
+    <meta property="og:url" content="http://www.bgbh.com.br/site/">
+    <meta property="og:description"
+        content="O BoardgameBH é um projeto que tem como foco o crescimento e a visibilidade do Boardgame no país, promovendo e realizando ações de amplo interesse e com um público espalhado por todo país.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://bgbh.com.br/site/images/bgbh-logo.png">
+    <meta property="og:image:secure_url" content="http://bgbh.com.br/site/images/logo-preto.png">
+
     <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -132,19 +143,26 @@
 
                 </div>
             </div>
-            <div class="wrapper style2">
+            <div class="wrapper style2 hidden-sm">
                 <div class="inner">
 
                     <!-- Feature 2 -->
-                    <section class="container box feature2">
-                        <div class="d-flex align-center banner-pequeno">
-                            <img src="images/banner-pequeno.png" class="hidden-sm" alt="banner"
-                                style="margin: 0 auto;" />
-                            <img src="images/banner-grande.png" class="visible-sm" alt="banner"
-                                style="margin: 0 auto;" />
+                    <section class="container box feature2 banner-area banner-unico">
+                        <div class="d-flex banner-pequeno">
+                            <img src="images/banner-pequeno.png" alt="banner" />
                         </div>
                     </section>
 
+
+                </div>
+            </div>
+            <div class="wrapper style2 banners-grandes visible-sm">
+                <div class="inner">
+                    <!-- Feature 2 -->
+                    <section class="container box feature2 d-flex align-center">
+                        <img src="images/banner-grande.png" alt="banner" />
+                        <img src="images/banner-grande.png" alt="banner" />
+                    </section>
                 </div>
             </div>
             <div id="desafios-e-torneios">
@@ -207,12 +225,16 @@
                                                     <h3><a href="#">BGBH - Trocas & Vendas</a>
                                                     </h3>
                                                 </header>
-                                                <p>O grupo é EXCLUSIVO para Belo Horizonte e Região e tem como foco os
+                                                <p>O grupo é <span class="font-800">EXCLUSIVO</span> para Belo Horizonte
+                                                    e Região e tem como foco os
                                                     anúncios de trocas e vendas entre seus usuários. O grupo possui
                                                     regras bem definidas para otimizar sua funcionalidade. </p>
-                                                <p class="font-red restricoes-grupos">
-                                                    <strong>Restrições:</strong> Chat moderado e apenas usuários que
-                                                    consigam entregar os jogos em BH
+                                                <p class="font-red restricoes-grupos font-800">
+                                                    <span class="font-dark-red">Restrições:</span>
+                                                    Chat moderado.
+                                                    <span style="font-weight: 500;"> Participação limitada a usuários
+                                                        que</span>
+                                                    consigam entregar os jogos em Belo Horizonte.
                                                 </p>
                                             </div>
                                         </article>
@@ -232,7 +254,8 @@
                                                     jogatinas online, presenciais, dúvidas sobre regras, indicações.
                                                     Aqui é o lugar. A única exigência é o bom senso. </p>
                                                 <p class="font-red restricoes-grupos">
-                                                    <strong>Restrições:</strong> Sem restrições
+                                                    <span class="font-dark-red font-800">Restrições:</span> Sem
+                                                    restrições
                                                 </p>
                                             </div>
                                         </article>
@@ -252,8 +275,9 @@
                                                     Grupo voltado para divulgação de oportunidades e ofertas de
                                                     Boardgames. Suas regras e funcionalidade ainda estão sendo
                                                     definidas.</p>
-                                                <p class="font-red restricoes-grupos">
-                                                    <strong>Restrições:</strong> Sem chat
+                                                <p class="font-red restricoes-grupos font-800">
+                                                    <span class="font-dark-red">Restrições:</span>
+                                                    Sem chat
                                                 </p>
                                             </div>
                                         </article>
@@ -289,7 +313,7 @@
                                     O <span class="font-800">BoardgameBH</span> é um projeto que tem como foco o
                                     crescimento e a visibilidade do Boardgame no país. O portal tem Belo Horizonte e
                                     região como carro chefe, mas não possui fronteiras, promovendo
-                                    e realizando ações de interesse e com um público espalhado por todo país, como
+                                    e realizando ações de amplo interesse e com um público espalhado por todo país, como
                                     torneios online, divulgação de lançamentos e conteúdo digital. Diversos braços do
                                     projeto ainda estão em desenvolvimento e em breve serão
                                     apresentados para o grande público. Enquanto isso, aproveite todas as
@@ -305,14 +329,14 @@
                                     <h2 class="font-800">Siga</h2>
                                     <ul class="list-inline">
                                         <li class="wp-social-link wp-social-link-instagram">
-                                            <a class="fa fa-instagram" href="https://www.instagram.com/boardgamebh/"
-                                                aria-label="Instagram">
+                                            <a class="fa fa-instagram" target="_blank"
+                                                href="https://www.instagram.com/boardgamebh/" aria-label="Instagram">
                                             </a>
                                         </li>
 
                                         <li class="wp-social-link wp-social-link-facebook">
-                                            <a class="fa fa-facebook" href="https://www.facebook.com/boardgamebh/"
-                                                aria-label="Facebook">
+                                            <a class="fa fa-facebook" target="_blank"
+                                                href="https://www.facebook.com/boardgamebh/" aria-label="Facebook">
                                             </a>
                                         </li>
                                     </ul>
