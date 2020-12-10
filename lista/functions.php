@@ -32,14 +32,15 @@ function template_header($title)
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <meta property="og:title" content="BGBH - O portal de jogos de tabuleiro de Belo Horizonte">
-            <meta property="og:site_name" content="BoardgameBH">
+            <meta property="og:title" content="BoardgameBH [BGBH]">
+            <meta property="og:site_name" content="BoardgameBH [BGBH]">
             <meta property="og:url" content="http://www.bgbh.com.br/site">
             <meta property="og:url" content="http://www.bgbh.com.br/site/">
             <meta property="og:description"
-                content="O BoardgameBH é um projeto que tem como foco o crescimento e a visibilidade do Boardgame no país, promovendo e realizando ações de amplo interesse e com um público espalhado por todo país.">
+                content="Lista de Trocas & Vendas do portal BoardgameBH">
             <meta property="og:type" content="website">
-            <meta property="og:image" content="http://bgbh.com.br/site/images/logo-preto.png">
+            <meta property="og:image" content="http://bgbh.com.br/site/images/logo_preto.png">
+            <meta property="og:image:secure_url" content="http://bgbh.com.br/site/images/logo_preto.png">
 
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
             <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
@@ -76,10 +77,10 @@ function template_header($title)
         </nav>
         <section class="banner-ads">
             <div class="col-12 d-none d-md-flex justify-content-center">
-                <img src="dist/assets/images/banner-pequeno.png" alt="banner" />
+                <img class="banner-ads-90" src="dist/assets/images/banner-pequeno.png" alt="banner" />
             </div>
             <div class="col-12 d-flex d-md-none justify-content-center">
-                <img src="dist/assets/images/banner-grande.png" alt="banner" />
+                <img class="banner-ads-273" src="dist/assets/images/banner-grande.png" alt="banner" />
             </div>
         </section>
         <main class="container-fluid p-3 py-4">

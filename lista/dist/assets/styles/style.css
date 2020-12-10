@@ -43,6 +43,13 @@ main {
     width: auto;
 }
 
+.banner-ads-90 {
+    max-height: 90px;
+}
+.banner-ads-273 {
+    max-height: 273px;
+}
+
 .sheet-title h2 {
     font-weight: bold;
     font-weight: 800;

@@ -28,6 +28,16 @@ hr {
 .d-flex.align-center{
     align-items: center;
 }
+.d-flex.justify-center{
+    justify-content: center;
+}
+
+.banner-ads-90 {
+    max-height: 90px;
+}
+.banner-ads-273 {
+    max-height: 273px;
+}
 
 .font-800 {
     font-weight: 800;
@@ -80,6 +90,7 @@ button.icon:before,
 #header-wrapper {
     background: transparent url("images/bgbh-topo-site.png");
     background-size: cover;
+    height: calc(100vh - 90px);
 }
 
 #header {
