@@ -34,13 +34,13 @@ function template_header($title)
 
             <meta property="og:title" content="BoardgameBH [BGBH]">
             <meta property="og:site_name" content="BoardgameBH [BGBH]">
-            <meta property="og:url" content="http://www.bgbh.com.br/site">
-            <meta property="og:url" content="http://www.bgbh.com.br/site/">
+            <meta property="og:url" content="http://www.bgbh.com.br">
+            <meta property="og:url" content="http://www.bgbh.com.br/">
             <meta property="og:description"
                 content="Lista de Trocas & Vendas do portal BoardgameBH">
             <meta property="og:type" content="website">
-            <meta property="og:image" content="http://bgbh.com.br/site/images/logo_preto.png">
-            <meta property="og:image:secure_url" content="http://bgbh.com.br/site/images/logo_preto.png">
+            <meta property="og:image" content="http://bgbh.com.br/images/logo_preto.png">
+            <meta property="og:image:secure_url" content="http://bgbh.com.br/images/logo_preto.png">
 
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
             <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
@@ -61,7 +61,7 @@ function template_header($title)
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/site">Site</a>
+                        <a class="nav-link" href="/">Site</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/lista">Visualizar lista <span class="sr-only">(current)</span></a>
