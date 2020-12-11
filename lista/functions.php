@@ -39,8 +39,8 @@ function template_header($title)
             <meta property="og:description"
                 content="Lista de Trocas & Vendas do portal BoardgameBH">
             <meta property="og:type" content="website">
-            <meta property="og:image" content="http://bgbh.com.br/images/logo_preto.png">
-            <meta property="og:image:secure_url" content="http://bgbh.com.br/images/logo_preto.png">
+            <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
+            <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.png">
 
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
             <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
@@ -50,7 +50,7 @@ function template_header($title)
         </head>
         <body>
         <nav class="navbar navbar-expand-sm navbar-dark">
-            <a class="navbar-brand" href="/lista">
+            <a class="navbar-brand" style="display:flex; align-items:center" href="/lista">
                 <img src="dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 BoardgameBH
             </a>
@@ -77,10 +77,10 @@ function template_header($title)
         </nav>
         <section class="banner-ads">
             <div class="col-12 d-none d-md-flex justify-content-center">
-                <img class="banner-ads-90" src="dist/assets/images/banner-pequeno.png" alt="banner" />
+                <img class="banner-ads-90" src="dist/assets/images/ads728x90.png" alt="banner" />
             </div>
             <div class="col-12 d-flex d-md-none justify-content-center">
-                <img class="banner-ads-273" src="dist/assets/images/banner-grande.png" alt="banner" />
+                <img class="banner-ads-270" src="dist/assets/images/ads500x270.png" alt="banner" />
             </div>
         </section>
         <main class="container-fluid p-3 py-4">

@@ -28,11 +28,11 @@ $today = strtotime(date("Y-m-d"));
         <h2>LISTA DE TROCAS & VENDAS - BGBH</h2>
     </div>
     <div class="not-responsible">
-        <h6>Nenhuma venda ou troca utilizando a lista de trocas & vendas é de responsabilidade da Boardgame BH</h6>
+        <h6>Nenhuma negociação utilizando a <strong>Lista de Trocas & Vendas</strong> é de responsabilidade do Boardgame BH</h6>
         <p class="regras-planilha">
             <i class="far fa-file-alt"></i>
             Confira as
-            <a href="/lista/regras-utilizacao-lista.html" target="_blank">
+            <a href="/regras-lista.html" target="_blank">
                 regras de utilização
             </a>
             da lista de trocas & vendas

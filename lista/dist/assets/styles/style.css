@@ -15,6 +15,28 @@ body {
     background-attachment: fixed;
 }
 
+.font-800 {
+    font-weight: 800;
+}
+.font-red {
+    color: crimson;
+}
+.font-green {
+    color: #129b12;
+}
+.font-dark-red {
+    color: #880f1d;
+}
+.highlight {
+    font-weight: bold;
+}
+.font-gray {
+    color: #4e515a;
+}
+.minor-text {
+    font-size: 0.85em;
+}
+
 main {
     margin-bottom: 50px;
 }
@@ -46,8 +68,8 @@ main {
 .banner-ads-90 {
     max-height: 90px;
 }
-.banner-ads-273 {
-    max-height: 273px;
+.banner-ads-270 {
+    max-height: 270px;
 }
 
 .sheet-title h2 {

@@ -235,7 +235,7 @@ if (!empty($_POST)) {
             <small>Os campos com * são obrigatórios.</small>
         </div>
         <div class="col-12 not-responsible">
-            <h6>Nenhuma venda ou troca utilizando a <strong>lista de trocas & vendas</strong> é de responsabilidade da Boardgame BH</h6>
+            <h6>Nenhuma negociação utilizando a <strong>Lista de Trocas & Vendas</strong> é de responsabilidade do Boardgame BH</h6>
         </div>
         <div class="col-12 text-center">
             <button type="submit" class="btn btn-success">Adicionar jogo</button>
