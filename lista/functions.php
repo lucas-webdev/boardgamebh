@@ -77,10 +77,14 @@ function template_header($title)
         </nav>
         <section class="banner-ads">
             <div class="col-12 d-none d-md-flex justify-content-center">
-                <img class="banner-ads-90" src="dist/assets/images/ads728x90.png" alt="banner" />
+                <a href="http://www.lucascmedeiros.com.br" target="_blank">
+                    <img class="banner-ads-90" src="dist/assets/images/ads728x90.png" alt="banner" />
+                </a>
             </div>
             <div class="col-12 d-flex d-md-none justify-content-center">
-                <img class="banner-ads-270" src="dist/assets/images/ads500x270.png" alt="banner" />
+                <a href="http://www.lucascmedeiros.com.br" target="_blank">
+                    <img class="banner-ads-270" src="dist/assets/images/ads500x270.png" alt="banner" />
+                </a>
             </div>
         </section>
         <main class="container-fluid p-3 py-4">
