@@ -5,7 +5,7 @@ $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 // Number of records to show on each page
-$records_per_page = 200;
+$records_per_page = 100;
 
 // Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
 $stmt = $pdo->prepare('SELECT * FROM boardgames ORDER BY name LIMIT :current_page, :record_per_page');
@@ -96,11 +96,11 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
         <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $$bg['created_at'] ?> <?= $addedClass ?>">
             <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
             <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
-            <div class="bg-fields text-center" style="flex: 1"><?= $bg['price'] ?></div>
+            <div class="bg-fields text-center" style="flex: 1">R$ <?= $bg['price'] ?></div>
             <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
             <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
                 <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
-                        <b>Preço:</b> <?= $bg['price'] ?> <br>
+                        <b>Preço:</b> R$ <?= $bg['price'] ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
                         <b>Idioma:</b> <?= ucwords($bg['language']) ?> <br>
@@ -116,13 +116,28 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
         </div>
     <?php endforeach; ?>
 </div>
-<div class="pagination">
+<ul class="pagination d-flex justify-content-center align-items-center">
     <?php if ($page > 1) : ?>
-        <a href="read.php?page=<?= $page - 1 ?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
-    <?php endif; ?>
-    <?php if ($page * $records_per_page < $num_boardgames) : ?>
-        <a href="read.php?page=<?= $page + 1 ?>"><i class="fas fa-angle-double-right fa-sm"></i></a>
-    <?php endif; ?>
-</div>
+        <li class='page-item'>
+            <a class="page-link mr-2" href="index.php?page=<?= $page - 1 ?>">
+                <i class="fas fa-angle-double-left fa-sm"></i>
+                Anterior
+            </a>
+        <?php endif; ?>
+        <?php
+        for ($x = 1; $x <= $pages; $x++) {
+            if ($x == $page)
+                echo "<li class='page-item active'><a class='page-link mr-1' href='index.php?page=$x'>$x</a>";
+            else
+                echo "<li class='page-item'><a class='page-link mr-1' href='index.php?page=$x'>$x</a>";
+        };
+        ?>
+        <?php if ($page * $records_per_page < $num_boardgames) : ?>
+        <li class='page-item'><a class="page-link mr-2" href="index.php?page=<?= $page + 1 ?>">
+                Próxima
+                <i class="fas fa-angle-double-right fa-sm"></i>
+            </a>
+        <?php endif; ?>
+</ul>
 
 <?= template_footer() ?>

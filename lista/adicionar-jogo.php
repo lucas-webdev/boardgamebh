@@ -7,7 +7,7 @@ $errors = array();
 if (!empty($_POST)) {
     $name = isset($_POST['name']) ? $_POST['name'] : '';
     $negociation = isset($_POST['negociation']) ? $_POST['negociation'] : '';
-    $price = isset($_POST['price']) && $_POST['price'] != "" ? "R$ " . $_POST['price'] : '-';
+    $price = isset($_POST['price']) && $_POST['price'] != "" ? $_POST['price'] : '-';
     $condition = isset($_POST['condition']) ? $_POST['condition'] : '';
     $edition = isset($_POST['edition']) ? $_POST['edition'] : '';
     $language = isset($_POST['language']) ? $_POST['language'] : '';

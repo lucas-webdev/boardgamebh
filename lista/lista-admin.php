@@ -6,7 +6,7 @@ $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 // Number of records to show on each page
-$records_per_page = 200;
+$records_per_page = 100;
 
 $stmt = $pdo->prepare('SELECT * FROM boardgames ORDER BY name LIMIT :current_page, :record_per_page');
 $stmt->bindValue(':current_page', ($page - 1) * $records_per_page, PDO::PARAM_INT);
@@ -16,6 +16,8 @@ $stmt->execute();
 $boardgames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
 $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn();
+$pages = ceil($num_boardgames / $records_per_page);
+
 
 $today = strtotime(date("Y-m-d"));
 
@@ -95,9 +97,9 @@ $today = strtotime(date("Y-m-d"));
         <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $addedClass ?>">
             <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
             <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
-            <div class="bg-fields text-center" style="flex: 1"><?= $bg['price'] ?></div>
+            <div class="bg-fields text-center" style="flex: 1">R$ <?= $bg['price'] ?></div>
             <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
-            <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
+            <div class="bg-fields d-flex" style="flex: 1" class="d-flex justify-content-center align-items-center">
                 <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> <?= $bg['price'] ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
@@ -117,13 +119,27 @@ $today = strtotime(date("Y-m-d"));
         </div>
     <?php endforeach; ?>
 </div>
-<div class="pagination">
+<ul class="pagination d-flex justify-content-center align-items-center">
     <?php if ($page > 1) : ?>
-        <a href="read.php?page=<?= $page - 1 ?>"><i class="fas fa-angle-double-left fa-sm"></i></a>
-    <?php endif; ?>
-    <?php if ($page * $records_per_page < $num_boardgames) : ?>
-        <a href="read.php?page=<?= $page + 1 ?>"><i class="fas fa-angle-double-right fa-sm"></i></a>
-    <?php endif; ?>
-</div>
+        <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page - 1 ?>">
+                <i class="fas fa-angle-double-left fa-sm"></i>
+                Anterior
+            </a>
+        <?php endif; ?>
+        <?php
+        for ($x = 1; $x <= $pages; $x++) {
+            if ($x == $page)
+                echo "<li class='page-item active'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
+            else
+                echo "<li class='page-item'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
+        };
+        ?>
+        <?php if ($page * $records_per_page < $num_boardgames) : ?>
+        <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page + 1 ?>">
+                Próxima
+                <i class="fas fa-angle-double-right fa-sm"></i>
+            </a>
+        <?php endif; ?>
+</ul>
 
 <?= template_footer() ?>
