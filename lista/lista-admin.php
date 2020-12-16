@@ -7,8 +7,24 @@ $pdo = pdo_connect_mysql();
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 // Number of records to show on each page
 $records_per_page = 100;
-
-$stmt = $pdo->prepare('SELECT * FROM boardgames ORDER BY name LIMIT :current_page, :record_per_page');
+$sql = "SELECT * FROM boardgames ";
+$orderBy = $_GET['sort'];
+switch ($orderBy) {
+    case "name":
+        $sql .= "ORDER BY name ";
+        break;
+    case "price":
+        $sql .= "ORDER BY price ";
+        break;
+    case "condition":
+        $sql .= "ORDER BY condition ";
+        break;
+    default:
+        $sql .= "ORDER BY name ";
+        break;
+}
+$sql .= "LIMIT :current_page, :record_per_page";
+$stmt = $pdo->prepare($sql);
 $stmt->bindValue(':current_page', ($page - 1) * $records_per_page, PDO::PARAM_INT);
 $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
@@ -97,11 +113,11 @@ $today = strtotime(date("Y-m-d"));
         <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $addedClass ?>">
             <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
             <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
-            <div class="bg-fields text-center" style="flex: 1">R$ <?= $bg['price'] ?></div>
+            <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
             <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
-            <div class="bg-fields d-flex" style="flex: 1" class="d-flex justify-content-center align-items-center">
+            <div class="bg-fields d-flex align-items-center" style="flex: 1" class="d-flex justify-content-center align-items-center">
                 <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
-                        <b>Preço:</b> <?= $bg['price'] ?> <br>
+                        <b>Preço:</b> <?= number_format($bg['price'], 2, ",", ".") ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
                         <b>Idioma:</b> <?= ucwords($bg['language']) ?> <br>

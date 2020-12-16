@@ -6,8 +6,16 @@ html {
 
 body {
     font-size: 14px;
-    background: transparent url("http://bgbh.com.br/images/base-site-branco.jpg");
     color: #4e515a;
+}
+body:not(.em-construcao) {
+    background: transparent url("http://bgbh.com.br/images/base-site-branco.jpg");
+}
+body.em-construcao {
+    background: transparent url("/images/textura_preto_icones.png");
+}
+body.em-construcao #titleBar {
+    display: none;
 }
 
 body footer,
@@ -81,6 +89,33 @@ button.icon:before,
 .image img {
     width: auto;
     max-width: 100%;
+}
+
+#em_construcao {
+    width: 100vw;
+    height: calc(100vh - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#em_construcao .logo {
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+#em_construcao img {
+    height: auto;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+#em_construcao h2 {
+    color: white;
+    margin-top: 30px;
+    font-size: 2.5em;
 }
 
 #page-wrapper {
@@ -208,13 +243,27 @@ button.icon:before,
     justify-content: center;
 }
 
+#grupos-whatsapp .article-grupos {
+    position: relative;
+}
+
+#grupos-whatsapp .article-grupos a.imagem-grupos { 
+    text-decoration: none;
+    color: #06afa4;
+}
+
 #grupos-whatsapp header.titulos-grupos {
     margin-bottom: 10px;
 }
 
 #grupos-whatsapp .imagem-grupos {
-    flex: 1
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85em
 }
+
 #grupos-whatsapp .descricao-grupos {
     flex: 2;
 }
