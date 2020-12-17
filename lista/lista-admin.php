@@ -19,6 +19,9 @@ switch ($orderBy) {
     case "condition":
         $sql .= "ORDER BY condition ";
         break;
+    case "date":
+        $sql .= "ORDER BY created_at DESC ";
+        break;
     default:
         $sql .= "ORDER BY name ";
         break;
@@ -92,7 +95,7 @@ $today = strtotime(date("Y-m-d"));
         <div class="headers" style="flex: 1.5">Jogo</div>
         <div class="headers text-center" style="flex: 1.2">Negociação</div>
         <div class="headers text-center" style="flex: 1">Preço</div>
-        <div class="headers text-center d-none d-lg-block" style="flex: 1">Condição</div>
+        <div class="headers text-center d-none d-lg-block" style="flex: 1">Adicionado em</div>
         <div class="headers" style="flex: 1"></div>
     </div>
     <?php foreach ($boardgames as $bg) : ?>
@@ -114,7 +117,7 @@ $today = strtotime(date("Y-m-d"));
             <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
             <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
             <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
-            <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
+            <div class="bg-fields text-center d-none d-lg-block" style="flex: 1"><?= $bg['created_at'] ?></div>
             <div class="bg-fields d-flex align-items-center" style="flex: 1" class="d-flex justify-content-center align-items-center">
                 <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> <?= number_format($bg['price'], 2, ",", ".") ?> <br>
