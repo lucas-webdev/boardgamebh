@@ -106,11 +106,11 @@ try {
         </div>
         <?php foreach ($gamesToRemove as $bg) : ?>
             <?php if ($bg['reason'] == "Troca pelo grupo" || $bg['reason'] != "Venda pelo grupo") : ?>
-            <div class="d-inline-flex justify-content-start align-items-center bg-item">
-                <div style="flex: 4"><b><?= ucwords($bg['name']) ?></b></div>
-                <div style="flex: 4"><?= $bg['owner'] ?></div>
-                <div style="flex: 4"><?= $bg['reason'] ?></div>
-            </div>
+                <div class="d-inline-flex justify-content-start align-items-center bg-item">
+                    <div style="flex: 4"><b><?= ucwords($bg['name']) ?></b></div>
+                    <div style="flex: 4"><?= $bg['owner'] ?></div>
+                    <div style="flex: 4"><?= $bg['reason'] ?></div>
+                </div>
             <?php endif ?>
         <?php endforeach; ?>
     </div>

@@ -34,7 +34,7 @@ function template_header($title)
 
             <meta property="og:title" content="BoardgameBH [BGBH]">
             <meta property="og:site_name" content="BoardgameBH [BGBH]">
-            <meta property="og:url" content="http://www.bgbh.com.br/lista/">
+            <meta property="og:url" content="http://www.bgbh.com.br/jogos-colaboradores/">
             <meta property="og:description"
                 content="Lista de Trocas & Vendas do portal BoardgameBH">
             <meta property="og:type" content="website">
@@ -42,47 +42,16 @@ function template_header($title)
             <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.png">
 
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
-            <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
+            <link href="http://bgbh.com.br/lista/dist/assets/styles/style.css" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
             <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap" rel="stylesheet">
         </head>
         <body>
-        <nav class="navbar navbar-expand-sm navbar-dark">
-            <a class="navbar-brand d-flex align-items-center" href="/lista">
-                <img src="/lista/dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
-                BoardgameBH
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Site</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/lista">Visualizar lista <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/lista/adicionar-jogo.php">Adicionar jogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/lista/remover-jogo.php">Remover jogo</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
         <section class="banner-ads">
-            <div class="col-12 d-none d-md-flex justify-content-center">
-                <a href="http://www.lucascmedeiros.com.br" target="_blank">
-                    <img class="banner-ads-90" src="dist/assets/images/ads728x90.png" alt="banner" />
-                </a>
-            </div>
-            <div class="col-12 d-flex d-md-none justify-content-center">
-                <a href="http://www.lucascmedeiros.com.br" target="_blank">
-                    <img class="banner-ads-270" src="dist/assets/images/ads500x270.png" alt="banner" />
+            <div class="col-12 d-flex justify-content-center">
+                <a href="/" target="_blank">
+                    <img class="banner-ads-270" src="/images/logo_preto.png" alt="banner" />
                 </a>
             </div>
         </section>

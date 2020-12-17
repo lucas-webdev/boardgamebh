@@ -20,9 +20,12 @@ if (isset($_GET['id'])) {
             $stmt->bindValue(1, $_GET['id'], PDO::PARAM_INT);
             $stmt->execute();
             $msg = 'Boardgame removido com sucesso!';
+            sleep(5);
+            header("Location: http://www.bgbh.com.br/lista/lista-admin.php");
+            exit;
         } else {
             // User clicked the "No" button, redirect them back to the read page
-            header('Location: full-table.php');
+            header('Location: lista-admin.php');
             exit;
         }
     }
