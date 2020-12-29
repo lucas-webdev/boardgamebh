@@ -107,15 +107,27 @@ button.icon:before,
 
 #em_construcao img {
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 80%;
     max-width: 600px;
 }
 
 #em_construcao h2 {
     color: white;
-    margin-top: 30px;
-    font-size: 2.5em;
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 500;
+    padding: 15px;
+    text-transform: none;
+}
+
+#em_construcao #counter {
+    color: #e2ff00;
+    font-weight: 800;
+}
+
+#em_construcao h2:last-child {
+    margin-bottom: 30px;
 }
 
 .navbar {
