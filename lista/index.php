@@ -79,7 +79,7 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
         </div>
     </div>
     <div class="num-bg">
-        <h6 style="margin-bottom: 5px">Total de jogos cadastrados: <?= $num_history ?></h6>
+        <h6 style="margin-bottom: 5px">Total de jogos já cadastrados: <?= $num_history ?></h6>
         <h6 style="margin-bottom: 5px">Total de jogos disponíveis no momento: <?= $num_boardgames ?></h6>
     </div>
 </div>

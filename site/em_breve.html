@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PM1S230CVN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PM1S230CVN');
+    </script>
+    <title>BoardgameBH [BGBH]</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <meta property="og:title" content="BoardgameBH [BGBH]">
+    <meta property="og:site_name" content="BoardgameBH [BGBH]">
+    <meta property="og:url" content="http://www.bgbh.com.br/">
+    <meta property="og:description" content="Um portal feito para você que ama boardgame.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
+    <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.jpg">
+
+    <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="em-construcao">
+    <div id="em_construcao">
+        <div class="logo">
+            <img data-aos="zoom-in-down" data-aos-delay="1500" src="images/bgbh-logo.png" alt="logo BGBH" />
+        </div>
+        <h2> Lançamento
+            <span id="counter"> HOJE (04/01)!</span>
+        </h2>
+    </div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        $(function () {
+            $("nav a").click(function () {
+                $(this).href();
+                $("#nav a").parent("li").removeClass("active");
+                $("#nav a").parent("li").removeClass("current_page_item");
+                $(this).parent("li").addClass("active");
+            });
+        })
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDSkax_bQZESW9EJf3lsWcScjVG3W1RglI",
+            authDomain: "site-bgbh.firebaseapp.com",
+            projectId: "site-bgbh",
+            storageBucket: "site-bgbh.appspot.com",
+            messagingSenderId: "55901407241",
+            appId: "1:55901407241:web:31b7dfb0296a5e8b6b50d8",
+            measurementId: "G-SZ4NX75M8X"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</body>

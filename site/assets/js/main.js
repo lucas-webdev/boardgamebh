@@ -63,25 +63,63 @@
 			target: $body,
 			visibleClass: 'navPanel-visible'
 		});
+
+	/* RANDOMIZAR BANNERS */
+	function randomizeBanners() {
+		const bannerCenter = $('#banner-ads-center a');
+		const bannerFooter = $('#banner-ads-footer a');
+		const footerSources = [
+			{
+				img: "images/banners/banner_90games.png",
+				link: "http://90games.com.br/"
+			},
+			{
+				img: "images/banners/banner-tabulovers.png",
+				link: "https://tabulovers.wixsite.com/tabulovers"
+			},
+		];
+
+		const centerSources = [
+			{
+				img: "images/banners/banner_timemachine_500x270.png",
+				link: "https://www.catarse.me/timemachinerocket"
+			}
+		];
+		const centerIndex = 0;
+		const footerIndex = Math.floor(Math.random() * footerSources.length);
+
+		bannerCenter[0].href = centerSources[centerIndex].link;
+		bannerCenter[0].children[0].src = centerSources[centerIndex].img;
+
+		console.log(footerIndex);
+
+		bannerFooter[0].href = footerSources[footerIndex].link;
+		bannerFooter[0].children[0].src = footerSources[footerIndex].img;
+
+	};
+
+	randomizeBanners();
+
+	/* CONTADOR REGRESSIVO */
 	// let timer;
 	// clearInterval(timer);
 
 	// timer = setInterval(function () {
 
-	// 	var _segundo = 1000;
-	// 	var _minuto = _segundo * 60;
-	// 	var _hora = _minuto * 60;
-	// 	var _dia = _hora * 24;
+	// 	const _segundo = 1000;
+	// 	const _minuto = _segundo * 60;
+	// 	const _hora = _minuto * 60;
+	// 	const _dia = _hora * 24;
 
-	// 	var atual = new Date();
-	// 	var fim = new Date("2021-01-04 00:00:00");
+	// 	const atual = new Date();
+	// 	const fim = new Date("2021-01-04 00:00:00");
 
-	// 	var diferenca = fim - atual;
+	// 	const diferenca = fim - atual;
 
-	// 	var dias = Math.floor(diferenca / _dia);
-	// 	var horas = Math.floor((diferenca % _dia) / _hora);
-	// 	var minutos = Math.floor((diferenca % _hora) / _minuto);
-	// 	var segundos = Math.floor((diferenca % _minuto) / _segundo);
+	// 	const dias = Math.floor(diferenca / _dia);
+	// 	const horas = Math.floor((diferenca % _dia) / _hora);
+	// 	const minutos = Math.floor((diferenca % _hora) / _minuto);
+	// 	const segundos = Math.floor((diferenca % _minuto) / _segundo);
 
 	// 	document.getElementById('counter').innerHTML = dias + ' dias, ';
 	// 	document.getElementById('counter').innerHTML += horas + 'h ';
@@ -90,14 +128,5 @@
 
 	// }, 1000);
 
-
-	// function daysDifference($startDate, $endDate) {
-	// 	oneDay = 24 * 60 * 60 * 1000;
-	// 	return Math.ceil(($endDate.getTime() - $startDate.getTime()) / oneDay);
-	// }
-
-	// const endDate = new Date("2021-01-04");
-	// const today = new Date();
-	// document.getElementById("contador").innerHTML = 'Faltam ' + daysDifference(today, endDate) + ' dias para o lançamento!';
 
 })(jQuery);

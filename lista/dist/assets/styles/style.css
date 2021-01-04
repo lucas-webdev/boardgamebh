@@ -60,6 +60,11 @@ main {
     height: 100%;
 }
 
+.banner-ads a {
+    width: 100%;
+    text-align: center;
+}
+
 .banner-ads img {
     height: 100%;
     width: auto;

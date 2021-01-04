@@ -76,13 +76,13 @@ function template_header($title)
         </nav>
         <section class="banner-ads">
             <div class="col-12 d-none d-md-flex justify-content-center">
-                <a href="http://www.lucascmedeiros.com.br" target="_blank">
-                    <img class="banner-ads-90" src="dist/assets/images/ads728x90.png" alt="banner" />
+                <a href="https://www.catarse.me/timemachinerocket" target="_blank">
+                    <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/banner_timemachine_728x90.png" alt="banner" />
                 </a>
             </div>
-            <div class="col-12 d-flex d-md-none justify-content-center">
-                <a href="http://www.lucascmedeiros.com.br" target="_blank">
-                    <img class="banner-ads-270" src="dist/assets/images/ads500x270.png" alt="banner" />
+            <div class="col-12 d-flex d-md-none justify-content-center" id="banner-ads-mobile">
+                <a href="" target="_blank">
+                    <img class="banner-ads-270" src="" alt="banner" />
                 </a>
             </div>
         </section>
@@ -109,7 +109,35 @@ function template_footer()
     $('.celular').mask('(00) 0 0000-0000');
     $('.dinheiro').mask('#.##0,00', {reverse: true});
     $('.data').mask('00/00/0000');
+
+    function randomizeBanners() {
+        const bannerAds = $('#banner-ads-mobile a');
+        const sources = [
+            {
+                img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner_timemachine_500x270.png" alt="Time Machine Rocket" />',
+                link: 'https://www.catarse.me/timemachinerocket'
+            },
+            {
+                img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner_90games.png" alt="Loja 90 Games" />',
+                link: 'http://90games.com.br/'
+            },
+            {
+                img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner-tabulovers.png" alt="Tabulovers" />',
+                link: 'https://tabulovers.wixsite.com/tabulovers'
+            },
+        ];
+
+        const index = Math.floor(Math.random() * sources.length);
+
+        bannerAds[0].href = sources[index].link;
+        bannerAds[0].innerHTML = sources[index].img;
+
+    };
+
+    randomizeBanners();
+
     </script>
+    
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
 

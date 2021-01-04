@@ -26,7 +26,7 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
         </div>
     </div>
     <div class="col-12">
-        <h6 style="margin-bottom: 8px">Total de jogos cadastrados: <?= $num_boardgames ?></h6>
+        <h6 style="margin-bottom: 8px">Total de jogos já cadastrados: <?= $num_boardgames ?></h6>
     </div>
     <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
         <div class="bg-table-header d-inline-flex justify-content-start align-items-center">

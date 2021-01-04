@@ -241,6 +241,11 @@ button.icon:before,
 .titulo-lista {
     text-align: left;
     line-height: normal;
+    padding-top: 0;
+}
+
+.titulo-lista small {
+    padding-left: 40px;
 }
 
 .titulo-lista h2 {
@@ -257,6 +262,7 @@ button.icon:before,
     font-weight: 600;
 }
 
+.titulo-lista i,
 #desafios-e-torneios i,
 #grupos-whatsapp i {
     color: #a7a7a7;
