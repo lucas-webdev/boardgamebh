@@ -238,6 +238,15 @@ button.icon:before,
     font-weight: 700;
 }
 
+.titulo-lista {
+    text-align: left;
+    line-height: normal;
+}
+
+.titulo-lista h2 {
+    margin-bottom: 5px;
+}
+
 .regras-planilha {
     font-size: 1.1em;
     letter-spacing: 0.1em;
@@ -368,7 +377,7 @@ p.font-red.restricoes-grupos {
     .banner-pequeno img {
         max-width: 90%;
     }
-    .banners-grandes .container img:last-child {
+    .banners-grandes .container a:last-child {
         display: none;
     }
 }

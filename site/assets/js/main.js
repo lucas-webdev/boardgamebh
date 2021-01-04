@@ -63,32 +63,32 @@
 			target: $body,
 			visibleClass: 'navPanel-visible'
 		});
-	let timer;
-	clearInterval(timer);
+	// let timer;
+	// clearInterval(timer);
 
-	timer = setInterval(function () {
+	// timer = setInterval(function () {
 
-		var _segundo = 1000;
-		var _minuto = _segundo * 60;
-		var _hora = _minuto * 60;
-		var _dia = _hora * 24;
+	// 	var _segundo = 1000;
+	// 	var _minuto = _segundo * 60;
+	// 	var _hora = _minuto * 60;
+	// 	var _dia = _hora * 24;
 
-		var atual = new Date();
-		var fim = new Date("2021-01-04 00:00:00");
+	// 	var atual = new Date();
+	// 	var fim = new Date("2021-01-04 00:00:00");
 
-		var diferenca = fim - atual;
+	// 	var diferenca = fim - atual;
 
-		var dias = Math.floor(diferenca / _dia);
-		var horas = Math.floor((diferenca % _dia) / _hora);
-		var minutos = Math.floor((diferenca % _hora) / _minuto);
-		var segundos = Math.floor((diferenca % _minuto) / _segundo);
+	// 	var dias = Math.floor(diferenca / _dia);
+	// 	var horas = Math.floor((diferenca % _dia) / _hora);
+	// 	var minutos = Math.floor((diferenca % _hora) / _minuto);
+	// 	var segundos = Math.floor((diferenca % _minuto) / _segundo);
 
-		document.getElementById('counter').innerHTML = dias + ' dias, ';
-		document.getElementById('counter').innerHTML += horas + 'h ';
-		document.getElementById('counter').innerHTML += minutos + 'min ';
-		document.getElementById('counter').innerHTML += segundos + 'seg';
+	// 	document.getElementById('counter').innerHTML = dias + ' dias, ';
+	// 	document.getElementById('counter').innerHTML += horas + 'h ';
+	// 	document.getElementById('counter').innerHTML += minutos + 'min ';
+	// 	document.getElementById('counter').innerHTML += segundos + 'seg';
 
-	}, 1000);
+	// }, 1000);
 
 
 	// function daysDifference($startDate, $endDate) {
