@@ -64,38 +64,62 @@
 			visibleClass: 'navPanel-visible'
 		});
 
+
+	const footerSources = [
+		{
+			img: "<img class='banner-ads-270' src='images/banners/banner_90games.png' alt='Loja 90 Games' />",
+			link: "http://90games.com.br/"
+		},
+		{
+			img: "<img class='banner-ads-270' src='images/banners/banner-tabulovers.png' alt='Tabulovers' />",
+			link: "https://www.instagram.com/tabulovers/"
+		},
+		{
+			img: "<img class='banner-ads-270' src='images/banners/banner_kardnarok_500x270.png' alt='Kardnarok' />",
+			link: "https://www.catarse.me/kardnarok"
+		},
+	];
+	const centerSources = [
+		{
+			img: "<img src='images/banners/banner_timemachine_500x270.png' alt='Time Machine Rocket' />",
+			link: "https://www.catarse.me/timemachinerocket"
+		}
+	];
+
+	function randomizeBannerFooterDuplo() {
+		const bannerFooterDuplo = $('#banner-ads-footer-duplo a');
+		const nums = new Set();
+
+		while (nums.size !== 2) {
+			nums.add(Math.floor(Math.random() * footerSources.length));
+		}
+
+		const firstBanner = footerSources[[...nums][0]];
+		const secondBanner = footerSources[[...nums][1]];
+
+		bannerFooterDuplo[0].href = firstBanner.link;
+		bannerFooterDuplo[0].innerHTML = firstBanner.img;
+
+		bannerFooterDuplo[1].href = secondBanner.link;
+		bannerFooterDuplo[1].innerHTML = secondBanner.img;
+	}
+
+	function randomizeBannerUnico(selector, sources) {
+		const bannerElement = $(selector);
+		const index = Math.floor(Math.random() * sources.length);
+
+		bannerElement[0].href = sources[index].link;
+		bannerElement[0].innerHTML = sources[index].img;
+	}
+
 	/* RANDOMIZAR BANNERS */
 	function randomizeBanners() {
-		const bannerCenter = $('#banner-ads-center a');
-		const bannerFooter = $('#banner-ads-footer a');
-		const footerSources = [
-			{
-				img: "images/banners/banner_90games.png",
-				link: "http://90games.com.br/"
-			},
-			{
-				img: "images/banners/banner-tabulovers.png",
-				link: "https://tabulovers.wixsite.com/tabulovers"
-			},
-		];
-
-		const centerSources = [
-			{
-				img: "images/banners/banner_timemachine_500x270.png",
-				link: "https://www.catarse.me/timemachinerocket"
-			}
-		];
-		const centerIndex = 0;
-		const footerIndex = Math.floor(Math.random() * footerSources.length);
-
-		bannerCenter[0].href = centerSources[centerIndex].link;
-		bannerCenter[0].children[0].src = centerSources[centerIndex].img;
-
-		console.log(footerIndex);
-
-		bannerFooter[0].href = footerSources[footerIndex].link;
-		bannerFooter[0].children[0].src = footerSources[footerIndex].img;
-
+		// banner central, unico
+		randomizeBannerUnico("#banner-ads-center a", centerSources);
+		// banner footer, unico
+		randomizeBannerUnico("#banner-ads-footer a", footerSources);
+		// banners footer, duplo
+		randomizeBannerFooterDuplo();
 	};
 
 	randomizeBanners();

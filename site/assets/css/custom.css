@@ -383,19 +383,19 @@ p.font-red.restricoes-grupos {
     .banner-pequeno img {
         max-width: 90%;
     }
-    .banners-grandes .container a:last-child {
-        display: none;
-    }
 }
 
-/* só celular e tablet */
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 980px) {
     .visible-sm {
         display: block;
     }
     .hidden-sm {
         display: none;
     }
+}
+
+/* só celular e tablet */
+@media screen and (max-width: 736px) {
     #page-wrapper .feature1 header h2 {
         font-size: 1.3em;
     }
