@@ -115,7 +115,7 @@ if (!$bg) {
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">R$</span>
                     </div>
-                    <input type="text" name="price" class="form-control dinheiro" aria-describedby="priceHelp" value="<?= $bg['price'] ?>">
+                    <input type="text" name="price" class="form-control dinheiro" aria-describedby="priceHelp" value="<?= $bg['price'] * 100 ?>">
                 </div>
                 <small id="priceHelp" class="form-text text-muted">Obrigatório para venda.</small>
             </div>

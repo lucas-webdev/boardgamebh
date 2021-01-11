@@ -37,6 +37,10 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
 $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn();
 $pages = ceil($num_boardgames / $records_per_page);
 
+$stmt3 = $pdo->prepare('SELECT * FROM gamesToRemove ORDER BY id');
+$stmt3->execute();
+$removedGames = $stmt3->fetchAll(PDO::FETCH_ASSOC);
+
 
 $today = strtotime(date("Y-m-d"));
 
@@ -161,4 +165,25 @@ $today = strtotime(date("Y-m-d"));
         <?php endif; ?>
 </ul>
 
+<div class="games-to-remove" style="margin-top: 45px">
+    <h5> Jogos a serem removidos </h5>
+    <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
+        <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
+            <div style="flex: 4">JOGO</div>
+            <div style="flex: 3">RESPONSÁVEL</div>
+            <div style="flex: 4">MOTIVO</div>
+            <div style="flex: 1">AÇÕES</div>
+        </div>
+        <?php foreach ($removedGames as $bg) : ?>
+            <div class="d-inline-flex justify-content-start align-items-center bg-item">
+                <div style="flex: 4"><b><?= ucwords($bg['name']) ?></b></div>
+                <div style="flex: 3"><?= $bg['owner'] ?></div>
+                <div style="flex: 4"><?= $bg['reason'] ?></div>
+                <div style="flex: 1">
+                    <a href="delete_removed.php?id=<?= $bg['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
 <?= template_footer() ?>

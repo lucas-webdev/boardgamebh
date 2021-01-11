@@ -226,7 +226,7 @@ if (!empty($_POST)) {
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="agreement" name="agreement" class="form-control">
                 <label class="form-check-label terms" for="agreement">
-                    Estou ciente que os jogos devem ser retirados/entregues em
+                    Estou de acordo com as <a href="http://www.bgbh.com.br/regras-lista.html">regras de utilização</a> e ciente que os jogos devem ser retirados/entregues em
                     <b>BELO HORIZONTE</b>
                 </label>
             </div>
