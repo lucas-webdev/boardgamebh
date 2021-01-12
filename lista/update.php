@@ -102,9 +102,9 @@ if (!$bg) {
             <div class="form-group">
                 <label>Negociação:</label>
                 <select class="form-control" name="negociation">
-                    <option value="Troca e Venda" selected="<?= $bg['negociation'] === "Troca e Venda" ?>">Troca e venda</option>
-                    <option value="Troca" selected="<?= $bg['negociation'] === "Troca" ?>">Troca</option>
-                    <option value="Venda" selected="<?= $bg['negociation'] === "Venda" ?>">Venda</option>
+                    <option value="Troca e Venda" <?= $bg['negociation'] === "Troca e Venda" ? "selected" : "" ?>>Troca e venda</option>
+                    <option value="Troca" <?= $bg['negociation'] === "Troca" ? "selected" : "" ?>>Troca</option>
+                    <option value="Venda" <?= $bg['negociation'] === "Venda" ? "selected" : "" ?>>Venda</option>
                 </select>
             </div>
         </div>
