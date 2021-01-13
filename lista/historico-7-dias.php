@@ -14,9 +14,7 @@ $stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
 // Fetch the records so we can display them in our template.
 $boardgames = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
-$num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn();
-$pages = ceil($num_boardgames / $records_per_page);
+$pages = ceil(count($boardgames) / $records_per_page);
 
 
 $today = strtotime(date("Y-m-d"));
@@ -25,6 +23,7 @@ $today = strtotime(date("Y-m-d"));
 ?>
 
 <?= template_header('Admin') ?>
+<h6>Total de jogos: <?= count($boardgames) ?></h6>
 <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
     <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
         <div class="headers" style="flex: 1.5">Jogo</div>
@@ -57,7 +56,7 @@ $today = strtotime(date("Y-m-d"));
                 echo "<li class='page-item'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
         };
         ?>
-        <?php if ($page * $records_per_page < $num_boardgames) : ?>
+        <?php if ($page * $records_per_page < count($boardgames)) : ?>
         <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page + 1 ?>">
                 Próxima
                 <i class="fas fa-angle-double-right fa-sm"></i>

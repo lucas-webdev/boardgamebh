@@ -20,14 +20,27 @@ function template_header($title)
     <html>
         <head>
             <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJZZ67VE3C"></script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187241035-1"></script>
             <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             
-            gtag('config', 'G-SJZZ67VE3C');
+            gtag('config', 'UA-187241035-1');
             </script>
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K2MBCJ50J"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1K2MBCJ50J');
+            </script>
+
+            <script data-ad-client="ca-pub-3851012828743137" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    
             <title>$title</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
