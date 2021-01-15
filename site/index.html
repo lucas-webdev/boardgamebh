@@ -21,6 +21,15 @@
         gtag('config', 'G-1K2MBCJ50J');
     </script>
 
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', 'UA-187241035-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
     <script data-ad-client="ca-pub-3851012828743137" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -173,13 +182,13 @@
                     <!-- Feature 2 -->
                     <section class="container box feature2 banner-area banner-unico">
                         <div class="d-flex align-center justify-center banner-pequeno">
-                            <a href="https://www.catarse.me/timemachinerocket" target="_blank">
+                            <a href="https://www.catarse.me/timemachinerocket" target="_blank"
+                                onclick="ga('send', 'event', 'Time Machine Rocket Banner', 'click-banner-unico');">
                                 <img class="banner-ads-90" src="images/banners/banner_timemachine_728x90.png"
                                     alt="banner Time Machine Rocket" />
                             </a>
                         </div>
                     </section>
-
 
                 </div>
             </div>
@@ -187,11 +196,13 @@
                 <div class="inner">
                     <!-- Feature 2 -->
                     <section class="container box feature2 d-flex align-center" id="banner-ads-center">
-                        <a href="https://www.catarse.me/timemachinerocket" target="_blank">
+                        <a href="https://www.catarse.me/timemachinerocket" target="_blank"
+                            onclick="ga('send', 'event', 'Banner', 'click-banner-duplo', 1);">
                             <img class="banner-ads-270" src="images/banners/banner_timemachine_500x270.png"
                                 alt="banner" />
                         </a>
-                        <a class="hidden-sm" href="https://tabulovers.wixsite.com/tabulovers" target="_blank">
+                        <a class="hidden-sm" href="https://tabulovers.wixsite.com/tabulovers" target="_blank"
+                            onclick="ga('send', 'event', 'Banner', 'click-banner-duplo', 2);">
                             <img class="banner-ads-270" src="images/banners/banner-tabulovers.png" alt="banner" />
                         </a>
                     </section>
@@ -351,7 +362,7 @@
             <div class="inner">
                 <!-- Feature 2 -->
                 <section class="container box feature2" id="banner-ads-footer">
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" onclick="ga('send', 'event', 'Banner Footer', 'click-banner-unico');">
                     </a>
                 </section>
             </div>
@@ -360,10 +371,12 @@
             <div class="inner">
                 <!-- Feature 2 -->
                 <section class="container box feature2" id="banner-ads-footer-duplo">
-                    <a href="https://tabulovers.wixsite.com/tabulovers" target="_blank">
+                    <a href="https://tabulovers.wixsite.com/tabulovers" target="_blank"
+                        onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 1);">
                         <img class="banner-ads-270" src="images/banners/banner-tabulovers.png" alt="banner" />
                     </a>
-                    <a href="http://90games.com.br/" target="_blank">
+                    <a href="http://90games.com.br/" target="_blank"
+                        onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 2);">
                         <img class="banner-ads-270" src="images/banners/banner_90games.png" alt="banner" />
                     </a>
                 </section>
@@ -440,17 +453,21 @@
                                     </div>
                                     <p>
                                         <label> Nome<br />
-                                            <span class="wpcf7-form-control-wrap your-name"><input type="text"
-                                                    name="your-name" value="" size="40"
+                                            <span class="wpcf7-form-control-wrap your-name">
+                                                <input type="text" name="your-name" value="" size="40"
                                                     class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                    aria-required="true" aria-invalid="false" /></span> </label>
+                                                    aria-required="true" aria-invalid="false" />
+                                            </span>
+                                        </label>
                                     </p>
                                     <p>
                                         <label> Email<br />
-                                            <span class="wpcf7-form-control-wrap your-email"><input type="email"
-                                                    name="your-email" value="" size="40"
+                                            <span class="wpcf7-form-control-wrap your-email">
+                                                <input type="email" name="your-email" value="" size="40"
                                                     class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                                    aria-required="true" aria-invalid="false" /></span> </label>
+                                                    aria-required="true" aria-invalid="false" />
+                                            </span>
+                                        </label>
                                     </p>
                                     <p>
                                         <label> Assunto (opcional)<br />

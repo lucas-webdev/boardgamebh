@@ -123,6 +123,7 @@
 	};
 
 	randomizeBanners();
+	ga('send', 'event', 'Home', 'view');
 
 	/* CONTADOR REGRESSIVO */
 	// let timer;

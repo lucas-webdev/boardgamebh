@@ -29,15 +29,13 @@ $boardgames = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="text-center" style="flex: 3">Preço da venda</div>
         </div>
         <?php foreach ($boardgames as $bg) : ?>
-            <?php if ($bg['reason'] == "Troca pelo grupo" || $bg['reason'] == "Venda pelo grupo") : ?>
-                <div class="d-inline-flex justify-content-start align-items-center bg-item">
-                    <div class="text-center" style="flex: 3"><b><?= ucwords($bg['name']) ?></b></div>
-                    <div class="text-center" style="flex: 3"><?= $bg['owner'] ?></div>
-                    <div class="text-center d-none d-lg-block" style="flex: 3"><?= $bg['reason'] ?></div>
-                    <div class="text-center" style="flex: 3"><?= $bg['condition'] ?></div>
-                    <div class="text-center" style="flex: 3"><?= $bg['value'] ?></div>
-                </div>
-            <?php endif ?>
+            <div class="d-inline-flex justify-content-start align-items-center bg-item">
+                <div class="text-center" style="flex: 3"><b><?= ucwords($bg['name']) ?></b></div>
+                <div class="text-center" style="flex: 3"><?= $bg['owner'] ?></div>
+                <div class="text-center d-none d-lg-block" style="flex: 3"><?= $bg['reason'] ?></div>
+                <div class="text-center" style="flex: 3"><?= $bg['condition'] ?></div>
+                <div class="text-center" style="flex: 3"><?= $bg['value'] ?></div>
+            </div>
         <?php endforeach; ?>
     </div>
 </div>

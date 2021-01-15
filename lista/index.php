@@ -34,6 +34,7 @@ $boardgames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Get the total number of boardgames, this is so we can determine whether there should be a next and previous button
 $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
 $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn();
+$pages = ceil($num_boardgames / $records_per_page);
 ?>
 
 <?= template_header('Lista de jogos') ?>
@@ -135,8 +136,7 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
 </div>
 <ul class="pagination d-flex justify-content-center align-items-center">
     <?php if ($page > 1) : ?>
-        <li class='page-item'>
-            <a class="page-link mr-2" href="index.php?page=<?= $page - 1 ?>">
+        <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page - 1 ?>">
                 <i class="fas fa-angle-double-left fa-sm"></i>
                 Anterior
             </a>
@@ -144,13 +144,13 @@ $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn()
         <?php
         for ($x = 1; $x <= $pages; $x++) {
             if ($x == $page)
-                echo "<li class='page-item active'><a class='page-link mr-1' href='index.php?page=$x'>$x</a>";
+                echo "<li class='page-item active'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
             else
-                echo "<li class='page-item'><a class='page-link mr-1' href='index.php?page=$x'>$x</a>";
+                echo "<li class='page-item'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
         };
         ?>
         <?php if ($page * $records_per_page < $num_boardgames) : ?>
-        <li class='page-item'><a class="page-link mr-2" href="index.php?page=<?= $page + 1 ?>">
+        <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page + 1 ?>">
                 Próxima
                 <i class="fas fa-angle-double-right fa-sm"></i>
             </a>

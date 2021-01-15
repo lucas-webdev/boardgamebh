@@ -22,7 +22,7 @@ if (!empty($_POST)) {
 
             // Inserir na tabela a ser removido
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $pdo->prepare('INSERT INTO `gamesToRemove` (`name`,`owner`,`reason`, `value`, `condition`, `visible`) VALUES (?, ?, ?)');
+            $stmt = $pdo->prepare('INSERT INTO `gamesToRemove` (`name`,`owner`,`reason`, `value`, `condition`, `visible`, `agreement`) VALUES (?, ?, ?, ?, ?, ?, ?)');
 
             $stmt->bindValue(1, $name, PDO::PARAM_STR);
             $stmt->bindValue(2, $owner, PDO::PARAM_STR);
@@ -35,7 +35,7 @@ if (!empty($_POST)) {
             $stmt->execute();
 
             // Inserir na tabela de historico de negociações
-            $stmtRemoved = $pdo->prepare('INSERT INTO `removedGames` (`name`,`owner`,`reason`, `value`, `condition`, `visible`) VALUES (?, ?, ?)');
+            $stmtRemoved = $pdo->prepare('INSERT INTO `removedGames` (`name`,`owner`,`reason`, `value`, `condition`, `visible`) VALUES (?, ?, ?, ?, ?, ?)');
 
             $visible = $reason == "Troca pelo grupo" || $reason == "Venda pelo grupo";
             $stmtRemoved->bindValue(1, $name, PDO::PARAM_STR);
@@ -43,7 +43,7 @@ if (!empty($_POST)) {
             $stmtRemoved->bindValue(3, $reason, PDO::PARAM_STR);
             $stmtRemoved->bindValue(4, $value, PDO::PARAM_STR);
             $stmtRemoved->bindValue(5, $condition, PDO::PARAM_STR);
-            $stmtRemoved->bindValue(5, $visible, PDO::PARAM_BOOL);
+            $stmtRemoved->bindValue(6, $visible, PDO::PARAM_BOOL);
 
             $stmtRemoved->execute();
 
@@ -51,6 +51,7 @@ if (!empty($_POST)) {
             echo '<script>history.pushState({}, "", "")</script>';
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
+            $errorMesg = "Ocorreu um erro com a solicitação. Tente novamente ou entre em contato com a equipe BGBH." . $e->getMessage();
         }
         // Output message
     }
@@ -130,7 +131,9 @@ try {
             <small>Os campos com * são obrigatórios. Os demais são opcionais.</small>
         </div>
         <?php if ($msg) : ?>
-            <div class="alert alert-success" role="alert"><?= $msg ?></div>
+            <div class="col-12 text-center">
+                <div class="alert alert-success" role="alert"><?= $msg ?></div>
+            </div>
         <?php endif; ?>
         <div class="col-12 text-center">
             <button type="submit" class="btn btn-danger">Solicitar remoção</button>
@@ -186,6 +189,10 @@ try {
 </div>
 
 <div class="alert alert-danger" style="display: none;" role="alert"></div>
+<?php if ($errorMesg) {
+    echo '<div class="alert alert-danger" style="display: none;" role="alert">' . $errorMesg . '</div>';
+}
+?>
 <script>
     function validateForm() {
         const bg = $('input[name="name"]').val();
