@@ -324,3 +324,42 @@ a.btn {
         min-width: 75px;
     }
 }
+
+/* STYLE TORNEIOS */
+.text-green {
+    color: #0b655e;
+}
+.text-light-green {
+    color: #029e92;
+}
+
+.text-red {
+    color: #cc0000;
+}
+
+.text-pure-red {
+    color: red;
+}
+
+.text-pure-green {
+    color: green;
+}
+
+.icon-color {
+    color: #a7a7a7;
+}
+
+.torneios-rodape .logos-realizacao img {
+    width: 100px;
+    height: auto;
+}
+
+.torneios-rodape .logos-patrocinio img {
+    width: 180px;
+    height: auto;
+}
+
+.torneios-rodape .logos-apoio img {
+    width: 90px;
+    height: auto;
+}
