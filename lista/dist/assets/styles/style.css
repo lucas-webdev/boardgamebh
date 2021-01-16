@@ -363,3 +363,15 @@ a.btn {
     width: 90px;
     height: auto;
 }
+
+@media screen and (max-width: 400px) {
+    .torneios-rodape .logos-realizacao img {
+        width: 70px;
+    }
+    .torneios-rodape .logos-patrocinio img {
+        width: 140px;
+    }
+    .torneios-rodape .logos-apoio img {
+        width: 60px;
+    }
+}
