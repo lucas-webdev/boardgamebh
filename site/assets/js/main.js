@@ -74,10 +74,6 @@
 			img: "<img class='banner-ads-270' src='images/banners/banner-tabulovers.png' alt='Tabulovers' />",
 			link: "https://www.instagram.com/tabulovers/"
 		},
-		{
-			img: "<img class='banner-ads-270' src='images/banners/banner_kardnarok_500x270.png' alt='Kardnarok' />",
-			link: "https://www.catarse.me/kardnarok"
-		},
 	];
 	const centerSources = [
 		{
