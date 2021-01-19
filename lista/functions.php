@@ -88,9 +88,12 @@ function template_header($title)
             </div>
         </nav>
         <section class="banner-ads">
+        
             <div class="col-12 d-none d-md-flex justify-content-center">
-                <a href="https://www.catarse.me/timemachinerocket" target="_blank">
-                    <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/banner_timemachine_728x90.png" alt="banner" />
+                <a href="http://www.bgbh.com.br/torneios.html" target="_blank"
+                    onclick="ga('send', 'event', 'Torneio Carcassonne', 'click-banner-unico');">
+                    <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/carcassonne-728x90.png"
+                        alt="banner torneio carcassonne" />
                 </a>
             </div>
             <div class="col-12 d-flex d-md-none justify-content-center" id="banner-ads-mobile">
@@ -127,8 +130,8 @@ function template_footer()
         const bannerAds = $('#banner-ads-mobile a');
         const sources = [
             {
-                img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner_timemachine_500x270.png" alt="Time Machine Rocket" />',
-                link: 'https://www.catarse.me/timemachinerocket'
+                img: "<img src='images/banners/carcassonne-728x90.png' alt='Torneio Carcassonne' />",
+                link: "http://www.bgbh.com.br/torneios.html"
             },
             {
                 img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner_90games.png" alt="Loja 90 Games" />',

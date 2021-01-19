@@ -77,8 +77,8 @@
 	];
 	const centerSources = [
 		{
-			img: "<img src='images/banners/banner_timemachine_500x270.png' alt='Time Machine Rocket' />",
-			link: "https://www.catarse.me/timemachinerocket"
+			img: "<img src='images/banners/carcassonne-728x90.png' alt='Torneio Carcassonne' />",
+			link: "http://www.bgbh.com.br/torneios.html"
 		}
 	];
 

@@ -3,8 +3,8 @@ $(function () {
         const bannerAds = $('#banner-ads-mobile a');
         const sources = [
             {
-                img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner_timemachine_500x270.png" alt="Time Machine Rocket" />',
-                link: 'https://www.catarse.me/timemachinerocket'
+                img: "<img src='images/banners/carcassonne-728x90.png' alt='Torneio Carcassonne' />",
+                link: "http://www.bgbh.com.br/torneios.html"
             },
             {
                 img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner_90games.png" alt="Loja 90 Games" />',
