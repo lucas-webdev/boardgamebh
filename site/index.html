@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187241035-1"></script>
     <script>
@@ -39,12 +40,11 @@
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
 
-    <script data-ad-client="ca-pub-3851012828743137" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- <script data-ad-client="ca-pub-3851012828743137" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoardgameBH [BGBH]</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <meta property="og:title" content="BoardgameBH [BGBH]">
     <meta property="og:site_name" content="BoardgameBH [BGBH]">
@@ -54,489 +54,478 @@
     <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
     <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.jpg">
 
-    <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
-<body class="homepage is-preload">
+<body data-bs-spy="scroll" data-bs-target="#main_navbar" data-bs-offset="0" tabindex="0">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB466ZC" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="page-wrapper">
-
-        <!-- Header -->
-        <div id="header-wrapper">
-            <div class="container">
-
-                <!-- Header -->
-                <header id="header">
-                    <div class="inner">
-
-                        <!-- Logo -->
-                        <h1><a href="index.html" id="logo">BoardgameBH</a></h1>
-
-                        <!-- Nav -->
-                        <nav id="nav">
-                            <ul>
-                                <li class="active"><a href="#">Início</a></li>
-                                <li><a href="#planilha">Lista de troca & venda</a></li>
-                                <li><a href="#desafios-e-torneios">Desafios e torneios</a>
-                                </li>
-                                <li><a href="#grupos-whatsapp">Grupos de whatsapp</a></li>
-                                <li><a href="#contato">Contato</a></li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                </header>
-
-                <!-- Logo -->
-                <div id="banner">
-                    <a href="/" target="_blank">
-                        <img class="w3-animate-zoom" src="images/bgbh-logo.png" alt="logo BGBH" />
-                    </a>
+    <!-- Image and text -->
+    <div class="site-wrapper">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand font-800" href="#">
+                    <img src="images/bgbh-logo.png" alt="logo BGBH" width="30" height="24"
+                        class="d-inline-block align-top">
+                    BoardgameBH
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_navbar"
+                    aria-controls="main_navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main_navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#mainCarousel"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'inicio');">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#desafios_e_torneios_anchor"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'torneios');">Desafios e torneios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lista_trocas_e_vendas_anchor"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'lista');">Lista de troca & venda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#grupos_anchor"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'grupos');">Nossos grupos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'contato');">Contato</a>
+                        </li>
+                    </ul>
                 </div>
-
+            </div>
+        </nav>
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/bgbh-topo-site.jpg" class="d-block w-100 main-background" alt="BGBH">
+                    <div class="carousel-caption">
+                        <img class="main-logo" src="images/bgbh-logo.png" alt="logo BGBH" />
+                        <!-- <h5 class="font-800">BoardgameBH</h5> -->
+                        <p>O seu portal de jogos de tabuleiro</p>
+                    </div>
+                </div>
+                <!-- <a class="carousel-control-prev" href="#mainCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#mainCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a> -->
             </div>
         </div>
-
-        <!-- Main Wrapper -->
-        <div id=" main-wrapper">
-            <div class="wrapper style1" id="planilha">
-                <div class="inner">
-
-                    <!-- Feature 1 -->
-                    <section class="container box feature1">
-                        <div class="row">
-                            <div class="col-12">
-                                <header class="first major">
-                                    <h2>Nosso portal ainda está em construção</h2>
-                                    <p>
-                                        Mas você já pode aproveitar nossa lista de <strong>trocas & vendas</strong>
-                                        (exclusiva BH),
-                                        <br class="hidden-sm" /> nossos <strong>desafios e torneios</strong> e também
-                                        conhecer nossos
-                                        <strong>grupos de whatsapp</strong>
+        <div class="site-content container">
+            <div class="mt-5 d-flex align-items-center flex-column main-header">
+                <h4 class="font-800 mb-2 text-center">NOSSO PORTAL AINDA ESTÁ EM CONSTRUÇÃO</h4>
+                <h6 class="mb-4 px-2 text-center">
+                    MAS VOCÊ JÁ PODE APROVEITAR NOSSA <span class="font-800">LISTA DE TROCAS & VENDAS</span> (EXCLUSIVA
+                    BH),
+                    <br class="hidden-sm" /> NOSSOS <span class="font-800">DESAFIOS E TORNEIOS</span> E
+                    TAMBÉM CONHECER NOSSOS <span class="font-800">GRUPOS DE WHATSAPP</span>
+                </h6>
+                <hr />
+                <hr />
+            </div>
+            <div id="desafios_e_torneios_anchor"></div>
+            <div class="pt-5" id="desafios_e_torneios" data-aos-duration="15000" data-aos="fade-down-right">
+                <i class="bi bi-puzzle-fill custom-color--a7 fs-3"></i>
+                <h4 class="font-800 d-inline-block">
+                    DESAFIOS E TORNEIOS
+                </h4>
+                <div class="mt-4">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <a href="/torneios.html" target="_blank"
+                                    onclick="ga('send', 'event', 'Ver regras torneio', 'click-imagem');">
+                                    <img src=" images/torneios/torneio-carcassonne.png" class="card-img-top"
+                                        alt="Torneio Carcassonne">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-body">
+                                    <p class="font-800">TORNEIO ONLINE DE CARCASSONNE</p>
+                                    <p class="card-text">Cavaleiros, Monges e Fazendeiros, eis a boa nova: Protejam seus
+                                        castelos, glorifiquem seus Deuses, dominem suas estradas e tragam a fartura de
+                                        alimentos para nossas mesas, isso porque descobriremos em breve quem é o grande
+                                        Senhor do Reino de Carcassonne.
                                     </p>
-                                </header>
-                            </div>
-                            <div class="col-12 titulo-lista" data-aos="fade-up" data-aos-duration="15000"
-                                data-aos-easing="ease-in-out">
-                                <h2 class="font-800 text-start">
-                                    <i class="fas fa-exchange-alt"></i> Lista de trocas & vendas
-                                </h2>
-                                <small class="font-red">
-                                    (Exclusiva para
-                                    <span class="font-800">Belo Horizonte</span>
-                                    e região)
-                                </small>
-                            </div>
-                            <div class="col-4">
-                                <section>
-                                    <a target="_blank" href="/lista/index.php" class="image featured btn-planilha"
-                                        data-aos="fade-up" data-aos-duration="15000" data-aos-easing="ease-in-out">
-                                        <img src="images/btn-visualizar.png" alt="Visualizar lista" />
-                                        <header class="second">
-                                            <h3>Visualizar lista</h3>
-                                        </header>
-                                    </a>
-                                </section>
-                            </div>
-                            <div class="col-4">
-                                <section>
-                                    <a target="_blank" href="/lista/adicionar-jogo.php"
-                                        class="image featured btn-planilha" data-aos="fade-up" data-aos-duration="15000"
-                                        data-aos-easing="ease-in-out" data-aos-delay="300">
-                                        <img src="images/btn-adicionar.png" alt="adicionar jogos" />
-                                        <header class="second">
-                                            <h3>Adicionar jogo</h3>
-                                        </header>
-                                    </a>
-                                </section>
-                            </div>
-                            <div class="col-4">
-                                <section>
-                                    <a target="_blank" href="/lista/remover-jogo.php"
-                                        class="image featured btn-planilha" data-aos="fade-up" data-aos-duration="15000"
-                                        data-aos-easing="ease-in-out" data-aos-delay="600">
-                                        <img src="images/btn-remover.png" alt="remover jogos" />
-                                        <header class="second">
-                                            <h3>Remover jogo</h3>
-                                        </header>
-                                    </a>
-                                </section>
-                            </div>
-                            <div class="col-12">
-                                <p class="regras-planilha">
-                                    <i class="far fa-file-alt"></i> Confira as
-                                    <a href="/regras-lista.html" target="_blank">regras de utilização</a> da Lista de
-                                    Trocas & Vendas
-                                </p>
-                                <p class="highlight red aviso-responsabilidade">Nenhuma negociação utilizando a Lista de
-                                    Trocas & Vendas é de responsabilidade do Boardgame BH</p>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-            </div>
-            <div class="wrapper style2 hidden-sm">
-                <div class="inner">
-
-                    <!-- Feature 2 -->
-                    <section class="container box feature2 banner-area banner-unico">
-                        <div class="d-flex align-center justify-center banner-pequeno">
-                            <a href="http://www.bgbh.com.br/torneios.html" target="_blank"
-                                onclick="ga('send', 'event', 'Torneio Carcassonne', 'click-banner-unico');">
-                                <img class="banner-ads-90" src="images/banners/carcassonne-728x90.png"
-                                    alt="banner torneio carcassonne" />
-                            </a>
-                        </div>
-                    </section>
-
-                </div>
-            </div>
-            <div class="wrapper style2 banners-grandes visible-sm">
-                <div class="inner">
-                    <!-- Feature 2 -->
-
-                    <section class="container box feature2 d-flex align-center" id="banner-ads-center">
-                        <a href="http://90games.com.br/" target="_blank"
-                            onclick="ga('send', 'event', 'Banner Center', 'click-banner-duplo', 2);">
-                            <img class="banner-ads-270" src="images/banners/banner_90games.png" alt="banner" />
-                        </a>
-                        <a class="hidden-sm" href="https://tabulovers.wixsite.com/tabulovers" target="_blank"
-                            onclick="ga('send', 'event', 'Banner Center', 'click-banner-duplo', 2);">
-                            <img class="banner-ads-270" src="images/banners/banner-tabulovers.png" alt="banner" />
-                        </a>
-                    </section>
-                </div>
-            </div>
-            <div id="desafios-e-torneios">
-                <div class="wrapper style3" id="grupos-whatsapp">
-
-                    <div class="inner">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-5 col-12-medium">
-                                    <!-- Spotlight -->
-                                    <section class="box spotlight secao-torneio">
-                                        <h2 class="font-800" data-aos-duration="15000" data-aos="fade-down-right">
-                                            <i class="fas fa-chess-rook"></i> Desafios e Torneios
-                                        </h2>
-                                        <article data-aos-duration="15000" data-aos="fade-right" data-aos-delay="300">
-                                            <a onclick="ga('send', 'event', 'Ver regras torneio', 'click-imagem');"
-                                                href="/torneios.html" target="_blank" class="image featured">
-                                                <img src="images/torneios/TORNEIOS-Carcassonne.png"
-                                                    alt="Torneio Carcassonne">
-                                            </a>
-                                            <!-- <header>
-												<h3><a href="#">Neural Implants</a></h3>
-												<p>The pros and cons. Mostly cons.</p>
-											</header>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in
-												lectus semper
-												mod
-												quisturpis nisi consequat ornare in, hendrerit in lectus semper mod
-												quis
-												eget mi quat etiam
-												lorem. Phasellus quam turpis, feugiat sed et lorem ipsum dolor
-												consequat
-												dolor feugiat sed
-												et tempus consequat etiam.</p>
-											<p>Lorem ipsum dolor quam turpis, feugiat sit amet ornare in, hendrerit
-												in
-												lectus semper
-												mod quisturpis nisi consequat etiam lorem sed amet quam turpis.</p> -->
-                                            <footer>
-                                                <a href="/torneios.html" target="_blank" class="button alt solid"
-                                                    onclick="ga('send', 'event', 'Ver regras torneio', 'click-botao');">
-                                                    Saiba mais
-                                                </a>
-                                            </footer>
-                                        </article>
-                                    </section>
-
+                                    <p class="mt-3">
+                                        <span class="font-800">Importante:</span>
+                                        <span>
+                                            Este torneio possui etapas independentes de classificação, não sendo
+                                            necessário participação em todos os dias ou etapas anteriores.
+                                            <br />
+                                            Escolha os dias de acordo com sua disponibilidade.
+                                        </span>
+                                    </p>
+                                    <p class="card-text">
+                                        <a href="/torneios.html" target="_blank" class="btn btn-dark"
+                                            onclick="ga('send', 'event', 'Ver regras torneio', 'click-botao');">Saiba
+                                            mais</a>
+                                    </p>
                                 </div>
-                                <hr class="d-block d-md-none" />
-                                <div class="col-7 col-12-medium">
-
-                                    <!-- Article list -->
-                                    <section class="box article-list">
-                                        <h2 class="font-800" data-aos-duration="15000" data-aos="fade-down-left">
-                                            <i class="fab fa-whatsapp"></i> Grupos de Whatsapp
-                                        </h2>
-
-                                        <!-- Excerpt -->
-                                        <article class="box excerpt article-grupos">
-                                            <a target="_blank" href="http://bgbh.com.br/regras-grupo-trocas.html"
-                                                class="image imagem-grupos" data-aos-duration="12000"
-                                                data-aos="zoom-in-right">
-                                                <img src="images/grupo-trocas.png"
-                                                    alt="grupo de whatsapp trocas e vendas" class="auto-img" />
-                                                <div class="click-to-enter">Clique para entrar</div>
-                                            </a>
-                                            <div class="descricao-grupos" data-aos-duration="15000" data-aos="fade-left"
-                                                data-aos-delay="300">
-                                                <header class="titulos-grupos">
-                                                    <h3><a target="_blank"
-                                                            href="http://bgbh.com.br/regras-grupo-trocas.html">BGBH
-                                                            - Trocas & Vendas</a>
-                                                    </h3>
-                                                </header>
-                                                <p>O grupo é <span class="font-800">EXCLUSIVO</span> para Belo Horizonte
-                                                    e Região e tem como foco os anúncios de trocas e vendas entre seus
-                                                    usuários. O grupo possui regras bem definidas para otimizar sua
-                                                    funcionalidade.
-                                                </p>
-                                                <p class="font-red restricoes-grupos font-800">
-                                                    <span class="font-dark-red">Restrições:</span> Chat moderado.
-                                                    <span style="font-weight: 500;"> Participação limitada a usuários
-                                                        que</span> consigam entregar os jogos em Belo Horizonte.
-                                                </p>
-                                            </div>
-                                        </article>
-
-                                        <!-- Excerpt -->
-                                        <article class="box excerpt article-grupos">
-                                            <a href="https://chat.whatsapp.com/K7OMoPn1nfyEl4EDt8sUyi" target="_blank"
-                                                class="image imagem-grupos" data-aos-duration="12000"
-                                                data-aos="zoom-in-right">
-                                                <img src="images/grupo-resenha.png" alt="grupo de whatsapp resenha"
-                                                    class="auto-img" />
-                                                <div class="click-to-enter">Clique para entrar</div>
-                                            </a>
-                                            <div class="descricao-grupos" data-aos-duration="15000" data-aos="fade-left"
-                                                data-aos-delay="300">
-                                                <header class="titulos-grupos">
-                                                    <h3>
-                                                        <a target="_blank"
-                                                            href="https://chat.whatsapp.com/K7OMoPn1nfyEl4EDt8sUyi">BGBH
-                                                            - Resenha BG</a>
-                                                    </h3>
-                                                </header>
-                                                <p>Grupo voltado para a interação entre amantes de Boardgame. BG é o que
-                                                    nos une mas um bom papo fora do tema não é proibido. Novidades,
-                                                    jogatinas online, presenciais, dúvidas sobre regras, indicações.
-                                                    Aqui
-                                                    é o lugar. A única exigência é o bom senso. </p>
-                                                <p class="font-red restricoes-grupos">
-                                                    <span class="font-dark-red font-800">Restrições:</span> Sem
-                                                    restrições
-                                                </p>
-                                            </div>
-                                        </article>
-
-                                        <!-- Excerpt -->
-                                        <article class="box excerpt article-grupos">
-                                            <a target="_blank" href="https://chat.whatsapp.com/HJ8AnItrIGUDtpkSgIF3Nn"
-                                                class="image imagem-grupos" data-aos-duration="12000"
-                                                data-aos="zoom-in-right">
-                                                <img src="images/grupo-ofertas.png" alt="grupo de whatsapp ofertas"
-                                                    class="auto-img" />
-                                                <div class="click-to-enter">Clique para entrar</div>
-                                            </a>
-                                            <div class="descricao-grupos" data-aos-duration="15000" data-aos="fade-left"
-                                                data-aos-delay="300">
-                                                <header class="titulos-grupos">
-                                                    <h3><a target="_blank"
-                                                            href="https://chat.whatsapp.com/HJ8AnItrIGUDtpkSgIF3Nn">BGBH
-                                                            - Ofertas BG</a></h3>
-                                                </header>
-                                                <p>
-                                                    <strong class="font-green">NOVIDADE!</strong> Grupo voltado para
-                                                    divulgação de oportunidades e ofertas de Boardgames. Suas regras e
-                                                    funcionalidade ainda estão sendo definidas.
-                                                </p>
-                                                <p class="font-red restricoes-grupos font-800">
-                                                    <span class="font-dark-red">Restrições:</span> Sem chat
-                                                </p>
-                                            </div>
-                                        </article>
-
-                                    </section>
-                                </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="wrapper style2 banners-grandes visible-sm">
-            <div class="inner">
-                <!-- Feature 2 -->
-                <section class="container box feature2" id="banner-ads-footer">
-                    <a href="#" target="_blank" onclick="ga('send', 'event', 'Banner Footer', 'click-banner-unico');">
-                    </a>
-                </section>
+        <div class="py-4 mt-5 banner-ads--center container-fluid" id="banner-ads--center-unico">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="http://www.bgbh.com.br/torneios.html" target="_blank"
+                    onclick="ga('send', 'event', 'Torneio Carcassonne', 'click-banner-unico');">
+                    <img class="img-fluid banner-ads-90" src="images/banners/carcassonne-728x90.png"
+                        alt="banner torneio carcassonne" />
+                </a>
             </div>
         </div>
-        <div class="wrapper style2 banners-grandes hidden-sm">
-            <div class="inner">
-                <!-- Feature 2 -->
-                <section class="container box feature2" id="banner-ads-footer-duplo">
-                    <a href="https://tabulovers.wixsite.com/tabulovers" target="_blank"
-                        onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 1);">
-                        <img class="banner-ads-270" src="images/banners/banner-tabulovers.png" alt="banner" />
-                    </a>
-                    <a href="http://90games.com.br/" target="_blank"
-                        onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 2);">
-                        <img class="banner-ads-270" src="images/banners/banner_90games.png" alt="banner" />
-                    </a>
-                </section>
+        <div class="site-content container">
+            <div id="lista_trocas_e_vendas_anchor"></div>
+            <div class="pt-8" id="lista_trocas_e_vendas" data-aos-duration="15000" data-aos="fade-up-left">
+                <i class="bi bi-arrow-left-right custom-color--a7 fs-3"></i>
+                <h4 class="font-800 d-inline-block">
+                    LISTA DE TROCAS & VENDAS
+                </h4>
+                <small class="custom-color--crimson d-block">
+                    (Exclusiva para <span class="font-800">Belo Horizonte</span> e região)
+                </small>
+                <div class="botoes-lista mt-3 container">
+                    <div class="d-flex justify-content-evenly align-items-center">
+                        <a target="_blank" href="/lista/index.php" class="image featured btn-planilha gray-filter"
+                            data-aos="fade-up" data-aos-duration="15000" data-aos-easing="ease-in-out"
+                            onclick="ga('send', 'event', 'botões lista', 'click', 'visualizar');">
+                            <img class="img-fluid" src="images/btn-visualizar.png" alt="Visualizar lista" />
+                            <h5 class="font-800 custom-color--visualizar-lista">VISUALIZAR LISTA</h5>
+                        </a>
+                        <a target="_blank" href="/lista/adicionar-jogo.php"
+                            class="image featured btn-planilha gray-filter" data-aos="fade-up" data-aos-duration="15000"
+                            data-aos-easing="ease-in-out" data-aos-delay="200"
+                            onclick="ga('send', 'event', 'botões lista', 'click', 'adicionar');">
+                            <img class="img-fluid" src="images/btn-adicionar.png" alt="Adicionar jogo" />
+                            <h5 class="font-800 custom-color--adicionar-jogo">ADICIONAR JOGO</h5>
+                        </a>
+                        <a target="_blank" href="/lista/remover-jogo.php"
+                            class="image featured btn-planilha gray-filter" data-aos="fade-up" data-aos-duration="15000"
+                            data-aos-easing="ease-in-out" data-aos-delay="300"
+                            onclick="ga('send', 'event', 'botões lista', 'click', 'remover');">
+                            <img class="img-fluid" src="images/btn-remover.png" alt="Remover jogo" />
+                            <h5 class="font-800 custom-color--remover-jogo">REMOVER JOGO</h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="regras-lista mt-5 text-center">
+                    <i class="bi bi-card-list me-1"></i>
+                    Confira as <a href="/regras-lista.html" target="_blank">regras de utilização</a> da Lista de Trocas
+                    & Vendas
+                </div>
+                <div class="regras-lista mt-2 text-center custom-color--crimson">
+                    <i class="bi bi-exclamation-diamond me-1"></i>
+                    Nenhuma negociação utilizando a Lista de Trocas & Vendas é de responsabilidade do Boardgame BH
+                </div>
             </div>
-        </div>
-        <!-- Footer Wrapper -->
-        <div id="footer-wrapper">
-            <footer id="footer" class="container">
-                <div class="row" id="contato">
-                    <div class="col-6 col-6-medium col-12-small">
-                        <div class="row">
-                            <!-- Links -->
-                            <section>
-                                <h2 class="font-800">Sobre o projeto</h2>
-                                <p>
-                                    O <span class="font-800">BoardgameBH</span> é um projeto que tem como foco o
-                                    crescimento e a visibilidade do Boardgame no país. O portal tem Belo Horizonte e
-                                    região como carro chefe, mas não possui fronteiras, promovendo
-                                    e realizando ações de amplo interesse e com um público espalhado por todo país, como
-                                    torneios online, divulgação de lançamentos e conteúdo digital. Diversos braços do
-                                    projeto ainda estão em desenvolvimento e em breve
-                                    serão apresentados para o grande público. Enquanto isso, aproveite todas as
-                                    funcionalidades liberadas e não deixe de apoiar esse e os demais projetos voltados
-                                    para o nosso hobby. Let’s Play!
-                                </p>
-                            </section>
+            <div id="grupos_anchor"></div>
+            <div class="pt-8" id="grupos">
+                <i class="bi bi-chat-text custom-color--a7 fs-3" data-aos-duration="15000"
+                    data-aos="fade-down-right"></i>
+                <h4 class="font-800 d-inline-block" data-aos-duration="15000" data-aos="fade-down-right">
+                    NOSSOS GRUPOS
+                </h4>
+                <div class="wrapper-groups mt-3 container">
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col" data-aos-duration="12000" data-aos="zoom-in-right">
+                            <div class="card h-100">
+                                <div class="card-img-top d-flex align-items-center justify-content-center">
+                                    <img src="images/grupos/grupo-wpp-trocas-vendas.png"
+                                        alt="Grupo Trocas & Vendas - BGBH" />
+                                </div>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">Card title</h5> -->
+                                    <p class="card-text text-center">
+                                        O grupo é <span class="font-800">EXCLUSIVO</span> para Belo Horizonte e Região e
+                                        tem
+                                        como foco os anúncios de trocas e vendas diretamente entre seus usuários. O
+                                        grupo
+                                        possui regras bem definidas para otimizar sua funcionalidade.
+                                        <br />
+                                        <span
+                                            class="d-inline-block mt-2 font-800 custom-color--dark-red">Restrições:</span>
+                                        <span class="custom-color--crimson">
+                                            <span class="font-800">Chat moderado</span>. Participação limitada a
+                                            usuários que
+                                            <span class="font-800">
+                                                consigam entregar os jogos
+                                                <br class="d-none d-xxl-block" />
+                                                em Belo Horizonte.
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <small class="text-muted">
+                                    </small>
+                                    <div class="mt-2 text-center">
+                                        <a target="_blank" class="btn btn-success"
+                                            href="http://bgbh.com.br/regras-grupo-trocas.html"
+                                            onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'trocas e vendas');">Entrar</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row siga-e-apoie">
-                            <div class="col-6 col-6-medium col-12-small">
-                                <!-- Links -->
-                                <section class="redes-sociais">
-                                    <h2 class="font-800">Siga</h2>
-                                    <ul class="list-inline">
-                                        <li class="wp-social-link wp-social-link-instagram">
-                                            <a class="fa fa-instagram" target="_blank"
-                                                href="https://www.instagram.com/boardgamebh/" aria-label="Instagram">
+                        <div class="col" data-aos-duration="15000" data-aos="zoom-in-right">
+                            <div class="card h-100">
+                                <div class="card-img-top d-flex align-items-center justify-content-center">
+                                    <img src="images/grupos/grupo-wpp-resenha.png" alt="Grupo Resenha - BGBH" />
+                                </div>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">Card title</h5> -->
+                                    <p class="card-text text-center">
+                                        Grupo voltado para a interação entre amantes de Boardgame. BG é o que nos une
+                                        mas um
+                                        bom papo fora do tema não é proibido. Novidades, jogatinas online, presenciais,
+                                        dúvidas sobre regras, indicações. Aqui é o lugar. A única exigência é o bom
+                                        senso.
+                                        <br />
+                                        <span
+                                            class="d-inline-block mt-2 font-800 custom-color--dark-red">Restrições:</span>
+                                        <span class="custom-color--crimson">Sem restrições</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <small class="text-muted">
+                                    </small>
+                                    <div class="mt-2 text-center">
+                                        <a target="_blank" class="btn btn-success"
+                                            href="http://bgbh.com.br/regras-grupo-trocas.html"
+                                            onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'resenha');">Entrar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" data-aos-duration="17000" data-aos="zoom-in-right">
+                            <div class="card h-100">
+                                <div class="card-img-top d-flex align-items-center justify-content-center">
+                                    <img src="images/grupos/grupo-wpp-ofertas.png" alt="Grupo Ofertas - BGBH" />
+                                </div>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">Card title</h5> -->
+                                    <p class="card-text text-center">
+                                        Grupo voltado para divulgação de oportunidades e ofertas de Boardgames.
+                                        Aqui é permitido a divulgação de anúncios em plataformas oficiais além de
+                                        promoções em luderias e sites.
+                                        Suas regras e funcionalidade ainda estão sendo definidas.
+                                        <br />
+                                        <span
+                                            class="d-inline-block mt-2 font-800 custom-color--dark-red">Restrições:</span>
+                                        <span class="custom-color--crimson">Sem chat</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <small class="text-muted">
+                                    </small>
+                                    <div class="mt-2 text-center">
+                                        <a target="_blank" class="btn btn-success"
+                                            href="https://chat.whatsapp.com/HJ8AnItrIGUDtpkSgIF3Nn"
+                                            onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'ofertas');">Entrar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" data-aos-duration="19000" data-aos="zoom-in-right">
+                            <div class="card h-100">
+                                <div class="card-img-top d-flex align-items-center justify-content-center">
+                                    <img src="images/grupos/grupo-tlgm-geral.png" alt="Grupo Telegram - BGBH" />
+                                </div>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title">Card title</h5> -->
+                                    <p class="card-text text-center">
+                                        <strong class="custom-color--green">NOVIDADE!</strong>
+                                        <br />
+                                        Grupo também voltado para interação entre os amantes de Boardgame.
+                                        Lugar para bate papo, indicações, lançamentos, dúvidas, etc.
+                                        O grupo no Telegram veio para ser mais uma ferramenta de comunicação.
+                                        <br />
+                                        <span
+                                            class="d-inline-block mt-2 font-800 custom-color--dark-red">Restrições:</span>
+                                        <span class="custom-color--crimson">Sem restrições</span>
+                                    </p>
+                                </div>
+                                <div class="card-footer text-center">
+                                    <small class="text-muted">
+                                    </small>
+                                    <div class="mt-2 text-center">
+                                        <a target="_blank" class="btn btn-success" href="https://t.me/boardgamebh"
+                                            onclick="ga('send', 'event', 'Grupo Telegram', 'click');">
+                                            Entrar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-4 mt-5 banner-ads--footer container-fluid d-none d-lg-block" id="banner-ads--footer-duplo">
+            <div class="d-flex align-items-center justify-content-center">
+                <a href="" target="_blank" onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 1);">
+
+                </a>
+                <a href="" target="_blank" onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 2);">
+
+                </a>
+            </div>
+        </div>
+        <div class="py-4 mt-5 banner-ads--footer container-fluid d-lg-none" id="banner-ads--footer-unico">
+            <div class="text-center">
+                <a href="" target="_blank" onclick="ga('send', 'event', 'Banner Footer', 'click-banner');">
+                </a>
+            </div>
+        </div>
+        <footer class="site-footer pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="col-12">
+                            <h5 class="font-800 title">SOBRE O PROJETO</h5>
+                            <p class="mt-3 custom-color--gray texto-sobre">
+                                O <span class="font-800">BoardgameBH</span> é um projeto que tem como foco o
+                                crescimento e a visibilidade do Boardgame no país. O portal tem Belo Horizonte e
+                                região como carro chefe, mas não possui fronteiras, promovendo
+                                e realizando ações de amplo interesse e com um público espalhado por todo país, como
+                                torneios online, divulgação de lançamentos e conteúdo digital. Diversos braços do
+                                projeto ainda estão em desenvolvimento e em breve
+                                serão apresentados para o grande público. Enquanto isso, aproveite todas as
+                                funcionalidades liberadas e não deixe de apoiar esse e os demais projetos voltados
+                                para o nosso hobby. Let’s Play!
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h5 class="font-800 title">APOIE</h5>
+                                    <p class="mt-2 custom-color--gray texto-apoie">
+                                        Entre em contato conosco e seja um apoiador do projeto
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <h5 class="font-800 title">SIGA</h5>
+                                    <ul class="list-group list-group-horizontal mt-2">
+                                        <li class="list-group-item instagram">
+                                            <a target="_blank" href="https://www.instagram.com/boardgamebh/"
+                                                aria-label="Instagram">
+                                                <i class="bi bi-instagram fs-3"></i>
                                             </a>
                                         </li>
 
-                                        <li class="wp-social-link wp-social-link-facebook">
-                                            <a class="fa fa-facebook" target="_blank"
-                                                href="https://www.facebook.com/boardgamebh/" aria-label="Facebook">
+                                        <li class="list-group-item facebook">
+                                            <a target="_blank" href="https://www.facebook.com/boardgamebh/"
+                                                aria-label="Facebook">
+                                                <i class="bi bi-facebook fs-3"></i>
                                             </a>
                                         </li>
                                     </ul>
-                                </section>
-                            </div>
-                            <div class="col-6 col-6-medium col-12-small">
-                                <!-- Links -->
-                                <section class="apoie-o-projeto">
-                                    <h2 class="font-800">Apoio</h2>
-                                    <p>ENTRE EM CONTATO CONOSCO E SEJA UM APOIADOR DO PROJETO</p>
-                                </section>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-12-medium imp-medium">
-                        <section class="form-contato">
-                            <h2 class="font-800">Contato</h2>
-                            <div role="form" class="wpcf7" id="wpcf7-f19-p3405-o1" lang="pt-BR" dir="ltr">
-                                <div class="screen-reader-response">
-                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                    <ul></ul>
-                                </div>
-                                <form action="/bgbh/#wpcf7-f19-p3405-o1" method="post"
-                                    class="wpcf7-form init form-contato" novalidate="novalidate" data-status="init">
-                                    <div style="display: none;">
-                                        <input type="hidden" name="_wpcf7" value="19" />
-                                        <input type="hidden" name="_wpcf7_version" value="5.3" />
-                                        <input type="hidden" name="_wpcf7_locale" value="pt_BR" />
-                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f19-p3405-o1" />
-                                        <input type="hidden" name="_wpcf7_container_post" value="3405" />
-                                        <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                    </div>
-                                    <p>
-                                        <label> Nome<br />
-                                            <span class="wpcf7-form-control-wrap your-name">
-                                                <input type="text" name="your-name" value="" size="40"
-                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                    aria-required="true" aria-invalid="false" />
-                                            </span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label> Email<br />
-                                            <span class="wpcf7-form-control-wrap your-email">
-                                                <input type="email" name="your-email" value="" size="40"
-                                                    class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-                                                    aria-required="true" aria-invalid="false" />
-                                            </span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label> Assunto (opcional)<br />
-                                            <span class="wpcf7-form-control-wrap your-subject"><input type="text"
-                                                    name="your-subject" value="" size="40"
-                                                    class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label> Mensagem<br />
-                                            <span class="wpcf7-form-control-wrap your-message"><textarea
-                                                    name="your-message" cols="40" rows="4"
-                                                    class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
-                                                    aria-required="true" aria-invalid="false"></textarea></span>
-                                        </label>
-                                    </p>
-                                    <p><input type="submit" value="Enviar"
-                                            class=" btn-primary wpcf7-form-control wpcf7-submit" />
-                                    </p>
-                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                </form>
+                    <div class="col-md-6" id="contato">
+                        <h5 class="font-800 title">CONTATO</h5>
+                        <div role="form" class="wpcf7" id="wpcf7-f19-p3405-o1" lang="pt-BR" dir="ltr">
+                            <div class="screen-reader-response">
+                                <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                <ul></ul>
                             </div>
+                            <form action="/bgbh/#wpcf7-f19-p3405-o1" method="post" class="wpcf7-form init form-contato"
+                                novalidate="novalidate" data-status="init">
+                                <div style="display: none;">
+                                    <input type="hidden" name="_wpcf7" value="19" />
+                                    <input type="hidden" name="_wpcf7_version" value="5.3" />
+                                    <input type="hidden" name="_wpcf7_locale" value="pt_BR" />
+                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f19-p3405-o1" />
+                                    <input type="hidden" name="_wpcf7_container_post" value="3405" />
+                                    <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                                </div>
+                                <p>
+                                    <label class="custom-color--gray"> Nome<br />
+                                        <span class="wpcf7-form-control-wrap your-name">
+                                            <input type="text" name="your-name" value="" size="40"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                aria-required="true" aria-invalid="false" />
+                                        </span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label class="custom-color--gray"> Email<br />
+                                        <span class="wpcf7-form-control-wrap your-email">
+                                            <input type="email" name="your-email" value="" size="40"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                aria-required="true" aria-invalid="false" />
+                                        </span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label class="custom-color--gray"> Assunto (opcional)<br />
+                                        <span class="wpcf7-form-control-wrap your-subject">
+                                            <input type="text" name="your-subject" value="" size="40"
+                                                class="wpcf7-form-control wpcf7-text" aria-invalid="false" />
+                                        </span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label class="custom-color--gray"> Mensagem<br />
+                                        <span class="wpcf7-form-control-wrap your-message">
+                                            <textarea name="your-message" cols="40" rows="4"
+                                                class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                aria-required="true" aria-invalid="false">
+                                            </textarea>
+                                        </span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <input type="submit" value="Enviar"
+                                        class="btn btn-light wpcf7-form-control wpcf7-submit" />
+                                </p>
+                                <div class="wpcf7-response-output" aria-hidden="true"></div>
+                            </form>
+                        </div>
                     </div>
-                    </section>
-
                 </div>
-                <div class="row">
-                    © BGBH 2020 - Todos os direitos reservados
-                </div>
-        </div>
+            </div>
         </footer>
     </div>
 
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        $(function () {
-            $("nav a").click(function () {
-                $(this).href();
-                $("#nav a").parent("li").removeClass("active");
-                $("#nav a").parent("li").removeClass("current_page_item");
-                $(this).parent("li").addClass("active");
-            });
-        })
-    </script>
+    <script> AOS.init(); </script>
+    <script src="assets/js/scripts.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+    https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
 
     <script>
