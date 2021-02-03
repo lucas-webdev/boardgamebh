@@ -11,8 +11,8 @@ $(function () {
     ];
     const centerSources = [
         {
-            img: "<img class='img-fluid banner-ads-90' src='images/banners/carcassonne-728x90.png' alt='Torneio Carcassonne' />",
-            link: "http://www.bgbh.com.br/torneios.html"
+            img: "<img class='img-fluid banner-ads-90' src='images/banners/728x90SushiGo.png' alt='Desafio Sushi Go' />",
+            link: "https://docs.google.com/forms/d/e/1FAIpQLSfjJh7t4QCed_GncUA3ogVlUaiP_o3teyAsT7ILVB3hFYBxCg/viewform?usp=sf_link"
         }
     ];
 
