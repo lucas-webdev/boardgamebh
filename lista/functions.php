@@ -91,9 +91,9 @@ function template_header($title)
         
             <div class="col-12 d-none d-md-flex justify-content-center">
                 <a href="http://www.bgbh.com.br/desafios.html" target="_blank"
-                    onclick="ga('send', 'event', 'Desafio Sushi Go', 'click-banner-unico');">
-                    <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/728x90SushiGo.png"
-                        alt="banner Desafio Sushi Go" />
+                    onclick="ga('send', 'event', 'Torneio Carcassonne', 'click-banner-unico');">
+                    <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/carcassonne-728x90.png"
+                        alt="banner Torneio Carcassonne" />
                 </a>
             </div>
             <div class="col-12 d-flex d-md-none justify-content-center" id="banner-ads-mobile">
@@ -130,7 +130,7 @@ function template_footer()
         const bannerAds = $('#banner-ads-mobile a');
         const sources = [
             {
-                img: "<img src='http://www.bgbh.com.br/images/banners/728x90SushiGo.png' alt='Desafio Sushi Go' />",
+                img: "<img src='http://www.bgbh.com.br/images/banners/carcassonne-728x90.png' alt='Torneio Carcassonne' />",
                 link: "http://www.bgbh.com.br/desafios.html"
             },
             {
