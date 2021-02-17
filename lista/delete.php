@@ -21,11 +21,11 @@ if (isset($_GET['id'])) {
             $stmt->execute();
             $msg = 'Boardgame removido com sucesso!';
             sleep(5);
-            header("Location: http://www.bgbh.com.br/lista/lista-admin.php");
+            header("Location: http://www.bgbh.com.br/lista/painel-adm.php");
             exit;
         } else {
             // User clicked the "No" button, redirect them back to the read page
-            header('Location: lista-admin.php');
+            header('Location: painel-adm.php');
             exit;
         }
     }

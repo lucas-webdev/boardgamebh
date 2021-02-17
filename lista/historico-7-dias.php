@@ -43,7 +43,7 @@ $today = strtotime(date("Y-m-d"));
 </div>
 <ul class="pagination d-flex justify-content-center align-items-center">
     <?php if ($page > 1) : ?>
-        <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page - 1 ?>">
+        <li class='page-item'><a class="page-link mr-2" href="historico-7-dias.php?page=<?= $page - 1 ?>">
                 <i class="fas fa-angle-double-left fa-sm"></i>
                 Anterior
             </a>
@@ -51,13 +51,13 @@ $today = strtotime(date("Y-m-d"));
         <?php
         for ($x = 1; $x <= $pages; $x++) {
             if ($x == $page)
-                echo "<li class='page-item active'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
+                echo "<li class='page-item active'><a class='page-link mr-1' href='historico-7-dias.php?page=$x'>$x</a>";
             else
-                echo "<li class='page-item'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
+                echo "<li class='page-item'><a class='page-link mr-1' href='historico-7-dias.php?page=$x'>$x</a>";
         };
         ?>
         <?php if ($page * $records_per_page < count($boardgames)) : ?>
-        <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page + 1 ?>">
+        <li class='page-item'><a class="page-link mr-2" href="historico-7-dias.php?page=<?= $page + 1 ?>">
                 Próxima
                 <i class="fas fa-angle-double-right fa-sm"></i>
             </a>

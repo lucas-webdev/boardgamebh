@@ -5,7 +5,7 @@ $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 // Number of records to show on each page
-$records_per_page = 100;
+$records_per_page = 150;
 
 // Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
 $sql = "SELECT * FROM boardgames ";
@@ -136,7 +136,7 @@ $pages = ceil($num_boardgames / $records_per_page);
 </div>
 <ul class="pagination d-flex justify-content-center align-items-center">
     <?php if ($page > 1) : ?>
-        <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page - 1 ?>">
+        <li class='page-item'><a class="page-link mr-2" href="?page=<?= $page - 1 ?>">
                 <i class="fas fa-angle-double-left fa-sm"></i>
                 Anterior
             </a>
@@ -144,13 +144,13 @@ $pages = ceil($num_boardgames / $records_per_page);
         <?php
         for ($x = 1; $x <= $pages; $x++) {
             if ($x == $page)
-                echo "<li class='page-item active'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
+                echo "<li class='page-item active'><a class='page-link mr-1' href='?page=$x'>$x</a>";
             else
-                echo "<li class='page-item'><a class='page-link mr-1' href='lista-admin.php?page=$x'>$x</a>";
+                echo "<li class='page-item'><a class='page-link mr-1' href='?page=$x'>$x</a>";
         };
         ?>
         <?php if ($page * $records_per_page < $num_boardgames) : ?>
-        <li class='page-item'><a class="page-link mr-2" href="lista-admin.php?page=<?= $page + 1 ?>">
+        <li class='page-item'><a class="page-link mr-2" href="?page=<?= $page + 1 ?>">
                 Próxima
                 <i class="fas fa-angle-double-right fa-sm"></i>
             </a>
