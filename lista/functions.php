@@ -91,9 +91,9 @@ function template_header($title)
         
             <div class="col-12 d-none d-md-flex justify-content-center">
                 <a href="http://www.bgbh.com.br/desafios.html" target="_blank"
-                    onclick="ga('send', 'event', 'Torneio Carcassonne', 'click-banner-unico');">
-                    <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/carcassonne-728x90.png"
-                        alt="banner Torneio Carcassonne" />
+                    onclick="ga('send', 'event', 'Torneio Draftosaurus', 'click-banner-unico');">
+                    <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/banner_draftosaurus_em_breve.png"
+                        alt="banner Torneio Draftosaurus" />
                 </a>
             </div>
             <div class="col-12 d-flex d-md-none justify-content-center" id="banner-ads-mobile">
