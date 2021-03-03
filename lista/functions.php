@@ -90,7 +90,7 @@ function template_header($title)
         <section class="banner-ads">
         
             <div class="col-12 d-none d-md-flex justify-content-center">
-                <a href="http://www.bgbh.com.br/desafios.html" target="_blank"
+                <a href="#" target="_blank"
                     onclick="ga('send', 'event', 'Torneio Draftosaurus', 'click-banner-unico');">
                     <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/banner_draftosaurus_em_breve.png"
                         alt="banner Torneio Draftosaurus" />
@@ -130,7 +130,7 @@ function template_footer()
         const bannerAds = $('#banner-ads-mobile a');
         const sources = [
             {
-                img: "<img src='http://www.bgbh.com.br/images/banners/carcassonne-728x90.png' alt='Torneio Carcassonne' />",
+                img: "<img src='http://www.bgbh.com.br/images/banners/banner_draftosaurus_em_breve.png' alt='Torneio Carcassonne' />",
                 link: "http://www.bgbh.com.br/desafios.html"
             },
             {

@@ -91,6 +91,7 @@ xxl >= 1400px
 /* navbar */
 #main_navbar {
     justify-content: flex-end;
+    font-size: 0.85em;
 }
 /* ./navbar */
 

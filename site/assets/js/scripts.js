@@ -11,8 +11,8 @@ $(function () {
     ];
     const centerSources = [
         {
-            img: "<img class='img-fluid banner-ads-90' src='images/banners/carcassonne-728x90.png' alt='Torneio Carcassonne' />",
-            link: "/torneios.html"
+            img: "<img class='img-fluid banner-ads-90' src='images/banners/banner_draftosaurus_em_breve.png' alt='Torneio Draftosaurus' />",
+            link: "#"
         }
     ];
 
