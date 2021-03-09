@@ -5,7 +5,7 @@ $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 // Number of records to show on each page
-$records_per_page = 150;
+$records_per_page = 200;
 
 // Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
 $sql = "SELECT * FROM boardgames ";
@@ -84,6 +84,19 @@ $pages = ceil($num_boardgames / $records_per_page);
         <h6 style="margin-bottom: 5px">Total de jogos disponíveis no momento: <?= $num_boardgames ?></h6>
     </div>
 </div>
+<div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Ordenar por
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="painel-adm.php?sort=name">Nome do jogo</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=owner">Responsável</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=created_at">Data</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=price">Preço</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=condition">Condição do jogo</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=negociation">Tipo de negociação</a></li>
+    </ul>
+</div>
 <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
     <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
         <div class="headers" style="flex: 1.5">Jogo</div>
@@ -96,7 +109,8 @@ $pages = ceil($num_boardgames / $records_per_page);
         <?php
         $addedClass = '';
         $conditionClass = '';
-        $diffDays = diffDaysFromToday($bg['created_at']);
+        $dateToCompare = $bg['updated_at'] === NULL ? $bg['created_at'] : $bg['updated_at'];
+        $diffDays = diffDaysFromToday($dateToCompare);
         if ($diffDays == 0)
             $addedClass = 'added-today';
         if ($diffDays >= 1 && $diffDays <= 2)
@@ -117,7 +131,7 @@ $pages = ceil($num_boardgames / $records_per_page);
             <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
             <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
             <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
+                <a tabindex="0" type="button" class="btn btn-sm btn-info" role="button" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> R$ <?= number_format($bg['price'], 2, ",", ".") ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
@@ -129,7 +143,7 @@ $pages = ceil($num_boardgames / $records_per_page);
                         <b>Região de retirada/entrega:</b> <?= $bg['deliver_region'] ?> <br>
                         <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>">
                     + info
-                </button>
+                </a>
             </div>
         </div>
     <?php endforeach; ?>

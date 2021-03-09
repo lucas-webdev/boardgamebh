@@ -196,7 +196,8 @@ a.btn {
 /* edit and delete */
 
 .bg-list a.edit,
-.bg-list a.trash {
+.bg-list a.trash,
+.bg-list a.refresh {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,6 +207,10 @@ a.btn {
     color: white;
     padding: 10px;
     text-decoration: none;
+}
+
+.bg-list .refresh {
+    background-color: #006b17;
 }
 
 .bg-list .edit,
@@ -291,7 +296,6 @@ a.btn {
     .legenda {
         position: absolute;
         left: 75%;
-        top: 10%;
     }
 }
 

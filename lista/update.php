@@ -200,6 +200,19 @@ if (!$bg) {
                 <small id="priceHelp" class="form-text text-muted">Informe o bairro onde o jogo pode ser retirado.</small>
             </div>
         </div>
+        <div class="col-12 col-lg-4">
+            <div class="form-group">
+                <label>Última atualização:</label>
+                <div class="input-group">
+                    <input type="text" name="created_at" class="form-control" id="created_at_input" value="<?= $bg['created_at'] ?>">
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="form-group d-flex align-items-center justify-content-start h-100">
+                <button class="btn btn-info btn-sm mt-3" onClick="$('#created_at_input').val(<?= "'" . date("Y-m-d H:i:s") . "'" ?>)" type="button">Atualizar</button>
+            </div>
+        </div>
         <div class="col-12">
             <small>Os campos com * são obrigatórios.</small>
         </div>

@@ -6,26 +6,12 @@ $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
 // Number of records to show on each page
-$records_per_page = 100;
+$records_per_page = 200;
+
 $sql = "SELECT * FROM boardgames ";
 $orderBy = $_GET['sort'];
-switch ($orderBy) {
-    case "name":
-        $sql .= "ORDER BY name ";
-        break;
-    case "price":
-        $sql .= "ORDER BY price ";
-        break;
-    case "condition":
-        $sql .= "ORDER BY condition ";
-        break;
-    case "date":
-        $sql .= "ORDER BY created_at DESC ";
-        break;
-    default:
-        $sql .= "ORDER BY name ";
-        break;
-}
+if ($orderBy) $sql .= "ORDER BY " . $orderBy . " ";
+else $sql .= "ORDER BY name ASC ";
 $sql .= "LIMIT :current_page, :record_per_page";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':current_page', ($page - 1) * $records_per_page, PDO::PARAM_INT);
@@ -94,36 +80,63 @@ $today = strtotime(date("Y-m-d"));
         <h6 style="margin-bottom: 5px">Total de jogos disponíveis no momento: <?= $num_boardgames ?></h6>
     </div>
 </div>
+<div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Ordenar por
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="painel-adm.php?sort=name">Nome do jogo</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=owner">Responsável</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=created_at">Data</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=price">Preço</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=condition">Condição do jogo</a></li>
+        <li><a class="dropdown-item" href="painel-adm.php?sort=negociation">Tipo de negociação</a></li>
+    </ul>
+</div>
+
 <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
     <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
-        <div class="headers" style="flex: 1.5">Jogo</div>
-        <div class="headers text-center" style="flex: 1.2">Negociação</div>
-        <div class="headers text-center" style="flex: 1">Preço</div>
-        <div class="headers text-center d-none d-lg-block" style="flex: 1">Adicionado em</div>
-        <div class="headers" style="flex: 1"></div>
+        <div class="headers" style="flex: 1">Jogo</div>
+        <div class="headers text-center" style="flex: 1">Negociação</div>
+        <div class="headers text-center" style="flex: 0.5">Preço</div>
+        <div class="headers text-center" style="flex: 1">Responsável</div>
+        <div class="headers text-center d-none d-lg-block" style="flex: 0.5">Adicionado em</div>
+        <div class="headers" style="flex: 0.5"></div>
     </div>
     <?php foreach ($boardgames as $bg) : ?>
         <?php
         $addedClass = '';
         $conditionClass = '';
-        $diffDays = diffDaysFromToday($bg['created_at']);
+        $dateToCompare = $bg['updated_at'] === NULL ? $bg['created_at'] : $bg['updated_at'];
+        $diffDays = diffDaysFromToday($dateToCompare);
         if ($diffDays == 0)
             $addedClass = 'added-today';
-        if ($diffDays >= 1 && $diffDays <= 3)
+        if ($diffDays >= 1 && $diffDays <= 2)
+            $addedClass = 'added-more-recently';
+        if ($diffDays >= 3 && $diffDays <= 4)
             $addedClass = 'added-recently';
+        if ($diffDays >= 60)
+            $addedClass = 'added-longtime';
         if ($bg['condition'] === "Lacrado")
             $conditionClass = 'lacrado';
         if ($bg['condition'] === "Avariado")
             $conditionClass = 'avariado';
         $descricao = htmlspecialchars($bg['description']);
         ?>
-        <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $addedClass ?>">
-            <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
-            <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
-            <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
-            <div class="bg-fields text-center d-none d-lg-block" style="flex: 1"><?= $bg['created_at'] ?></div>
-            <div class="bg-fields d-flex align-items-center" style="flex: 1" class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
+        <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $bg['updated_at'] ?> <?= $addedClass ?>">
+            <div class="bg-fields" style="flex: 1"><b><?= ucwords($bg['name']) ?></b></div>
+            <div class="bg-fields text-center" style="flex: 1"><?= $bg['negociation'] ?></div>
+            <div class="bg-fields text-center" style="flex: 0.5">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
+            <div class="bg-fields text-center" style="flex: 1">
+                <?= ucwords($bg['owner']) ?>
+                <br />
+                <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'>
+                    <?= $bg['owner_contact'] ?>
+                </a>
+            </div>
+            <div class="bg-fields text-center d-none d-lg-block" style="flex: 0.5"><?= date_create_from_format('Y-m-d H:i:s', $dateToCompare)->format('d/m/y') ?></div>
+            <div class="bg-fields d-flex align-items-center" style="flex: 0.5" class="d-flex justify-content-center align-items-center">
+                <a tabindex="0" type="button" class="btn btn-sm btn-info" role="button" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> <?= number_format($bg['price'], 2, ",", ".") ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
@@ -135,9 +148,12 @@ $today = strtotime(date("Y-m-d"));
                         <b>Região de retirada/entrega:</b> <?= $bg['deliver_region'] ?> <br>
                         <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>">
                     + info
-                </button>
-                <a href="update.php?id=<?= $bg['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
-                <a href="delete.php?id=<?= $bg['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+                    </button>
+                    <a href="update.php?id=<?= $bg['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                    <a href="delete.php?id=<?= $bg['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+                    <form action="update.php?id=<?= $bg['id'] ?>" method="POST">
+                        <a href="refresh.php?id=<?= $bg['id'] ?>" class="refresh"><i class="fas fa-sync fa-xs"></i></a>
+                    </form>
             </div>
         </div>
     <?php endforeach; ?>
