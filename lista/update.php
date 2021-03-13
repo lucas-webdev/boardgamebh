@@ -59,7 +59,7 @@ if (isset($_GET['id'])) {
                 $stmt->bindValue(10, $owner_contact, PDO::PARAM_STR);
                 $stmt->bindValue(11, $deliver_region, PDO::PARAM_STR);
                 $stmt->bindValue(12, $wishlist, PDO::PARAM_STR);
-                $stmt->bindValue(13, date("Y-m-d H:i:s"), PDO::PARAM_STR);
+                $stmt->bindValue(13, date_create(date("Y-m-d H:i:s"))->modify('-5 days')->format('Y-m-d H:i:s'), PDO::PARAM_STR);
                 $stmt->bindValue(14, $_GET['id'], PDO::PARAM_INT);
 
                 $stmt->execute();
