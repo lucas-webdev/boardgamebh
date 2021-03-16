@@ -15,24 +15,31 @@ body {
     background-attachment: fixed;
 }
 
+.btn.font-800,
 .font-800 {
     font-weight: 800;
 }
+
 .font-red {
     color: crimson;
 }
+
 .font-green {
     color: #129b12;
 }
+
 .font-dark-red {
     color: #880f1d;
 }
+
 .highlight {
     font-weight: bold;
 }
+
 .font-gray {
     color: #4e515a;
 }
+
 .minor-text {
     font-size: 0.85em;
 }
@@ -56,7 +63,7 @@ main {
     padding: 15px;
 }
 
-.banner-ads > div {
+.banner-ads>div {
     height: 100%;
 }
 
@@ -73,6 +80,7 @@ main {
 .banner-ads-90 {
     max-height: 90px;
 }
+
 .banner-ads-270 {
     max-height: 270px;
 }
@@ -306,7 +314,7 @@ a.btn {
     .not-responsible h6 {
         font-size: 0.75em;
     }
-    .regras-planilha{
+    .regras-planilha {
         font-size: 0.85em;
     }
     button[type="submit"] {
@@ -329,10 +337,13 @@ a.btn {
     }
 }
 
+
 /* STYLE TORNEIOS */
+
 .text-green {
     color: #0b655e;
 }
+
 .text-light-green {
     color: #029e92;
 }
@@ -353,12 +364,14 @@ a.btn {
     color: #a7a7a7;
 }
 
-.torneios-rodape .logos-realizacao img {
+.torneios-rodape .logos-realizacao img,
+.workshops-rodape .logos-realizacao img {
     width: 100px;
     height: auto;
 }
 
-.torneios-rodape .logos-patrocinio img {
+.torneios-rodape .logos-patrocinio img,
+.workshops-rodape .logos-patrocinio img {
     width: 180px;
     height: auto;
 }
@@ -366,6 +379,16 @@ a.btn {
 .torneios-rodape .logos-apoio img {
     width: 90px;
     height: auto;
+}
+
+.image-map {
+    zoom: 70%;
+    width: auto;
+    max-width: 100%;
+}
+
+::marker {
+    font-weight: 800;
 }
 
 @media screen and (max-width: 400px) {

@@ -1,57 +1,89 @@
 /* utils */
+
 .font-800 {
     font-weight: 800;
 }
+
 body {
     background: transparent url("http://bgbh.com.br/images/base-site-branco.jpg");
     background-size: 100%;
     color: #404248;
     font-family: 'Open Sans', sans-serif;
 }
+
 .navbar {
     top: 30px;
 }
+
 .site-wrapper {
     margin-top: 82px;
 }
+
 hr {
     width: 100%;
     margin: 5px 0;
 }
+
+.w-85 {
+    max-width: 85%;
+}
+
 i.bi {
     position: relative;
     top: -3px;
 }
+
 .custom-color--a7 {
     color: #a7a7a7;
 }
+
 .custom-color--crimson {
     color: crimson
 }
+
 .custom-color--dark-red {
     color: #880f1d;
 }
-.custom-color--green{
+
+.custom-color--green {
     color: #129b12;
 }
+
 .custom-color--gray {
     color: #acb2bf;
 }
+
 a.btn-planilha:hover .custom-color--visualizar-lista {
     color: #008daf;
 }
+
 a.btn-planilha:hover .custom-color--adicionar-jogo {
     color: #007852;
 }
+
 a.btn-planilha:hover .custom-color--remover-jogo {
     color: #dc1313;
 }
-h1, h2, h3, h4, h5, h6, p {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     font-family: 'Open Sans', sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 0;
 }
+
 #desafios_e_torneios_anchor,
 #lista_trocas_e_vendas_anchor,
 #grupos_anchor {
@@ -60,9 +92,11 @@ h1, h2, h3, h4, h5, h6 {
     top: -50px;
     visibility: hidden;
 }
+
 .pt-8 {
     padding-top: 80px;
 }
+
 @media screen and (min-width: 769px) {
     .gray-filter {
         -webkit-filter: grayscale(100%);
@@ -77,7 +111,10 @@ h1, h2, h3, h4, h5, h6 {
         filter: grayscale(0%);
     }
 }
+
+
 /* ./utils */
+
 
 /* BREAKPOINTS
 xs - none
@@ -88,36 +125,50 @@ xl >= 1200px
 xxl >= 1400px
 */
 
+
 /* navbar */
+
 #main_navbar {
     justify-content: flex-end;
     font-size: 0.85em;
 }
+
+
 /* ./navbar */
 
+
 /* main carousel */
+
 #mainCarousel {
-    height: calc(100vh - 90px); 
+    height: calc(100vh - 90px);
 }
+
 #mainCarousel .main-logo {
     max-width: 40%;
     position: relative;
     top: -10vh;
 }
+
 #mainCarousel .carousel-item,
 #mainCarousel .carousel-inner,
 #mainCarousel .carousel-item .main-background {
     height: 100%;
 }
+
 @media screen and (max-width: 768px) {
     #mainCarousel .main-logo {
         max-width: 100%;
         top: -50px;
-    };
+    }
+    ;
 }
+
+
 /* ./main carousel */
 
+
 /* header */
+
 @media screen and (max-width: 768px) {
     .main-header h4 {
         font-size: 1em;
@@ -126,46 +177,60 @@ xxl >= 1400px
         font-size: 0.85em;
     }
 }
+
+
 /* ./header */
 
+
 /* desafios e torneios */
+
 #desafios_e_torneios .card {
     background-color: transparent;
     border: none;
 }
+
 #desafios_e_torneios .card .card-title {
     font-weight: bold;
 }
+
 #desafios_e_torneios .card img {
     max-width: 615px;
     max-height: 330px;
 }
+
 @media screen and (max-width: 768px) {
     #desafios_e_torneios .card {
         max-width: 85%;
         margin: 0 auto;
     }
 }
+
+
 /* ./desafios e torneios */
 
+
 /* lista trocas & vendas */
-#lista_trocas_e_vendas small{
+
+#lista_trocas_e_vendas small {
     padding-left: 40px;
 }
+
 #lista_trocas_e_vendas a.btn-planilha {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    
 }
+
 #lista_trocas_e_vendas .btn-planilha img {
     width: 100%;
 }
+
 #lista_trocas_e_vendas .regras-lista {
     font-size: 0.85em;
 }
+
 #lista_trocas_e_vendas .regras-lista a {
     color: inherit;
 }
@@ -175,6 +240,7 @@ xxl >= 1400px
         max-width: 180px;
     }
 }
+
 @media screen and (max-width: 768px) {
     #lista_trocas_e_vendas a.btn-planilha {
         white-space: normal;
@@ -187,46 +253,62 @@ xxl >= 1400px
     }
 }
 
+
 /* ./lista trocas & vendas */
 
+
 /* grupos */
+
 #grupos .card {
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
-#grupos .card .card-footer { 
+
+#grupos .card .card-footer {
     border-top: none;
 }
+
 #grupos .card .card-img-top {
     height: 135px;
 }
-#grupos .card .card-img-top img { 
+
+#grupos .card .card-img-top img {
     max-width: 100%;
     max-height: 100%;
 }
+
 #grupos .card .card-text {
     font-size: 0.9em;
 }
+
+
 /* ./grupos */
 
+
 /* site footer */
+
 .site-footer {
     background-color: #2e3036;
     padding-top: 30px;
 }
+
 .site-footer a {
     color: #acb2bf;
 }
+
 .site-footer .title {
     color: white;
 }
+
 .site-footer .list-group .list-group-item {
     background-color: transparent;
     border: none;
 }
-.site-footer .list-group .list-group-item.facebook a:hover i{
+
+.site-footer .list-group .list-group-item.facebook a:hover i {
     color: #1877f2;
 }
-.site-footer .list-group .list-group-item.instagram a:hover i{
+
+.site-footer .list-group .list-group-item.instagram a:hover i {
     color: transparent;
     background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
@@ -235,9 +317,10 @@ xxl >= 1400px
     background-clip: text;
     -webkit-background-clip: text;
 }
-.site-footer #contato form label, 
-.site-footer #contato form label span, 
-.site-footer #contato form label input, 
+
+.site-footer #contato form label,
+.site-footer #contato form label span,
+.site-footer #contato form label input,
 .site-footer #contato form label textarea {
     width: 100%;
 }
@@ -260,26 +343,39 @@ xxl >= 1400px
         background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
         background-clip: text;
         -webkit-background-clip: text;
-    }   
+    }
+    .card-text {
+        text-align: center;
+    }
 }
+
+
 /* ./site footer */
 
+
 /* banners */
+
 .banner-ads--center,
 .banner-ads--footer {
     background: rgba(0, 0, 0, 0.1);
 }
-#banner-ads--footer-duplo a:first-child{
+
+#banner-ads--footer-duplo a:first-child {
     margin-right: 100px;
 }
+
 .banner-ads--footer img {
     max-width: 100%;
 }
+
 .banner-ads-90 {
     max-height: 90px;
     max-width: 100%;
 }
+
 .banner-ads-270 {
     max-height: 270px;
 }
+
+
 /* ./banners */
