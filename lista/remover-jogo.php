@@ -71,23 +71,23 @@ try {
 
 <?= template_header('Remover jogo') ?>
 
-<form action="remover-jogo.php" method="POST" class="add-new-bg" onsubmit="return validateRemoveForm()">
+<form action="remover-jogo.php" method="POST" class="form-remover" onsubmit="return validateRemoveForm()">
     <div class="row">
         <div class="col-12 col-lg-6">
-            <div class="form-group">
-                <label>Nome do jogo: *</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Nome do jogo: *</label>
                 <input type="text" name="name" class="form-control" required>
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <div class="form-group">
-                <label>Responsável: *</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Responsável: *</label>
                 <input type="text" name="owner" class="form-control" required>
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <div class="form-group">
-                <label>Motivo: *</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Motivo: *</label>
                 <select class="form-control" name="reason">
                     <option value="Troca pelo grupo">Troca pelo grupo</option>
                     <option value="Venda pelo grupo">Venda pelo grupo</option>
@@ -97,8 +97,8 @@ try {
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <div class="form-group">
-                <label>Condição em que o jogo estava:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Condição em que o jogo estava:</label>
                 <select class="form-control" name="condition">
                     <option value="Lacrado">Lacrado</option>
                     <option value="Ótimo estado (como novo)">Ótimo estado (como novo)</option>
@@ -108,8 +108,8 @@ try {
             </div>
         </div>
         <div class="col-12 col-lg-6">
-            <div class="form-group">
-                <label>Preço da venda: </label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Preço da venda: </label>
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">R$</span>
@@ -136,7 +136,7 @@ try {
             </div>
         <?php endif; ?>
         <div class="col-12 text-center">
-            <button type="submit" class="btn btn-danger">Solicitar remoção</button>
+            <button type="submit" class="btn primaryButton">Solicitar remoção</button>
         </div>
     </div>
 </form>
@@ -227,5 +227,10 @@ try {
         }
     }
 </script>
+<style>
+    #mainNavbar.navbar-dark .navbar-nav .nav-item:nth-child(4) a {
+        color: white;
+    }
+</style>
 
 <?= template_footer() ?>

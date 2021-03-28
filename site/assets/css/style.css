@@ -65,6 +65,14 @@ a.btn-planilha:hover .custom-color--remover-jogo {
     color: #dc1313;
 }
 
+.btn.btn-primary {
+    background-color: #0b655e;
+}
+.btn.btn-primary:hover {
+    background-color: #00baac;
+    border-color: #018a7f;
+}
+
 h1,
 h2,
 h3,
@@ -379,3 +387,37 @@ xxl >= 1400px
 
 
 /* ./banners */
+
+#em_construcao {
+    width: 100vw;
+    height: calc(100vh - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#em_construcao .logo {
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+#em_construcao img {
+    height: auto;
+    margin: 0 auto 30px;
+    width: 60%;
+    max-width: 600px;
+}
+
+#em_construcao h5 {
+    color: #007852;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 500;
+    padding: 15px;
+    text-transform: none;
+}
+
+#em_construcao h5:last-child {
+    margin-bottom: 30px;
+}

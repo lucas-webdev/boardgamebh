@@ -51,7 +51,7 @@ $today = strtotime(date("Y-m-d"));
     </div>
     <div class="action-buttons d-flex justify-content-between">
         <div class="d-flex buttons">
-            <a class="btn btn-success btn-sm" href="adicionar-jogo.php" title="Adicionar jogo">
+            <a class="btn btn-primary btn-sm" href="adicionar-jogo.php" title="Adicionar jogo">
                 <i class="fas fa-plus-circle"></i>
                 Adicionar jogo
             </a>

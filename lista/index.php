@@ -40,29 +40,45 @@ $pages = ceil($num_boardgames / $records_per_page);
 <?= template_header('Lista de jogos') ?>
 <div class="col-lg-12 margin-tb mb-3">
     <div class="sheet-title">
-        <h2>LISTA DE TROCAS & VENDAS - BGBH</h2>
+        <i class="icone bi bi-list-stars"></i>
+        <h1 class="d-inline-block ms-2">LISTA DE TROCAS & VENDAS - BGBH</h1>
     </div>
     <div class="not-responsible">
-        <h6>Nenhuma negociação utilizando a <strong>Lista de Trocas & Vendas</strong> é de responsabilidade do Boardgame BH</h6>
+        <span class="danger semibold d-block my-2">
+            <i class="icone danger bi bi-exclamation-diamond me-1"></i>
+            Nenhuma negociação utilizando a <span class="extrabold danger">Lista de Trocas & Vendas</span> é de responsabilidade do Boardgame BH
+        </span>
         <p class="regras-planilha">
-            <i class="far fa-file-alt"></i>
+            <i class="icone bi bi-file-earmark-text me-1"></i>
             Confira as
-            <a href="/regras-lista.html" target="_blank">
+            <a class="inheritLink" href="/regras-lista.html" target="_blank">
                 regras de utilização
             </a>
             da lista de trocas & vendas
         </p>
     </div>
     <div class="action-buttons d-flex justify-content-between">
+
         <div class="d-flex buttons">
-            <a class="btn btn-success btn-sm" href="adicionar-jogo.php" title="Adicionar jogo">
-                <i class="fas fa-plus-circle"></i>
-                Adicionar jogo
-            </a>
-            <a class="btn btn-danger btn-sm" href="remover-jogo.php" title="Remover jogo">
-                <i class="fas fa-minus-circle"></i>
-                Remover jogo
-            </a>
+            <div class="botoes-lista">
+                <div class="d-flex justify-content-start align-items-center">
+                    <a target="_blank" href="adicionar-jogo.php" class="image featured btn-planilha adicionar-jogo me-3" onclick="ga('send', 'event', 'botões lista', 'click', 'adicionar');">
+                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/images/btn-adicionar.png" alt="Adicionar jogo" />
+                        <small class="extrabold">ADICIONAR JOGO</small>
+                    </a>
+                    <a target="_blank" href="remover-jogo.php" class="image featured btn-planilha remover-jogo" onclick="ga('send', 'event', 'botões lista', 'click', 'remover');">
+                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/images/btn-remover.png" alt="Remover jogo" />
+                        <small class="extrabold">REMOVER JOGO</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="num-bg d-flex justify-content-lg-between mt-3">
+        <div>
+            <small class="mb-1">Total de jogos já cadastrados: <?= $num_history ?></small>
+            <br />
+            <small class="mb-1">Total de jogos disponíveis no momento: <?= $num_boardgames ?></small>
         </div>
         <div class="legenda">
             <div class="d-flex align-items-center">
@@ -79,13 +95,9 @@ $pages = ceil($num_boardgames / $records_per_page);
             </div>
         </div>
     </div>
-    <div class="num-bg">
-        <h6 style="margin-bottom: 5px">Total de jogos já cadastrados: <?= $num_history ?></h6>
-        <h6 style="margin-bottom: 5px">Total de jogos disponíveis no momento: <?= $num_boardgames ?></h6>
-    </div>
 </div>
 <div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
         Ordenar por
     </a>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -97,7 +109,7 @@ $pages = ceil($num_boardgames / $records_per_page);
         <li><a class="dropdown-item" href="index.php?sort=negociation">Tipo de negociação</a></li>
     </ul>
 </div>
-<div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
+<div class="d-flex flex-column bd-highlight mt-2 mb-3 bg-list flex-1">
     <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
         <div class="headers" style="flex: 1.5">Jogo</div>
         <div class="headers text-center" style="flex: 1.2">Negociação</div>
@@ -131,7 +143,7 @@ $pages = ceil($num_boardgames / $records_per_page);
             <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
             <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
             <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
-                <a tabindex="0" type="button" class="btn btn-sm btn-info" role="button" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
+                <a tabindex="0" type="button" class="btn btn-sm btn-dark" role="button" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> R$ <?= number_format($bg['price'], 2, ",", ".") ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
@@ -170,5 +182,10 @@ $pages = ceil($num_boardgames / $records_per_page);
             </a>
         <?php endif; ?>
 </ul>
+<style>
+    #mainNavbar.navbar-dark .navbar-nav .nav-item:nth-child(2) a {
+        color: white;
+    }
+</style>
 
 <?= template_footer() ?>

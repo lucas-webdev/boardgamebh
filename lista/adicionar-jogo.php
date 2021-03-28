@@ -112,17 +112,17 @@ if (!empty($_POST)) {
 
 <?= template_header('Adicionar jogo') ?>
 
-<form action="adicionar-jogo.php" method="POST" class="add-new-bg" onsubmit="return validateForm()">
+<form action="adicionar-jogo.php" method="POST" class="form-adicionar" onsubmit="return validateForm()">
     <div class="row">
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Jogo: *</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Jogo: *</label>
                 <input type="text" name="name" class="form-control" required>
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Negociação:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Negociação:</label>
                 <select class="form-control" name="negociation">
                     <option value="Troca e Venda">Troca e venda</option>
                     <option value="Troca">Troca</option>
@@ -131,8 +131,8 @@ if (!empty($_POST)) {
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Preço:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Preço:</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon1">R$</span>
@@ -143,8 +143,8 @@ if (!empty($_POST)) {
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Condição:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Condição:</label>
                 <select class="form-control" name="condition">
                     <option value="Lacrado">Lacrado</option>
                     <option value="Ótimo estado (como novo)">Ótimo estado (como novo)</option>
@@ -154,14 +154,14 @@ if (!empty($_POST)) {
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Editora:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Editora:</label>
                 <input type="text" name="edition" class="form-control">
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Idioma do jogo:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Idioma do jogo:</label>
                 <select class="form-control" name="language">
                     <option value="Português">Português</option>
                     <option value="Inglês">Inglês</option>
@@ -175,8 +175,8 @@ if (!empty($_POST)) {
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Dependência de Idioma:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Dependência de Idioma:</label>
                 <select class="form-control" name="language_dependency">
                     <option value="Jogo em pt-br">Jogo em pt-br</option>
                     <option value="Alta dependência">Alta dependência</option>
@@ -187,26 +187,26 @@ if (!empty($_POST)) {
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Descrição:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Descrição:</label>
                 <textarea name="description" class="form-control"></textarea>
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Responsável: *</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Responsável: *</label>
                 <input type="text" name="owner" class="form-control" required>
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Whatsapp: *</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Whatsapp: *</label>
                 <input type="text" name="owner_contact" class="form-control celular" required>
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Lista de desejos:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Lista de desejos:</label>
                 <div class="input-group">
                     <input type="text" name="wishlist" class="form-control">
                 </div>
@@ -214,31 +214,31 @@ if (!empty($_POST)) {
             </div>
         </div>
         <div class="col-12 col-lg-4">
-            <div class="form-group">
-                <label>Região de entrega/retirada:</label>
+            <div class="form-group mb-2">
+                <label class="semibold mb-1">Região de entrega/retirada:</label>
                 <div class="input-group">
                     <input type="text" name="deliver_region" class="form-control">
                 </div>
                 <small id="priceHelp" class="form-text text-muted">Informe o bairro onde o jogo pode ser retirado.</small>
             </div>
         </div>
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-lg-10">
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="agreement" name="agreement" class="form-control">
                 <label class="form-check-label terms" for="agreement">
-                    Estou de acordo com as <a href="http://www.bgbh.com.br/regras-lista.html">regras de utilização</a> e ciente que os jogos devem ser retirados/entregues em
+                    Estou de acordo com as <a class="inheritLink" href="http://www.bgbh.com.br/regras-lista.html">regras de utilização</a> e ciente que os jogos devem ser retirados/entregues em
                     <b>BELO HORIZONTE</b>
                 </label>
             </div>
         </div>
         <div class="col-12">
-            <small>Os campos com * são obrigatórios.</small>
+            <small class="semibold">Os campos com * são obrigatórios.</small>
         </div>
-        <div class="col-12 not-responsible">
-            <h6>Nenhuma negociação utilizando a <strong>Lista de Trocas & Vendas</strong> é de responsabilidade do Boardgame BH</h6>
+        <div class="col-12 my-2">
+            <small class="danger semibold">Nenhuma negociação utilizando a <strong>Lista de Trocas & Vendas</strong> é de responsabilidade do Boardgame BH</small class="danger">
         </div>
         <div class="col-12 text-center">
-            <button type="submit" class="btn btn-success">Adicionar jogo</button>
+            <button type="submit" class="btn primaryButton">Adicionar jogo</button>
         </div>
     </div>
 </form>
@@ -249,6 +249,11 @@ if (!empty($_POST)) {
 
 <div class="alert alert-danger" style="display: none;" role="alert"></div>
 <script>
+    $(function() {
+        $("#mainNavbar .nav-link").removeClass("active");
+        $("#mainNavbar .nav-link.adicionar-jogo").addClass("active");
+    });
+
     function validateForm() {
         const bg = $('input[name="name"]').val();
         const owner = $('input[name="owner"]').val();
@@ -289,5 +294,11 @@ if (!empty($_POST)) {
         }
     }
 </script>
+<style>
+    #mainNavbar.navbar-dark .navbar-nav .nav-item:nth-child(3) a {
+        color: white;
+    }
+</style>
+
 
 <?= template_footer() ?>

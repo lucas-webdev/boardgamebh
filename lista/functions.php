@@ -54,41 +54,53 @@ function template_header($title)
             <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
             <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.png">
 
+            <!-- fonts -->
+            <link
+                href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+                rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
-            <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
+
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap" rel="stylesheet">
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+            <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="../public/css/styles.css">
         </head>
         <body>
-        <nav class="navbar navbar-expand-sm navbar-dark">
-            <a class="navbar-brand d-flex align-items-center" href="/lista">
-                <img src="/lista/dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
-                BoardgameBH
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="site-wrapper listaTrocasVendas">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="mainNavbar">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="/lista">
+                    <img src="/lista/dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
+                    <span class="navbarLogoText ms-2">BoardgameBH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Site</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/lista">Visualizar lista <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/lista/adicionar-jogo.php">Adicionar jogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/lista/remover-jogo.php">Remover jogo</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-7" href="/">SITE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="visualizar-lista nav-link fw-bold fs-7" href="/lista">VISUALIZAR LISTA <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="adicionar-jogo nav-link fw-bold fs-7" href="/lista/adicionar-jogo.php">ADICIONAR JOGO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="remover-jogo nav-link fw-bold fs-7" href="/lista/remover-jogo.php">REMOVER JOGO</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        <section class="banner-ads">
-        
+        <section class="py-4 banner-ads--center container-fluid">
             <div class="col-12 d-none d-md-flex justify-content-center">
                 <a href="#" target="_blank"
                     onclick="ga('send', 'event', 'Torneio Draftosaurus', 'click-banner-unico');">
@@ -113,6 +125,7 @@ function template_footer()
     <footer>
     <div class="col-12 text-center"> © BGBH 2020 - Todos os direitos reservados </div>
     </footer>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
