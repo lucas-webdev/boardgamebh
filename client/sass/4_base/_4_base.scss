@@ -1,0 +1,97 @@
+body {
+    background: transparent url($whitePattern);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+small {
+    font-family: $primaryFont;
+}
+
+h1 {
+    font-family: $primaryFont;
+    font-size: $fontSizeXLarge;
+    font-weight: $extraBold;
+    color: $primaryColor;
+}
+
+h2 {
+    font-size: $fontSizeLarge;
+    font-weight: $extraBold;
+    font-family: $primaryFont;
+}
+
+h3 {
+    font-family: $primaryFont;
+    font-size: $fontSizeMedium;
+    font-weight: $extraBold;
+    color: $primaryColor;
+
+    &.regular {
+        font-weight: $regular;
+
+    }
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+p { 
+    font-size: $fontSizeMedium; 
+    color: $primaryColor;
+    
+    &.secondary { color: $secondaryColor; }
+    &.success { color: $successColor; }
+    &.info { color: $infoColor; }
+    &.danger { color: $dangerColor; }
+}
+
+span, label { 
+    font-size: inherit;
+    color: $primaryColor;
+
+    &.secondary { color: $secondaryColor; }
+    &.success { color: $successColor; }
+    &.info { color: $infoColor; }
+    &.danger { color: $dangerColor; }
+}
+
+small {
+    font-size: $fontSizeSmall;
+    color: $primaryColor;
+
+    &.secondary { color: $secondaryColor; }
+    &.success { color: $successColor; }
+    &.info { color: $infoColor; }
+    &.danger { color: $dangerColor; }
+}
+
+button { 
+    color: $buttonTextColor;
+}
+
+img {
+    max-width: 100%;
+}

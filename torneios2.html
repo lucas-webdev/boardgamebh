@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187241035-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-187241035-1');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K2MBCJ50J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1K2MBCJ50J');
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+        ga('create', 'UA-187241035-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
+    <!-- <script data-ad-client="ca-pub-3851012828743137" async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+
+    <title>BoardgameBH [BGBH] - TORNEIOS</title>
+
+    <!-- meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="BoardgameBH [BGBH]">
+    <meta property="og:site_name" content="BoardgameBH [BGBH]">
+    <meta property="og:url" content="http://www.bgbh.com.br/">
+    <meta property="og:description" content="Saiba tudo sobre os torneios do BGBH">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
+    <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.jpg">
+
+    <!-- fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- external css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./public/css/styles.css">
+
+    <style>
+        .full-image {
+            /* object-fit: cover; */
+            object-fit: fill;
+            max-height: 100%;
+            min-width: 100%;
+        }
+
+        .section-subscribe {
+            background: url("http://www.bgbh.com.br/images/base-site-verde.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50vh;
+        }
+
+        .subscribe-content {
+            height: calc(100% - 54px);
+        }
+
+        .image-map {
+            zoom: 70%;
+        }
+
+        .fs-7 {
+            font-size: 0.825em;
+        }
+
+        .menu-anchor {
+            display: block;
+            position: relative;
+            top: -60px;
+            visibility: hidden;
+        }
+
+        #accordionFormatoSuico .text-success {
+            color: #198754 !important;
+        }
+
+        /* PERSONALIZADOS PARA TORNEIO */
+
+        h4.text-dark {
+            color: #673409 !important;
+        }
+
+        /* .text-success {
+            color: #cb781a !important;
+        } */
+
+        .text-info {
+            color: #f9911a !important;
+        }
+
+        /* section.gradient-bg {
+            background: rgb(87, 46, 24);
+            background: linear-gradient(180deg, rgba(87, 46, 24, 1) 50%, rgba(34, 21, 16, 1) 100%);
+        } */
+
+        /* section.gradient-bg .icon-gradient,
+        section.gradient-bg .text-gradient {
+            background: -webkit-linear-gradient(#feb228, #f67e12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        } */
+
+        .list-group-item,
+        .accordion-button,
+        .accordion-button:not(.collapsed) {
+            /* background: rgba(87, 46, 24, 0.5); */
+            background: #ffebd4;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: inherit;
+        }
+
+        @media screen and (max-width: 762px) {
+            iframe {
+                max-width: 100%;
+            }
+
+            .full-image {
+                height: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="-30" tabindex="0">
+    <div class="site-wrapper torneios">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="http://www.bgbh.com.br/images/bgbh-logo.png" alt="logo BGBH" width="30" height="24">
+                    <span class="fw-bold text-white ms-2">BoardgameBH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="mainNavbar">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold fs-7" href="#torneio" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                O TORNEIO
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item text-white fw-bold fs-7"
+                                        href="#detalhes_torneio">DETALHES</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white fw-bold fs-7"
+                                        href="#cronograma_torneio">CRONOGRAMA</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-white fw-bold fs-7"
+                                        href="#premiacao_torneio">PREMIAÇÃO</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-7" href="#inscricao_torneio">INSCRIÇÃO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-7" href="#informacoes_importantes">INFORMAÇÕES IMPORTANTES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-7" href="#formato_suico">O FORMATO SUIÇO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-7" href="#sobre_bgbh">BGBH</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="height: 60vh;">
+            <img src="http://www.bgbh.com.br/images/torneios/torneio-draftosaurus.png" class="full-image"
+                alt="Torneio Draftosaurus">
+        </div>
+        <div class="menu-anchor" id="torneio"></div>
+        <section class="container sectionYSpacer">
+            <div class="d-flex align-items-center flex-column main-header">
+                <p class="lead mb-0 text-center">
+                    Chegou a hora de gerenciar o seu próprio zoológio de dinossauros!
+                    <br />
+                    Em <span class="fw-bold">Draftosaurus</span> os jogadorem devem posicionar seus dinomeeples
+                    estratégicamente, <br> seguindo a regra de
+                    colocação de cada rodada para conseguir a maior pontuação.
+                </p>
+                <div class="mt-3 mx-auto text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eSaqTJFJ2EQ"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- <hr size="3" />
+        <hr size="3" class="mt-1" /> -->
+        <div class="menu-anchor" id="detalhes_torneio"></div>
+        <section class="container-fluid detalhes-torneio sectionYSpacer bg-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <i class="icone bi bi-gear fs-3"></i>
+                        <h1 class="d-inline-block ms-2">DETALHES</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span class="bold">DADOS GERAIS</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="bold">Plataforma:</span>
+                                <span>Boardgame Arena (BGA)</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="bold">Formato:</span>
+                                <span>Formato suiço</span>
+                            </li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h3 class="text-success mb-3 fw-bold">CONFIGURAÇÃO DA MESA</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Modo de jogo: </span>
+                                <span>Modo normal</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Velocidade de jogo: </span>
+                                <span>Tempo real</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Jogadores por mesa: </span>
+                                <span>4 jogadores</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Modo: </span>
+                                <span>Verão / Inverno</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="menu-anchor" id="cronograma_torneio"></div>
+        <section class="container-fluid gradient-bg d-flex align-items-center justify-content-center">
+            <i class="bi bi-calendar-week icon-gradient me-3 fs-3"></i>
+            <h2 class="py-2 text-gradient fw-bold mb-0">CRONOGRAMA</h2>
+        </section>
+        <div class="py-4">
+            <section class="container py-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-success mb-3 fw-bold">PRIMEIRA FASE</h3>
+                    </div>
+                    <div class="col-12">
+                        <h4 class="text-info">ETAPAS CLASSIFICATÓRIAS INDEPENDENTES</h4>
+                        <p class="lead">
+                            Serão realizadas
+                            <span class="fw-bold">2 etapas classificatórias independentes</span>, em 2 dias diferentes,
+                            nos
+                            quais
+                            os participantes poderão
+                            <span class="fw-bold">escolher os dias que pretendem participar de acordo com sua
+                                disponibilidade</span>,
+                            podendo inclusive participar de todos os dias, ampliando suas possibilidades de garantir uma
+                            vaga
+                            para a fase final do torneio.
+                        </p>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Classificatória 1: </span>
+                                <span>Dia da semana, XX de Abril - </span>
+                                <span class="fw-bold">20h</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Classificatória 2: </span>
+                                <span>Dia da semana, XX de Abril - </span>
+                                <span class="fw-bold">20h</span>
+                            </li>
+                        </ul>
+                        <p class="mt-3">
+                            Cada etapa classificatória acontecerá em
+                            <span class="fw-bold">formato suiço </span>, com <span class="fw-bold">4 rodadas
+                                (partidas)</span>
+                            de duração.
+                            <span class="fw-bold">
+                                Ao final das 4 rodadas os 4 melhores colocados de cada etapa classificatória irão
+                                garantir
+                                uma
+                                vaga para a fase final.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <h3 class="text-success mb-3 fw-bold">FASE FINAL</h3>
+                    </div>
+                    <div class="col-12">
+                        <h4 class="text-info">FINAL - TORNEIO SUIÇO ENTRE OS 8 CLASSIFICADOS</h4>
+                        <p class="lead">
+                            Os
+                            <span class="fw-bold">4 classificados de cada dia (cada etapa)</span> se enfrentam em
+                            <span class="fw-bold">4 rodadas de suiço</span>,
+                            em que a mesa de cada rodada é montada pela própria plataforma considerando o desempenho dos
+                            jogadores.
+                            <br />
+                            Pode existir reencontro entre os jogadores nas mesas.
+                        </p>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Final: </span>
+                                <span>Dia da semana, XX de Abril - </span>
+                                <span class="fw-bold">20h</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="menu-anchor" id="premiacao_torneio"></div>
+        <section class="container-fluid gradient-bg d-flex align-items-center justify-content-center">
+            <i class="bi bi-trophy icon-gradient me-3 fs-3"></i>
+            <h2 class="py-2 text-gradient fw-bold mb-0">PREMIAÇÃO</h2>
+        </section>
+        <div class="py-4 bg-white">
+            <section class="container py-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-success mb-3 fw-bold">PRÊMIOS</h3>
+                    </div>
+                    <div class="col-12">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Campeão: </span>
+                                <span>1 cópia do jogo </span>
+                                <span class="fw-bold">Draftosaurus</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Vice-campeão: </span>
+                                <span>1 voucher de desconto de </span>
+                                <span class="fw-bold">R$ 50,00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <h4 class="text-info">SORTEIO ESPECIAL KIT MEEPLE BR</h4>
+                            <p class="lead">
+                                Um Sorteio Especial será realizado entre todos os participantes do torneio que
+                                responderem o
+                                <span class="fw-bold">formulário pós-torneio</span>.
+                                <br />
+                                O formulário estará disponível aqui no regulamento do torneio após o término da etapa do
+                                dia
+                                24/03 (quarta).
+                                <br />
+                                Caso um jogador eliminado do torneio por W.O., sem justificativa, seja sorteado, um novo
+                                nome
+                                será sorteado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p class="text-danger fw-bold fs-6">Frete por conta dos ganhadores</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="menu-anchor" id="inscricao_torneio"></div>
+        <div class="section-subscribe">
+            <section class="container-fluid gradient-bg d-flex align-items-center justify-content-center">
+                <i class="bi bi-pencil-square icon-gradient me-3 fs-3"></i>
+                <h2 class="py-2 text-gradient fw-bold mb-0">INSCRIÇÃO</h2>
+            </section>
+            <section class="container subscribe-content d-flex align-items-center justify-content-center">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="lead text-center text-white fw-bold">
+                            Falta pouco para você fazer parte do nosso torneio.
+                            <br />
+                            Clique no botão abaixo para realizar a sua inscrição e vamos em busca de termos o melhor zoo
+                            de
+                            Dinos! Yhaa!
+                        </p>
+                    </div>
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSGO8RyRXR7EmPZQiYWGOwzG71JuVd4t2t3v9kvyDsk-AN1Q/viewform"
+                            target="_blank" class="btn btn-dark btn-lg my-4">
+                            FAZER INSCRIÇÃO
+                        </a>
+                    </div>
+                </div>
+                <!-- <form action="">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <div class="mb-3">
+                                <label for="emailInput" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="emailInput" placeholder="nome@examplo.com">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="mb-3">
+                                <label for="nameInput" class="form-label">Nome *</label>
+                                <input type="text" id="nameInput" class="form-control" aria-describedby="nameHelperBlock">
+                                <div id="nameHelperBlock" class="form-text">
+                                    Informe nome e sobrenome
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="mb-3">
+                                <label for="bgaUserInput" class="form-label">Usuário BGA (Nome no BGA) *</label>
+                                <input type="text" id="bgaUserInput" class="form-control" aria-describedby="bgaUserHelperBlock">
+                                <div id="bgaUserHelperBlock" class="form-text">
+                                    <span class="fw-bold">Atenção: </span>
+                                    Para o envio correto do convite pela plataforma é necessário que o nome de usuário esteja
+                                    exatamente como o registrado.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="mb-3">
+                                <label for="contactInput" class="form-label">Contato para confirmação do cadastro *</label>
+                                <input type="text" id="contactInput" class="form-control" aria-describedby="contactHelperBlock">
+                                <div id="contactHelperBlock" class="form-text">
+                                    Informe o Whatsapp de contato
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="mb-3">
+                                <label for="contactInput" class="form-label">Você participou de algum torneio/desafio anterior?
+                                    *</label>
+                                <ul class="list-group">
+                                    <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        <li class="list-group-item">
+                                            Ver opções
+                                        </li>
+                                    </a>
+                                </ul>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="list-group">
+                                        <label class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="">
+                                            Não, esse é meu primeiro torneio
+                                        </label>
+                                    </div>
+                                    <div class="list-group list-group-horizontal">
+                                        <label class="list-group-item w-50">
+                                            <input class="form-check-input me-1" type="checkbox" value="">
+                                            For Sale
+                                        </label>
+                                        <label class="list-group-item w-50">
+                                            <input class="form-check-input me-1" type="checkbox" value="">
+                                            Jaipur
+                                        </label>
+                                    </div>
+                                    <div class="list-group list-group-horizontal">
+                                        <label class="list-group-item w-50">
+                                            <input class="form-check-input me-1" type="checkbox" value="">
+                                            7 Wonders Duel
+                                        </label>
+                                        <label class="list-group-item w-50">
+                                            <input class="form-check-input me-1" type="checkbox" value="">
+                                            Carcassonee
+                                        </label>
+                                    </div>
+                                    <div class="list-group">
+                                        <label class="list-group-item">
+                                            <input class="form-check-input me-1" type="checkbox" value="">
+                                            Desafio Sushi Go
+                                        </label>
+                                    </div>
+                                </div>
+        
+                                <div id="contactHelperBlock" class="form-text">
+                                    Informe o Whatsapp de contato
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form> -->
+            </section>
+        </div>
+        <div class="menu-anchor" id="informacoes_importantes"></div>
+        <section class="container-fluid gradient-bg d-flex align-items-center justify-content-center">
+            <i class="bi bi-exclamation-triangle icon-gradient me-3 fs-3"></i>
+            <h2 class="py-2 text-gradient fw-bold mb-0">INFORMAÇÕES IMPORTANTES</h2>
+        </section>
+        <div class="py-4">
+            <section class="container py-4">
+                <div>
+                    <h4 class="text-dark fw-bold mb-3">DESCLASSIFICAÇÃO AUTOMÁTICA</h4>
+                    <p>
+                        Caso o participante tenha se inscrito nas duas etapas e consiga a
+                        <span class="fw-bold"> classificação na primeira</span>, poderá participar normalmente da
+                        segunda
+                        etapa.
+                        <br />
+                        A vaga do participante na final já estará garantida e caso venha a se classificar em uma nova
+                        etapa,
+                        <span class="fw-bold">a vaga será do jogador imediatamente abaixo dele no ranking desta
+                            etapa.</span>
+                        <br />
+                        Esse processo é repetido até que 4 jogadores ocupem as vagas para o torneio final.
+                        <br />
+                        <span class="fw-bold text-danger">
+                            Os jogadores desclassificados são eliminados de todas as rodadas do dia.
+                        </span>
+                        <br />
+                        <span class="text-danger">
+                            <span class="fw-bold">Mas fique atento!!</span>
+                            Caso um classificado perca por W.O. em alguma etapa seguinte ele estará desclassificado da
+                            etapa
+                            final.
+                            <br />
+                            Desta forma, os classificados devem ficar atentos caso queiram participar da segunda etapa.
+                        </span>
+                    </p>
+                </div>
+                <hr />
+                <div>
+                    <h4 class="text-dark fw-bold mb-3">O QUE ACONTECE SE UM JOGADOR SE CLASSIFICAR EM UMA ETAPA E
+                        ESTIVER
+                        INSCRITO NAS PRÓXIMAS ETAPAS? ELE PODERÁ JOGAR?</h4>
+                    <p>
+                        O início da etapa será aberto automaticamente pela plataforma (BGA), <span
+                            class="fw-bold">rigorosamente
+                            no
+                            horário</span>.
+                        Após a liberação da entrada nas mesas o sistema possui uma <span class="fw-bold">tolerância de 5
+                            minutos</span> e
+                        os jogadores que não estiverem em suas mesas serão desclassificados automaticamente.
+                        <br />
+                        <span class="fw-bold text-danger">
+                            Os jogadores desclassificados são eliminados de todas as rodadas do dia.
+                        </span>
+                        <br />
+                        <span class="text-danger">
+                            Os organizadores não podem ser responsabilizados por eventuais desclassificações efetuadas
+                            pela
+                            plataforma,
+                            não existindo ressarcimento nesses casos.
+                        </span>
+                    </p>
+                </div>
+                <hr />
+                <div>
+                    <h4 class="text-dark fw-bold mb-3">O QUE ACONTECE COM A VAGA QUE FICAR EM ABERTO EM CASO DE
+                        DESCLASSIFICAÇÃO
+                        OU DESISTÊNCIA?</h4>
+                    <p>
+                        A vaga será ocupada pelo <span class="fw-bold">próximo jogador no ranqueamento da etapa do
+                            jogador
+                            ausente</span>, que poderia se classificar diretamente.
+                        <br />
+                        Se estivermos a menos de <span class="fw-bold">6 horas</span> da etapa final esta vaga <span
+                            class="fw-bold text-danger">NÃO</span> será preenchida
+                    </p>
+                </div>
+                <hr />
+                <div>
+                    <h4 class="text-dark fw-bold mb-3">O QUE ACONTECE EM CASO DE EMPATE NA FASE FINAL?</h4>
+                    <p>
+                        Como a fase final será decidida em múltiplos jogos, em formato suiço, a classificação final será
+                        determinada a partir dos <span class="fw-bold">critérios de desempate do BGA para o seu formato
+                            suiço</span>.
+                        <br />
+                        Não haverá possibilidade de novas partidas de desempate.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div class="menu-anchor" id="formato_suico"></div>
+        <section class="container-fluid gradient-bg d-flex align-items-center justify-content-center">
+            <i class="bi bi-diagram-3 icon-gradient me-3 fs-3"></i>
+            <h2 class="py-2 text-gradient fw-bold mb-0">SOBRE O FORMATO SUIÇO</h2>
+        </section>
+        <div class="py-4 bg-white">
+            <section class="container py-4">
+                <div class="accordion" id="accordionFormatoSuico">
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header border-bottom bg-white" id="headingOne">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                COMO FUNCIONA O FORMATO SUIÇO?
+                            </button>
+                        </h2>
+                        <div id="collapseOne"
+                            class="accordion-collapse collapse border-bottom border-top-0 bg-white show"
+                            aria-labelledby="headingOne" data-bs-parent="#accordionFormatoSuico">
+                            <div class="accordion-body">
+                                <p>
+                                    O Formato Suiço (swiss system) faz o pareamento de jogadores de acordo com os
+                                    resultados
+                                    ao
+                                    longo do torneio.
+                                    <br />
+                                    Na prática, funciona da seguinte forma:
+                                </p>
+                                <div class="mt-2">
+                                    A <span class="fw-bold">primeira rodada</span> têm um pareamento aleatório, já que
+                                    todos
+                                    os
+                                    jogadores
+                                    estão com
+                                    <br />
+                                    <span class="fw-bold">
+                                        0 <span class="fw-bold text-success">VITÓRIAS</span> e 0 <span
+                                            class="fw-bold text-danger">DERROTAS</span> ( 0 <span
+                                            class="fw-bold text-success">VIT.</span> / 0 <span
+                                            class="fw-bold text-danger">DER.</span> )
+                                    </span>
+                                    <div class="mt-3">
+                                        A
+                                        <span class="fw-bold">segunda rodada</span> coloca os jogadores que estão
+                                        <span class="fw-bold text-success">1 VIT.</span> /
+                                        <span class="fw-bold text-danger">0 DER.</span> contra aqueles que também estão
+                                        com
+                                        <span class="fw-bold text-success">1 VIT.</span> /
+                                        <span class="fw-bold text-danger">0 DER.</span>
+                                        <br /> E jogadores que estão
+                                        <span class="fw-bold">
+                                            0 <span class="fw-bold text-success">VIT.</span> / 1 <span
+                                                class="fw-bold text-danger">DER.</span>
+                                        </span>
+                                        Contra outros jogadores que também estão
+                                        <span class="fw-bold">
+                                            0 <span class="fw-bold text-success">VIT.</span> / 1 <span
+                                                class="fw-bold text-danger">DER.</span>
+                                        </span>
+                                    </div>
+                                    <div class="mt-3">
+                                        A
+                                        <span class="fw-bold">terceira rodada</span> continua utilizando os resultados
+                                        anteriores para
+                                        parear as partidas.
+                                        <br />
+                                        <span class="fw-bold">
+                                            2 <span class="fw-bold text-success">VIT.</span> / 0 <span
+                                                class="fw-bold text-danger">DER.</span>
+                                        </span> Contra <span class="fw-bold">
+                                            2 <span class="fw-bold text-success">VIT.</span> / 0 <span
+                                                class="fw-bold text-danger">DER.</span>
+                                        </span>,
+                                        <br />
+                                        <span class="fw-bold">
+                                            1 <span class="fw-bold text-success">VIT.</span> / 1 <span
+                                                class="fw-bold text-danger">DER.</span>
+                                        </span> Contra <span class="fw-bold">
+                                            1 <span class="fw-bold text-success">VIT.</span> / 1 <span
+                                                class="fw-bold text-danger">DER.</span>
+                                        </span>
+                                        <br /> E <span class="fw-bold">
+                                            0 <span class="fw-bold text-success">VIT.</span> / 2 <span
+                                                class="fw-bold text-danger">DER.</span>
+                                        </span> Contra <span class="fw-bold">
+                                            0 <span class="fw-bold text-success">VIT.</span> / 2 <span
+                                                class="fw-bold text-danger">DER.</span>
+                                        </span>
+                                    </div>
+                                    E isso continua ao longo de <span class="fw-bold">todas as rodadas</span>, sempre
+                                    pareando
+                                    de acordo
+                                    com os resultados das rodadas anteriores.
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header border-bottom bg-white" id="headingTwo">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                QUAL A VANTAGEM DE UTILIZAR UM FORMATO SUIÇO?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse border-bottom border-top-0 bg-white"
+                            aria-labelledby="headingTwo" data-bs-parent="#accordionFormatoSuico">
+                            <div class="accordion-body">
+                                Em primeiro lugar, porque <span class="fw-bold">não existem jogadores eliminados</span>
+                                durante
+                                o suiço.
+                                <br /> Ou seja, <span class="fw-bold">todos os jogadores jogam até o fim de cada etapa,
+                                    o
+                                    mesmo
+                                    número de
+                                    jogos,
+                                    não importando quantas vitórias ou derrotas tenha.</span>
+                                <br /> Como explicado anteriormente, o torneio vai se equilibrando ao longo das
+                                partidas.
+                                <br /> Quanto mais rodadas tiverem sido jogadas no torneio, mais equilibrada será sua
+                                partida.
+                                <br /> Isso elimina o fator “azar” de pegar um jogador teoricamente mais forte em todas
+                                as
+                                rodadas mesmo após uma derrota, já que perdendo uma partida você será emparelhado contra
+                                um
+                                adversário com desempenho similar ao seu, uma vez que ele também terá perdido a sua
+                                partida
+                                anterior.
+                                <br /> Por outro lado, alcançar as primeiras colocações se torna cada vez mais difícil a
+                                cada
+                                derrota.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-2">
+                        <h2 class="accordion-header border-bottom bg-white" id="headingThree">
+                            <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                QUEM CLASSIFICA EM CASO DE EMPATE NA PONTUAÇÃO?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse border-bottom border-top-0 bg-white"
+                            aria-labelledby="headingThree" data-bs-parent="#accordionFormatoSuico">
+                            <div class="accordion-body">
+                                <div>
+                                    Caso exista um empate no suiço, a plataforma possui um critério de desempate a
+                                    partir da
+                                    <span class="fw-bold">pontuação dos adversários que você enfrentou.</span>
+                                    <br />
+                                    Classifica-se assim, o jogador que enfrentou adversários que tiveram um melhor
+                                    desempenho e
+                                    teoricamente teve confrontos mais fortes.
+                                </div>
+                                <div class="mt-2">
+                                    <span class="fw-bold">1º Critério:</span> Soma da pontuação alcançada por todos os
+                                    adversários que o
+                                    jogador enfrentou.
+                                    <br />
+                                    <span class="fw-bold">2º Critério: </span> Média do ELO de todos os adversários que
+                                    o
+                                    jogador enfrentou.
+                                    <small class="fst-italic">
+                                        (soma dos ELOs dos adversários dividida pelo número de partidas da etapa)
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="menu-anchor" id="sobre_bgbh"></div>
+        <section class="container-fluid gradient-bg d-flex align-items-center justify-content-center">
+            <i class="bi bi-dice-1 icon-gradient me-3 fs-3"></i>
+            <h2 class="py-2 text-gradient fw-bold mb-0">BOARDGAMEBH</h2>
+        </section>
+        <div class="py-4">
+            <section class="container py-4">
+                <p class="lead">
+                    O <strong>BoardgameBH</strong> é um projeto que tem como foco o crescimento e a visibilidade do
+                    Boardgame no
+                    país. O portal tem Belo Horizonte e região como carro chefe, mas não possui fronteiras, promovendo e
+                    realizando ações de amplo interesse e com um público espalhado por todo país, como torneios online,
+                    divulgação de lançamentos e conteúdo digital. Diversos braços do projeto ainda estão em
+                    desenvolvimento
+                    e em
+                    breve serão apresentados para o grande público. Enquanto isso, aproveite todas as funcionalidades
+                    liberadas
+                    e não deixe de apoiar esse e os demais projetos voltados para o nosso hobby.
+                    <br />
+                    <strong>Let's play boardgames!</strong>
+                </p>
+                <div class="my-4">
+                    <h5 class="text-success mb-3">
+                        <i class="bi bi-whatsapp me-1 fs-5"></i>
+                        AINDA POSSUI DÚVIDAS OU QUER INTERAGIR COM OUTROS PARTICIPANTES DOS TORNEIOS?
+                    </h5>
+                    <div class="fw-bold">
+                        ENTÃO NÃO DEIXE DE ENTRAR NO GRUPO DE WHATSAPP VOLTADO PARA DIVULGAÇÃO, INFORMAÇÃO E INTERAÇÃO
+                        SOBRE
+                        OS
+                        TORNEIOS DA BGBH.
+                    </div>
+                    <div class="mt-2">
+                        <a class="btn btn-secondary btn-md" href="https://chat.whatsapp.com/KTH6MSuPHNiAoOPgaFbN0n"
+                            target="_blank">ENTRAR NO GRUPO</a>
+                    </div>
+                </div>
+                <div class="py-4">
+                    <h5 class="text-success mb-3">
+                        <i class="bi bi-instagram me-1 fs-5"></i>
+                        NÃO DEIXE DE SEGUIR NOSSO INSTAGRAM E FICAR POR DENTRO DE TUDO QUE ROLA NO BGBH!
+                    </h5>
+                    <div class="mt-2">
+                        <a class="btn btn-secondary btn-md" href="www.intagram.com/boardgamebh"
+                            target="_blank">INSTAGRAM
+                            BGBH</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <hr />
+        <footer class="container-fluid pt-4">
+            <div class="row">
+                <div class="col-12 mt-3 d-flex align-items-center justify-content-center">
+                    <!-- Image Map Generated by http://www.image-map.net/ -->
+                    <img src="http://www.bgbh.com.br/images/map/logos-colt.png" class="image-map w-auto mw-100"
+                        usemap="#image-map">
+
+                    <map name="image-map">
+                        <area id="BoardgameBH" alt="BoardgameBH" title="BoardgameBH" href="http://www.bgbh.com.br/"
+                            shape="rect" coords="53,17,216,244" style="outline:none;" target="_blank" />
+                        <area id="MeepleBR" alt="MeepleBR" title="MeepleBR" href="http://www.meeplebr.com" shape="rect"
+                            coords="298,4,537,244" style="outline:none;" target="_blank" />
+                        <area id="TavernaReal" alt="Taverna Real" title="Taverna Real"
+                            href="https://www.tavernareal.com/" shape="rect" coords="563,0,706,244"
+                            style="outline:none;" target="_blank" />
+                        <area id="MesaSecreta" alt="Mesa Secreta" title="Mesa Secreta" href="http://mesasecreta.com.br/"
+                            shape="rect" coords="802,0,997,244" style="outline:none;" target="_blank" />
+
+                    </map>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.torneios {
+    h1 {
+        color: $primaryColor;
+    }
+
+    .bg-white {
+        background-color: transparentize($color: $primaryColorTournament, $amount: 0.6) !important;
+    }
+}

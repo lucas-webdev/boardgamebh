@@ -1,0 +1,50 @@
+// COLORS
+$primaryColor: #404248 !default;
+$secondaryColor: #acb2bf !default;
+$tertiaryColor: #008daf !default;
+$successColor: #0b655e !default;
+$infoColor: #029e92 !default;
+$dangerColor: #dc3545 !default;
+$darkColor: #212529 !default;
+$darkRed: #880f1d !default;
+$lightColor: #e1e1e1 !default;
+
+// COLORS LISTA
+$addedTodayColor: #fcff5c;
+$addedMoreRecentlyColor: #ffedba;
+$addedRecentlyColor: #fdf4da;
+$addedLongTimeColor: #ff9f9f;
+
+// COLORS TORNEIOS
+$primaryColorTournament: #f9911a; 
+$secondaryColorTournament: #673409;
+$tertiaryColorTournament: #feb228;
+
+// FONTS
+$primaryFont: "Open Sans", sans-serif !default;
+$secondaryFont: "Roboto", sans-serif !default;
+
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 900;
+
+$fontSizeXLarge: 1.5rem !default;
+$fontSizeLarge: 1.25rem !default;
+$fontSizeMedium: 1rem !default;
+$fontSizeSmall: 0.875rem !default;
+$fontSizeXSmall: 0.83rem !default;
+$fontSizeXLSmall: 0.75rem !default;
+
+// BUTTONS
+$buttonTextColor: white !default;
+$primaryButtonBG: linear-gradient(180deg, rgba(64,66,72,1) 15%, rgba(33,37,41,1) 100%) !default;
+$primaryButtonHover: linear-gradient(180deg, rgba(11,101,94,1) 50%, rgba(64,66,72,1) 100%) !default;
+
+// SPACER
+$sectionYSpacer: 35px;
+
+// PATTERNS
+$whitePattern: "http://www.bgbh.com.br/patterns/bgbh_white.png";
+$blackPattern: "http://www.bgbh.com.br/patterns/bgbh_black.png";
+$greenPattern: "http://www.bgbh.com.br/patterns/bgbh_green.png";

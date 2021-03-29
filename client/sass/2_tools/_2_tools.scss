@@ -1,0 +1,61 @@
+// TRANSITIONS AND ANIMATIONS
+@mixin gradientAnimation( $topColor, $bottomColor, $topHoverColor, $bottomHoverColor, $transTime ){
+    background-size: 100% 300%;
+    moz-transition: all $transTime ease-in-out;
+    -o-transition: all $transTime ease-in-out;
+    -webkit-transition: all $transTime ease-in-out;
+    transition: all $transTime ease-in-out;
+    color: $buttonTextColor;
+    background-image: linear-gradient(to bottom, $topColor, $bottomColor, $topHoverColor 80%, $bottomHoverColor);
+
+    &:hover {
+        background-position: 0 100%;
+        moz-transition: all $transTime ease-in-out;
+        -o-transition: all $transTime ease-in-out;
+        -webkit-transition: all $transTime ease-in-out;
+        transition: all $transTime ease-in-out;
+        color: $buttonTextColor;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin corBtnPlanilha($color) {
+    transition: all 0.4s ease-out;
+    color: initial;
+    &:hover {
+        span { 
+            color: $color; 
+            transition: all 0.4s ease-out; 
+        }
+    }
+}
+
+@mixin grayFilter() {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.4s ease-out;
+
+    &:hover {
+        transition: all 0.4s ease-out;
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+}
+
+@mixin flexbox($direction: row, $align: center, $justify: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin textGradient($startColor, $endColor, $direction: "to bottom") {
+    background: -webkit-linear-gradient($startColor, $endColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

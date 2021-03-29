@@ -43,9 +43,10 @@
     <!-- <script data-ad-client="ca-pub-3851012828743137" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoardgameBH [BGBH]</title>
 
+    <!-- meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="BoardgameBH [BGBH]">
     <meta property="og:site_name" content="BoardgameBH [BGBH]">
     <meta property="og:url" content="http://www.bgbh.com.br/">
@@ -54,70 +55,86 @@
     <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
     <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.jpg">
 
+    <!-- fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- external css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/style.css">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../public/css/styles.css">
+
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#main_navbar" data-bs-offset="0" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="-30" tabindex="0">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB466ZC" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Image and text -->
     <div class="site-wrapper">
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="mainNavbar">
             <div class="container-fluid">
-                <a class="navbar-brand font-800" href="#">
-                    <img src="images/bgbh-logo.png" alt="logo BGBH" width="30" height="24"
-                        class="d-inline-block align-top"> BoardgameBH
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/bgbh-logo.png" alt="logo BGBH" height="30">
+                    <span class="navbarLogoText ms-2">BoardgameBH</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_navbar"
-                    aria-controls="main_navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="main_navbar">
-                    <ul class="navbar-nav">
+                <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold active" aria-current="page" href="#mainCarousel"
-                                onclick="ga('send', 'event', 'Menu', 'click', 'inicio');">INÍCIO</a>
+                            <a class="nav-link fw-bold fs-7 active" href="#mainCarousel"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'inicio');">
+                                INÍCIO
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#desafios_e_torneios_anchor"
-                                onclick="ga('send', 'event', 'Menu', 'click', 'torneios');">DESAFIOS E TORNEIOS</a>
+                            <a class="nav-link fw-bold fs-7" href="#desafios_e_torneios_anchor"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'torneios');">
+                                DESAFIOS E TORNEIOS
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#lista_trocas_e_vendas_anchor"
-                                onclick="ga('send', 'event', 'Menu', 'click', 'lista');">LISTA DE TROCAS & VENDAS</a>
+                            <a class="nav-link fw-bold fs-7" href="#lista_trocas_e_vendas_anchor"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'lista');">
+                                LISTA DE TROCAS & VENDAS
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#grupos_anchor"
-                                onclick="ga('send', 'event', 'Menu', 'click', 'grupos');">NOSSOS GRUPOS</a>
+                            <a class="nav-link fw-bold fs-7" href="#grupos_anchor"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'grupos');">
+                                NOSSOS GRUPOS
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#contato"
-                                onclick="ga('send', 'event', 'Menu', 'click', 'contato');">CONTATO</a>
+                            <a class="nav-link fw-bold fs-7" href="#contato"
+                                onclick="ga('send', 'event', 'Menu', 'click', 'contato');">
+                                CONTATO
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="mainCarousel" class="carousel slide mainCarousel" data-bs-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/bgbh-topo-site.jpg" class="d-block main-background" alt="BGBH">
+                    <img src="images/bgbh-topo-site.jpg" class="d-block carousel-background" alt="BGBH">
                     <div class="carousel-caption">
-                        <img class="main-logo" src="images/bgbh-logo.png" alt="logo BGBH" />
-                        <!-- <h5 class="font-800">BoardgameBH</h5> -->
+                        <img class="mainLogo" src="images/bgbh-logo.png" alt="logo BGBH" />
+                        <!-- <h5 class="extrabold">BoardgameBH</h5> -->
                         <p>O seu portal de jogos de tabuleiro</p>
                     </div>
                 </div>
@@ -131,89 +148,30 @@
                 </a> -->
             </div>
         </div>
-        <div class="site-content container">
-            <div class="mt-5 d-flex align-items-center flex-column main-header">
-                <h4 class="font-800 mb-2 text-center">NOSSO PORTAL AINDA ESTÁ EM CONSTRUÇÃO</h4>
-                <h6 class="mb-4 px-2 text-center">
-                    MAS VOCÊ JÁ PODE APROVEITAR NOSSA <span class="font-800">LISTA DE TROCAS & VENDAS</span> (EXCLUSIVA
+        <div class="container">
+            <div class="sectionYSpacer d-flex align-items-center flex-column main-header">
+                <h1 class="mb-2 text-center">NOSSO PORTAL AINDA ESTÁ EM CONSTRUÇÃO</h1>
+                <h3 class="regular px-2 text-center">
+                    MAS VOCÊ JÁ PODE APROVEITAR NOSSA <span class="extrabold">LISTA DE TROCAS & VENDAS</span> (EXCLUSIVA
                     BH),
-                    <br class="hidden-sm" /> NOSSOS <span class="font-800">DESAFIOS E TORNEIOS</span> E TAMBÉM CONHECER
-                    NOSSOS <span class="font-800">GRUPOS DE WHATSAPP</span>
-                </h6>
-                <hr />
-                <hr />
+                    <br class="hidden-sm" /> NOSSOS <span class="extrabold">DESAFIOS E TORNEIOS</span> E TAMBÉM CONHECER
+                    NOSSOS <span class="extrabold">GRUPOS DE WHATSAPP</span>
+                </h3>
             </div>
-            <div class="py-4" id="workshops" data-aos-duration="15000" data-aos="fade-down-left">
-                <i class="bi bi-puzzle-fill custom-color--a7 fs-3"></i>
-                <h4 class="font-800 d-inline-block">
-                    WORKSHOP
-                </h4>
-                <div class="mt-4">
-                    <div class="row g-0">
-                        <div class="col-12 text-center mx-auto">
-                            <a class="mx-auto w-85 d-block d-md-none" href="/workshop.html" target="_blank"
-                                onclick="ga('send', 'event', 'Ver regras workshop', 'click-imagem');">
-                                <img src=" images/workshops/workshop-colt-mobile.jpeg" alt="Workshop Colt Express"
-                                    class="w-100">
-                            </a>
-                            <a class="mx-auto w-100 d-none d-md-block" href="/workshop.html" target="_blank"
-                                onclick="ga('send', 'event', 'Ver regras workshop', 'click-imagem');">
-                                <img src=" images/workshops/Colt-Express.png" alt="Workshop Colt Express" class="w-100">
-                            </a>
-                        </div>
-                    </div>
+        </div>
+        <hr size="3" />
+        <hr size="3" class="mt-1" />
+        <div class="container">
+            <div id="desafios_e_torneios_anchor" class="anchorSpacer"></div>
+            <div class="sectionYSpacer" id="desafios_e_torneios">
+                <div data-aos-duration="10000" data-aos="fade-down-right">
+                    <i class="icone bi bi-trophy-fill fs-3"></i>
+                    <h1 class="d-inline-block ms-2">
+                        DESAFIOS E TORNEIOS
+                    </h1>
                 </div>
-            </div>
-            <hr class="mb-3" />
-            <hr />
-            <div id="desafios_e_torneios_anchor"></div>
-            <div class="pt-4" id="desafios_e_torneios" data-aos-duration="15000" data-aos="fade-down-right">
-                <i class="bi bi-trophy-fill custom-color--a7 fs-3"></i>
-                <h4 class="font-800 d-inline-block">
-                    DESAFIOS E TORNEIOS
-                </h4>
-                <div class="mt-4">
-                    <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-lg-6">
-                                <img src=" images/torneios/torneio-Colt-Express.png" class="card-img-top"
-                                    alt="Torneio Colt Express">
-                                <!-- <a href="/torneios.html" target="_blank" onclick="ga('send', 'event', 'Ver regras torneio Colt', 'click-imagem');">
-                                </a> -->
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card-body">
-                                    <p class="font-800">COLT EXPRESS - TORNEIO ONLINE</p>
-                                    <p class="card-text">
-                                        Uma locomotiva em movimento, jóias, dinheiro e Bang Bang! A hora de testar sua
-                                        astucia e coragem se aproxima. Em Colt Express os jogadores são verdadeiros
-                                        Foras da Lei no Velho Oeste, disputando movimento a movimento quem vai terminar
-                                        essa aventura coletando
-                                        a maior quantia em dinheiro nos vagões.
-                                    </p>
-                                    <p class="mt-3">
-                                        <span class="font-800">Fiquem Ligados, as inscrições serão iniciadas nos
-                                            próximos dias.</span>
-                                    </p>
-                                    <!-- <span>
-                                            Este torneio possui etapas independentes de classificação, não sendo
-                                            necessário participação em todos os dias ou etapas anteriores.
-                                            <br />
-                                            Escolha os dias de acordo com sua disponibilidade.
-                                        </span>
-                                    </p>
-                                    <p class="card-text">
-                                        <a href="/torneios.html" target="_blank" class="btn btn-dark" onclick="ga('send', 'event', 'Ver regras torneio', 'click-botao');">Saiba
-                                            mais</a> 
-                                        </p>
-                                    -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <div class="card mb-3">
+                <div class="mt-4" data-aos-duration="15000" data-aos="fade-right" data-aos-delay="500">
+                    <div class="card card-torneio mb-4">
                         <div class="row g-0">
                             <div class="col-lg-6">
                                 <img src=" images/torneios/torneio-draftosaurus.png" class="card-img-top"
@@ -223,14 +181,14 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="card-body">
-                                    <p class="font-800">DRAFTOSAURUS - TORNEIO ONLINE</p>
+                                    <h3 class="mb-2">DRAFTOSAURUS - TORNEIO ONLINE</h3>
                                     <p class="card-text">
                                         Já imaginou gerenciar um Parque de Dinossauros com a intenção de atrair o maior
                                         número possível de visitantes nesse inusitado empreendimento? Não? Então
                                         prepa-se, em ABRIL os DinoMeeples irão invandir o BoardgameBH
                                     </p>
                                     <p class="mt-3">
-                                        <span class="font-800">O recrutamento para essa perigosa missão começa em
+                                        <span class="extrabold">O recrutamento para essa perigosa missão começa em
                                             breve.</span>
                                     </p>
                                     <!-- <span>
@@ -250,15 +208,16 @@
                     </div>
                 </div>
             </div>
-            <div class="mb-4" data-aos-duration="15000" data-aos="fade-down-left" data-aos-delay="600">
-                <div class="accordion accordion-flush d-md-none" id="accordionFlushUltimosTorneios">
+            <section class="ultimosTorneios sectionYSpacer" data-aos-duration="15000" data-aos="fade-down"
+                data-aos-delay="600">
+                <div class="accordion accordion-flush d-md-none ultimosTorneios" id="accordionFlushUltimosTorneios">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseOne" aria-expanded="false"
                                 aria-controls="flush-collapseOne">
-                                <i class="bi bi-trophy-fill custom-color--a7 fs-3"></i>
-                                <small class="font-800 d-inline-block ms-2">
+                                <i class="icone bi bi-trophy-fill fs-3"></i>
+                                <small class="extrabold d-inline-block ms-2">
                                     ÚLTIMOS TORNEIOS REALIZADOS
                                 </small>
                             </button>
@@ -266,6 +225,11 @@
                         <div id="flush-collapseOne" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body row">
+                                <div class="col-lg-3 col-md-4 col-6 mt-2">
+                                    <img class="w-100 gray-filter"
+                                        src="images/torneios/realizados/torneio-colt-express.png"
+                                        alt="Torneio Colt Express" />
+                                </div>
                                 <div class="col-lg-3 col-md-4 col-6 mt-2">
                                     <img class="w-100 gray-filter" src="images/torneios/realizados/desafio-sushigo.png"
                                         alt="desafio Sushi Go" />
@@ -291,11 +255,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4 d-none d-md-block">
-                    <h6 class="font-800 d-inline-block">
-                        <i class="bi bi-puzzle-fill custom-color--a7 fs-3"></i> ÚLTIMOS TORNEIOS REALIZADOS
-                    </h6>
+                <div class="row d-none d-md-block">
+                    <h3 class="extrabold d-inline-block">
+                        <i class="icone bi bi-puzzle-fill fs-4"></i> ÚLTIMOS TORNEIOS REALIZADOS
+                    </h3>
                     <div class="row mt-4 d-flex justify-content-center">
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                            <img class="w-100 gray-filter" src="images/torneios/realizados/torneio-colt-express.png"
+                                alt="Torneio Colt Express" />
+                        </div>
                         <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                             <img class="w-100 gray-filter" src="images/torneios/realizados/desafio-sushigo.png"
                                 alt="desafio Sushi Go" />
@@ -318,9 +286,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-        <div class="py-4 mt-5 banner-ads--center container-fluid" id="banner-ads--center-unico">
+        <div class="py-4 sectionYSpacer banner-ads--center container-fluid" id="banner-ads--center-unico">
             <div class="d-flex align-items-center justify-content-center">
                 <a href="" target="_blank">
                     <img class="img-fluid banner-ads-90" src="images/banners/banner_draftosaurus_em_breve.png"
@@ -328,178 +296,181 @@
                 </a>
             </div>
         </div>
-        <div class="site-content container">
-            <div id="lista_trocas_e_vendas_anchor"></div>
-            <div class="py-4" id="lista_trocas_e_vendas" data-aos-duration="15000" data-aos="fade-up-left">
-                <i class="bi bi-arrow-left-right custom-color--a7 fs-3"></i>
-                <h4 class="font-800 d-inline-block">
+        <div class="container">
+            <div id="lista_trocas_e_vendas_anchor" class="anchorSpacer"></div>
+            <div class="sectionYSpacer" id="lista_trocas_e_vendas" data-aos-duration="15000" data-aos="fade-up-left">
+                <i class="icone bi bi-arrow-left-right fs-3"></i>
+                <h1 class=" ms-2 extrabold d-inline-block">
                     LISTA DE TROCAS & VENDAS
-                </h4>
-                <small class="custom-color--crimson d-block">
-                    (Exclusiva para <span class="font-800">Belo Horizonte</span> e região)
+                </h1>
+                <small class="danger d-block">
+                    (Exclusiva para <span class="extrabold danger">Belo Horizonte</span> e região)
                 </small>
                 <div class="botoes-lista mt-3 container">
                     <div class="d-flex justify-content-evenly align-items-center">
-                        <a target="_blank" href="/lista/index.php" class="image featured btn-planilha gray-filter"
+                        <a target="_blank" href="/lista/index.php" class="image featured btn-planilha visualizar-lista"
                             data-aos="fade-up" data-aos-duration="15000" data-aos-easing="ease-in-out"
                             onclick="ga('send', 'event', 'botões lista', 'click', 'visualizar');">
                             <img class="img-fluid" src="images/btn-visualizar.png" alt="Visualizar lista" />
-                            <h5 class="font-800 custom-color--visualizar-lista">VISUALIZAR LISTA</h5>
+                            <span class="extrabold">VISUALIZAR LISTA</span>
                         </a>
                         <a target="_blank" href="/lista/adicionar-jogo.php"
-                            class="image featured btn-planilha gray-filter" data-aos="fade-up" data-aos-duration="15000"
-                            data-aos-easing="ease-in-out" data-aos-delay="200"
+                            class="image featured btn-planilha adicionar-jogo" data-aos="fade-up"
+                            data-aos-duration="15000" data-aos-easing="ease-in-out" data-aos-delay="200"
                             onclick="ga('send', 'event', 'botões lista', 'click', 'adicionar');">
                             <img class="img-fluid" src="images/btn-adicionar.png" alt="Adicionar jogo" />
-                            <h5 class="font-800 custom-color--adicionar-jogo">ADICIONAR JOGO</h5>
+                            <span class="extrabold">ADICIONAR JOGO</span>
                         </a>
                         <a target="_blank" href="/lista/remover-jogo.php"
-                            class="image featured btn-planilha gray-filter" data-aos="fade-up" data-aos-duration="15000"
-                            data-aos-easing="ease-in-out" data-aos-delay="300"
+                            class="image featured btn-planilha remover-jogo" data-aos="fade-up"
+                            data-aos-duration="15000" data-aos-easing="ease-in-out" data-aos-delay="300"
                             onclick="ga('send', 'event', 'botões lista', 'click', 'remover');">
                             <img class="img-fluid" src="images/btn-remover.png" alt="Remover jogo" />
-                            <h5 class="font-800 custom-color--remover-jogo">REMOVER JOGO</h5>
+                            <span class="extrabold">REMOVER JOGO</span>
                         </a>
                     </div>
                 </div>
                 <div class="regras-lista mt-5 text-center">
-                    <i class="bi bi-card-list me-1"></i> Confira as <a href="/regras-lista.html" target="_blank">regras
-                        de utilização</a> da Lista de Trocas & Vendas
+                    <i class="icone bi bi-file-earmark-text me-1"></i> Confira as
+                    <a class="inheritLink" href="/regras-lista.html" target="_blank"> regras de utilização </a>
+                    da Lista de Trocas & Vendas
                 </div>
-                <div class="regras-lista mt-2 text-center custom-color--crimson">
-                    <i class="bi bi-exclamation-diamond me-1"></i> Nenhuma negociação utilizando a Lista de Trocas &
-                    Vendas é de responsabilidade do Boardgame BH
+                <div class="regras-lista mt-2 text-center">
+                    <i class="icone danger bi bi-exclamation-diamond me-1"></i>
+                    <small class="danger">Nenhuma negociação utilizando a Lista de Trocas & Vendas é de responsabilidade
+                        do Boardgame BH</small>
+
                 </div>
             </div>
-            <hr class="mb-3" />
-            <hr />
-            <div id="grupos_anchor"></div>
-            <div class="py-4" id="grupos">
-                <i class="bi bi-chat-text custom-color--a7 fs-3" data-aos-duration="15000"
-                    data-aos="fade-down-right"></i>
-                <h4 class="font-800 d-inline-block" data-aos-duration="15000" data-aos="fade-down-right">
-                    NOSSOS GRUPOS
-                </h4>
+        </div>
+        <hr size="3" />
+        <hr size="3" class="mt-1" />
+        <div class="container">
+            <div id="grupos_anchor" class="anchorSpacer"></div>
+            <div class="sectionYSpacer" id="grupos">
+                <div data-aos-duration="15000" data-aos="fade-down-right">
+                    <i class=" icone bi bi-chat-text fs-3"></i>
+                    <h1 class="ms-2 extrabold d-inline-block">
+                        NOSSOS GRUPOS
+                    </h1>
+                </div>
                 <div class="wrapper-groups mt-3 container">
                     <div class="row row-cols-1 row-cols-md-4 g-4">
                         <div class="col" data-aos-duration="12000" data-aos="zoom-in-right">
-                            <div class="card h-100">
+                            <div class="card h-100 card-grupos">
                                 <div class="card-img-top d-flex align-items-center justify-content-center">
                                     <img src="images/grupos/grupo-wpp-trocas-vendas.png"
                                         alt="Grupo Trocas & Vendas - BGBH" />
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <!-- <h5 class="card-title">Card title</h5> -->
-                                    <p class="card-text text-center">
-                                        O grupo é <span class="font-800">EXCLUSIVO</span> para Belo Horizonte e Região e
+                                    <small class="card-text">
+                                        O grupo é <span class="extrabold">EXCLUSIVO</span> para Belo Horizonte e Região
+                                        e
                                         tem como foco os anúncios de trocas e vendas diretamente entre seus usuários. O
                                         grupo possui regras bem definidas para otimizar sua
                                         funcionalidade.
                                         <br />
-                                        <span
-                                            class="d-inline-block mt-2 font-800 custom-color--dark-red">Restrições:</span>
-                                        <span class="custom-color--crimson">
-                                            <span class="font-800">Chat moderado</span>. Participação limitada a
+                                        <span class="d-inline-block mt-2 extrabold darkRed">Restrições:</span>
+                                        <span class="danger">
+                                            <span class="extrabold danger">Chat moderado</span>. Participação limitada a
                                             usuários que
-                                            <span class="font-800">
+                                            <span class="extrabold danger">
                                                 consigam entregar os jogos
                                                 <br class="d-none d-xxl-block" />
                                                 em Belo Horizonte.
                                             </span>
                                         </span>
-                                    </p>
+                                    </small>
                                 </div>
                                 <div class="card-footer text-center">
                                     <small class="text-muted">
                                     </small>
                                     <div class="mt-2 text-center">
-                                        <a target="_blank" class="btn btn-primary"
+                                        <a target="_blank" class="btn primaryButton"
                                             href="http://bgbh.com.br/regras-grupo-trocas.html"
                                             onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'trocas e vendas');">Entrar</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col" data-aos-duration="15000" data-aos="zoom-in-right">
-                            <div class="card h-100">
+                        <div class="col" data-aos-duration="15000" data-aos="zoom-in-right" data-aos-delay="200">
+                            <div class="card h-100 card-grupos">
                                 <div class="card-img-top d-flex align-items-center justify-content-center">
                                     <img src="images/grupos/grupo-wpp-resenha.png" alt="Grupo Resenha - BGBH" />
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <!-- <h5 class="card-title">Card title</h5> -->
-                                    <p class="card-text text-center">
+                                    <small class="card-text">
                                         Grupo voltado para a interação entre amantes de Boardgame. BG é o que nos une
                                         mas um bom papo fora do tema não é proibido. Novidades, jogatinas online,
                                         presenciais, dúvidas sobre regras, indicações. Aqui é o lugar. A única exigência
                                         é o bom senso.
                                         <br />
-                                        <span
-                                            class="d-inline-block mt-2 font-800 custom-color--dark-red">Restrições:</span>
-                                        <span class="custom-color--crimson">Sem restrições</span>
-                                    </p>
+                                        <span class="d-inline-block mt-2 extrabold darkRed">Restrições:</span>
+                                        <span class="danger">Sem restrições</span>
+                                    </small>
                                 </div>
                                 <div class="card-footer text-center">
                                     <small class="text-muted">
                                     </small>
                                     <div class="mt-2 text-center">
-                                        <a target="_blank" class="btn btn-primary"
+                                        <a target="_blank" class="btn primaryButton"
                                             href="https://chat.whatsapp.com/K7OMoPn1nfyEl4EDt8sUyi"
                                             onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'resenha');">Entrar</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col" data-aos-duration="17000" data-aos="zoom-in-right">
-                            <div class="card h-100">
+                        <div class="col" data-aos-duration="17000" data-aos="zoom-in-right" data-aos-delay="300">
+                            <div class="card h-100 card-grupos">
                                 <div class="card-img-top d-flex align-items-center justify-content-center">
                                     <img src="images/grupos/grupo-wpp-ofertas.png" alt="Grupo Ofertas - BGBH" />
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <!-- <h5 class="card-title">Card title</h5> -->
-                                    <p class="card-text text-center">
+                                    <small class="card-text">
                                         Grupo voltado para divulgação de oportunidades e ofertas de Boardgames. Aqui é
                                         permitido a divulgação de anúncios em plataformas oficiais além de promoções em
                                         luderias e sites. Suas regras e funcionalidade ainda estão sendo definidas.
                                         <br />
-                                        <span
-                                            class="d-inline-block mt-2 font-800 custom-color--dark-red">Restrições:</span>
-                                        <span class="custom-color--crimson">Sem chat</span>
-                                    </p>
+                                        <span class="d-inline-block mt-2 extrabold darkRed">Restrições:</span>
+                                        <span class="danger">Sem chat</span>
+                                    </small>
                                 </div>
                                 <div class="card-footer text-center">
                                     <small class="text-muted">
                                     </small>
                                     <div class="mt-2 text-center">
-                                        <a target="_blank" class="btn btn-primary"
+                                        <a target="_blank" class="btn primaryButton"
                                             href="https://chat.whatsapp.com/HJ8AnItrIGUDtpkSgIF3Nn"
                                             onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'ofertas');">Entrar</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col" data-aos-duration="19000" data-aos="zoom-in-right">
-                            <div class="card h-100">
+                        <div class="col" data-aos-duration="19000" data-aos="zoom-in-right" data-aos-delay="400">
+                            <div class="card h-100 card-grupos">
                                 <div class="card-img-top d-flex align-items-center justify-content-center">
                                     <img src="images/grupos/grupo-tlgm-geral.png" alt="Grupo Telegram - BGBH" />
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <!-- <h5 class="card-title">Card title</h5> -->
-                                    <p class="card-text text-center">
+                                    <small class="card-text">
                                         <strong class="custom-color--green">NOVIDADE!</strong>
                                         <br /> Grupo também voltado para interação entre os amantes de Boardgame. Lugar
                                         para bate papo, indicações, lançamentos, dúvidas, etc. O grupo no Telegram veio
                                         para ser mais uma ferramenta de comunicação.
                                         <br />
-                                        <span
-                                            class="d-inline-block mt-2 font-800 custom-color--dark-red">Restrições:</span>
-                                        <span class="custom-color--crimson">Sem restrições</span>
-                                    </p>
+                                        <span class="d-inline-block mt-2 extrabold darkRed">Restrições:</span>
+                                        <span class="danger">Sem restrições</span>
+                                    </small>
                                 </div>
                                 <div class="card-footer text-center">
                                     <small class="text-muted">
                                     </small>
                                     <div class="mt-2 text-center">
-                                        <a target="_blank" class="btn btn-primary" href="https://t.me/boardgamebh"
+                                        <a target="_blank" class="btn primaryButton" href="https://t.me/boardgamebh"
                                             onclick="ga('send', 'event', 'Grupo Telegram', 'click');">
                                             Entrar
                                         </a>
@@ -511,7 +482,8 @@
                 </div>
             </div>
         </div>
-        <div class="py-4 mt-5 banner-ads--footer container-fluid d-none d-lg-block" id="banner-ads--footer-duplo">
+        <div class="py-4 banner-ads--footer banner-duplo container-fluid d-none d-lg-block"
+            id="banner-ads--footer-duplo">
             <div class="d-flex align-items-center justify-content-center">
                 <a href="" target="_blank" onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 1);">
 
@@ -521,7 +493,7 @@
                 </a>
             </div>
         </div>
-        <div class="py-4 mt-5 banner-ads--footer container-fluid d-lg-none" id="banner-ads--footer-unico">
+        <div class="py-4 banner-ads--footer container-fluid d-lg-none" id="banner-ads--footer-unico">
             <div class="text-center">
                 <a href="" target="_blank" onclick="ga('send', 'event', 'Banner Footer', 'click-banner');">
                 </a>
@@ -532,9 +504,10 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="col-12">
-                            <h5 class="font-800 title">SOBRE O PROJETO</h5>
-                            <p class="mt-3 custom-color--gray texto-sobre">
-                                O <span class="font-800">BoardgameBH</span> é um projeto que tem como foco o crescimento
+                            <h2 class="extrabold title mb-2">SOBRE O PROJETO</h2>
+                            <small class="secondary texto-sobre">
+                                O <span class="extrabold secondary">BoardgameBH</span> é um projeto que tem como foco o
+                                crescimento
                                 e a visibilidade do Boardgame no país. O portal tem Belo Horizonte e região como carro
                                 chefe, mas não possui fronteiras, promovendo
                                 e realizando ações de amplo interesse e com um público espalhado por todo país, como
@@ -542,40 +515,43 @@
                                 projeto ainda estão em desenvolvimento e em breve serão
                                 apresentados para o grande público. Enquanto isso, aproveite todas as funcionalidades
                                 liberadas e não deixe de apoiar esse e os demais projetos voltados para o nosso hobby.
-                                Let’s Play!
-                            </p>
+                                <span class="bold secondary">Let’s Play!</span>
+                            </small>
                         </div>
                         <div class="col-12">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <h5 class="font-800 title">APOIE</h5>
-                                    <p class="mt-2 custom-color--gray texto-apoie">
+                                    <h2 class="extrabold title mb-2 mt-3">APOIE</h2>
+                                    <small class="secondary texto-apoie">
                                         Entre em contato conosco e seja um apoiador do projeto
-                                    </p>
+                                    </small>
                                 </div>
-                                <div class="col">
-                                    <h5 class="font-800 title">SIGA</h5>
-                                    <ul class="list-group list-group-horizontal mt-2">
+                                <div class="col mb-4">
+                                    <h2 class="extrabold title mb-2 mt-3">SIGA</h2>
+                                    <ul class="list-group list-group-horizontal">
                                         <li class="list-group-item instagram">
                                             <a target="_blank" href="https://www.instagram.com/boardgamebh/"
                                                 aria-label="Instagram">
-                                                <i class="bi bi-instagram fs-3"></i>
+                                                <i class="icone bi bi-instagram fs-3"></i>
                                             </a>
                                         </li>
 
                                         <li class="list-group-item facebook">
                                             <a target="_blank" href="https://www.facebook.com/boardgamebh/"
                                                 aria-label="Facebook">
-                                                <i class="bi bi-facebook fs-3"></i>
+                                                <i class="icone bi bi-facebook fs-3"></i>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="col-12">
+                                    <small class="secondary">© BGBH 2020 - Todos os direitos reservados</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" id="contato">
-                        <h5 class="font-800 title">CONTATO</h5>
+                    <div class="col-md-6 mb-4" id="contato">
+                        <h2 class="extrabold title">CONTATO</h2>
                         <div role="form" class="wpcf7" id="wpcf7-f19-p3405-o1" lang="pt-BR" dir="ltr">
                             <div class="screen-reader-response">
                                 <p role="status" aria-live="polite" aria-atomic="true"></p>
@@ -592,44 +568,45 @@
                                     <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
                                 </div>
                                 <p>
-                                    <label class="custom-color--gray"> Nome<br />
+                                    <label class="secondary"> Nome<br />
                                         <span class="wpcf7-form-control-wrap your-name">
                                             <input type="text" name="your-name" value="" size="40"
-                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                class="mt-1 wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                 aria-required="true" aria-invalid="false" />
                                         </span>
                                     </label>
                                 </p>
                                 <p>
-                                    <label class="custom-color--gray"> Email<br />
+                                    <label class="secondary"> Email<br />
                                         <span class="wpcf7-form-control-wrap your-email">
                                             <input type="email" name="your-email" value="" size="40"
-                                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                class="mt-1 wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
                                                 aria-required="true" aria-invalid="false" />
                                         </span>
                                     </label>
                                 </p>
                                 <p>
-                                    <label class="custom-color--gray"> Assunto (opcional)<br />
+                                    <label class="secondary"> Assunto (opcional)<br />
                                         <span class="wpcf7-form-control-wrap your-subject">
                                             <input type="text" name="your-subject" value="" size="40"
-                                                class="wpcf7-form-control wpcf7-text" aria-invalid="false" />
+                                                class="mt-1 wpcf7-form-control wpcf7-text" aria-invalid="false" />
                                         </span>
                                     </label>
                                 </p>
                                 <p>
-                                    <label class="custom-color--gray"> Mensagem<br />
+                                    <label class="secondary"> Mensagem<br />
                                         <span class="wpcf7-form-control-wrap your-message">
                                             <textarea name="your-message" cols="40" rows="4"
-                                                class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                class="wpcmt-1 f7-form-control wpcf7-textarea wpcf7-validates-as-required"
                                                 aria-required="true" aria-invalid="false">
                                             </textarea>
                                         </span>
                                     </label>
                                 </p>
                                 <p>
-                                    <input type="submit" value="Enviar"
-                                        class="btn btn-light wpcf7-form-control wpcf7-submit" />
+                                    <button type="submit" class="btn primaryButton">
+                                        Enviar
+                                    </button>
                                 </p>
                                 <div class="wpcf7-response-output" aria-hidden="true"></div>
                             </form>

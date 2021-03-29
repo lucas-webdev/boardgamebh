@@ -1,0 +1,63 @@
+@media screen and (min-width: 769px) {
+    .mainCarousel {
+        .mainLogo {
+            max-width: 40%;
+            top: -15vh;
+        }
+    }
+
+    .btn-planilha {
+        span {
+            font-size: $fontSizeLarge;
+        }
+
+        img {
+            @include grayFilter();
+        }
+    }
+
+    .regras-lista {
+        small {
+            font-size: $fontSizeSmall;
+        }
+    }
+
+    .site-footer {
+        form label {
+            width: 90%;
+    
+            span, input, textarea {
+                width: 90%
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainLogo {
+        max-width: 100%;
+        top: -50px;
+    }
+
+    .primaryButton {
+        background-position: 0 100%;
+    }
+
+    .site-footer {
+        .list-group-item {
+            &.instagram i {
+                color: transparent;
+                background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+
+            &.facebook i {
+                color: #1877f2;
+            }
+        }
+    }
+}

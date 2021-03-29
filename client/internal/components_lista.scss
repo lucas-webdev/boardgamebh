@@ -1,0 +1,39 @@
+%lacrado { color: $successColor; font-weight: $bold; }
+%avariado { color: $dangerColor; }
+.listaTrocasVendas {
+    .bg-list {
+        .bg-table-header {
+            background-color: $secondaryColor;
+            font-weight: $bold;
+            height: 40px;
+            padding: 6px;
+        }
+    }
+    .bg-item {
+        padding: 6px 10px;
+        border-bottom: 1px solid $lightColor;
+
+        &:last-child { border-bottom: none; }
+
+        &:nth-child(2n-1) { background-color: transparentize($lightColor, 0.7); }
+
+        &.added-today { background-color: transparentize($addedTodayColor, 0.4); }
+
+        &.added-more-recently { background-color: transparentize($addedMoreRecentlyColor, 0.4); }
+
+        &.added-recently { background-color: transparentize($addedRecentlyColor, 0.4); }
+
+        &.added-longtime { background-color: transparentize($addedLongTimeColor, 0.4); }
+
+        &.square { border: 1px solid $darkColor; }
+
+        .lacrado { @extend %lacrado; }
+
+        .avariado { @extend %avariado; }
+    }
+
+    .popover {
+        .lacrado { @extend %lacrado; }
+        .avariado { @extend %avariado; }
+    }
+}

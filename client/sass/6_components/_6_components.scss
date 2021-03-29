@@ -1,0 +1,103 @@
+.card {
+    &.card-torneio {
+        background: transparent;
+        border: 0;
+    
+        .card-body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+    &.card-grupos {
+        background: transparentize(white, 0.75);
+        border: 1px solid transparentize($color: #cccccc, $amount: 0.6);
+
+        .card-img-top {
+            height: 135px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .card-footer {
+            border: none;
+        }
+    }
+}
+
+.banner-ads {
+    &--center, &--footer {
+        background: transparentize($primaryColor, 0.8);
+    } 
+
+    &--footer {
+        &.banner-duplo {
+            a:first-child {
+                margin-right: 100px;
+            }
+        }
+    }
+}
+
+.primaryButton {
+    @include gradientAnimation($primaryColor, $darkColor, $successColor, $darkColor, .4s);
+}
+
+.btn-planilha {
+    &.visualizar-lista { 
+        @include corBtnPlanilha($tertiaryColor);
+    }
+    &.adicionar-jogo { 
+        @include corBtnPlanilha($successColor);
+    }
+    &.remover-jogo { 
+        @include corBtnPlanilha($dangerColor);
+    }
+}
+
+.site-footer {
+    .title {
+        color: white;
+    }
+
+    .list-group-item {
+        background-color: transparent;
+        border: none;
+
+        &.instagram {
+            a:hover {
+                i {
+                    color: transparent;
+                    background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                }
+            }
+        }
+
+        &.facebook {
+            a:hover {
+                i {
+                    color: #1877f2;
+                }
+            }
+        }
+    }
+
+    form label {
+        width: 100%;
+
+        span, input, textarea {
+            width: 100%
+        }
+    }
+}
+
+@import "../../internal/components_lista.scss";
