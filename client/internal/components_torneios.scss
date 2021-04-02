@@ -1,10 +1,8 @@
 .torneios {
-
     .icone {
         color: $infoColor;
         margin-bottom: 0;
     }
-
     .infoTorneio {
         .texto {
             height: 40px;
@@ -16,21 +14,17 @@
             top: 0;
         }
     }
-
     .counters {
         text-align: center;
-
         &.segundaFase {
             zoom: 0.9;
         }
-
         .classificadosEtapa,
         .duracaoPartida {
             .icone-xg {
                 font-size: 4rem
             }
         }
-    
         .counter-count {
             color: $successColor;
             font-size: 4rem;
@@ -41,128 +35,119 @@
             display: inline-block;
             margin-bottom: 0;
         }
-
         .icone-xs {
             margin-top: 15px;
         }
-
         .icone-xg {
             margin-right: 5px;
         }
-
         .classificadosEtapa,
         .duracaoPartida,
         .jogadoresPorPartida,
         .numPartidas,
         .formatoEtapa {
             width: 100%;
-
             .counter-flex {
                 min-width: 150px;
                 height: 75px;
                 max-height: 75px;
-
                 .bi-diagram-2-fill {
-                    max-width: 70px;
+                    max-width: 65px;
                 }
             }
-
             .detalhes {
                 min-width: 120px;
             }
         }
     }
-
     .textoAdicionais {
         text-align: center;
         padding: 0 15px;
+        max-width: 90vw;
     }
-
     .cronogramaEtapas {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
-
-        > div {
+        width: auto;
+        margin: 0 auto;
+        >div {
             margin-top: 15px;
-
-            &:first-child { margin-top: 0 }
+            &:first-child {
+                margin-top: 0
+            }
         }
-
-
     }
-
     .configAdicionais {
         text-align: center;
         padding-left: 0;
     }
-
     .configAdicionaisFinal {
         .textoAdicionais {
             .list-group-flush {
                 max-width: 250px;
                 padding-left: 0;
-
                 .list-group-item {
                     background: transparent;
                 }
-
                 .badge {
                     background-color: $successColor;
                 }
             }
         }
-
         ol {
             li {
                 text-align: left;
             }
         }
     }
-
     .premiacao {
         .premios {
             flex-direction: column;
         }
-
         img {
             max-width: 200px;
         }
     }
-
     .inscricao {
         ol {
             max-width: 300px;
             margin-bottom: 0;
         }
-
         .passosInscricao {
             flex-direction: column;
-
             .taxaInscricao {
                 order: 1;
                 text-align: center;
                 margin-top: 20px;
-
+                border: 1px solid $infoColor;
+                border-radius: 10px;
+                padding: 25px;
+                .etapasPagas {
+                    flex-direction: column;
+                    >div:not(.verticalDivider) {
+                        margin-bottom: 15px;
+                    }
+                }
+                .pacoteEtapas {
+                    margin: 5px 0 20px;
+                    padding: 0 20px;
+                }
                 p.mt-3 {
                     margin-top: 10px !important;
                 }
             }
         }
     }
-
     .informacoesImportantes,
     .sobreFormatoSuico {
         .accordionInformacoesImportantes,
         .accordionFormatoSuico {
             .accordion-button {
-
                 &:not(.collapsed) {
                     background-color: transparent;
                     border-bottom: none;
                     border-color: rgba(0, 0, 0, 0.125);
-
                     &:after {
                         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230b655e'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
                     }
@@ -176,8 +161,7 @@
             }
         }
     }
-
-    @media screen and (min-width: 992px) { 
+    @media screen and (min-width: 992px) {
         .counters {
             .classificadosEtapa,
             .duracaoPartida,
@@ -186,101 +170,90 @@
             .formatoEtapa {
                 width: auto;
             }
-
             .icone-xs {
                 position: absolute;
                 margin-top: 0;
             }
-
             .classificadosEtapa {
                 .icone-xs {
-                    right: 5px;
-                    
+                    right: 20px;
                 }
             }
-    
             .duracaoPartida {
                 .icone-xs {
-                    right: -15px;
+                    right: -5px;
                 }
             }
-    
             .jogadoresPorPartida {
                 .icone-xs {
                     right: 25px;
                 }
             }
-    
             .numPartidas {
                 .icone-xs {
-                    right: 2px;
+                    right: 20px;
                 }
             }
-    
             .formatoEtapa {
                 .icone-xs {
                     right: -20px;
                 }
             }
-
             .counter-flex {
                 justify-content: center;
-    
                 .icone {
                     height: 100%;
                     max-height: 100%;
                 }
             }
         }
-
         .configAdicionais {
             text-align: left;
         }
-
         .cronogramaEtapas {
             flex-direction: row;
-
-            > div {
+            >div {
                 margin-top: 0;
                 margin-left: 25px;
-    
-                &:first-child { margin-left: 0 }
+                &:first-child {
+                    margin-left: 0
+                }
             }
         }
-
         .textoAdicionais {
-            max-width: 70vw;
+            max-width: 80vw;
             margin: 0 auto;
         }
-
         .premiacao {
             .premios {
                 flex-direction: row;
                 justify-content: center;
-
                 .segundoLugar {
                     margin-left: 100px;
                 }
             }
         }
-
         .inscricao {
             ol {
                 max-width: 500px;
             }
-
             .passosInscricao {
                 flex-direction: row;
-    
                 .taxaInscricao {
                     order: 0;
                     text-align: left;
                     margin-top: 0;
+                    .etapasPagas {
+                        height: 70px;
+                        flex-direction: row;
+                    }
+                    .pacoteEtapas {
+                        margin-top: 1.5rem;
+                    }
                 }
             }
         }
     }
-
     @media screen and (max-width: 762px) {
         .counters {
             .classificadosEtapa,
@@ -293,16 +266,13 @@
                     height: auto;
                 }
             }
-
             .criteriosDesempate {
                 padding: 0 15px;
             }
         }
-
         .plataforma,
         .modoJogo {
             margin-top: 15px;
-
             .icone {
                 top: -6px;
             }
@@ -311,5 +281,4 @@
             margin-top: 20px;
         }
     }
-
 }

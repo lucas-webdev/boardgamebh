@@ -10,7 +10,6 @@
 
 .mainCarousel {
     height: calc(100vh - 90px);
-
     .carousel-item,
     .carousel-inner,
     .carousel-background {
@@ -18,14 +17,12 @@
         min-width: 100%;
         object-fit: cover;
     }
-
     .mainLogo {
         position: relative;
         max-width: 100%;
         top: -50px;
     }
-
-    .carousel-caption p{
+    .carousel-caption p {
         color: white;
     }
 }
@@ -40,7 +37,6 @@
 .sectionYSpacer {
     margin-top: $sectionYSpacerMobile;
     margin-bottom: $sectionYSpacerMobile;
-
     @media screen and (min-width: 992px) {
         margin-top: $sectionYSpacer;
         margin-bottom: $sectionYSpacer;
@@ -49,11 +45,18 @@
 
 .specialTitle {
     font-size: $fontSize2XLarge;
-    
-    &.primary { color: $primaryColor; }
-    &.success { color: $successColor; }
-    &.info { color: $infoColor; }
-    &.danger { color: $dangerColor; }
+    &.primary {
+        color: $primaryColor;
+    }
+    &.success {
+        color: $successColor;
+    }
+    &.info {
+        color: $infoColor;
+    }
+    &.danger {
+        color: $dangerColor;
+    }
 }
 
 .icone {
@@ -61,11 +64,18 @@
     position: relative;
     top: -2px;
     font-size: $fontSizeXLarge;
-    
-    &.primary { color: $primaryColor; }
-    &.success { color: $successColor; }
-    &.info { color: $infoColor; }
-    &.danger { color: $dangerColor; }
+    &.primary {
+        color: $primaryColor;
+    }
+    &.success {
+        color: $successColor;
+    }
+    &.info {
+        color: $infoColor;
+    }
+    &.danger {
+        color: $dangerColor;
+    }
 }
 
 .semibold {
@@ -102,7 +112,7 @@
 }
 
 .btn {
-    color: $buttonTextColor; 
+    color: $buttonTextColor;
 }
 
 .btn-planilha {
@@ -110,17 +120,14 @@
     font-size: $fontSizeMedium;
     text-decoration: none;
     text-align: center;
-    
     img {
         width: 100%;
         max-width: 180px;
-
         &.btnImage {
             width: 90px;
             max-width: 90px;
         }
     }
-
 }
 
 .regras-lista {
@@ -132,7 +139,6 @@
 .inheritLink {
     color: inherit;
     font-size: inherit;
-
     &:hover {
         color: darken($primaryColor, 15%);
     }
@@ -152,6 +158,17 @@
     @include verticalDivider();
 }
 
+.faixaHorizontal {
+    @extend %backgroundVariant;
+    width: 100%;
+    &.rounded {
+        &--top {
+            border-radius: 9px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
 
 @import "../../internal/objects_lista.scss";
 @import "../../internal/objects_torneios.scss";

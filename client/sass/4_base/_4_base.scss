@@ -1,3 +1,8 @@
+html,
+body {
+    font-size: 16px
+}
+
 body {
     background: transparent url($whitePattern);
     background-size: auto;
@@ -45,10 +50,8 @@ h3 {
     font-size: $fontSizeMedium;
     font-weight: $extraBold;
     color: $primaryColor;
-
     &.regular {
         font-weight: $regular;
-
     }
 }
 
@@ -57,11 +60,18 @@ hr {
     margin: 0 auto;
 }
 
-p { font-size: $fontSizeMedium;  }
+p {
+    font-size: $fontSizeMedium;
+}
 
-span, label { font-size: inherit; }
+span,
+label {
+    font-size: inherit;
+}
 
-small {font-size: $fontSizeSmall; }
+small {
+    font-size: $fontSizeSmall;
+}
 
 h1,
 h2,
@@ -72,20 +82,12 @@ label,
 small {
     color: $primaryColor;
     @extend %textVariant;
-
-    &.badgeStyle {
-        color: white;
-        width: 100%;
-        margin: 0 auto;
-        padding: 8px;
-        white-space: nowrap;
-        vertical-align: baseline;
-        @extend %backgroundVariant;
-    }
 }
 
+button {
+    color: $buttonTextColor;
+}
 
-
-button { color: $buttonTextColor; }
-
-img {max-width: 100%; }
+img {
+    max-width: 100%;
+}

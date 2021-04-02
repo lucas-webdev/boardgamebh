@@ -30,7 +30,7 @@
 
     <!-- Google Analytics -->
     <script>
-        window.ga = window.ga || function () {
+        window.ga = window.ga || function() {
             (ga.q = ga.q || []).push(arguments)
         };
         ga.l = +new Date;
@@ -56,14 +56,11 @@
     <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.jpg">
 
     <!-- fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <!-- external css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
@@ -74,15 +71,14 @@
         .image-map {
             zoom: 70%;
         }
-
+        
         .menu-anchor {
             display: block;
             position: relative;
             top: -100px;
             visibility: hidden;
         }
-
-
+        
         @media screen and (max-width: 762px) {
             iframe {
                 max-width: 100%;
@@ -92,7 +88,7 @@
 
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="-30" tabindex="0">
+<body class="bodyTorneios" data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="-30" tabindex="0">
     <div class="site-wrapper torneios">
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -101,8 +97,7 @@
                     <img src="http://www.bgbh.com.br/images/bgbh-logo.png" alt="logo BGBH" width="30" height="24">
                     <span class="bold text-white ms-2">BoardgameBH</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
@@ -167,16 +162,8 @@
                 <!-- texto intro -->
                 <p class="mt-4 mb-0 text-center">
                     Cientistas finalmente clonaram dinossauros!
-                    <br />
-                    Ao redor de todo o mundo estão abrindo zoológicos cheios destas enormes criaturas.
-                    Por isso seu objetivo em Draftosaurus é ter o parque de dinossauros mais atrativo para os
-                    visitantes.
-                    Draftosaurus é um jogo de <em>"draft"</em> (escolha) rápido e leve, ideal para você que procura
-                    diversão com a dose certa de estratégia.
-                    Durante a partida você deve selecionar dino meeples e colocá-los em cercados, respeitando suas
-                    restrições. A cada turno, um dos jogadores lança um dado e isso limita em quais cercados qualquer
-                    outro jogador pode adicionar seu dinossauro.
-                    Preparado? Então não perca tempo e venha construir seu parque.
+                    <br /> Ao redor de todo o mundo estão abrindo zoológicos cheios destas enormes criaturas. Por isso seu objetivo em Draftosaurus é ter o parque de dinossauros mais atrativo para os visitantes. Draftosaurus é um jogo de <em>"draft"</em>                    (escolha) rápido e leve, ideal para você que procura diversão com a dose certa de estratégia. Durante a partida você deve selecionar dino meeples e colocá-los em cercados, respeitando suas restrições. A cada turno, um dos jogadores
+                    lança um dado e isso limita em quais cercados qualquer outro jogador pode adicionar seu dinossauro. Preparado? Então não perca tempo e venha construir seu parque.
                 </p>
                 <!-- ./texto intro -->
             </div>
@@ -193,53 +180,50 @@
                 </div>
                 <!-- ETAPAS CLASSIFICATÓRIAS -->
                 <div class="etapasClassificatorias mb-5">
-                    <div class="row">
-                        <div class="col-12 text-center my-3">
-                            <h1 class="badgeStyle info text-white">
-                                ETAPAS CLASSIFICATÓRIAS
-                                <br>
-                                <small class="text-white"><em>(classificatórias independentes)</em></small>
-                            </h1>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-lg-center">
-                            <div class="d-flex cronogramaEtapas align-items-start">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i>
-                                    <div class="d-flex flex-column ms-2">
-                                        <h3 class="success">ETAPA ESPECIAL</h3>
-                                        <small class="bold"> 08 de Abril - 20H</small>
-                                        <small class="semibold"><em>Quinta-Feira</em></small>
-                                        <small class="bold danger">Inscrições gratuitas</small>
-                                    </div>
+                    <div class="col-12 text-center mb-4 faixaHorizontal rounded--top info py-1">
+                        <h1 class="text-white lh-1">
+                            ETAPAS CLASSIFICATÓRIAS
+                        </h1>
+                        <small class="text-white"><em>(classificatórias independentes)</em></small>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-lg-center">
+                        <div class="d-flex cronogramaEtapas align-items-start">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i>
+                                <div class="d-flex flex-column ms-2">
+                                    <h3 class="success">ETAPA ESPECIAL</h3>
+                                    <small class="bold"> 08 de Abril - 20H</small>
+                                    <small class="semibold"><em>Quinta-Feira</em></small>
+                                    <small class="bold danger">Inscrições gratuitas</small>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i>
-                                    <div class="d-flex flex-column ms-2">
-                                        <h3 class="success">SEGUNDA ETAPA</h3>
-                                        <small class="bold"> 12 de Abril - 20H</small>
-                                        <small class="semibold"><em>Segunda-Feira</em></small>
-                                    </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i>
+                                <div class="d-flex flex-column ms-2">
+                                    <h3 class="success">SEGUNDA ETAPA</h3>
+                                    <small class="bold"> 12 de Abril - 20H</small>
+                                    <small class="semibold"><em>Segunda-Feira</em></small>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i>
-                                    <div class="d-flex flex-column ms-2">
-                                        <h3 class="success">TERCEIRA ETAPA</h3>
-                                        <small class="bold"> 13 de Abril - 20H</small>
-                                        <small class="semibold"><em>Terça-Feira</em></small>
-                                    </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i>
+                                <div class="d-flex flex-column ms-2">
+                                    <h3 class="success">TERCEIRA ETAPA</h3>
+                                    <small class="bold"> 13 de Abril - 20H</small>
+                                    <small class="semibold"><em>Terça-Feira</em></small>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i>
-                                    <div class="d-flex flex-column ms-2">
-                                        <h3 class="success">QUARTA ETAPA</h3>
-                                        <small class="bold"> 14 de Abril - 20H</small>
-                                        <small class="semibold"><em>Quarta-Feira</em></small>
-                                    </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i>
+                                <div class="d-flex flex-column ms-2">
+                                    <h3 class="success">QUARTA ETAPA</h3>
+                                    <small class="bold"> 14 de Abril - 20H</small>
+                                    <small class="semibold"><em>Quarta-Feira</em></small>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="text-center my4">
+                    <div class="text-center my-4">
                         <h2 class="info">PRIMEIRA FASE</h1>
                     </div>
                     <!-- counters etapas classificatorias -->
@@ -254,9 +238,7 @@
                                     <div class="d-flex align-items-top justify-content-center">
                                         <div class="d-flex align-items-center justify-content-center position-relative">
                                             <small>Suiço</small>
-                                            <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                            <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -268,9 +250,7 @@
                                     <h3>NÚMERO DE <br> PARTIDAS</h3>
                                     <div class="d-flex align-items-center justify-content-center position-relative">
                                         <small>5 partidas <br> por jogador</small>
-                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Todos os jogadores fazem o mesmo numero de partidas em cada etapa"></i>
+                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Todos os jogadores fazem o mesmo numero de partidas em cada etapa" data-bs-trigger="click" data-bs-customClass="beautifier"></i>
                                     </div>
                                 </div>
 
@@ -282,9 +262,7 @@
                                     <h3>JOGADORES POR <br> PARTIDAS</h3>
                                     <div class="d-flex align-items-center justify-content-center position-relative">
                                         <small>máx 4 <br> mín 3</small>
-                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="A plataforma sempre tentará criar as mesas considerando o número máximo. Caso o número de inscritos não seja um número múltiplo para que isso aconteça ela irá criar algumas mesas também com o número minimo para que o maior número de pessoas participem de cada rodada."></i>
+                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="A plataforma sempre tentará criar as mesas considerando o número máximo. Caso o número de inscritos não seja um número múltiplo para que isso aconteça ela irá criar algumas mesas também com o número minimo para que o maior número de pessoas participem de cada rodada."></i>
                                     </div>
                                 </div>
 
@@ -296,25 +274,20 @@
                                     <h3>DURAÇÃO DA <br> PARTIDA</h3>
                                     <div class="d-flex align-items-center justify-content-center position-relative">
                                         <small>Duração máxima de <br> 10min por partida</small>
-                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Uma partida se encerra após o limite de tmepo. Nesse caso, considera-se o tempo individual de cada jogador e jogadores com tempos negativos são declarados derrotados automaticamente">
+                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Uma partida se encerra após o limite de tmepo. Nesse caso, considera-se o tempo individual de cada jogador e jogadores com tempos negativos são declarados derrotados automaticamente">
                                         </i>
                                     </div>
                                 </div>
 
                                 <div class="classificadosEtapa d-flex flex-column justify-content-center col-xs-12">
                                     <div class="d-flex align-items-center counter-flex">
-                                        <i
-                                            class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
+                                        <i class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
                                         <p class="counter-count">8</p>
                                     </div>
                                     <h3>CLASSIFICADOS PARA A<br> SEGUNDA FASE</h3>
                                     <div class="d-flex align-items-center justify-content-center position-relative">
                                         <small>8 melhores <br> de cada etapa</small>
-                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="O número de classificados considera apenas jogadores que não possuem vaga para a semi-final. Caso exista algum jogador já classificado por uma etapa anterior a vaga será passada para jogador seguinte, até completarmos o número de classificados para a segunda fase">
+                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="O número de classificados considera apenas jogadores que não possuem vaga para a semi-final. Caso exista algum jogador já classificado por uma etapa anterior a vaga será passada para jogador seguinte, até completarmos o número de classificados para a segunda fase">
                                         </i>
                                     </div>
                                 </div>
@@ -330,9 +303,7 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>SUIÇO</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="numPartidas d-flex align-items-center justify-content-evenly">
@@ -345,9 +316,7 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>5 partidas <br> por jogador</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="jogadoresPorPartida d-flex align-items-center justify-content-evenly">
@@ -360,9 +329,7 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>máx 4 <br> mín 3</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="duracaoPartida d-flex align-items-center justify-content-evenly">
@@ -375,25 +342,20 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>Duração máxima de <br> 10min por partida</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="classificadosEtapa d-flex align-items-center justify-content-evenly">
                                 <div class="d-flex align-items-center flex-column counter-flex">
                                     <div class="d-flex">
-                                        <i
-                                            class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
+                                        <i class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
                                         <p class="counter-count">10</p>
                                     </div>
                                     <h3>CLASSIFICADOS <br> POR ETAPA</h3>
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>8 melhores <br> de cada etapa</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                         </div>
@@ -416,15 +378,11 @@
                     <div class="textoAdicionais mt-3">
                         <p>
                             Serão realizadas
-                            <span class="bold">4 etapas classificatórias independentes</span>,
-                            em 4 dias diferentes, nos quais os participantes poderão
-                            <span class="bold">escolher os dias que pretendem participar de acordo com sua
-                                disponibilidade</span>,
-                            podendo inclusive participar de todos os dias, ampliando
-                            suas possibilidades de garantir uma vaga para a fase final do torneio.
-                            <br>
-                            Ao término das 5 partidas, uma nova fase irá se iniciar, com os
-                            <span class="bold">8 melhores classificados</span>
+                            <span class="extrabold">4 etapas classificatórias independentes</span>, em 4 dias diferentes, nos quais os participantes poderão
+                            <span class="extrabold">escolher os dias que pretendem participar de acordo com sua
+                                disponibilidade</span>, podendo inclusive participar de todos os dias, ampliando suas possibilidades de garantir uma vaga para a fase final do torneio.
+                            <br> Ao término das 5 partidas, uma nova fase irá se iniciar, com os
+                            <span class="extrabold">8 melhores classificados</span>
                         </p>
                     </div>
                     <!-- ./configuracoes adicionais etapas classificatorias -->
@@ -440,8 +398,7 @@
 
                                     <div class="numPartidas d-flex flex-column justify-content-center col-xs-12">
                                         <div class="d-flex align-items-center counter-flex">
-                                            <i
-                                                class="d-flex align-items-center bi bi-diagram-2-fill icone-xg icone"></i>
+                                            <i class="d-flex align-items-center bi bi-diagram-2-fill icone-xg icone"></i>
                                             <p class="counter-count">3</p>
                                         </div>
                                         <h3>NÚMERO DE <br> PARTIDAS</h3>
@@ -452,8 +409,7 @@
 
                                     <div class="classificadosEtapa d-flex flex-column justify-content-center col-xs-12">
                                         <div class="d-flex align-items-center counter-flex">
-                                            <i
-                                                class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
+                                            <i class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
                                             <p class="counter-count">2</p>
                                         </div>
                                         <h3>CLASSIFICADOS <br> PARA SEMI-FINAL</h3>
@@ -470,34 +426,28 @@
                                 <div class="numPartidas d-flex align-items-center justify-content-evenly">
                                     <div class="d-flex align-items-center flex-column counter-flex">
                                         <div class="d-flex">
-                                            <i
-                                                class="d-flex align-items-center bi bi-diagram-2-fill icone-xg icone"></i>
+                                            <i class="d-flex align-items-center bi bi-diagram-2-fill icone-xg icone"></i>
                                             <p class="counter-count">5</p>
                                         </div>
                                         <h3>NÚMERO DE <br> PARTIDAS</h3>
                                     </div>
                                     <div class="d-flex align-items-center flex-column detalhes">
                                         <small>5 partidas <br> por jogador</small>
-                                        <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom"
-                                            title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                        <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                     </div>
                                 </div>
 
                                 <div class="classificadosEtapa d-flex align-items-center justify-content-evenly">
                                     <div class="d-flex align-items-center flex-column counter-flex">
                                         <div class="d-flex">
-                                            <i
-                                                class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
+                                            <i class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
                                             <p class="counter-count">2</p>
                                         </div>
                                         <h3>CLASSIFICADOS <br> POR ETAPA</h3>
                                     </div>
                                     <div class="d-flex align-items-center flex-column detalhes">
                                         <small>8 melhores <br> de cada etapa</small>
-                                        <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom"
-                                            title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                        <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                     </div>
                                 </div>
                             </div>
@@ -505,19 +455,13 @@
                     </div>
                     <div class="textoAdicionais mt-3">
                         <p>
-                            Após o término das partidas de cada etapa, uma segunda fase é montada
-                            <span class="extrabold">imediatamente</span>
-                            com os
-                            <span>8 classificados</span>
-                            de cada etapa.
-                            <br>
-                            Os classificados se enfrentam em uma nova série de
-                            <span class="extrabold">suiço</span>
-                            dessa vez com apenas
-                            <span class="extrabold">3 partidas</span>,
-                            em que os
-                            <span class="extrabold">2 melhores</span>
-                            garantem vaga para a
+                            Após o término das partidas da primeira fase, uma segunda fase é montada
+                            <span class="extrabold">imediatamente</span> com os
+                            <span class="extrabold">8 melhores classificados</span>.
+                            <br> Eles se enfrentam em uma nova série de
+                            <span class="extrabold">suiço</span> dessa vez com apenas
+                            <span class="extrabold">3 partidas</span>, em que os
+                            <span class="extrabold">2 primeiros</span> garantem vaga para a
                             <span class="extrabold">semi-final</span>
                         </p>
 
@@ -525,11 +469,9 @@
                     <hr>
                     <div class="row my-4">
                         <div class="col-12 text-center">
-                            <p class="extrabold mb-1">Critérios de desempate para PRIMEIRA E SEGUNDA FASES</p>
-                            <small>Caso exista um empate ao término das partidas destas fases, os critérios de
-                                desempate
-                                da própria plataforma BGA serão utilizados, determinando a ordem de
-                                classificação.</small>
+                            <p class="extrabold mb-1 px-3">Critérios de desempate para PRIMEIRA E SEGUNDA FASES</p>
+                            <p class="px-3">Caso exista um empate ao término das partidas destas fases, os critérios de desempate da própria plataforma BGA serão utilizados, determinando a ordem de classificação.
+                            </p>
                         </div>
                     </div>
                     <!-- ./SEGUNDA FASE -->
@@ -537,21 +479,10 @@
                 <!-- ./ETAPAS CLASSIFICATORIAS -->
                 <!-- SEMI-FINAL  -->
                 <div class="semifinal mb-5">
-                    <div class="row">
-                        <div class="col-12 text-center my-3">
-                            <h1 class="badgeStyle info text-white">SEMI-FINAL</h1>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-lg-center">
-                            <div class="d-flex cronogramaEtapas">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <!-- <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i> -->
-                                    <div class="d-flex flex-column ms-2 align-items-center justify-content-center">
-                                        <small class="bold"> 15 de Abril - 19H</small>
-                                        <small class="semibold"><em>Quinta-Feira</em></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-12 text-center faixaHorizontal info rounded--top py-1">
+                        <h1 class="info text-white">SEMI-FINAL</h1>
+                        <span class="semibold text-white"><em>Quinta-Feira -</em></span>
+                        <span class="bold text-white"> 15 de Abril - 19H</span>
                     </div>
 
                     <!-- counters segunda etapa -->
@@ -566,9 +497,7 @@
                                     <div class="d-flex align-items-top justify-content-center">
                                         <div class="d-flex align-items-center justify-content-center position-relative">
                                             <small>Suiço</small>
-                                            <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                            <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -580,9 +509,7 @@
                                     <h3> PARTIDAS</h3>
                                     <div class="d-flex align-items-center justify-content-center position-relative">
                                         <small>4 partidas <br> por jogador</small>
-                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Todos os jogadores fazem o mesmo numero de partidas em cada etapa"></i>
+                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Todos os jogadores fazem o mesmo numero de partidas em cada etapa"></i>
                                     </div>
                                 </div>
 
@@ -594,9 +521,7 @@
                                     <h3>JOGADORES <br> POR PARTIDA</h3>
                                     <div class="d-flex align-items-center justify-content-center position-relative">
                                         <small>4 jogadores</small>
-                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="A plataforma sempre tentará criar as mesas considerando o número máximo. Caso o número de inscritos não seja um número múltiplo para que isso aconteça ela irá criar algumas mesas também com o número minimo para que o maior número de pessoas participem de cada rodada."></i>
+                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="A plataforma sempre tentará criar as mesas considerando o número máximo. Caso o número de inscritos não seja um número múltiplo para que isso aconteça ela irá criar algumas mesas também com o número minimo para que o maior número de pessoas participem de cada rodada."></i>
                                     </div>
                                 </div>
 
@@ -608,9 +533,7 @@
                                     <h3>DURAÇÃO</h3>
                                     <div class="d-flex align-items-center justify-content-center position-relative">
                                         <small>Duração máxima de <br> 10min por partida</small>
-                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Uma partida se encerra após o limite de tmepo. 
+                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Uma partida se encerra após o limite de tmepo. 
                                                 Nesse caso, considera-se o tempo individual de cada jogador e jogadores com tempos negativos são declarados derrotados automaticamente">
                                         </i>
                                     </div>
@@ -618,16 +541,13 @@
 
                                 <div class="classificadosEtapa d-flex flex-column justify-content-center col-xs-12">
                                     <div class="d-flex align-items-center counter-flex">
-                                        <i
-                                            class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
+                                        <i class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
                                         <p class="counter-count">4</p>
                                     </div>
                                     <h3>CLASSIFICADOS </h3>
                                     <div class="d-flex align-items-center justify-content-center position-relative">
                                         <small>4 melhores</small>
-                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="O número de classificados considera apenas jogadores que não possuem vaga para a semi-final. Caso exista algum jogador já classificado por uma etapa anterior a vaga será passada para jogador seguinte, até completarmos o número de classificados para a segunda fase">
+                                        <i class="position-absolute bi bi-info-circle-fill icone-xs ms-1 right-10" data-bs-toggle="tooltip" data-bs-placement="bottom" title="O número de classificados considera apenas jogadores que não possuem vaga para a semi-final. Caso exista algum jogador já classificado por uma etapa anterior a vaga será passada para jogador seguinte, até completarmos o número de classificados para a segunda fase">
                                         </i>
                                     </div>
                                 </div>
@@ -644,9 +564,7 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>SUIÇO</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa">
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa">
                                     </i>
                                 </div>
                             </div>
@@ -660,9 +578,7 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>5 partidas <br> por jogador</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="jogadoresPorPartida d-flex align-items-center justify-content-evenly">
@@ -675,9 +591,7 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>máx 4 <br> mín 3</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="duracaoPartida d-flex align-items-center justify-content-evenly">
@@ -690,25 +604,20 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>Duração máxima de <br> 10min por partida</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="classificadosEtapa d-flex align-items-center justify-content-evenly">
                                 <div class="d-flex align-items-center flex-column counter-flex">
                                     <div class="d-flex">
-                                        <i
-                                            class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
+                                        <i class="d-flex align-items-center bi bi-bookmark-star-fill icone-xg icone"></i>
                                         <p class="counter-count">4</p>
                                     </div>
                                     <h3>CLASSIFICADOS <br> POR ETAPA</h3>
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>10 melhores <br> de cada etapa</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
                                 </div>
                             </div>
                         </div>
@@ -732,44 +641,28 @@
                     <div class="textoAdicionais mt-3">
                         <p>
                             Os
-                            <span class="bold">8 classificados da SEGUNDA FASE (2 de cada etapa)</span>
-                            se enfrentam em
-                            <span class="bold">4 partidas</span>,
-                            de suiço e os
-                            <span class="bold">4 melhores</span>
-                            se classificam para a grande final.
+                            <span class="extrabold">8 classificados das etapas classificatórias (2 de cada etapa)</span> se enfrentam em
+                            <span class="extrabold">4 partidas</span>, de suiço e os
+                            <span class="extrabold">4 melhores</span> se classificam para a grande final.
                         </p>
                     </div>
                     <!-- ./configuracoes adicionais segunda etapa -->
                     <hr>
                     <div class="row my-4">
                         <div class="col-12 text-center">
-                            <p class="extrabold mb-1">Critérios de desempate para a SEMI-FINAL</p>
-                            <small>Caso exista um empate ao término das partidas destas fases, os critérios de desempate
-                                da própria plataforma BGA serão utilizados, determinando a ordem de
-                                classificação.</small>
+                            <p class="extrabold mb-1 px-1">Critérios de desempate para a SEMI-FINAL</p>
+                            <p class="px-3">Caso exista um empate ao término das partidas destas fases, os critérios de desempate da própria plataforma BGA serão utilizados, determinando a ordem de classificação.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <!-- ./SEMI-FINAL  -->
                 <!-- FINAL -->
                 <div class="faseFinal">
-                    <div class="row">
-                        <div class="col-12 text-center my-3">
-                            <h1 class="badgeStyle info text-white">FINAL</h1>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-lg-center">
-                            <div class="d-flex cronogramaEtapas">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <!-- <i class="icone bi bi-calendar-event-fill icone-lg d-flex align-items-center"></i> -->
-                                    <div class="d-flex flex-column ms-2 align-items-center justify-content-center">
-                                        <small class="bold"> 15 de Abril - 20H</small>
-                                        <small class="semibold"><em>Quinta-Feira</em></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="col-12 text-center faixaHorizontal rounded--top info py-1">
+                        <h1 class="text-white">FINAL</h1>
+                        <span class="semibold text-white"><em>Quinta-Feira -</em></span>
+                        <span class="bold text-white"> 15 de Abril - 20H</span>
                     </div>
 
                     <!-- counters final -->
@@ -829,7 +722,7 @@
                                         <div class="d-flex align-items-center justify-content-center position-relative">
                                             <small>
                                                 Canal
-                                                <a href="https://www.youtube.com/channel/UCY4AO_6AUGiWmP3GocAdcFA"
+                                                <a href="https://www.youtube.com/channel/UCY4AO_6AUGiWmP3GocAdcFA "
                                                     target="_blank" class="inheritLink">Mesa Secreta</a>
                                             </small>
                                         </div>
@@ -872,9 +765,8 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>máx 4 <br> mín 3</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma
+                                no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="duracaoPartida d-flex align-items-center justify-content-evenly">
@@ -887,9 +779,8 @@
                                 </div>
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>Duração máxima de <br> 10min por partida</small>
-                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip"
-                                        data-bs-placement="bottom"
-                                        title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma no decorrer da etapa"></i>
+                                    <i class="bi bi-info-circle-fill icone-xs mt-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Em um formato suiço todos os jogadores fazem o mesmo número de partidas, independente de perderem alguma
+                                no decorrer da etapa"></i>
                                 </div>
                             </div>
                             <div class="classificadosEtapa d-flex align-items-center justify-content-evenly">
@@ -902,7 +793,7 @@
                                 <div class="d-flex align-items-center flex-column detalhes">
                                     <small>
                                         Canal
-                                        <a href="https://www.youtube.com/channel/UCY4AO_6AUGiWmP3GocAdcFA"
+                                        <a href="https://www.youtube.com/channel/UCY4AO_6AUGiWmP3GocAdcFA "
                                             target="_blank" class="inheritLink">Mesa Secreta</a>
                                     </small>
                                 </div>
@@ -926,8 +817,7 @@
                         </ul>
                         <div class="textoAdicionais">
                             <p class="mb-1">
-                                Os 4 finalistas disputam uma melhor de 3 e somam pontos a cada partida de acordo com a
-                                tabela abaixo.
+                                Os 4 finalistas disputam uma melhor de 3 e somam pontos a cada partida de acordo com a tabela abaixo.
                             </p>
                             <ul class="list-group-flush mx-auto">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -951,21 +841,17 @@
                         <hr>
                         <div class="menu-anchor" id="criteriosDesempate"></div>
                         <div class="my-3 criteriosDesempate text-center">
-                            <p class="bold mb-2">Critérios de desempate da final</p>
-                            <p class="text-start mb-0">
-                                Caso exista um empate ao término das 3 partidas da grande final, os seguintes
-                                critérios
-                                serão considerados:
+                            <p class="extrabold mb-2">Critérios de desempate da final</p>
+                            <p class="text-start mb-1 px-3">
+                                Caso exista um empate ao término das 3 partidas da grande final, os seguintes critérios serão considerados:
                             </p>
-                            <ol>
+                            <ol class="pe-3">
                                 <li>Soma da pontução do jogador nas partidas da final.</li>
-                                <li>Persistindo o empate o jogador melhor colocado na segunda fase do torneio (top
-                                    20)
-                                    será declarado campeão.</li>
+                                <li>Persistindo o empate o jogador melhor colocado na segunda fase do torneio (top 20) será declarado campeão.</li>
                                 <li>Persistindo o empate uma nova partida será realizada com os jogadores empatados.
                                 </li>
                             </ol>
-                            <small>* Critérios de desempate válidos para a Final. Nas demais etapas será utilizado o
+                            <small class="px-3 d-block">* Critérios de desempate válidos para a Final. Nas demais etapas será utilizado o
                                 critério
                                 de desempate do próprio BGA.</small>
 
@@ -988,29 +874,18 @@
                 </div>
                 <div class="d-flex mt-4 premios">
                     <div class="primeiroLugar d-flex flex-column align-items-center justify-content-center">
-                        <img src="http://www.bgbh.com.br/images/torneios/caixas/draftosaurus.png"
-                            alt="Caixa Draftosaurus">
+                        <img src="http://www.bgbh.com.br/images/torneios/caixas/draftosaurus.png" alt="Caixa Draftosaurus">
                         <h3 class="success mt-2">CAMPEÃO</h3>
                         <p class="info">1 DRAFTOSAURUS *</p>
                     </div>
                     <!-- <div class="segundoLugar">
                         <div class="primeiroLugar d-flex flex-column align-items-center justify-content-center">
-                            <img src="http://www.bgbh.com.br/images/torneios/caixas/draftosaurus.png"
+                            <img src="http://www.bgbh.com.br/images/torneios/caixas/draftosaurus.png "
                                 alt="Caixa Draftosaurus">
                             <h3 class="success mt-2">VICE CAMPEÃO</h3>
                             <p class="info">1 DRAFTOSAURUS *</p>
                         </div>
                     </div> -->
-                </div>
-                <div class="row linkManual text-center my-3">
-                    <p>
-                        <small class="semibold">
-                            <a href="https://www.tavernareal.com/loja/todos-os-jogos/draftosaurus-detail"
-                                class="inheritLink" target="_blank">
-                                Comprar o jogo
-                            </a>
-                        </small>
-                    </p>
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
@@ -1021,7 +896,7 @@
                                 aprovação)
                             </small>
                         </span>
-                        <small>Frete da premiação por conta dos ganhadores</small>
+                        <small class="danger">Frete da premiação por conta dos ganhadores</small>
                     </div>
                 </div>
             </div>
@@ -1068,8 +943,7 @@
                 <div class="processoInscricao mx-auto">
                     <p class="text-center">
                         <span class="danger bold">Atenção!</span>
-                        <br class="d-md-none">
-                        Seu processo de inscrição possui
+                        <br class="d-md-none"> Seu processo de inscrição possui
                         <span class="bold">4 etapas</span>
                     </p>
                     <ol class="mx-auto mt-2 list-unstyled text-center">
@@ -1099,12 +973,54 @@
                     </ol>
                 </div>
                 <div class="taxaInscricao mx-auto mt-4">
-                    <h3 class="text-center">TAXA DE INSCRIÇÃO</h3>
-                    <p class="mt-3">
-                        Este é um
-                        <span class="bold">Torneio Gratuito</span>,
-                        não possui nenhuma taxa de inscrição.
-                    </p>
+                    <h2 class="text-center">TAXA DE INSCRIÇÃO</h2>
+                    <div class="col-12 mt-3 text-center">
+                        <p class="extrabold mb-1 success">
+                            ETAPA ESPECIAL -
+                            <span class="danger">GRATUITA</span>
+                            <br>
+                            <span class="info bold">08/04 - Quinta-Feira - 20h</span>
+                        </p>
+                        <p class="mb-0">Inscrições até 16h do dia <span class="bold">08/04</span>*</p>
+                    </div>
+                    <div class="etapasPagas mt-4 text-center d-flex align-items-center justify-content-center">
+                        <div>
+                            <p class="extrabold mb-1 success">
+                                SEGUNDA ETAPA - <span class="danger">R$ 3,00</span>
+                                <br>
+                                <span class="info bold">12/04 - Segunda-Feira - 20h</span>
+                            </p>
+                            <p class="mb-0">Inscrições até 16h do dia <span class="bold">12/04</span>*</p>
+                        </div>
+                        <div class="verticalDivider info border-1 mx-3"></div>
+                        <div>
+                            <p class="extrabold mb-1 success">
+                                TERCEIRA ETAPA - <span class="danger">R$ 3,00</span>
+                                <br>
+                                <span class="info bold">13/04 - Terça-Feira - 20h</span>
+                            </p>
+                            <p class="mb-0">Inscrições até 16h do dia <span class="bold">13/04</span>*</p>
+                        </div>
+                        <div class="verticalDivider info border-1 mx-3"></div>
+                        <div>
+                            <p class="extrabold mb-1 success">
+                                QUARTA ETAPA - <span class="danger">R$ 3,00</span>
+                                <br>
+                                <span class="info bold">14/04 - Quarta-Feira - 20h</span>
+                            </p>
+                            <p class="mb-0">Inscrições até 16h do dia <span class="bold">14/04</span>*</p>
+                        </div>
+                    </div>
+                    <div class="pacoteEtapas text-center">
+                        <p class="extrabold mb-0 success">
+                            PACOTE ESPECIAL ESPECIAL (TODAS AS ETAPAS) -
+                            <span class="danger">R$ 7,00</span>
+                        </p>
+                        <p class="mb-0">Válido até 16h do dia <span class="bold">10/04</span>*</p>
+                    </div>
+                    <div class="text-center">
+                        <small>* As inscrições poderão se encerrar sem aviso prévio caso o número máximo de vagas da etapa seja atingido.</small>
+                    </div>
                 </div>
             </div>
             <div class="row mt-4">
@@ -1113,7 +1029,7 @@
                 </div>
                 <div class="col-12 text-center mt-5">
                     <small class="danger bold">
-                        ATENÇÃO: SUA PARTICIPAÇÃO SÓ SERÁ CONFIRMADA APÓS A EXECUÇÃO DOS 3 PASSOS!
+                        ATENÇÃO: SUA PARTICIPAÇÃO SÓ SERÁ CONFIRMADA APÓS A EXECUÇÃO DOS 4 PASSOS!
                         <br>
                         QUALQUER DÚVIDA ENTRE EM CONTATO COM A ORGANIZAÇÃO.
                     </small>
@@ -1141,24 +1057,17 @@
                     <div class="d-flex align-items-center justify-content-center wrapperRegras">
                         <div class="video-regras d-flex flex-column justify-content-center">
                             <h3 class="mb-3">Regras completas</h3>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/eSaqTJFJ2EQ"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/eSaqTJFJ2EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="verticalDivider light mx-3 d-none d-md-block"></div>
                         <div class="video-regras d-flex flex-column justify-content-center">
                             <h3 class="mb-3">Gameplay</h3>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/synfvZOFpE0"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/synfvZOFpE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="row linkManual text-center mt-4">
                         <p class="semibold">
-                            <a href="http://www.bgbh.com.br/assets/manuais/manual_draftosaurus_pt_br.pdf"
-                                class="inheritLink" target="_blank">
+                            <a href="http://www.bgbh.com.br/assets/manuais/manual_draftosaurus_pt_br.pdf" class="inheritLink" target="_blank">
                                 Baixar manual do jogo
                             </a>
                         </p>
@@ -1177,29 +1086,21 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="accordion accordion-flush accordionInformacoesImportantes"
-                    id="accordionInformacoesImportantes">
+                <div class="accordion accordion-flush accordionInformacoesImportantes" id="accordionInformacoesImportantes">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                 <h3>O QUE ACONTECE CASO UM JOGADOR NÃO ESTEJA NA MESA DO JOGO NO HORÁRIO DETERMINADO
                                     PARA O INÍCIO DA PARTIDA?</h3>
                             </button>
                         </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionInformacoesImportantes">
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionInformacoesImportantes">
                             <div class="accordion-body">
                                 <p>
                                     A etapa vigente e as partidas são abertas automaticamente pela plataforma (BGA),
-                                    <span class="bold">rigorosamente no horário</span>.
-                                    Após a liberação da entrada nas mesas o sistema possui uma
-                                    <span class="bold">tolerância de 5 minutos</span> e
-                                    todos os jogadores que não estiverem em suas mesas após a tolerância concedida pela
-                                    plataforma serão
-                                    <span class="bold">desclassificados automaticamente</span>
-                                    do restante da etapa.
+                                    <span class="bold">rigorosamente no horário</span>. Após a liberação da entrada nas mesas o sistema possui uma
+                                    <span class="bold">tolerância de 5 minutos</span> e todos os jogadores que não estiverem em suas mesas após a tolerância concedida pela plataforma serão
+                                    <span class="bold">desclassificados automaticamente</span> do restante da etapa.
                                     <br />
                                     <br />
                                     <span class="bold danger">
@@ -1217,74 +1118,51 @@
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                                 <h3>O QUE ACONTECE SE UM JOGADOR SE CLASSIFICAR EM UMA ETAPA E ESTIVER INSCRITO NAS
                                     PRÓXIMAS ETAPAS? ELE PODERÁ JOGAR?</h3>
                             </button>
                         </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionInformacoesImportantes">
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionInformacoesImportantes">
                             <div class="accordion-body">
                                 <p>
-                                    Jogadores que passaram para a segunda fase mas não conseguiram vaga para a
-                                    semi-final podem participar normalmente das demais etapas, no entanto os
-                                    <span class="bold">2 classificados para a semi-final</span>
-                                    poderão apenas participar da
-                                    <span class="bold">primeira fase</span> de cada
-                                    etapa. <br>
-                                    Caso consigam avançar novamente para a segunda fase a sua vaga será repassada
-                                    automaticamente para o próximo jogador do ranking
+                                    Jogadores que passaram para a segunda fase mas não conseguiram vaga para a semi-final podem participar normalmente das demais etapas, no entanto os
+                                    <span class="bold">2 classificados para a semi-final</span> poderão apenas participar da
+                                    <span class="bold">primeira fase</span> de cada etapa. <br> Caso consigam avançar novamente para a segunda fase a sua vaga será repassada automaticamente para o próximo jogador do ranking
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                                 <h3>O QUE ACONTECE COM A VAGA QUE FICAR EM ABERTO EM CASO DE DESCLASSIFICAÇÃO OU
                                     DESISTÊNCIA?</h3>
                             </button>
                         </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionInformacoesImportantes">
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionInformacoesImportantes">
                             <div class="accordion-body">
                                 <p>
-                                    Caso a desclassificação/desistência ocorra até <span class="bold">48h</span> antes
-                                    da etapa final, essa vaga será ocupada pelo próximo jogador do ranqueamento da etapa
-                                    em que o jogador ausente a garantiu.
-                                    <br />
-                                    Se estivermos a menos de <span class="bold">48h</span> a organização poderá ocupar
-                                    essa vaga ou não, de acordo com a viabilidade para o mesmo. Esta decisão será
-                                    informada e justificada para todos os outros finalistas.
+                                    Caso a desclassificação/desistência ocorra até <span class="bold">48h</span> antes da etapa final, essa vaga será ocupada pelo próximo jogador do ranqueamento da etapa em que o jogador ausente a garantiu.
+                                    <br /> Se estivermos a menos de <span class="bold">48h</span> a organização poderá ocupar essa vaga ou não, de acordo com a viabilidade para o mesmo. Esta decisão será informada e justificada para todos os outros finalistas.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                aria-controls="flush-collapseFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
                                 <h3>O QUE ACONTECE EM CASO DE EMPATE NA FINAL?</h3>
                             </button>
                         </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionInformacoesImportantes">
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionInformacoesImportantes">
                             <div class="accordion-body">
                                 <p>
                                     O critério de desempate em etapas finais será apresentado no
-                                    <span class="bold">regulamento de cada torneio.</span>
-                                    Nos casos em que nenhum critério de desempate for determinado e apresentado
-                                    com antecedência pela organização para essa etapa específica, os critérios de
-                                    desempate da plataforma BGA serão utilizados.
-                                    <br>
-                                    Os
-                                    <span class="bold">critérios de desempate da final</span>
-                                    deste torneio estão informados
+                                    <span class="bold">regulamento de cada torneio.</span> Nos casos em que nenhum critério de desempate for determinado e apresentado com antecedência pela organização para essa etapa específica, os critérios de desempate
+                                    da plataforma BGA serão utilizados.
+                                    <br> Os
+                                    <span class="bold">critérios de desempate da final</span> deste torneio estão informados
                                     <a class="inheritLink" href="#criteriosDesempate">aqui</a>.
                                 </p>
                             </div>
@@ -1307,142 +1185,104 @@
                     <div class="accordion accordion-flush accordionFormatoSuico" id="accordionFormatoSuico">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOneSuico">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOneSuico" aria-expanded="false"
-                                    aria-controls="flush-collapseOneSuico">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneSuico" aria-expanded="false" aria-controls="flush-collapseOneSuico">
                                     <h3>COMO FUNCIONA O FORMATO SUIÇO?</h3>
                                 </button>
                             </h2>
-                            <div id="flush-collapseOneSuico" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOneSuico" data-bs-parent="#accordionFormatoSuico">
+                            <div id="flush-collapseOneSuico" class="accordion-collapse collapse" aria-labelledby="flush-headingOneSuico" data-bs-parent="#accordionFormatoSuico">
                                 <div class="accordion-body">
                                     <p>
-                                        O Formato Suiço (swiss system) faz o pareamento de jogadores de acordo com os
-                                        resultados ao longo do torneio.
-                                        <br />
-                                        Na prática, funciona da seguinte forma:
+                                        O Formato Suiço (swiss system) faz o pareamento de jogadores de acordo com os resultados ao longo do torneio.
+                                        <br /> Na prática, funciona da seguinte forma:
                                     </p>
                                     <div class="mt-2">
-                                        A <span class="bold">primeira rodada</span> têm um pareamento aleatório, já que
-                                        todos os jogadores estão com
+                                        A <span class="bold">primeira rodada</span> têm um pareamento aleatório, já que todos os jogadores estão com
                                         <br />
                                         <span class="bold">
-                                            0 <span class="bold success">VITÓRIAS</span> e 0 <span
-                                                class="bold danger">DERROTAS</span> ( 0 <span
-                                                class="bold success">VIT.</span> / 0 <span
-                                                class="bold danger">DER.</span> )
+                                            0 <span class="bold success">VITÓRIAS</span> e 0 <span class="bold danger">DERROTAS</span> ( 0 <span class="bold success">VIT.</span> / 0 <span class="bold danger">DER.</span>                                        )
                                         </span>
                                         <div class="mt-3">
                                             A
                                             <span class="bold">segunda rodada</span> coloca os jogadores que estão
                                             <span class="bold success">1 VIT.</span> /
-                                            <span class="bold danger">0 DER.</span> contra aqueles que também
-                                            estão com
+                                            <span class="bold danger">0 DER.</span> contra aqueles que também estão com
                                             <span class="bold success">1 VIT.</span> /
                                             <span class="bold danger">0 DER.</span>
-                                            <br />
-                                            E jogadores que estão
+                                            <br /> E jogadores que estão
                                             <span class="bold">
-                                                0 <span class="bold success">VIT.</span> / 1 <span
-                                                    class="bold danger">DER.</span>
+                                                0 <span class="bold success">VIT.</span> / 1 <span class="bold danger">DER.</span>
                                             </span>
                                             Contra outros jogadores que também estão
                                             <span class="bold">
-                                                0 <span class="bold success">VIT.</span> / 1 <span
-                                                    class="bold danger">DER.</span>
+                                                0 <span class="bold success">VIT.</span> / 1 <span class="bold danger">DER.</span>
                                             </span>
                                         </div>
                                         <div class="mt-3">
                                             A
-                                            <span class="bold">terceira rodada</span> continua utilizando os resultados
-                                            anteriores para parear as partidas.
+                                            <span class="bold">terceira rodada</span> continua utilizando os resultados anteriores para parear as partidas.
                                             <br />
                                             <span class="bold">
-                                                2 <span class="bold success">VIT.</span> / 0 <span
-                                                    class="bold danger">DER.</span>
+                                                2 <span class="bold success">VIT.</span> / 0 <span class="bold danger">DER.</span>
                                             </span> Contra <span class="bold">
-                                                2 <span class="bold success">VIT.</span> / 0 <span
-                                                    class="bold danger">DER.</span>
+                                                2 <span class="bold success">VIT.</span> / 0 <span class="bold danger">DER.</span>
                                             </span>,
                                             <br />
                                             <span class="bold">
-                                                1 <span class="bold success">VIT.</span> / 1 <span
-                                                    class="bold danger">DER.</span>
+                                                1 <span class="bold success">VIT.</span> / 1 <span class="bold danger">DER.</span>
                                             </span> Contra <span class="bold">
-                                                1 <span class="bold success">VIT.</span> / 1 <span
-                                                    class="bold danger">DER.</span>
+                                                1 <span class="bold success">VIT.</span> / 1 <span class="bold danger">DER.</span>
                                             </span>
                                             <br /> E <span class="bold">
-                                                0 <span class="bold success">VIT.</span> / 2 <span
-                                                    class="bold danger">DER.</span>
+                                                0 <span class="bold success">VIT.</span> / 2 <span class="bold danger">DER.</span>
                                             </span> Contra <span class="bold">
-                                                0 <span class="bold success">VIT.</span> / 2 <span
-                                                    class="bold danger">DER.</span>
+                                                0 <span class="bold success">VIT.</span> / 2 <span class="bold danger">DER.</span>
                                             </span>
                                         </div>
                                         E isso continua ao longo de
-                                        <span class="bold">todas as rodadas</span>,
-                                        sempre pareando de acordo com os resultados das rodadas anteriores.
+                                        <span class="bold">todas as rodadas</span>, sempre pareando de acordo com os resultados das rodadas anteriores.
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingTwoSuico">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwoSuico" aria-expanded="false"
-                                    aria-controls="flush-collapseTwoSuico">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoSuico" aria-expanded="false" aria-controls="flush-collapseTwoSuico">
                                     <h3>QUAL A VANTAGEM DE UTILIZAR UM FORMATO SUIÇO?</h3>
                                 </button>
                             </h2>
-                            <div id="flush-collapseTwoSuico" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwoSuico" data-bs-parent="#accordionFormatoSuico">
+                            <div id="flush-collapseTwoSuico" class="accordion-collapse collapse" aria-labelledby="flush-headingTwoSuico" data-bs-parent="#accordionFormatoSuico">
                                 <div class="accordion-body">
                                     Em primeiro lugar, porque
-                                    <span class="bold">não existem jogadores eliminados</span>
-                                    durante o suiço.
+                                    <span class="bold">não existem jogadores eliminados</span> durante o suiço.
                                     <br /> Ou seja,
                                     <span class="bold">todos os jogadores jogam até o fim de cada etapa, o mesmo número
                                         de jogos, não importando quantas vitórias ou derrotas tenha.</span>
-                                    <br />
-                                    Como explicado anteriormente, o torneio vai se equilibrando ao longo das partidas.
-                                    <br /> Quanto mais rodadas tiverem sido jogadas no torneio, mais equilibrada será
-                                    sua partida.
-                                    <br /> Isso elimina o fator “azar” de pegar um jogador teoricamente mais forte em
-                                    todas as rodadas mesmo após uma derrota, já que perdendo uma partida você será
-                                    emparelhado contra um adversário com desempenho similar ao seu, uma vez que ele
-                                    também terá perdido a sua partida anterior.
-                                    <br /> Por outro lado, alcançar as primeiras colocações se torna cada vez mais
-                                    difícil a cada derrota.
+                                    <br /> Como explicado anteriormente, o torneio vai se equilibrando ao longo das partidas.
+                                    <br /> Quanto mais rodadas tiverem sido jogadas no torneio, mais equilibrada será sua partida.
+                                    <br /> Isso elimina o fator “azar” de pegar um jogador teoricamente mais forte em todas as rodadas mesmo após uma derrota, já que perdendo uma partida você será emparelhado contra um adversário com desempenho similar
+                                    ao seu, uma vez que ele também terá perdido a sua partida anterior.
+                                    <br /> Por outro lado, alcançar as primeiras colocações se torna cada vez mais difícil a cada derrota.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingThreeSuico">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThreeSuico" aria-expanded="false"
-                                    aria-controls="flush-collapseThreeSuico">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeSuico" aria-expanded="false" aria-controls="flush-collapseThreeSuico">
                                     <h3>QUEM CLASSIFICA EM CASO DE EMPATE NA PONTUAÇÃO?</h3>
                                 </button>
                             </h2>
-                            <div id="flush-collapseThreeSuico" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThreeSuico" data-bs-parent="#accordionFormatoSuico">
+                            <div id="flush-collapseThreeSuico" class="accordion-collapse collapse" aria-labelledby="flush-headingThreeSuico" data-bs-parent="#accordionFormatoSuico">
                                 <div class="accordion-body">
                                     <div class="accordion-body">
                                         <div>
-                                            Caso exista um empate no suiço, a plataforma possui um critério de desempate
-                                            a partir da
+                                            Caso exista um empate no suiço, a plataforma possui um critério de desempate a partir da
                                             <span class="bold">pontuação dos adversários que você enfrentou.</span>
-                                            <br />
-                                            Classifica-se assim, o jogador que enfrentou adversários que tiveram um
-                                            melhor desempenho e teoricamente teve confrontos mais fortes.
+                                            <br /> Classifica-se assim, o jogador que enfrentou adversários que tiveram um melhor desempenho e teoricamente teve confrontos mais fortes.
                                         </div>
                                         <div class="mt-2">
-                                            <span class="bold">1º Critério:</span> Soma da pontuação alcançada por todos
-                                            os adversários que o jogador enfrentou.
+                                            <span class="bold">1º Critério:</span> Soma da pontuação alcançada por todos os adversários que o jogador enfrentou.
                                             <br />
-                                            <span class="bold">2º Critério: </span> Média do ELO de todos os adversários
-                                            que o jogador enfrentou.
+                                            <span class="bold">2º Critério: </span> Média do ELO de todos os adversários que o jogador enfrentou.
                                             <small class="fst-italic">
                                                 (soma dos ELOs dos adversários dividida pelo número de partidas da
                                                 etapa)
@@ -1478,12 +1318,10 @@
                 </div>
                 <div class="col-12 col-md-6 text-center">
                     <h3 class="success">
-                        <i class="bi bi-whatsapp me-1 fs-3"></i>
-                        INTERAJA COM OUTROS PARTICIPANTES DOS TORNEIOS
+                        <i class="bi bi-whatsapp me-1 fs-3"></i> INTERAJA COM OUTROS PARTICIPANTES DOS TORNEIOS
                     </h3>
                     <div class="mt-3">
-                        <a class="btn primaryButton btn-md" href="https://chat.whatsapp.com/KTH6MSuPHNiAoOPgaFbN0n"
-                            target="_blank">GRUPO BGBH TORNEIOS
+                        <a class="btn primaryButton btn-md" href="https://chat.whatsapp.com/KTH6MSuPHNiAoOPgaFbN0n" target="_blank">GRUPO BGBH TORNEIOS
                         </a>
                         <small class="d-block mt-3">
                             Grupo de whatsapp voltado para divulgações de torneios, esclarecimento de dúvidas,
@@ -1493,12 +1331,10 @@
                 </div>
                 <div class="col-12 col-md-6 text-center instagramBGBH">
                     <h3 class="success">
-                        <i class="bi bi-instagram me-1 fs-3"></i>
-                        FIQUE POR DENTRO DE TUDO QUE ROLA NO BGBH
+                        <i class="bi bi-instagram me-1 fs-3"></i> FIQUE POR DENTRO DE TUDO QUE ROLA NO BGBH
                     </h3>
                     <div class="mt-3">
-                        <a class="btn primaryButton btn-md" href="www.intagram.com/boardgamebh"
-                            target="_blank">INSTAGRAM BGBH
+                        <a class="btn primaryButton btn-md" href="www.intagram.com/boardgamebh" target="_blank">INSTAGRAM BGBH
                         </a>
                         <br>
                         <small class="d-block mt-3">
@@ -1515,37 +1351,34 @@
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <!-- Image Map Generated by http://www.image-map.net/ -->
                     <!-- Image Map Generated by http://www.image-map.net/ -->
-                    <img src="http://www.bgbh.com.br/images/map/apoio-torneios-meeplebr.png" usemap="#image-map">
+                    <img src="http://www.bgbh.com.br/images/map/apoio-torneios-meeplebr.png" usemap="#image-map" class="image-map w-auto mw-100">
 
                     <map name="image-map">
-                        <area target="_blank" alt="MeepleBR" title="MeepleBR" href="http://meeplebr.com/"
+                        <area target="_blank" alt="MeepleBR" title="MeepleBR" href="http://meeplebr.com/ "
                             coords="493,175,223,90" shape="rect">
-                        <area target="_blank" alt="Taverna Real" title="Taverna Real"
+                        <area target="_blank" alt="Taverna Real" title="Taverna Real "
                             href="https://www.tavernareal.com/loja/" coords="514,27,647,202" shape="rect">
-                        <area target="_blank" alt="Mesa Secreta" title="Mesa Secreta" href="http://mesasecreta.com.br/"
+                        <area target="_blank" alt="Mesa Secreta" title="Mesa Secreta" href="http://mesasecreta.com.br/ "
                             coords="672,77,850,177" shape="rect">
-                        <area target="_blank" alt="BoardgameBH" title="BoardgameBH" href="http://bgbh.com.br/"
+                        <area target="_blank" alt="BoardgameBH" title="BoardgameBH" href="http://bgbh.com.br/ "
                             coords="915,60,1070,198" shape="rect">
                     </map>
                 </div>
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="public/js/jquery.countup.min.js"></script>
 
     <script>
-        $(function ($) {
+        $(function($) {
             $('.counter-count').countUp({
-                'time': 1500,
+                'time': 500,
             });
             $('[data-bs-toggle="tooltip"]').tooltip({
-                container: '.torneios'
+                container: '.torneios',
             });
         });
     </script>
