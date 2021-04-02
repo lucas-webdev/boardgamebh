@@ -59,3 +59,15 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@mixin verticalDivider($width: 2px) {
+    border-right: $width solid $primaryColor;
+    height: 100%;
+    margin: 0px 4px;
+
+    &.secondary { border-right: $width solid $secondaryColor; }
+    &.success { border-right: $width solid $successColor; }
+    &.info { border-right: $width solid $infoColor; }
+    &.danger { border-right: $width solid $dangerColor; }
+    &.light { border-right: $width solid $lightColor; }
+}

@@ -57,41 +57,35 @@ hr {
     margin: 0 auto;
 }
 
+p { font-size: $fontSizeMedium;  }
 
-p { 
-    font-size: $fontSizeMedium; 
-    color: $primaryColor;
-    
-    &.secondary { color: $secondaryColor; }
-    &.success { color: $successColor; }
-    &.info { color: $infoColor; }
-    &.danger { color: $dangerColor; }
-}
+span, label { font-size: inherit; }
 
-span, label { 
-    font-size: inherit;
-    color: $primaryColor;
+small {font-size: $fontSizeSmall; }
 
-    &.secondary { color: $secondaryColor; }
-    &.success { color: $successColor; }
-    &.info { color: $infoColor; }
-    &.danger { color: $dangerColor; }
-}
-
+h1,
+h2,
+h3,
+p,
+span,
+label,
 small {
-    font-size: $fontSizeSmall;
     color: $primaryColor;
+    @extend %textVariant;
 
-    &.secondary { color: $secondaryColor; }
-    &.success { color: $successColor; }
-    &.info { color: $infoColor; }
-    &.danger { color: $dangerColor; }
+    &.badgeStyle {
+        color: white;
+        width: 100%;
+        margin: 0 auto;
+        padding: 8px;
+        white-space: nowrap;
+        vertical-align: baseline;
+        @extend %backgroundVariant;
+    }
 }
 
-button { 
-    color: $buttonTextColor;
-}
 
-img {
-    max-width: 100%;
-}
+
+button { color: $buttonTextColor; }
+
+img {max-width: 100%; }

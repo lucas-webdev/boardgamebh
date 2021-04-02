@@ -38,8 +38,22 @@
 }
 
 .sectionYSpacer {
-    margin-top: $sectionYSpacer;
-    margin-bottom: $sectionYSpacer;
+    margin-top: $sectionYSpacerMobile;
+    margin-bottom: $sectionYSpacerMobile;
+
+    @media screen and (min-width: 992px) {
+        margin-top: $sectionYSpacer;
+        margin-bottom: $sectionYSpacer;
+    }
+}
+
+.specialTitle {
+    font-size: $fontSize2XLarge;
+    
+    &.primary { color: $primaryColor; }
+    &.success { color: $successColor; }
+    &.info { color: $infoColor; }
+    &.danger { color: $dangerColor; }
 }
 
 .icone {
@@ -132,6 +146,10 @@
     .gray-filter {
         @include grayFilter();
     }
+}
+
+.verticalDivider {
+    @include verticalDivider();
 }
 
 

@@ -1,3 +1,18 @@
 * {
     box-sizing: border-box;
 }
+
+%textVariant {
+    &.secondary { color: $secondaryColor; }
+    &.success { color: $successColor; }
+    &.info { color: $infoColor; }
+    &.danger { color: $dangerColor; }
+}
+
+%backgroundVariant {
+    &.primary { background-color: $primaryColor; }
+    &.secondary { background-color: $secondaryColor; }
+    &.success { background-color: $successColor; }
+    &.info { background-color: $infoColor; }
+    &.danger { background-color: $dangerColor; }
+}

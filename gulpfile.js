@@ -12,7 +12,7 @@ gulp.task('php', function () {
 
 gulp.task('browserSync', gulp.series('php'), function () {
     browserSync.init({
-        proxy: "localhost:8010",
+        proxy: "localhost:8080",
         baseDir: "./",
         open: true,
         notify: false

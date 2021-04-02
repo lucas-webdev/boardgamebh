@@ -27,6 +27,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Regras Lista Trocas & Vendas</title>
     <meta property="og:title" content="BoardgameBH [BGBH]">
     <meta property="og:site_name" content="BoardgameBH [BGBH]">
     <meta property="og:url" content="http://www.bgbh.com.br/regras-lista.html">
@@ -35,131 +36,149 @@
     <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
     <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.jpg">
 
+    <!-- fonts -->
     <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico" />
-    <link href="lista/dist/assets/styles/style.css" rel="stylesheet" type="text/css">
-    <title>Regras Planilha</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- external css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../public/css/styles.css">
 </head>
 
-<body style="font-size: 18px">
-    <nav class="navbar navbar-expand-sm navbar-dark">
-        <a class="navbar-brand d-flex align-items-center" href="/">
-            <img src="lista/dist/assets/images/logo_com_sombra.png" width="30" height="30"
-                class="d-inline-block align-top mr-1" alt="">
-            BoardgameBH
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Voltar para o site</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="col-12 mt-4 font-gray px-4">
-        <h3 class="font-800">LISTA DE TROCAS & VENDAS BGBH</h3>
-        <h6>
-            A lista é uma ferramenta adicional e opcional desenvolvida pelo BGBH. Recomendamos sua utilização para
-            ampliar o alcance de suas suas ofertas e para que seus jogos fiquem sempre com um acesso prático e rápido
-            para os demais usuários.
-        </h6>
-        <hr />
-        <div class="regras_lista">
-            <section class="regras_lista--visualizar">
-                <h5 class="font-weight-bold">
-                    <i class="fas fa-eye"></i>
-                    Visualizar lista
-                </h5>
-                <li>
-                    Acesse a
-                    <strong>lista de trocas & vendas</strong>
-                    no link a seguir:
-                    <a target="_blank" href="//bgbh.com.br/lista">Visualizar lista</a>
-                </li>
-            </section>
-            <section class="regras_lista--adicionar mt-4">
-                <h5 class="font-weight-bold">
-                    <i class="fas fa-plus"></i>
-                    Adicionar jogos
-                </h5>
-                <p class="mt-3">Para adicionar seus jogos na lista, basta
-                    <strong>
-                        preencher o formulário corretamente.
-                    </strong>
-                    <br />
-                    Alguns campos são <strong>obrigatórios</strong> para qualquer tipo de negociação.
-                    <strong>
-                        O preço é obrigatório em caso de venda.
-                    </strong>
-                </p>
-                <li>
-                    Link direto para a página de adicionar jogos:
-                    <a target="_blank" href="//bgbh.com.br/lista/adicionar-jogo.php">Adicionar jogo</a>
-                </li>
-            </section>
-            <section class="regras_lista--remover mt-4">
-                <h5 class="font-weight-bold">
-                    <i class="fas fa-minus"></i>
-                    Remover jogos
-                </h5>
-                <p>Os itens solicitados serão adicionados em uma lista interna e
-                    <strong>
-                        os administradores irão removê-lo da lista padrão.
-                    </strong>
-                </p>
-                <li>
-                    Link direto para a página de remoção de jogos:
-                    <a target="_blank" href="//bgbh.com.br/lista/remover-jogo.php">Remover jogo</a>
-                </li>
-            </section>
-            <section class="regras_lista--alterar mt-4">
-                <h5 class="font-weight-bold">
-                    <i class="fas fa-edit"></i>
-                    Alterar jogos
-                </h5>
-                <p>Ainda não temos uma maneira definitiva para alteração de itens. <br />
-                    Provisoriamente, caso queira fazer alguma alteração
-                    <strong>
-                        entre em contato com os adminstradores.
-                    </strong>
-                </p>
-            </section>
-        </div>
-
-        <p> Os jogos na lista serão
-            <strong>
-                revisados periodicamente
-            </strong>
-            e precisarão de uma confirmação simples de seus donos para
-            <strong>
-                permanecerem disponíveis
-            </strong>
-            após determinados períodos.
-        </p>
-
-        <div>
+<body>
+    <div class="site-wrapper">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="mainNavbar">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="/images/bgbh-logo.png" alt="logo BGBH" height="30">
+                    <span class="navbarLogoText ms-2">BoardgameBH</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold fs-7 active" href="/"
+                                onclick="ga('send', 'event', 'Voltar para o site', 'click', 'regras lista');">
+                                VOLTAR PARA O SITE
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="col-12 font-gray px-4" style="margin-top: 100px">
+            <h3 class="font-800">LISTA DE TROCAS & VENDAS BGBH</h3>
             <p>
-                Ao adicionar uma oferta na lista, todos os dados fornecidos nos formulários de inclusão e remoção podem
-                ser compartilhados com os demais usuários. Caso utilizado, ficarão de forma pública, de acordo com as
-                necessidades observadas para a entrega de informações claras e úteis para todos.
+                A lista é uma ferramenta adicional e opcional desenvolvida pelo BGBH. Recomendamos sua utilização para
+                ampliar o alcance de suas suas ofertas e para que seus jogos fiquem sempre com um acesso prático e
+                rápido
+                para os demais usuários.
+            </p>
+            <hr />
+            <div class="regras_lista mt-4">
+                <section class="regras_lista--visualizar">
+                    <h3>
+                        <i class="fas fa-eye"></i>
+                        Visualizar lista
+                    </h3>
+                    <li>
+                        Acesse a
+                        <strong>lista de trocas & vendas</strong>
+                        no link a seguir:
+                        <a class="btn primaryButton" target="_blank" href="//bgbh.com.br/lista">Visualizar lista</a>
+                    </li>
+                </section>
+                <section class="regras_lista--adicionar mt-4">
+                    <h3>
+                        <i class="fas fa-plus"></i>
+                        Adicionar jogos
+                    </h3>
+                    <p class="mt-3">Para adicionar seus jogos na lista, basta
+                        <strong>
+                            preencher o formulário corretamente.
+                        </strong>
+                        <br />
+                        Alguns campos são <strong>obrigatórios</strong> para qualquer tipo de negociação.
+                        <strong>
+                            O preço é obrigatório em caso de venda.
+                        </strong>
+                    </p>
+                    <li>
+                        Link direto para a página de adicionar jogos:
+                        <a class="btn primaryButton" target="_blank"
+                            href="//bgbh.com.br/lista/adicionar-jogo.php">Adicionar jogo</a>
+                    </li>
+                </section>
+                <section class="regras_lista--remover mt-4">
+                    <h3>
+                        <i class="fas fa-minus"></i>
+                        Remover jogos
+                    </h3>
+                    <p>Os itens solicitados serão adicionados em uma lista interna e
+                        <strong>
+                            os administradores irão removê-lo da lista padrão.
+                        </strong>
+                    </p>
+                    <li>
+                        Link direto para a página de remoção de jogos:
+                        <a class="btn primaryButton" target="_blank" href="//bgbh.com.br/lista/remover-jogo.php">Remover
+                            jogo</a>
+                    </li>
+                </section>
+                <section class="regras_lista--alterar mt-4">
+                    <h3>
+                        <i class="fas fa-edit"></i>
+                        Alterar jogos
+                    </h3>
+                    <p>Ainda não temos uma maneira definitiva para alteração de itens. <br />
+                        Provisoriamente, caso queira fazer alguma alteração
+                        <strong>
+                            entre em contato com os adminstradores.
+                        </strong>
+                    </p>
+                </section>
+            </div>
+
+            <p> Os jogos na lista serão
+                <strong>
+                    revisados periodicamente
+                </strong>
+                e precisarão de uma confirmação simples de seus donos para
+                <strong>
+                    permanecerem disponíveis
+                </strong>
+                após determinados períodos.
+            </p>
+
+            <div>
+                <p>
+                    Ao adicionar uma oferta na lista, todos os dados fornecidos nos formulários de inclusão e remoção
+                    podem
+                    ser compartilhados com os demais usuários. Caso utilizado, ficarão de forma pública, de acordo com
+                    as
+                    necessidades observadas para a entrega de informações claras e úteis para todos.
+                </p>
+            </div>
+
+            <p class="danger bold">
+                Nenhuma negociação utilizando a <strong>Lista de Trocas & Vendas</strong> é de responsabilidade do
+                Boardgame BH.
+            </p>
+            <p class="semibold"> Em caso de dúvidas, entre em contato conosco pelos grupos ou email da
+                BoradgameBH.
             </p>
         </div>
-
-        <p class="font-weight-bold font-red">
-            Nenhuma negociação utilizando a <strong>Lista de Trocas & Vendas</strong> é de responsabilidade do
-            Boardgame BH.
-        </p>
-        <p class="font-weight-bold"> Em caso de dúvidas, entre em contato conosco pelos grupos ou email da BoradgameBH.
-        </p>
     </div>
 
 </body>

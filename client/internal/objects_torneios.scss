@@ -1,9 +1,103 @@
 .torneios {
+    // background: url("http://www.bgbh.com.br/images/parallax/dino.svg") no-repeat;
+    background-attachment: fixed;
+    background-position: 120% 75%;
+    background-size: 50%;
+
+    * {
+        &.success {
+            color: $successColor;
+        }
+    }
+
     h1 {
         color: $primaryColor;
     }
 
-    .bg-white {
-        background-color: transparentize($color: $primaryColorTournament, $amount: 0.6) !important;
+    small {
+        line-height: normal;
+    }
+
+    .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, 
+    .bs-tooltip-bottom .tooltip-arrow::before {
+        border-bottom-color: $infoColor;
+    }
+    
+    .tooltip-inner {
+        background-color: $infoColor;
+    }
+
+    .imagemTorneio {
+        height: 100vh;
+        background: url("http://www.bgbh.com.br/images/torneios/parallax/draftosaurus.jpg");
+        background-attachment: fixed;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    .icone-xs {
+        font-size: $fontSizeXSmall;
+        color: $secondaryColor;
+        cursor: pointer;
+    }
+
+    .icone-lg {
+        font-size: 3rem;
+    }
+
+    .icone-xg {
+        font-size: 5rem;
+    }
+
+    .configAdicionais {
+        padding-left: 20px;
+    }
+
+    footer {
+        background: transparentize($secondaryColor, 0.7);
+    }
+
+    .etapasClassificatorias,
+    .semifinal,
+    .faseFinal {
+        margin-top: 10px;
+        border: 1px solid $infoColor;
+        border-radius: 10px;
+    }
+
+    .comoJogar {
+        background: transparentize($color: $secondaryColor, $amount: 0.7);
+        padding: 35px 0;
+    }
+
+    .wrapperRegras {
+        flex-direction: column;
+
+        .video-regras:last-child {
+            margin-top: 20px;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        .imagemTorneio {
+            height: 70vh;
+
+            .fill-image {
+                min-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .configAdicionais {
+            padding-left: 60px;
+        }
+
+        .wrapperRegras {
+            flex-direction: row;
+
+            .video-regras:last-child {
+                margin-top: 0;
+            }
+        }
     }
 }

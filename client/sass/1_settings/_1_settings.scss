@@ -29,6 +29,7 @@ $semiBold: 600;
 $bold: 700;
 $extraBold: 900;
 
+$fontSize2XLarge: 2rem !default;
 $fontSizeXLarge: 1.5rem !default;
 $fontSizeLarge: 1.25rem !default;
 $fontSizeMedium: 1rem !default;
@@ -42,7 +43,8 @@ $primaryButtonBG: linear-gradient(180deg, rgba(64,66,72,1) 15%, rgba(33,37,41,1)
 $primaryButtonHover: linear-gradient(180deg, rgba(11,101,94,1) 50%, rgba(64,66,72,1) 100%) !default;
 
 // SPACER
-$sectionYSpacer: 35px;
+$sectionYSpacer: 40px;
+$sectionYSpacerMobile: 25px;
 
 // PATTERNS
 $whitePattern: "http://www.bgbh.com.br/patterns/bgbh_white.png";
