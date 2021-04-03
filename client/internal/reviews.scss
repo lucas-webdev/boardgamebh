@@ -1,0 +1,12 @@
+.reviews {
+    &.brazilImperial {
+        .imagemReview {
+            height: 100vh;
+            background: url("http://meeplebr.com/wp-content/uploads/2020/09/Capa-Blog.png");
+            background-attachment: fixed;
+            background-position: center 85px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+}
