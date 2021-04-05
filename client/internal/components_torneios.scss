@@ -255,6 +255,7 @@
         }
     }
     @media screen and (max-width: 762px) {
+        
         .counters {
             .classificadosEtapa,
             .duracaoPartida,
@@ -275,6 +276,12 @@
             margin-top: 15px;
             .icone {
                 top: -6px;
+            }
+        }
+
+        .video-regras {
+            iframe {
+                height: 200px;
             }
         }
         .instagramBGBH {

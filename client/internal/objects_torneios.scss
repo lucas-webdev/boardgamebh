@@ -81,4 +81,11 @@
             }
         }
     }
+    @media screen and (max-width: 762px) {
+        .imagemTorneio {
+            height: 175px;
+            background-position: 0 86px;
+            background-size: 100% auto;
+        }
+    }
 }
