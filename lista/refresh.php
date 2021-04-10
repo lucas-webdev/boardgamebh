@@ -4,7 +4,7 @@ $pdo = pdo_connect_mysql();
 $msg = '';
 // Check if POST data is not empty
 if (isset($_GET['id'])) {
-
+    $orderBy = $_GET['sort'];
     // Insert new record into the boardgames table
     if (count($errors) === 0) {
         try {
@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
 
             $msg = 'Jogo atualizado com sucesso!';
             echo '<script>history.pushState({}, "", "")</script>';
-            header('Location: painel-adm.php');
+            header('Location: painel-adm.php?sort=' . $orderBy . '');
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
         }

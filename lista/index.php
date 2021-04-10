@@ -14,6 +14,9 @@ switch ($orderBy) {
     case "name":
         $sql .= "ORDER BY name ";
         break;
+    case "owner":
+        $sql .= "ORDER BY owner ";
+        break;
     case "price":
         $sql .= "ORDER BY price ";
         break;

@@ -149,10 +149,10 @@ $today = strtotime(date("Y-m-d"));
                         <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>">
                     + info
                     </button>
-                    <a href="update.php?id=<?= $bg['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
-                    <a href="delete.php?id=<?= $bg['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
-                    <form action="update.php?id=<?= $bg['id'] ?>" method="POST">
-                        <a href="refresh.php?id=<?= $bg['id'] ?>" class="refresh"><i class="fas fa-sync fa-xs"></i></a>
+                    <a href="update.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
+                    <a href="delete.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+                    <form action="update.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>" method="POST">
+                        <a href="refresh.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>" class="refresh"><i class="fas fa-sync fa-xs"></i></a>
                     </form>
             </div>
         </div>
