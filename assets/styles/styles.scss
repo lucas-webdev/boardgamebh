@@ -1,0 +1,21 @@
+@import "itcss/1_settings/1_settings";
+@import "itcss/2_tools/2_tools";
+@import "itcss/3_generic/3_generic";
+@import "itcss/4_base/4_base";
+@import "itcss/5_objects/5_objects";
+@import "itcss/6_components/6_components";
+@import "itcss/7_trumps/7_trumps";
+@import "itcss/8_torneios/torneios";
+@import "itcss/9_lista/lista";
+
+/*
+
+Settings:   Global variables, config switches.
+Tools:      Default mixins and functions.
+Generic:    Ground-zero styles (Normalize.css, resets, box-sizing).
+Base:       Unclassed HTML elements (type selectors).
+Objects:    Cosmetic-free design patterns.
+Components: Designed components, chunks of UI.
+Trumps:     Helpers and overrides.
+
+*/

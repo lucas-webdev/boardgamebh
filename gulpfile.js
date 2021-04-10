@@ -6,11 +6,11 @@ const webpack = require("webpack");
 const php = require('gulp-connect-php');
 const browserSync = require('browser-sync').create();
 
-gulp.task('php', function () {
+gulp.task('php', function() {
     php.server({ base: './', port: 8010, keepalive: true });
 });
 
-gulp.task('browserSync', gulp.series('php'), function () {
+gulp.task('browserSync', gulp.series('php'), function() {
     browserSync.init({
         proxy: "localhost:8080",
         baseDir: "./",
@@ -20,23 +20,22 @@ gulp.task('browserSync', gulp.series('php'), function () {
     });
 });
 
-gulp.task('dev', gulp.series('browserSync'), function () {
+gulp.task('dev', gulp.series('browserSync'), function() {
     gulp.watch('./lista/*.php', browserSync.reload);
 });
 
 
-gulp.task('sass', function () {
-    return gulp.src(['./client/sass/**/*.scss'])
+gulp.task('sass', function() {
+    return gulp.src(['./assets/styles/styles.scss'])
         .pipe(sass({
             outputStyle: 'compressed',
             errLogToConsole: true,
-            onError: function (err) {
-            }
+            onError: function(err) {}
         }))
         .pipe(autoprefixer('last 1 version'))
         .pipe(gulp.dest('./public/css'));
 });
-gulp.task('server', gulp.series('browserSync'), function () {
+gulp.task('server', gulp.series('browserSync'), function() {
     var sources = [
         './public/index.html',
         './public/**/*.css',
@@ -47,20 +46,20 @@ gulp.task('server', gulp.series('browserSync'), function () {
     server.start();
 
     //use gulp.watch to trigger server actions(notify, start or stop)
-    return gulp.watch(sources, function (file) {
+    return gulp.watch(sources, function(file) {
         server.notify.apply(server, [file]);
     });
 });
 
-gulp.task('watch', function () {
-    gulp.watch(['./client/sass/**/*.scss'], gulp.series("sass"));
-    gulp.watch(['./client/scripts/**/*.js'], gulp.series("webpack"));
+gulp.task('watch', function() {
+    gulp.watch(['./assets/styles/itcss/**/*.scss'], gulp.series("sass"));
+    gulp.watch(['./assets/scripts/**/*.js'], gulp.series("webpack"));
 });
 
-gulp.task("webpack", function (callback) {
+gulp.task("webpack", function(callback) {
     webpack({
 
-        entry: "./client/scripts/app.js",
+        entry: "./assets/scripts/app.js",
 
         output: {
             path: "./public/js",
@@ -74,19 +73,17 @@ gulp.task("webpack", function (callback) {
         ],
 
         module: {
-            loaders: [
-                {
-                    test: /\.jsx?$/,
-                    exclude: /(node_modules|bower_components)/,
-                    loader: 'babel',
-                    query: {
-                        //    presets: ['es2015'] //uncomment if you want es2015 to ES5
-                    }
+            loaders: [{
+                test: /\.jsx?$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel',
+                query: {
+                    //    presets: ['es2015'] //uncomment if you want es2015 to ES5
                 }
-            ]
+            }]
         }
 
-    }, function (err, stats) {
+    }, function(err, stats) {
         if (err) throw new gutil.PluginError("webpack", err);
         console.log("[webpack]", stats.toString({
             // output options
