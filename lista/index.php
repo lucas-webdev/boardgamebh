@@ -10,23 +10,8 @@ $records_per_page = 200;
 // Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
 $sql = "SELECT * FROM boardgames ";
 $orderBy = $_GET['sort'];
-switch ($orderBy) {
-    case "name":
-        $sql .= "ORDER BY name ";
-        break;
-    case "owner":
-        $sql .= "ORDER BY owner ";
-        break;
-    case "price":
-        $sql .= "ORDER BY price ";
-        break;
-    case "condition":
-        $sql .= "ORDER BY condition ";
-        break;
-    default:
-        $sql .= "ORDER BY name ";
-        break;
-}
+if ($orderBy) $sql .= "ORDER BY " . $orderBy . " ";
+else $sql .= "ORDER BY name ASC ";
 $sql .= "LIMIT :current_page, :record_per_page";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':current_page', ($page - 1) * $records_per_page, PDO::PARAM_INT);
@@ -35,7 +20,7 @@ $stmt->execute();
 // Fetch the records so we can display them in our template.
 $boardgames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // Get the total number of boardgames, this is so we can determine whether there should be a next and previous button
-$num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
+$num_boardgames = count($boardgames);
 $num_history = $pdo->query('SELECT COUNT(*) FROM boardgames_bkp')->fetchColumn();
 $pages = ceil($num_boardgames / $records_per_page);
 ?>
@@ -106,7 +91,7 @@ $pages = ceil($num_boardgames / $records_per_page);
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item" href="index.php?sort=name">Nome do jogo</a></li>
         <li><a class="dropdown-item" href="index.php?sort=owner">Responsável</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=created_at">Data</a></li>
+        <li><a class="dropdown-item" href="index.php?sort=updated_at">Data</a></li>
         <li><a class="dropdown-item" href="index.php?sort=price">Preço</a></li>
         <li><a class="dropdown-item" href="index.php?sort=condition">Condição do jogo</a></li>
         <li><a class="dropdown-item" href="index.php?sort=negociation">Tipo de negociação</a></li>
@@ -132,15 +117,17 @@ $pages = ceil($num_boardgames / $records_per_page);
             $addedClass = 'added-more-recently';
         if ($diffDays >= 3 && $diffDays <= 4)
             $addedClass = 'added-recently';
-        if ($diffDays >= 60)
+        if ($diffDays >= 50 && $diffDays <= 60)
             $addedClass = 'added-longtime';
+        if ($diffDays >= 61)
+            $addedClass = 'added-extra-longtime';
         if ($bg['condition'] === "Lacrado")
             $conditionClass = 'lacrado';
         if ($bg['condition'] === "Avariado")
             $conditionClass = 'avariado';
         $descricao = htmlspecialchars($bg['description']);
         ?>
-        <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $$bg['created_at'] ?> <?= $addedClass ?>">
+        <div class="d-inline-flex justify-content-start align-items-center bg-item <?= $diffDays ?> <?= $addedClass ?>">
             <div class="bg-fields" style="flex: 1.5"><b><?= ucwords($bg['name']) ?></b></div>
             <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
             <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>

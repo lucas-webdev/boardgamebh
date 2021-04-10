@@ -165,10 +165,9 @@ try {
         <?php endforeach; ?>
     </div>
 </div>
-<hr />
-<div class="games-to-remove"></div>
+<div class="games-to-remove mt-4"></div>
 <h5> Jogos a serem removidos </h5>
-<div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
+<div class="d-flex flex-column bd-highlight my-3 bg-list" style="flex: 1">
     <div class="bg-table-header d-inline-flex justify-content-start align-items-center">
         <div class="text-center" style="flex: 3">Jogo</div>
         <div class="text-center" style="flex: 3">Responsável</div>
