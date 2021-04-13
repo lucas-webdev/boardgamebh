@@ -67,8 +67,7 @@ function template_header($title)
             <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-            <link href="dist/assets/styles/style.css" rel="stylesheet" type="text/css">
-            <link rel="stylesheet" href="../public/css/styles.css">
+            <link rel="stylesheet" href="http://www.bgbh.com.br/public/css/styles.css">
         </head>
         <body>
         <div class="site-wrapper listaTrocasVendas">
@@ -104,7 +103,7 @@ function template_header($title)
             <div class="col-12 d-none d-md-flex justify-content-center">
                 <a href="#" target="_blank"
                     onclick="ga('send', 'event', 'Torneio Draftosaurus', 'click-banner-unico');">
-                    <img class="banner-ads-90" src="http://www.bgbh.com.br/images/banners/banner_draftosaurus_em_breve.png"
+                    <img class="banner-ads-90" src="http://www.bgbh.com.br/public/images/banners/728x90/banner_draftosaurus_em_breve.png"
                         alt="banner Torneio Draftosaurus" />
                 </a>
             </div>
@@ -131,9 +130,11 @@ function template_footer()
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
     $(function() {
-        $('[data-bs-toggle="popover"]').popover({
+        new bootstrap.Popover(document.body, {
+            selector: '.has-popover',
+            trigger: 'focus',
             html: true
-        });
+          });
     });
     $('.celular').mask('(00) 0 0000-0000');
     $('.dinheiro').mask('#.##0,00', {reverse: true});

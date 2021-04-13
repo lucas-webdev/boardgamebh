@@ -1,5 +1,5 @@
 <?php
-include 'functions.php';
+include 'utils/functions.php';
 // Connect to MySQL database
 $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
@@ -50,12 +50,12 @@ $pages = ceil($num_boardgames / $records_per_page);
         <div class="d-flex buttons">
             <div class="botoes-lista">
                 <div class="d-flex justify-content-start align-items-center">
-                    <a target="_blank" href="adicionar-jogo.php" class="image featured btn-planilha adicionar-jogo me-3" onclick="ga('send', 'event', 'botões lista', 'click', 'adicionar');">
-                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/images/btn-adicionar.png" alt="Adicionar jogo" />
+                    <a target="_blank" href="/lista/adicionar-jogo/" class="image featured btn-planilha adicionar-jogo me-3" onclick="ga('send', 'event', 'botões lista', 'click', 'adicionar');">
+                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/public/images/botoes/btn-adicionar.png" alt="Adicionar jogo" />
                         <small class="extrabold">ADICIONAR JOGO</small>
                     </a>
-                    <a target="_blank" href="remover-jogo.php" class="image featured btn-planilha remover-jogo" onclick="ga('send', 'event', 'botões lista', 'click', 'remover');">
-                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/images/btn-remover.png" alt="Remover jogo" />
+                    <a target="_blank" href="/lista/remover-jogo" class="image featured btn-planilha remover-jogo" onclick="ga('send', 'event', 'botões lista', 'click', 'remover');">
+                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/public/images/botoes/btn-remover.png" alt="Remover jogo" />
                         <small class="extrabold">REMOVER JOGO</small>
                     </a>
                 </div>
@@ -132,7 +132,7 @@ $pages = ceil($num_boardgames / $records_per_page);
             <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
             <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
             <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
-            <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
+            <div class="bg-fields has-popover" style="flex: 1" class="d-flex justify-content-center align-items-center">
                 <a tabindex="0" type="button" class="btn btn-sm btn-dark" role="button" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> R$ <?= number_format($bg['price'], 2, ",", ".") ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>

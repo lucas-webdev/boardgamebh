@@ -1,5 +1,5 @@
 <?php
-include 'functions.php';
+include '../utils/functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 $errors = array();
@@ -112,7 +112,7 @@ if (!empty($_POST)) {
 
 <?= template_header('Adicionar jogo') ?>
 
-<form action="adicionar-jogo.php" method="POST" class="form-adicionar" onsubmit="return validateForm()">
+<form action="index.php" method="POST" class="form-adicionar" onsubmit="return validateForm()">
     <div class="row">
         <div class="col-12 col-lg-4">
             <div class="form-group mb-2">

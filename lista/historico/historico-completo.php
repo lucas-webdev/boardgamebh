@@ -1,5 +1,5 @@
 <?php
-include 'functions.php';
+include '../utils/functions.php';
 // Connect to MySQL database
 $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
@@ -55,7 +55,7 @@ $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
                 <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
                 <div class="bg-fields text-center" style="flex: 1"><?= $bg['price'] ?></div>
                 <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
-                <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
+                <div class="bg-fields has-popover" style="flex: 1" class="d-flex justify-content-center align-items-center">
                     <button type="button" class="btn btn-sm btn-info" data-toggle="popover" data-placement="left" data-trigger="focus" title="<?= $bg['name'] ?>" data-html="true" data-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> <?= $bg['price'] ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>

@@ -1,5 +1,5 @@
 <?php
-include 'functions.php';
+include '../utils/functions.php';
 $pdo = pdo_connect_mysql();
 $msg = '';
 $errors = array();
@@ -71,7 +71,7 @@ try {
 
 <?= template_header('Remover jogo') ?>
 
-<form action="remover-jogo.php" method="POST" class="form-remover" onsubmit="return validateRemoveForm()">
+<form action="index.php" method="POST" class="form-remover" onsubmit="return validateRemoveForm()">
     <div class="row">
         <div class="col-12 col-lg-6">
             <div class="form-group mb-2">
