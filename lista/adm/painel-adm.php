@@ -150,17 +150,7 @@ $today = strtotime(date("Y-m-d"));
             </div>
             <div class="bg-fields text-center d-none d-lg-block" style="flex: 0.5"><?= date_create_from_format('Y-m-d H:i:s', $dateToCompare)->format('d/m/y') ?></div>
             <div class="bg-fields d-flex align-items-center" style="flex: 0.5" class="d-flex justify-content-center align-items-center">
-                <a 
-                    tabindex="0" 
-                    role="button" 
-                    type="button" 
-                    class="btn btn-sm primaryButton me-1 has-popover" 
-                    data-bs-toggle="popover" 
-                    data-bs-placement="left" 
-                    data-bs-trigger="focus" 
-                    title="<?= $bg['name'] ?>" 
-                    data-bs-html="true" 
-                    data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
+                <a tabindex="0" role="button" type="button" class="btn btn-sm primaryButton me-1 has-popover" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> <?= number_format($bg['price'], 2, ",", ".") ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>
@@ -175,18 +165,11 @@ $today = strtotime(date("Y-m-d"));
                 </a>
 
                 <a href="update.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
-                <a
-                    tabindex="0"
-                    role="button"
-                    class="trash has-popover"
-                    data-bs-toggle="popover" 
-                    title="Tem certeza que deseja remover este jogo?"
-                    data-bs-content='
+                <a tabindex="0" role="button" class="trash has-popover" data-bs-toggle="popover" title="Tem certeza que deseja remover este jogo?" data-bs-content='
                         <a style="color: white; background-color: #0b655e padding: 6px;" class="confirm-delete" href="delete.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>&confirm=yes">Sim</a>
                         <a style="color: white; backgorund-color: #dc3545; padding: 6px;" class="cancel-delete" href="delete.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>&confirm=no">Não</a>
-                    '
-                >
-                        <i class="fas fa-trash fa-xs"></i>
+                    '>
+                    <i class="fas fa-trash fa-xs"></i>
                 </a>
 
                 <form action="update.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>" method="POST">
@@ -234,17 +217,9 @@ $today = strtotime(date("Y-m-d"));
                 <div style="flex: 3"><?= $bg['owner'] ?></div>
                 <div style="flex: 4"><?= $bg['reason'] ?></div>
                 <div style="flex: 1">
-                    <a 
-                        tabindex="0"
-                        role="button"
-                        data-bs-toggle="popover" 
-                        data-bs-trigger="click"
-                        data-bs-html="true"
-                        title="Tem certeza que deseja remover este jogo?"
-                        data-bs-content='
+                    <a class="has-popover trash" tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="click" data-bs-html="true" title="Tem certeza que deseja remover este jogo?" data-bs-content='
                             <a class="confirm-delete" href="delete_removed.php?id=<?= $bg['id'] ?>&confirm=yes" style="color: white; background-color: #0b655e padding: 6px;">Sim</a>
-                            <a class="cancel-delete">Não</a>'
-                    >
+                            <a class="cancel-delete">Não</a>'>
                         <i class="fas fa-trash fa-xs"></i>
                     </a>
                 </div>
