@@ -74,7 +74,7 @@ function template_header($title)
         <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="mainNavbar">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="/lista">
-                    <img src="/lista/dist/assets/images/logo_com_sombra.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
+                    <img src="/public/images/logo_bgbh/bgbh-com-sombra.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
                     <span class="navbarLogoText ms-2">BoardgameBH</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,10 +101,10 @@ function template_header($title)
         </nav>
         <section class="py-4 banner-ads--center container-fluid">
             <div class="col-12 d-none d-md-flex justify-content-center">
-                <a href="#" target="_blank"
-                    onclick="ga('send', 'event', 'Torneio Draftosaurus', 'click-banner-unico');">
-                    <img class="banner-ads-90" src="http://www.bgbh.com.br/public/images/banners/728x90/banner_draftosaurus_em_breve.png"
-                        alt="banner Torneio Draftosaurus" />
+                <a href="/rifa-brazil-imperial/" target="_blank"
+                    onclick="ga('send', 'event', 'Rifa Brazil', 'click-banner-site');">
+                    <img class="img-fluid banner-ads-90" src="/public/images/banners/728x90/banner-BRAZIL.png"
+                        alt="banner Rifa Brazil" />
                 </a>
             </div>
             <div class="col-12 d-flex d-md-none justify-content-center" id="banner-ads-mobile">
@@ -144,17 +144,9 @@ function template_footer()
         const bannerAds = $('#banner-ads-mobile a');
         const sources = [
             {
-                img: "<img src='http://www.bgbh.com.br/images/banners/banner_draftosaurus_em_breve.png' alt='Torneio Carcassonne' />",
-                link: "http://www.bgbh.com.br/desafios.html"
-            },
-            {
-                img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner_90games.png" alt="Loja 90 Games" />',
-                link: 'http://90games.com.br/'
-            },
-            {
-                img: '<img class="banner-ads-270" src="http://www.bgbh.com.br/images/banners/banner-tabulovers.png" alt="Tabulovers" />',
-                link: 'https://www.instagram.com/tabulovers/'
-            },
+                img: "<img src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Rifa Brazil Imperial' />",
+                link: "http://www.bgbh.com.br/rifa-brazil-imperial"
+            }
         ];
 
         const index = Math.floor(Math.random() * sources.length);

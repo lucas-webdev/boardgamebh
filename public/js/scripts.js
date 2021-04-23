@@ -1,16 +1,16 @@
-$(function() {
+$(function () {
     const footerSources = [{
-            img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner_90games.png' alt='Loja 90 Games' />",
-            link: "http://90games.com.br/"
-        },
-        {
-            img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner-tabulovers.png' alt='Tabulovers' />",
-            link: "https://www.instagram.com/tabulovers/"
-        },
+        img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner_90games.png' alt='Loja 90 Games' />",
+        link: "http://90games.com.br/"
+    },
+    {
+        img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner-tabulovers.png' alt='Tabulovers' />",
+        link: "https://www.instagram.com/tabulovers/"
+    },
     ];
     const centerSources = [{
-        img: "<img class='img-fluid banner-ads-90' src='public/images/banners/728x90/banner_draftosaurus_em_breve.png' alt='Torneio Draftosaurus' />",
-        link: "#"
+        img: "<img class='img-fluid banner-ads-90' src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Rifa Brazil Imperial' />",
+        link: "/rifa-brazil-imperial"
     }];
 
     function randomizeBannerFooterDuplo() {
@@ -51,8 +51,8 @@ $(function() {
 
     randomizeBanners();
 
-    
-	new bootstrap.Popover(document.body, {
-		selector: '.has-popover'
-	  });
+
+    new bootstrap.Popover(document.body, {
+        selector: '.has-popover'
+    });
 })
