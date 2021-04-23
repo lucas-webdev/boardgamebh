@@ -133,7 +133,7 @@ $pages = ceil($num_boardgames / $records_per_page);
             <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
             <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
             <div class="bg-fields has-popover" style="flex: 1" class="d-flex justify-content-center align-items-center">
-                <a tabindex="0" type="button" class="btn btn-sm btn-dark" role="button" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
+                <a tabindex="0" type="button" class="btn btn-sm btn-dark has-popover" role="button" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> R$ <?= number_format($bg['price'], 2, ",", ".") ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
                         <b>Editora:</b> <?= ucwords($bg['edition']) ?> <br>

@@ -144,8 +144,8 @@ function template_footer()
         const bannerAds = $('#banner-ads-mobile a');
         const sources = [
             {
-                img: "<img src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Rifa Brazil Imperial' />",
-                link: "http://www.bgbh.com.br/rifa-brazil-imperial"
+                img: "<img src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Sorteio Brazil Imperial' />",
+                link: "http://www.bgbh.com.br/sorteio-brazil-imperial"
             }
         ];
 

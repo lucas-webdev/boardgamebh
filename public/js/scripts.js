@@ -1,16 +1,16 @@
-$(function () {
+$(function() {
     const footerSources = [{
-        img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner_90games.png' alt='Loja 90 Games' />",
-        link: "http://90games.com.br/"
-    },
-    {
-        img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner-tabulovers.png' alt='Tabulovers' />",
-        link: "https://www.instagram.com/tabulovers/"
-    },
+            img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner_90games.png' alt='Loja 90 Games' />",
+            link: "http://90games.com.br/"
+        },
+        {
+            img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner-tabulovers.png' alt='Tabulovers' />",
+            link: "https://www.instagram.com/tabulovers/"
+        },
     ];
     const centerSources = [{
-        img: "<img class='img-fluid banner-ads-90' src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Rifa Brazil Imperial' />",
-        link: "/rifa-brazil-imperial"
+        img: "<img class='img-fluid banner-ads-90' src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Sorteio Brazil Imperial' />",
+        link: "/sorteio-brazil-imperial"
     }];
 
     function randomizeBannerFooterDuplo() {
