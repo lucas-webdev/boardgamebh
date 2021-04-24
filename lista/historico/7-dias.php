@@ -22,7 +22,7 @@ $today = strtotime(date("Y-m-d"));
 // Home Page template below.
 ?>
 
-<?= template_header('Jogos adicionados nos ultimos 7 dias') ?>
+<?= template_header('Histórico 7 dias') ?>
 <h6>Total de jogos: <?= count($boardgames) ?></h6>
 <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
     <div class="bg-table-header d-inline-flex justify-content-start align-items-center">

@@ -18,7 +18,7 @@ $boardgames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $num_boardgames = $pdo->query('SELECT COUNT(*) FROM boardgames')->fetchColumn();
 ?>
 
-<?= template_header('Lista de jogos') ?>
+<?= template_header('Histórico Completo') ?>
 <div class="row">
     <div class="col-lg-12 margin-tb mb-3">
         <div class="pull-left">
