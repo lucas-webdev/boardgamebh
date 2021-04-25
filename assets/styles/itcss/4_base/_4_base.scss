@@ -1,0 +1,108 @@
+html,
+body {
+    font-size: 16px
+}
+
+body {
+    background: transparent url($whitePattern);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+small {
+    font-family: $primaryFont;
+}
+
+h1 {
+    font-family: $primaryFont;
+    font-size: $fontSizeXLarge;
+    font-weight: $extraBold;
+    color: $primaryColor;
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeLarge;
+    }
+}
+
+h2 {
+    font-size: $fontSizeLarge;
+    font-weight: $extraBold;
+    font-family: $primaryFont;
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeLarge;
+    }
+}
+
+h3 {
+    font-family: $primaryFont;
+    font-size: $fontSizeMedium;
+    font-weight: $extraBold;
+    color: $primaryColor;
+    &.regular {
+        font-weight: $regular;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeSmall;
+    }
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+}
+
+p {
+    font-size: $fontSizeMedium;
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeSmall;
+    }
+}
+
+span,
+label {
+    font-size: inherit;
+}
+
+small {
+    font-size: $fontSizeSmall;
+    @media screen and (max-width: 768px) {
+        font-size: $fontSizeXSmall;
+    }
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+label,
+small {
+    color: $primaryColor;
+    @extend %textVariant;
+}
+
+button {
+    color: $buttonTextColor;
+}
+
+img {
+    max-width: 100%;
+}

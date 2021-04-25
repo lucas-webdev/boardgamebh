@@ -7,6 +7,10 @@ $(function() {
             img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner-tabulovers.png' alt='Tabulovers' />",
             link: "https://www.instagram.com/tabulovers/"
         },
+        {
+            img: "<img class='banner-ads-270' src='public/images/banners/500x270/sultao_banner_500x270.png' alt='Sultão' />",
+            link: "https://www.catarse.me/osdesejosdosultao"
+        },
     ];
     const centerSources = [{
         img: "<img class='img-fluid banner-ads-90' src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Sorteio Brazil Imperial' />",
@@ -42,7 +46,7 @@ $(function() {
     /* RANDOMIZAR BANNERS */
     function randomizeBanners() {
         // banner central, unico
-        randomizeBannerUnico("#banner-ads--center-unico a", centerSources);
+        // randomizeBannerUnico("#banner-ads--center-unico a", centerSources);
         // banner footer, unico
         randomizeBannerUnico("#banner-ads--footer-unico a", footerSources);
         // banners footer, duplo

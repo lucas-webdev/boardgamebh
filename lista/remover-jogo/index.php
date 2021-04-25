@@ -143,6 +143,7 @@ try {
 
 <div class="games-to-remove">
     <h5> Histórico de negociações </h5>
+    <small>Total de negociações no grupo: <?= count($removedGames) ?></small>
     <small>(apenas jogos negociados a partir do grupo ou lista BGBH)</small>
     <div class="d-flex flex-column bd-highlight mb-3 bg-list" style="flex: 1">
         <div class="bg-table-header d-inline-flex justify-content-start align-items-center">

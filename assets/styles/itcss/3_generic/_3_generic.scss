@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+%textVariant {
+    &.secondary {
+        color: $secondaryColor;
+    }
+    &.success {
+        color: $successColor;
+    }
+    &.info {
+        color: $infoColor;
+    }
+    &.danger {
+        color: $dangerColor;
+    }
+    &.2x-large {
+        font-size: $fontSize2XLarge;
+    }
+    &.x-large {
+        font-size: $fontSizeXLarge;
+    }
+    &.large {
+        font-size: $fontSizeLarge;
+    }
+    &.medium {
+        font-size: $fontSizeMedium;
+    }
+    &.small {
+        font-size: $fontSizeSmall;
+    }
+    &.x-small {
+        font-size: $fontSizeXSmall;
+    }
+    &.xl-small {
+        font-size: $fontSizeXLSmall;
+    }
+}
+
+%backgroundVariant {
+    &.primary {
+        background-color: $primaryColor;
+    }
+    &.secondary {
+        background-color: $secondaryColor;
+    }
+    &.success {
+        background-color: $successColor;
+    }
+    &.info {
+        background-color: $infoColor;
+    }
+    &.danger {
+        background-color: $dangerColor;
+    }
+}
