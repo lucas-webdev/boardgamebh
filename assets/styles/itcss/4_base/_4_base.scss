@@ -38,7 +38,7 @@ h1 {
     font-weight: $extraBold;
     color: $primaryColor;
     @media screen and (max-width: 768px) {
-        font-size: $fontSizeLarge;
+        font-size: $fontSizeLargeMobile;
     }
 }
 
