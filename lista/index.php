@@ -120,7 +120,7 @@ $pages = ceil($num_boardgames / $records_per_page);
         if ($diffDays >= 50 && $diffDays <= 60)
             $addedClass = 'added-longtime';
         if ($diffDays >= 61)
-            $addedClass = 'added-extra-longtime';
+            $addedClass = 'added-extra-longtime d-none';
         if ($bg['condition'] === "Lacrado")
             $conditionClass = 'lacrado';
         if ($bg['condition'] === "Avariado")

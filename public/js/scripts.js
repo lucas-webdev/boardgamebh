@@ -1,20 +1,19 @@
 $(function() {
     const footerSources = [{
             img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner_90games.png' alt='Loja 90 Games' />",
-            link: "http://90games.com.br/"
+            link: "https://90games.acervodejogos.com.br/",
+            onClick: "ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 'Loja 90 games');"
         },
         {
             img: "<img class='banner-ads-270' src='public/images/banners/500x270/banner-tabulovers.png' alt='Tabulovers' />",
-            link: "https://www.instagram.com/tabulovers/"
-        },
-        {
-            img: "<img class='banner-ads-270' src='public/images/banners/500x270/sultao_banner_500x270.png' alt='Sultão' />",
-            link: "https://www.catarse.me/osdesejosdosultao"
+            link: "https://www.instagram.com/tabulovers/",
+            onClick: "ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 'Tabulovers');"
         },
     ];
     const centerSources = [{
         img: "<img class='img-fluid banner-ads-90' src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Sorteio Brazil Imperial' />",
-        link: "/sorteio-brazil-imperial"
+        link: "/sorteio-brazil-imperial",
+        onClick: "banner Brazil"
     }];
 
     function randomizeBannerFooterDuplo() {
@@ -30,9 +29,11 @@ $(function() {
 
         bannerFooterDuplo[0].href = firstBanner.link;
         bannerFooterDuplo[0].innerHTML = firstBanner.img;
+        bannerFooterDuplo[0].setAttribute('onclick', firstBanner.onClick);
 
         bannerFooterDuplo[1].href = secondBanner.link;
         bannerFooterDuplo[1].innerHTML = secondBanner.img;
+        bannerFooterDuplo[1].setAttribute('onclick', secondBanner.onClick);
     }
 
     function randomizeBannerUnico(selector, sources) {
