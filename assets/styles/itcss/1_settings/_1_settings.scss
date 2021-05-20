@@ -46,3 +46,16 @@ $sectionYSpacerMobile: 25px;
 $whitePattern: "http://www.bgbh.com.br/patterns/bgbh_white2.png";
 $blackPattern: "http://www.bgbh.com.br/patterns/bgbh_black.png";
 $greenPattern: "http://www.bgbh.com.br/patterns/bgbh_green.png";
+// BULMA OVERRIDE
+$primary: $primaryColor;
+$info: $infoColor;
+$success: $successColor;
+$danger: $dangerColor;
+$light: $lightColor;
+$primary-dark: $darkColor;
+$danger-dark: $darkRed;
+$family-primary: $primaryFont;
+$family-secondary: $secondaryFont;
+$link: $infoColor;
+$link-hover: $successColor;
+$link-visited: $tertiaryColor;
