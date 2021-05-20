@@ -3,7 +3,8 @@ body {
   font-size: 16px;
 }
 
-body:not(.home) {
+body:not(.home),
+.pattern-bg {
   background: transparent url($whitePattern);
   background-size: auto;
   background-repeat: repeat;

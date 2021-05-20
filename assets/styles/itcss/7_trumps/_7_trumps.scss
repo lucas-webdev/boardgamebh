@@ -1,66 +1,185 @@
 @media screen and (min-width: 769px) {
-    .topoSite {
-        .mainLogo {
-            max-width: 40%;
-            top: -15vh;
-        }
+  .topoSite {
+    .mainLogo {
+      max-width: 40%;
+      top: -15vh;
     }
-    .btn-planilha {
-        span {
-            font-size: $fontSizeLarge;
-        }
-        img {
-            @include grayFilter();
-        }
+  }
+  .btn-planilha {
+    span {
+      font-size: $fontSizeLarge;
     }
-    .regras-lista {
-        small {
-            font-size: $fontSizeSmall;
-        }
+    img {
+      @include grayFilter();
     }
-    .site-footer {
-        form label {
-            width: 90%;
-            span,
-            input,
-            textarea {
-                width: 90%
-            }
-        }
+  }
+  .regras-lista {
+    small {
+      font-size: $fontSizeSmall;
     }
+  }
+  .site-footer {
+    form label {
+      width: 90%;
+      span,
+      input,
+      textarea {
+        width: 90%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .mainLogo {
-        max-width: 100%;
-        top: -50px;
+  .mainLogo {
+    max-width: 100%;
+    top: -50px;
+  }
+  .primaryButton {
+    background-position: 0 100%;
+  }
+  .btn-planilha {
+    a,
+    span {
+      font-size: $fontSizeSmall;
     }
-    .primaryButton {
-        background-position: 0 100%;
+  }
+  .exclusiva-bh {
+    text-align: center;
+  }
+  .site-footer {
+    .list-group-item {
+      &.instagram i {
+        color: transparent;
+        background: -webkit-radial-gradient(
+          30% 107%,
+          circle,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        background: -o-radial-gradient(
+          30% 107%,
+          circle,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        background: -webkit-radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      &.facebook i {
+        color: #1877f2;
+      }
     }
-    .btn-planilha {
-        a,
-        span {
-            font-size: $fontSizeSmall;
+  }
+}
+
+// home 1 ano
+@media screen and (max-width: 992px) {
+  .home {
+    .navbar-collapse {
+      &.collapse,
+      &.collapsing {
+        position: absolute;
+      }
+    }
+
+    .outras-iniciativas {
+      .nav-tabs {
+        .nav-link {
+          font-size: 0.7em;
         }
+      }
     }
-    .exclusiva-bh {
-        text-align: center;
+
+    .tab-content-lista,
+    .tab-content-grupos {
+      flex-direction: column;
+
+      img {
+        margin-bottom: 1em;
+      }
     }
-    .site-footer {
-        .list-group-item {
-            &.instagram i {
-                color: transparent;
-                background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-                background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-                background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-                background-clip: text;
-                -webkit-background-clip: text;
-            }
-            &.facebook i {
-                color: #1877f2;
-            }
+
+    .tab-content-grupos {
+      img {
+        max-width: 200px;
+      }
+    }
+
+    .logo-parceiros {
+      img {
+        max-width: 80px;
+      }
+    }
+
+    .wrapper-apoio {
+      flex-direction: column;
+      .btn {
+        margin-left: 0 !important;
+        margin-top: 10px;
+      }
+    }
+
+    .financiamentos-coletivos {
+      .card {
+        margin-left: 0 !important;
+      }
+    }
+
+    footer {
+      .container {
+        flex-direction: column;
+        > .d-flex {
+          margin-bottom: 15px;
+          margin-left: 0 !important;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
+      }
     }
+  }
+  .redes-sociais {
+    a {
+      &:last-child {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  #mainNavbar {
+    .nav-item {
+      text-align: center;
+    }
+  }
+  .redes-sociais {
+    a {
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
 }

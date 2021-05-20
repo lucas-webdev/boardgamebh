@@ -173,3 +173,75 @@
   max-width: 615px;
   max-height: 330px;
 }
+
+// HOME 1 ANO
+.home {
+  #mainNavbar {
+    z-index: 99;
+  }
+
+  .navbar-collapse {
+    &.collapsing,
+    &.collapse.show {
+      top: 60px;
+    }
+  }
+
+  #heroTopCarousel {
+    top: -29px;
+    &.carousel {
+      .carousel-item {
+        height: 70vh;
+        img {
+          position: absolute;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+          min-height: 70vh;
+        }
+      }
+      .carousel-control-next,
+      .carousel-control-prev {
+        background: transparent;
+        border: none;
+      }
+    }
+  }
+
+  .outras-iniciativas {
+    .dropdown-menu {
+      width: 100%;
+    }
+    .dropdown-toggle::after {
+      display: none;
+    }
+  }
+
+  .catalogo-estabelecimentos {
+    a {
+      color: $infoColor;
+      &:hover,
+      &.active {
+        color: $successColor;
+      }
+    }
+  }
+
+  .apoie-o-bgbh {
+    background-color: $infoColor;
+  }
+
+  .card {
+    max-width: 18rem;
+  }
+
+  .banner-ads {
+    background: transparentize($color: $infoColor, $amount: 0.9);
+
+    &.banner-duplo {
+      a:first-child {
+        margin-right: 100px;
+      }
+    }
+  }
+}

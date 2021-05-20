@@ -98,90 +98,6 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="public/css/styles.css" />
-
-    <style>
-      #mainNavbar {
-        z-index: 99;
-      }
-      .navbar-collapse.collapse,
-      .navbar-collapse.collapsing {
-        position: absolute;
-      }
-      .navbar-collapse.collapsing {
-        top: 60px;
-      }
-      .navbar-collapse.collapse.show {
-        top: 60px;
-      }
-
-      #heroTopCarousel {
-        top: -29px;
-      }
-
-      .carousel .carousel-item {
-        height: 70vh;
-      }
-
-      .carousel-item img {
-        position: absolute;
-        object-fit: cover;
-        top: 0;
-        left: 0;
-        min-height: 70vh;
-      }
-
-      .dropdown-menu {
-        width: 100%;
-      }
-      .dropdown-toggle::after {
-        display: none;
-      }
-      .apoie-o-bgbh {
-        background-color: #029e92;
-      }
-      .card {
-        max-width: 18rem;
-      }
-      @media screen and (max-width: 992px) {
-        .outras-iniciativas .nav-tabs .nav-link {
-          font-size: 0.7em;
-        }
-        .tab-content-lista,
-        .tab-content-grupos {
-          flex-direction: column;
-        }
-        .tab-content-lista img,
-        .tab-content-grupos img {
-          margin-bottom: 1em;
-        }
-        .tab-content-grupos img {
-          max-width: 200px;
-        }
-        .logo-parceiros img {
-          max-width: 80px;
-        }
-        .wrapper-apoio {
-          flex-direction: column;
-        }
-        .wrapper-apoio .btn {
-          margin-left: 0 !important;
-          margin-top: 10px;
-        }
-        .financiamentos-coletivos .card {
-          margin-left: 0 !important;
-        }
-        footer .container {
-          flex-direction: column;
-        }
-        footer .container > .d-flex {
-          margin-bottom: 15px;
-          margin-left: 0 !important;
-        }
-        footer .container > .d-flex:last-child {
-          margin-bottom: 0;
-        }
-      }
-    </style>
   </head>
 
   <body class="home" tabindex="0">
@@ -226,38 +142,38 @@
           </button>
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-2">
               <a
-                class="ms-3 text-white extrabold text-decoration-none"
+                class="text-white extrabold text-decoration-none"
                 href="#torneios"
                 >DESAFIOS E TORNEIOS</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a
-                class="ms-3 text-white extrabold text-decoration-none"
+                class="text-white extrabold text-decoration-none"
                 href="#outras-iniciativas"
                 >OUTRAS INICIATIVAS</a
               >
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item me-2">
               <a
-                class="ms-3 text-white extrabold text-decoration-none"
+                class="text-white extrabold text-decoration-none"
                 href="#outras-iniciativas"
                 >NOSSOS PARCEIROS</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a
-                class="ms-3 text-white extrabold text-decoration-none"
+                class="text-white extrabold text-decoration-none"
                 href="#outras-iniciativas"
                 >CATÁLOGO DE ESTABELECIMENTOS</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a
-                class="ms-3 text-white extrabold text-decoration-none"
+                class="text-white extrabold text-decoration-none"
                 href="#outras-iniciativas"
                 >FINANCIAMENTOS COLETIVOS</a
               >
@@ -373,10 +289,7 @@
     </section>
     <!-- ./ Torneios e Desafios -->
     <!-- Banner Ads Central -->
-    <div
-      class="container-fluid apoie-o-bgbh my-5"
-      id="banner-ads--center-unico"
-    >
+    <div class="container-fluid banner-ads mt-5" id="banner-ads--center-unico">
       <div class="d-flex justify-content-center align-items-center p-4">
         <a
           href="/sorteios/brazil-imperial/"
@@ -391,294 +304,301 @@
       </div>
     </div>
     <!-- ./ Banner Ads Central -->
-    <!-- Outras iniciativas -->
-    <section class="container outras-iniciativas mt-5">
-      <h1 class="text-success">OUTRAS INICIATIVAS</h1>
-      <h6 class="subtitle">Conheça outras iniciativas do nosso portal</h6>
-      <ul
-        class="nav nav-tabs justify-content-center mt-3"
-        id="myTab"
-        role="tablist"
-      >
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="home-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#home"
-            type="button"
-            role="tab"
-            aria-controls="home"
-            aria-selected="true"
-          >
-            Lista de Trocas & Vendas
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="profile-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#profile"
-            type="button"
-            role="tab"
-            aria-controls="profile"
-            aria-selected="false"
-          >
-            Grupos de comunicação
-          </button>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div
-          class="tab-pane fade show active align-items-center"
-          id="home"
-          role="tabpanel"
-          aria-labelledby="home-tab"
+    <div class="container-fluid pattern-bg py-5">
+      <!-- Outras iniciativas -->
+      <section class="container outras-iniciativas">
+        <h1 class="text-success">OUTRAS INICIATIVAS</h1>
+        <h6 class="subtitle">Conheça outras iniciativas do nosso portal</h6>
+        <ul
+          class="nav nav-tabs justify-content-center mt-3"
+          id="myTab"
+          role="tablist"
         >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home"
+              type="button"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Lista de Trocas & Vendas
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Grupos de comunicação
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
           <div
-            class="
-              d-flex
-              align-items-center
-              justify-content-center
-              mt-3
-              tab-content-lista
-            "
+            class="tab-pane fade show active align-items-center"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
           >
-            <img
-              src="./public/images/image-placeholder.png"
-              alt="Lista de Trocas & Vendas BGBH"
-            />
-            <div class="ms-4">
-              <p>
-                Acesse nossa Lista de Trocas & Vendas
-                <span class="has-text-danger"
-                  >exclusiva para Belo Horizonte e região</span
-                >
-                e negocie boardgames diretamente com os responsáveis.
-                <br />
-                Adicione também os seus jogos disponíveis para troca ou venda.
-              </p>
-              <p>
-                <a href="/lista" class="btn primaryButton">
-                  Ir para Lista de Trocas e Vendas
-                </a>
-              </p>
+            <div
+              class="
+                d-flex
+                align-items-center
+                justify-content-center
+                mt-3
+                tab-content-lista
+              "
+            >
+              <img
+                src="./public/images/image-placeholder.png"
+                alt="Lista de Trocas & Vendas BGBH"
+              />
+              <div class="ms-4">
+                <p>
+                  Acesse nossa Lista de Trocas & Vendas
+                  <span class="has-text-danger"
+                    >exclusiva para Belo Horizonte e região</span
+                  >
+                  e negocie boardgames diretamente com os responsáveis.
+                  <br />
+                  Adicione também os seus jogos disponíveis para troca ou venda.
+                </p>
+                <p>
+                  <a href="/lista" class="btn primaryButton">
+                    Ir para Lista de Trocas e Vendas
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="profile"
-          role="tabpanel"
-          aria-labelledby="profile-tab"
-        >
-          <div class="d-flex mt-3 flex-column">
-            <span>Clique em cada grupo para saber mais</span>
-            <div class="mt-3">
-              <div
-                class="
-                  d-flex
-                  align-items-center
-                  justify-content-center
-                  tab-content-grupos
-                "
-              >
-                <div class="dropdown me-4">
-                  <div
-                    class="dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img
-                      class="img-grupos"
-                      src="./public/images/grupos/grupo-wpp-trocas-vendas.png"
-                      alt="Grupo Trocas & Vendas BGBH"
-                    />
-                  </div>
-                  <div class="dropdown-menu p-4 text-center">
-                    <small>
-                      O grupo é <span class="extrabold">EXCLUSIVO</span> para
-                      Belo Horizonte e Região e tem como foco os anúncios de
-                      trocas e vendas diretamente entre seus usuários. O grupo
-                      possui regras bem definidas para otimizar sua
-                      funcionalidade.
-                      <br />
-                      <span class="d-inline-block mt-2 extrabold darkRed"
-                        >Restrições:</span
-                      >
-                      <span class="danger">
-                        <span class="extrabold danger">Chat moderado</span>.
-                        Participação limitada a usuários que
-                        <span class="extrabold danger">
-                          consigam entregar os jogos
-                          <br class="d-none d-xxl-block" />
-                          em Belo Horizonte.
+          <div
+            class="tab-pane fade"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <div class="d-flex mt-3 flex-column">
+              <span>Clique em cada grupo para saber mais</span>
+              <div class="mt-3">
+                <div
+                  class="
+                    d-flex
+                    align-items-center
+                    justify-content-center
+                    tab-content-grupos
+                  "
+                >
+                  <div class="dropdown me-4">
+                    <div
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        class="img-grupos"
+                        src="./public/images/grupos/grupo-wpp-trocas-vendas.png"
+                        alt="Grupo Trocas & Vendas BGBH"
+                      />
+                    </div>
+                    <div class="dropdown-menu p-4 text-center">
+                      <small>
+                        O grupo é <span class="extrabold">EXCLUSIVO</span> para
+                        Belo Horizonte e Região e tem como foco os anúncios de
+                        trocas e vendas diretamente entre seus usuários. O grupo
+                        possui regras bem definidas para otimizar sua
+                        funcionalidade.
+                        <br />
+                        <span class="d-inline-block mt-2 extrabold darkRed"
+                          >Restrições:</span
+                        >
+                        <span class="danger">
+                          <span class="extrabold danger">Chat moderado</span>.
+                          Participação limitada a usuários que
+                          <span class="extrabold danger">
+                            consigam entregar os jogos
+                            <br class="d-none d-xxl-block" />
+                            em Belo Horizonte.
+                          </span>
                         </span>
-                      </span>
-                      <div class="mt-2 text-center">
-                        <a
-                          target="_blank"
-                          class="btn primaryButton btn-small"
-                          href="http://bgbh.com.br/regras/regras-grupo-trocas.html"
-                          onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'trocas e vendas');"
-                          >Entrar</a
+                        <div class="mt-2 text-center">
+                          <a
+                            target="_blank"
+                            class="btn primaryButton btn-small"
+                            href="http://bgbh.com.br/regras/regras-grupo-trocas.html"
+                            onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'trocas e vendas');"
+                            >Entrar</a
+                          >
+                        </div>
+                      </small>
+                    </div>
+                  </div>
+                  <div class="dropdown me-4">
+                    <div
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        class="img-grupos"
+                        src="./public/images/grupos/grupo-wpp-resenha.png"
+                        alt="Grupo Resenha BGBH"
+                      />
+                    </div>
+                    <div class="dropdown-menu p-4 text-center">
+                      <small>
+                        Grupo voltado para a interação entre amantes de
+                        Boardgame. BG é o que nos une mas um bom papo fora do
+                        tema não é proibido. Novidades, jogatinas online,
+                        presenciais, dúvidas sobre regras, indicações. Aqui é o
+                        lugar. A única exigência é o bom senso.
+                        <br />
+                        <span class="d-inline-block mt-2 extrabold darkRed"
+                          >Restrições:</span
                         >
-                      </div>
-                    </small>
+                        <span class="danger">Sem restrições</span>
+                        <div class="mt-2 text-center">
+                          <a
+                            target="_blank"
+                            class="btn primaryButton"
+                            href="https://chat.whatsapp.com/K7OMoPn1nfyEl4EDt8sUyi"
+                            onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'resenha');"
+                            >Entrar</a
+                          >
+                        </div>
+                      </small>
+                    </div>
                   </div>
-                </div>
-                <div class="dropdown me-4">
-                  <div
-                    class="dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img
-                      class="img-grupos"
-                      src="./public/images/grupos/grupo-wpp-resenha.png"
-                      alt="Grupo Resenha BGBH"
-                    />
-                  </div>
-                  <div class="dropdown-menu p-4 text-center">
-                    <small>
-                      Grupo voltado para a interação entre amantes de Boardgame.
-                      BG é o que nos une mas um bom papo fora do tema não é
-                      proibido. Novidades, jogatinas online, presenciais,
-                      dúvidas sobre regras, indicações. Aqui é o lugar. A única
-                      exigência é o bom senso.
-                      <br />
-                      <span class="d-inline-block mt-2 extrabold darkRed"
-                        >Restrições:</span
-                      >
-                      <span class="danger">Sem restrições</span>
-                      <div class="mt-2 text-center">
-                        <a
-                          target="_blank"
-                          class="btn primaryButton"
-                          href="https://chat.whatsapp.com/K7OMoPn1nfyEl4EDt8sUyi"
-                          onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'resenha');"
-                          >Entrar</a
+                  <div class="dropdown me-4">
+                    <div
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        class="img-grupos"
+                        src="./public/images/grupos/grupo-wpp-ofertas.png"
+                        alt="Grupo Ofertas BGBH"
+                      />
+                    </div>
+                    <div class="dropdown-menu p-4 text-center">
+                      <small>
+                        Grupo voltado para divulgação de oportunidades e ofertas
+                        de Boardgames. Aqui é permitido a divulgação de anúncios
+                        em plataformas oficiais além de promoções em luderias e
+                        sites. Suas regras e funcionalidade ainda estão sendo
+                        definidas.
+                        <br />
+                        <span class="d-inline-block mt-2 extrabold darkRed"
+                          >Restrições:</span
                         >
-                      </div>
-                    </small>
+                        <span class="danger">Sem chat</span>
+                        <div class="mt-2 text-center">
+                          <a
+                            target="_blank"
+                            class="btn primaryButton"
+                            href="https://chat.whatsapp.com/HJ8AnItrIGUDtpkSgIF3Nn"
+                            onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'ofertas');"
+                            >Entrar</a
+                          >
+                        </div>
+                      </small>
+                    </div>
                   </div>
-                </div>
-                <div class="dropdown me-4">
-                  <div
-                    class="dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img
-                      class="img-grupos"
-                      src="./public/images/grupos/grupo-wpp-ofertas.png"
-                      alt="Grupo Ofertas BGBH"
-                    />
-                  </div>
-                  <div class="dropdown-menu p-4 text-center">
-                    <small>
-                      Grupo voltado para divulgação de oportunidades e ofertas
-                      de Boardgames. Aqui é permitido a divulgação de anúncios
-                      em plataformas oficiais além de promoções em luderias e
-                      sites. Suas regras e funcionalidade ainda estão sendo
-                      definidas.
-                      <br />
-                      <span class="d-inline-block mt-2 extrabold darkRed"
-                        >Restrições:</span
-                      >
-                      <span class="danger">Sem chat</span>
-                      <div class="mt-2 text-center">
-                        <a
-                          target="_blank"
-                          class="btn primaryButton"
-                          href="https://chat.whatsapp.com/HJ8AnItrIGUDtpkSgIF3Nn"
-                          onclick="ga('send', 'event', 'Grupo Whatsapp', 'click', 'ofertas');"
-                          >Entrar</a
+                  <div class="dropdown">
+                    <div
+                      class="dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <img
+                        class="img-grupos"
+                        src="./public/images/grupos/grupo-tlgm-geral.png"
+                        alt="Grupo Geral Telegram BGBH"
+                      />
+                    </div>
+                    <div class="dropdown-menu p-4 text-center">
+                      <small>
+                        Grupo também voltado para interação entre os amantes de
+                        Boardgame. Lugar para bate papo, indicações,
+                        lançamentos, dúvidas, etc. O grupo no Telegram veio para
+                        ser mais uma ferramenta de comunicação.
+                        <br />
+                        <span class="d-inline-block mt-2 extrabold darkRed"
+                          >Restrições:</span
                         >
-                      </div>
-                    </small>
-                  </div>
-                </div>
-                <div class="dropdown">
-                  <div
-                    class="dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img
-                      class="img-grupos"
-                      src="./public/images/grupos/grupo-tlgm-geral.png"
-                      alt="Grupo Geral Telegram BGBH"
-                    />
-                  </div>
-                  <div class="dropdown-menu p-4 text-center">
-                    <small>
-                      Grupo também voltado para interação entre os amantes de
-                      Boardgame. Lugar para bate papo, indicações, lançamentos,
-                      dúvidas, etc. O grupo no Telegram veio para ser mais uma
-                      ferramenta de comunicação.
-                      <br />
-                      <span class="d-inline-block mt-2 extrabold darkRed"
-                        >Restrições:</span
-                      >
-                      <span class="danger">Sem restrições</span>
-                      <div class="mt-2 text-center">
-                        <a
-                          target="_blank"
-                          class="btn primaryButton"
-                          href="https://t.me/boardgamebh"
-                          onclick="ga('send', 'event', 'Grupo Telegram', 'click');"
-                          >Entrar</a
-                        >
-                      </div>
-                    </small>
+                        <span class="danger">Sem restrições</span>
+                        <div class="mt-2 text-center">
+                          <a
+                            target="_blank"
+                            class="btn primaryButton"
+                            href="https://t.me/boardgamebh"
+                            onclick="ga('send', 'event', 'Grupo Telegram', 'click');"
+                            >Entrar</a
+                          >
+                        </div>
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- ./ Outras iniciativas -->
-    <!-- Nossos Parceiros -->
-    <section class="container nossos-parceiros mt-5">
-      <h1 class="text-success">NOSSOS PARCEIROS</h1>
-      <h6 class="subtitle">Veja algumas das nossas parcerias</h6>
-      <div
-        class="d-flex align-items-center justify-content-center logo-parceiros"
-      >
-        <img
-          src="./public/images/apoio/mesa_secreta.png"
-          alt="Canal Mesa Secreta"
-          width="120"
-        />
-        <img
-          src="./public/images/apoio/seligabg.jpeg"
-          alt="Se liga BG"
-          width="120"
-          class="ms-4"
-        />
-        <img
-          src="./public/images/apoio/assinatura-tabulovers-ARTE-capa-copiarrascunhp.png"
-          alt="Tabulovers"
-          width="120"
-          class="ms-4"
-        />
-      </div>
-    </section>
-    <!-- ./ Nossos Parceiros -->
+      </section>
+      <!-- ./ Outras iniciativas -->
+      <!-- Nossos Parceiros -->
+      <section class="container nossos-parceiros mt-5">
+        <h1 class="text-success">NOSSOS PARCEIROS</h1>
+        <h6 class="subtitle">Veja algumas das nossas parcerias</h6>
+        <div
+          class="
+            d-flex
+            align-items-center
+            justify-content-center
+            logo-parceiros
+          "
+        >
+          <img
+            src="./public/images/apoio/mesa_secreta.png"
+            alt="Canal Mesa Secreta"
+            width="120"
+          />
+          <img
+            src="./public/images/apoio/seligabg.jpeg"
+            alt="Se liga BG"
+            width="120"
+            class="ms-4"
+          />
+          <img
+            src="./public/images/apoio/assinatura-tabulovers-ARTE-capa-copiarrascunhp.png"
+            alt="Tabulovers"
+            width="120"
+            class="ms-4"
+          />
+        </div>
+      </section>
+      <!-- ./ Nossos Parceiros -->
+    </div>
     <!-- Apoie o BGBH -->
-    <div class="container-fluid apoie-o-bgbh my-5">
+    <div class="container-fluid apoie-o-bgbh mb-5">
       <div
         class="
           d-flex
@@ -863,8 +783,49 @@
       </div>
     </section>
     <!-- ./ Financiamentos Coletivos -->
+    <!-- Banner Ads Duplo -->
+    <!-- BANNERS FOOTER - 500X270 -->
+    <div
+      class="
+        py-4
+        mt-5
+        banner-ads banner-duplo
+        container-fluid
+        d-none d-lg-block
+      "
+      id="banner-ads--footer-duplo"
+    >
+      <div class="d-flex align-items-center justify-content-center">
+        <a
+          href=""
+          target="_blank"
+          onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 1);"
+        >
+        </a>
+        <a
+          href=""
+          target="_blank"
+          onclick="ga('send', 'event', 'Banner Footer', 'click-banner-duplo', 2);"
+        >
+        </a>
+      </div>
+    </div>
+    <div
+      class="py-4 banner-ads--footer container-fluid d-lg-none mt-5"
+      id="banner-ads--footer-unico"
+    >
+      <div class="text-center">
+        <a
+          href=""
+          target="_blank"
+          onclick="ga('send', 'event', 'Banner Footer', 'click-banner');"
+        >
+        </a>
+      </div>
+    </div>
+    <!-- ./ Banner Ads Duplo -->
     <!-- Rodape -->
-    <footer class="container-fluid bg-dark p-4 mt-5">
+    <footer class="container-fluid bg-dark p-4">
       <div class="container d-flex align-items-start justify-content-start">
         <div class="d-flex flex-column">
           <h6 class="extrabold text-white">INSTITUCIONAL</h6>
@@ -879,6 +840,22 @@
         </div>
         <div class="d-flex flex-column ms-5">
           <h6 class="extrabold text-white">REDES SOCIAIS</h6>
+          <div class="d-flex redes-sociais">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/boardgamebh/"
+              aria-label="Instagram"
+            >
+              <i class="icone bi bi-instagram fs-3"></i>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/boardgamebh/"
+              aria-label="Facebook"
+            >
+              <i class="icone bi bi-facebook fs-3"></i>
+            </a>
+          </div>
         </div>
         <div class="d-flex flex-column text-white ms-5">
           <div>
@@ -907,7 +884,7 @@
     <script>
       AOS.init();
     </script>
-    <script src="./public/js/script.js"></script>
+    <script src="./public/js/scripts.js"></script>
     <!-- <script src="public/js/scripts.js"></script> -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
