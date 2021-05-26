@@ -1,185 +1,204 @@
 @media screen and (min-width: 769px) {
-  .topoSite {
-    .mainLogo {
-      max-width: 40%;
-      top: -15vh;
-    }
-  }
-  .btn-planilha {
-    span {
-      font-size: $fontSizeLarge;
-    }
-    img {
-      @include grayFilter();
-    }
-  }
-  .regras-lista {
-    small {
-      font-size: $fontSizeSmall;
-    }
-  }
-  .site-footer {
-    form label {
-      width: 90%;
-      span,
-      input,
-      textarea {
-        width: 90%;
-      }
-    }
-  }
+	.topoSite {
+		.mainLogo {
+			max-width: 40%;
+			top: -15vh;
+		}
+	}
+	.btn-planilha {
+		span {
+			font-size: $fontSizeLarge;
+		}
+		img {
+			@include grayFilter();
+		}
+	}
+	.regras-lista {
+		small {
+			font-size: $fontSizeSmall;
+		}
+	}
+	.site-footer {
+		form label {
+			width: 90%;
+			span,
+			input,
+			textarea {
+				width: 90%;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {
-  .mainLogo {
-    max-width: 100%;
-    top: -50px;
-  }
-  .primaryButton {
-    background-position: 0 100%;
-  }
-  .btn-planilha {
-    a,
-    span {
-      font-size: $fontSizeSmall;
-    }
-  }
-  .exclusiva-bh {
-    text-align: center;
-  }
-  .site-footer {
-    .list-group-item {
-      &.instagram i {
-        color: transparent;
-        background: -webkit-radial-gradient(
-          30% 107%,
-          circle,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
-        background: -o-radial-gradient(
-          30% 107%,
-          circle,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
-        background: radial-gradient(
-          circle at 30% 107%,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
-        background: -webkit-radial-gradient(
-          circle at 30% 107%,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-      }
-      &.facebook i {
-        color: #1877f2;
-      }
-    }
-  }
+	.mainLogo {
+		max-width: 100%;
+		top: -50px;
+	}
+	.primaryButton {
+		background-position: 0 100%;
+	}
+	.btn-planilha {
+		a,
+		span {
+			font-size: $fontSizeSmall;
+		}
+	}
+	.exclusiva-bh {
+		text-align: center;
+	}
+	.site-footer {
+		.list-group-item {
+			&.instagram i {
+				color: transparent;
+				background: -webkit-radial-gradient(
+					30% 107%,
+					circle,
+					#fdf497 0%,
+					#fdf497 5%,
+					#fd5949 45%,
+					#d6249f 60%,
+					#285aeb 90%
+				);
+				background: -o-radial-gradient(
+					30% 107%,
+					circle,
+					#fdf497 0%,
+					#fdf497 5%,
+					#fd5949 45%,
+					#d6249f 60%,
+					#285aeb 90%
+				);
+				background: radial-gradient(
+					circle at 30% 107%,
+					#fdf497 0%,
+					#fdf497 5%,
+					#fd5949 45%,
+					#d6249f 60%,
+					#285aeb 90%
+				);
+				background: -webkit-radial-gradient(
+					circle at 30% 107%,
+					#fdf497 0%,
+					#fdf497 5%,
+					#fd5949 45%,
+					#d6249f 60%,
+					#285aeb 90%
+				);
+				background-clip: text;
+				-webkit-background-clip: text;
+			}
+			&.facebook i {
+				color: #1877f2;
+			}
+		}
+	}
 }
 
 // home 1 ano
 @media screen and (max-width: 992px) {
-  .home {
-    .navbar-collapse {
-      &.collapse,
-      &.collapsing {
-        position: absolute;
-      }
-    }
+	.home {
+		.navbar-collapse {
+			&.collapse,
+			&.collapsing {
+				position: absolute;
+			}
+		}
 
-    .outras-iniciativas {
-      .nav-tabs {
-        .nav-link {
-          font-size: 0.7em;
-        }
-      }
-    }
+		.tab-content-lista,
+		.tab-content-grupos {
+			flex-direction: column;
 
-    .tab-content-lista,
-    .tab-content-grupos {
-      flex-direction: column;
+			img {
+				margin-bottom: 1em;
+			}
+		}
 
-      img {
-        margin-bottom: 1em;
-      }
-    }
+		.tab-content-grupos {
+			img {
+				max-width: 200px;
+			}
+		}
 
-    .tab-content-grupos {
-      img {
-        max-width: 200px;
-      }
-    }
+		.logo-parceiros {
+			img {
+				max-width: 80px;
+			}
+		}
 
-    .logo-parceiros {
-      img {
-        max-width: 80px;
-      }
-    }
+		.wrapper-apoio {
+			flex-direction: column;
+			.btn {
+				margin-left: 0 !important;
+				margin-top: 10px;
+			}
+		}
 
-    .wrapper-apoio {
-      flex-direction: column;
-      .btn {
-        margin-left: 0 !important;
-        margin-top: 10px;
-      }
-    }
+		.financiamentos-coletivos {
+			.card {
+				margin-left: 0 !important;
+			}
+		}
 
-    .financiamentos-coletivos {
-      .card {
-        margin-left: 0 !important;
-      }
-    }
+		footer {
+			.container {
+				flex-direction: column;
+				> .d-flex {
+					margin-bottom: 15px;
+					margin-left: 0 !important;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.apoie-o-bgbh {
+			span {
+				font-size: 0.85em;
+			}
+		}
 
-    footer {
-      .container {
-        flex-direction: column;
-        > .d-flex {
-          margin-bottom: 15px;
-          margin-left: 0 !important;
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-  .redes-sociais {
-    a {
-      &:last-child {
-        margin-top: 15px;
-      }
-    }
-  }
+		.lista-trocas-vendas {
+			.d-flex {
+				flex-direction: column;
+				img {
+					margin-bottom: 1em;
+				}
+			}
+		}
+
+		.dicas-bgbh {
+			.d-flex {
+				flex-direction: column;
+				.btn {
+					&:last-child {
+						margin-top: 1.5em;
+					}
+				}
+			}
+		}
+	}
 }
 @media screen and (min-width: 992px) {
-  #mainNavbar {
-    .nav-item {
-      text-align: center;
-    }
-  }
-  .redes-sociais {
-    a {
-      &:first-child {
-        margin-right: 15px;
-      }
-    }
-  }
+	#mainNavbar {
+		.nav-item {
+			text-align: center;
+		}
+	}
+	.nosso-blog {
+		.card {
+			margin-right: 1.5em;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.dicas-bgbh {
+		.btn {
+			&:first-child {
+				margin-right: 1.5em;
+			}
+		}
+	}
 }
