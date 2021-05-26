@@ -97,7 +97,8 @@
 
 // home 1 ano
 @media screen and (max-width: 992px) {
-	.home {
+	.home,
+	.internas-home {
 		.navbar-collapse {
 			&.collapse,
 			&.collapsing {
