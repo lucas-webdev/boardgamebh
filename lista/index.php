@@ -51,11 +51,11 @@ $pages = ceil($num_boardgames / $records_per_page);
             <div class="botoes-lista">
                 <div class="d-flex justify-content-start align-items-center">
                     <a target="_blank" href="/lista/adicionar-jogo/" class="image featured btn-planilha adicionar-jogo me-3" onclick="ga('send', 'event', 'botões lista', 'click', 'adicionar');">
-                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/public/images/botoes/btn-adicionar.png" alt="Adicionar jogo" />
+                        <img class="img-fluid btnImage" src="../public/images/botoes/btn-adicionar.png" alt="Adicionar jogo" />
                         <small class="extrabold">ADICIONAR JOGO</small>
                     </a>
                     <a target="_blank" href="/lista/remover-jogo" class="image featured btn-planilha remover-jogo" onclick="ga('send', 'event', 'botões lista', 'click', 'remover');">
-                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/public/images/botoes/btn-remover.png" alt="Remover jogo" />
+                        <img class="img-fluid btnImage" src="../public/images/botoes/btn-remover.png" alt="Remover jogo" />
                         <small class="extrabold">REMOVER JOGO</small>
                     </a>
                 </div>
@@ -89,12 +89,12 @@ $pages = ceil($num_boardgames / $records_per_page);
         Ordenar por
     </a>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="index.php?sort=name">Nome do jogo</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=owner">Responsável</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=updated_at">Data</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=price">Preço</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=condition">Condição do jogo</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=negociation">Tipo de negociação</a></li>
+        <li><a class="dropdown-item" href="?sort=name">Nome do jogo</a></li>
+        <li><a class="dropdown-item" href="?sort=owner">Responsável</a></li>
+        <li><a class="dropdown-item" href="?sort=updated_at">Data</a></li>
+        <li><a class="dropdown-item" href="?sort=price">Preço</a></li>
+        <li><a class="dropdown-item" href="?sort=condition">Condição do jogo</a></li>
+        <li><a class="dropdown-item" href="?sort=negociation">Tipo de negociação</a></li>
     </ul>
 </div>
 <div class="d-flex flex-column bd-highlight mt-2 mb-3 bg-list flex-1">

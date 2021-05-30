@@ -19,10 +19,8 @@ $primaryColorTournament: #f9911a;
 $secondaryColorTournament: #673409;
 $tertiaryColorTournament: #feb228;
 // FONTS
-$primaryFont: "Open Sans",
-sans-serif !default;
-$secondaryFont: "Roboto",
-sans-serif !default;
+$primaryFont: "Open Sans", sans-serif !default;
+$secondaryFont: "Roboto", sans-serif !default;
 $regular: 400;
 $semiBold: 600;
 $bold: 700;
@@ -37,15 +35,23 @@ $fontSizeXSmall: 0.83rem !default;
 $fontSizeXLSmall: 0.75rem !default;
 // BUTTONS
 $buttonTextColor: white !default;
-$primaryButtonBG: linear-gradient(180deg, rgba(64, 66, 72, 1) 15%, rgba(33, 37, 41, 1) 100%) !default;
-$primaryButtonHover: linear-gradient(180deg, rgba(11, 101, 94, 1) 50%, rgba(64, 66, 72, 1) 100%) !default;
+$primaryButtonBG: linear-gradient(
+  180deg,
+  rgba(64, 66, 72, 1) 15%,
+  rgba(33, 37, 41, 1) 100%
+) !default;
+$primaryButtonHover: linear-gradient(
+  180deg,
+  rgba(11, 101, 94, 1) 50%,
+  rgba(64, 66, 72, 1) 100%
+) !default;
 // SPACER
 $sectionYSpacer: 40px;
 $sectionYSpacerMobile: 25px;
 // PATTERNS
-$whitePattern: "http://www.bgbh.com.br/patterns/bgbh_white2.png";
-$blackPattern: "http://www.bgbh.com.br/patterns/bgbh_black.png";
-$greenPattern: "http://www.bgbh.com.br/patterns/bgbh_green.png";
+$whitePattern: "https://bgbh.com.br/patterns/bgbh_white2.png";
+$blackPattern: "https://bgbh.com.br/patterns/bgbh_black.png";
+$greenPattern: "https://bgbh.com.br/patterns/bgbh_green.png";
 // BULMA OVERRIDE
 $primary: $primaryColor;
 $info: $infoColor;
