@@ -2,7 +2,7 @@
 date_default_timezone_set('America/Sao_Paulo');
 function pdo_connect_mysql()
 {
-    $DATABASE_HOST = 'localhost';
+    $DATABASE_HOST = 'mysql.task.com.br';
     $DATABASE_USER = 'bgbh';
     $DATABASE_PASS = 'p9R@o9';
     $DATABASE_NAME = 'bgbh_com_br';
@@ -25,7 +25,7 @@ function template_header($title)
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            
+
             gtag('config', 'UA-187241035-1');
             </script>
 
@@ -40,7 +40,7 @@ function template_header($title)
             </script>
 
             <script data-ad-client="ca-pub-3851012828743137" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    
+
             <title>$title</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,8 +51,8 @@ function template_header($title)
             <meta property="og:description"
                 content="Lista de Trocas & Vendas do portal BoardgameBH">
             <meta property="og:type" content="website">
-            <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
-            <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.png">
+            <meta property="og:image" content="https://bgbh.com.br/images/og-image.jpg">
+            <meta property="og:image:secure_url" content="https://bgbh.com.br/images/og-image.png">
 
             <!-- fonts -->
             <link
@@ -67,14 +67,14 @@ function template_header($title)
             <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-            <link rel="stylesheet" href="http://www.bgbh.com.br/public/css/styles.css">
+            <link rel="stylesheet" href="../../public/css/styles.css">
         </head>
         <body>
         <div class="site-wrapper listaTrocasVendas">
         <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" id="mainNavbar">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="/lista">
-                    <img src="/public/images/logo_bgbh/bgbh-com-sombra.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
+                    <img src="../../public/images/logo_bgbh/bgbh-com-sombra.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">
                     <span class="navbarLogoText ms-2">BoardgameBH</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,11 +99,11 @@ function template_header($title)
                 </div>
             </div>
         </nav>
-        <section class="py-4 banner-ads--center container-fluid">
+        <section class="py-4 banner-ads--center container-fluid d-none">
             <div class="col-12 d-none d-md-flex justify-content-center">
                 <a href="/rifa-brazil-imperial/" target="_blank"
                     onclick="ga('send', 'event', 'Rifa Brazil', 'click-banner-site');">
-                    <img class="img-fluid banner-ads-90" src="/public/images/banners/728x90/banner-BRAZIL.png"
+                    <img class="img-fluid banner-ads-90" src="../../public/images/banners/728x90/banner-BRAZIL.png"
                         alt="banner Rifa Brazil" />
                 </a>
             </div>
@@ -144,7 +144,7 @@ function template_footer()
         const bannerAds = $('#banner-ads-mobile a');
         const sources = [
             {
-                img: "<img src='/public/images/banners/728x90/banner-BRAZIL.png' alt='Sorteio Brazil Imperial' />",
+                img: "<img src='../../public/images/banners/728x90/banner-BRAZIL.png' alt='Sorteio Brazil Imperial' />",
                 link: "http://www.bgbh.com.br/sorteio-brazil-imperial"
             }
         ];
@@ -159,7 +159,7 @@ function template_footer()
     randomizeBanners();
 
     </script>
-    
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
 

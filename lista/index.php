@@ -1,5 +1,5 @@
 <?php
-include 'utils/functions.php';
+include './utils/functions.php';
 // Connect to MySQL database
 $pdo = pdo_connect_mysql();
 // Get the page via GET request (URL param: page), if non exists default the page to 1
@@ -9,9 +9,8 @@ $records_per_page = 200;
 
 // Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
 $sql = "SELECT * FROM boardgames ";
-$orderBy = $_GET['sort'];
-if ($orderBy) $sql .= "ORDER BY " . $orderBy . " ";
-else $sql .= "ORDER BY name ASC ";
+$orderBy = isset($_GET['sort']) ? $_GET['sort'] : 'name ASC';
+$sql .= "ORDER BY " . $orderBy . " ";
 $sql .= "LIMIT :current_page, :record_per_page";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':current_page', ($page - 1) * $records_per_page, PDO::PARAM_INT);
@@ -51,11 +50,11 @@ $pages = ceil($num_boardgames / $records_per_page);
             <div class="botoes-lista">
                 <div class="d-flex justify-content-start align-items-center">
                     <a target="_blank" href="/lista/adicionar-jogo/" class="image featured btn-planilha adicionar-jogo me-3" onclick="ga('send', 'event', 'botões lista', 'click', 'adicionar');">
-                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/public/images/botoes/btn-adicionar.png" alt="Adicionar jogo" />
+                        <img class="img-fluid btnImage" src="../public/images/botoes/btn-adicionar.png" alt="Adicionar jogo" />
                         <small class="extrabold">ADICIONAR JOGO</small>
                     </a>
                     <a target="_blank" href="/lista/remover-jogo" class="image featured btn-planilha remover-jogo" onclick="ga('send', 'event', 'botões lista', 'click', 'remover');">
-                        <img class="img-fluid btnImage" src="http://www.bgbh.com.br/public/images/botoes/btn-remover.png" alt="Remover jogo" />
+                        <img class="img-fluid btnImage" src="../public/images/botoes/btn-remover.png" alt="Remover jogo" />
                         <small class="extrabold">REMOVER JOGO</small>
                     </a>
                 </div>

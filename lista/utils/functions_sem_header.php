@@ -25,10 +25,10 @@ function template_header($title)
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            
+
             gtag('config', 'UA-187241035-1');
             </script>
-            
+
             <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K2MBCJ50J"></script>
             <script>
@@ -40,7 +40,7 @@ function template_header($title)
             </script>
 
             <script data-ad-client="ca-pub-3851012828743137" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        
+
             <title>$title</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,11 +51,11 @@ function template_header($title)
             <meta property="og:description"
                 content="Lista de Trocas & Vendas do portal BoardgameBH">
             <meta property="og:type" content="website">
-            <meta property="og:image" content="http://bgbh.com.br/images/og-image.jpg">
-            <meta property="og:image:secure_url" content="http://bgbh.com.br/images/og-image.png">
+            <meta property="og:image" content="https://bgbh.com.br/images/og-image.jpg">
+            <meta property="og:image:secure_url" content="https://bgbh.com.br/images/og-image.png">
 
             <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
-            <link href="http://bgbh.com.br/lista/dist/assets/styles/style.css" rel="stylesheet" type="text/css">
+            <link href="https://bgbh.com.br/lista/dist/assets/styles/style.css" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
             <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,500&display=swap" rel="stylesheet">

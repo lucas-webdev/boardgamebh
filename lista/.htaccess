@@ -1,4 +1,17 @@
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteBase /
+
+# Remove index.php from url
+RewriteRule ^index.php$ / [L,R=301]
+
+# Remove index.php from url
+RewriteRule ^/index.php$ /lista [L,R=301]
+
+# Remove all .php extension / Redirect 301 from non-trailing slash
+RewriteRule ^([a-zA-z0-9]+).php$ /$1   [L,R=301]
+
+# Remove all .php extension / Redirect 301 from non-trailing slash
+RewriteRule ^/([a-zA-z0-9]+).php$ /$1   [L,R=301]
+
+# Add trailing slash
+RewriteRule ^([a-zA-z0-9]+).php$ /$1/   [L,R=301]

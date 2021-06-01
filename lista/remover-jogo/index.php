@@ -189,7 +189,7 @@ try {
 </div>
 
 <div class="alert alert-danger" style="display: none;" role="alert"></div>
-<?php if ($errorMesg) {
+<?php if (isset($errorMesg)) {
     echo '<div class="alert alert-danger" style="display: none;" role="alert">' . $errorMesg . '</div>';
 }
 ?>
