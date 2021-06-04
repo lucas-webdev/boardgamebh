@@ -12,6 +12,10 @@
 	margin-top: 56px;
 }
 
+.minor-text {
+	font-size: $fontSizeXLSmall;
+}
+
 .topoSite {
 	height: calc(100vh - 90px);
 	.carousel-item,
@@ -182,6 +186,7 @@
 		z-index: 99;
 		position: absolute;
 		width: 100%;
+		top: 0;
 	}
 
 	.navbar-collapse {

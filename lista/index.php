@@ -88,12 +88,12 @@ $pages = ceil($num_boardgames / $records_per_page);
         Ordenar por
     </a>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="index.php?sort=name">Nome do jogo</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=owner">Responsável</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=updated_at">Data</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=price">Preço</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=condition">Condição do jogo</a></li>
-        <li><a class="dropdown-item" href="index.php?sort=negociation">Tipo de negociação</a></li>
+        <li><a class="dropdown-item" href="?sort=name">Nome do jogo</a></li>
+        <li><a class="dropdown-item" href="?sort=owner">Responsável</a></li>
+        <li><a class="dropdown-item" href="?sort=updated_at">Data</a></li>
+        <li><a class="dropdown-item" href="?sort=price">Preço</a></li>
+        <li><a class="dropdown-item" href="?sort=condition">Condição do jogo</a></li>
+        <li><a class="dropdown-item" href="?sort=negociation">Tipo de negociação</a></li>
     </ul>
 </div>
 <div class="d-flex flex-column bd-highlight mt-2 mb-3 bg-list flex-1">
