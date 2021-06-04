@@ -5,7 +5,6 @@
 */
 
 (function ($) {
-
 	var $window = $(window),
 		$body = $('body');
 
@@ -14,7 +13,7 @@
 		xlarge: ['1281px', '1680px'],
 		large: ['981px', '1280px'],
 		medium: ['737px', '980px'],
-		small: [null, '736px']
+		small: [null, '736px'],
 	});
 
 	// Play initial animations on page load.
@@ -30,7 +29,7 @@
 		mode: 'fade',
 		noOpenerFade: true,
 		speed: 300,
-		detach: false
+		detach: false,
 	});
 
 	// Nav.
@@ -38,20 +37,15 @@
 	// Title Bar.
 	$(
 		'<div id="titleBar">' +
-		'<a href="#navPanel" class="toggle"></a>' +
-		'<span class="title">' + $('#logo').html() + '</span>' +
-		'</div>'
-	)
-		.appendTo($body);
+			'<a href="#navPanel" class="toggle"></a>' +
+			'<span class="title">' +
+			$('#logo').html() +
+			'</span>' +
+			'</div>',
+	).appendTo($body);
 
 	// Panel.
-	$(
-		'<div id="navPanel">' +
-		'<nav>' +
-		$('#nav').navList() +
-		'</nav>' +
-		'</div>'
-	)
+	$('<div id="navPanel">' + '<nav>' + $('#nav').navList() + '</nav>' + '</div>')
 		.appendTo($body)
 		.panel({
 			delay: 500,
@@ -61,25 +55,24 @@
 			resetForms: true,
 			side: 'left',
 			target: $body,
-			visibleClass: 'navPanel-visible'
+			visibleClass: 'navPanel-visible',
 		});
-
 
 	const footerSources = [
 		{
 			img: "<img class='banner-ads-270' src='images/banners/banner_90games.png' alt='Loja 90 Games' />",
-			link: "http://90games.com.br/"
+			link: 'http://90games.com.br/',
 		},
 		{
 			img: "<img class='banner-ads-270' src='images/banners/banner-tabulovers.png' alt='Tabulovers' />",
-			link: "https://www.instagram.com/tabulovers/"
+			link: 'https://www.instagram.com/tabulovers/',
 		},
 	];
 	const centerSources = [
 		{
 			img: "<img src='images/banners/carcassonne-728x90.png' alt='Torneio Carcassonne' />",
-			link: "http://www.bgbh.com.br/torneios.html"
-		}
+			link: 'https://bgbh.com.br/torneios.html',
+		},
 	];
 
 	function randomizeBannerFooterDuplo() {
@@ -111,12 +104,12 @@
 	/* RANDOMIZAR BANNERS */
 	function randomizeBanners() {
 		// banner central, unico
-		randomizeBannerUnico("#banner-ads-center a", centerSources);
+		randomizeBannerUnico('#banner-ads-center a', centerSources);
 		// banner footer, unico
-		randomizeBannerUnico("#banner-ads-footer a", footerSources);
+		randomizeBannerUnico('#banner-ads-footer a', footerSources);
 		// banners footer, duplo
 		randomizeBannerFooterDuplo();
-	};
+	}
 
 	randomizeBanners();
 	ga('send', 'event', 'Home', 'view');
@@ -148,6 +141,4 @@
 	// 	document.getElementById('counter').innerHTML += segundos + 'seg';
 
 	// }, 1000);
-
-
 })(jQuery);

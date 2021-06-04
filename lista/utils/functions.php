@@ -47,7 +47,7 @@ function template_header($title)
 
             <meta property="og:title" content="BoardgameBH [BGBH]">
             <meta property="og:site_name" content="BoardgameBH [BGBH]">
-            <meta property="og:url" content="http://www.bgbh.com.br/lista/">
+            <meta property="og:url" content="https://bgbh.com.br/lista/">
             <meta property="og:description"
                 content="Lista de Trocas & Vendas do portal BoardgameBH">
             <meta property="og:type" content="website">
@@ -59,8 +59,6 @@ function template_header($title)
                 href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
                 rel="stylesheet">
             <link rel="preconnect" href="https://fonts.gstatic.com">
-
-            <link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico"/>
 
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
@@ -130,11 +128,22 @@ function template_footer()
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
     $(function() {
-        new bootstrap.Popover(document.body, {
-            selector: '.has-popover',
-            trigger: 'focus',
-            html: true
-          });
+        new bootstrap.Popover(document.body, {selector: '.has-popover'});
+        $('a.has-popover').each(function(){
+            $(this).on('shown.bs.popover', function() {
+                const content = $(this).data('bs-content');
+                $('.popover-body').html(content)
+            })
+        })
+    });
+    $('body').on('click', function (e) {
+        $('[data-bs-toggle="popover"]').each(function () {
+            //the 'is' for buttons that trigger popups
+            //the 'has' for icons within a button that triggers a popup
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
     });
     $('.celular').mask('(00) 0 0000-0000');
     $('.dinheiro').mask('#.##0,00', {reverse: true});
@@ -145,7 +154,7 @@ function template_footer()
         const sources = [
             {
                 img: "<img src='../../public/images/banners/728x90/banner-BRAZIL.png' alt='Sorteio Brazil Imperial' />",
-                link: "http://www.bgbh.com.br/sorteio-brazil-imperial"
+                link: "https://bgbh.com.br/sorteio-brazil-imperial"
             }
         ];
 
@@ -214,8 +223,8 @@ function dateInRange($startDate, $endDate, $date)
 
 function printWishlist($wishlist)
 {
-    if (strpos($wishlist, "http") === false)
+    if (strpos($wishlist, "https") === false)
         return $wishlist;
 
-    return "<a href='" . $wishlist . "' target='_blank'>" . $wishlist . "</a>";
+    return "<a href=" . $wishlist . " target='_blank'>" . $wishlist . "</a>";
 }

@@ -47,7 +47,7 @@ function template_header($title)
 
             <meta property="og:title" content="BoardgameBH [BGBH]">
             <meta property="og:site_name" content="BoardgameBH [BGBH]">
-            <meta property="og:url" content="http://www.bgbh.com.br/jogos-colaboradores/">
+            <meta property="og:url" content="https://bgbh.com.br/jogos-colaboradores/">
             <meta property="og:description"
                 content="Lista de Trocas & Vendas do portal BoardgameBH">
             <meta property="og:type" content="website">

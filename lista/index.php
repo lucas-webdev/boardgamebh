@@ -131,7 +131,7 @@ $pages = ceil($num_boardgames / $records_per_page);
             <div class="bg-fields text-center" style="flex: 1.2"><?= $bg['negociation'] ?></div>
             <div class="bg-fields text-center" style="flex: 1">R$ <?= number_format($bg['price'], 2, ",", ".") ?></div>
             <div class="bg-fields text-center d-none d-lg-block <?= $conditionClass ?>" style="flex: 1"><?= $bg['condition'] ?></div>
-            <div class="bg-fields has-popover" style="flex: 1" class="d-flex justify-content-center align-items-center">
+            <div class="bg-fields" style="flex: 1" class="d-flex justify-content-center align-items-center">
                 <a tabindex="0" type="button" class="btn btn-sm btn-dark has-popover" role="button" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" title="<?= $bg['name'] ?>" data-bs-html="true" data-bs-html="true" data-bs-content="<b>Negociação:</b> <?= $bg['negociation'] ?> <br>
                         <b>Preço:</b> R$ <?= number_format($bg['price'], 2, ",", ".") ?> <br>
                         <b>Condição:</b> <span class='<?= $conditionClass ?>'><?= $bg['condition'] ?> </span><br>
@@ -140,7 +140,7 @@ $pages = ceil($num_boardgames / $records_per_page);
                         <b>Depend. Idioma:</b> <?= $bg['language_dependency'] ?> <br>
                         <b>Descrição:</b> <?= $descricao ?> <br>
                         <b>Responsável:</b> <?= ucwords($bg['owner']) ?> <br>
-                        <b>Contato:</b> <a target='_blank' href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/'><?= $bg['owner_contact'] ?></a><br>
+                        <b>Contato:</b> <a href='https://wa.me/<?= formatCellphone($bg['owner_contact']) ?>/' target='_blank'><?= $bg['owner_contact'] ?></a><br>
                         <b>Região de retirada/entrega:</b> <?= $bg['deliver_region'] ?> <br>
                         <b>Lista de desejos:</b> <?= printWishlist($bg['wishlist']) ?><br>">
                     + info
