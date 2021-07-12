@@ -1,0 +1,63 @@
+# Sat Jul 10 08:29:26 2021
+#+ Geeklist: MOCK MATH TRADE BELO HORIZONTE - JULHO 2021
+#+ ... https://www.boardgamegeek.com/geeklist/287110
+#+ Owner: lucascmedeiros
+#+ Item count: 6
+#+ Users with items: 3
+
+#! ALLOW-DUMMIES
+#! REQUIRE-COLONS
+#! REQUIRE-USERNAMES
+#! HIDE-NONTRADES
+#! SHOW-ELAPSED-TIME
+#! SEED=123456
+#! METRIC=Users-Trading
+
+!BEGIN-OFFICIAL-NAMES
+8369564 ==> 1. "Puerto Rico" (from alisonarantes)
+8369567 ==> 2. "Five Tribes" (from lucascmedeiros)
+8369569 ==> 3. "Banco Imobiliário Júnior" (from lucascmedeiros)
+8369575 ==> 4. "Carcassonne" (from m4lk4v)
+8369578 ==> 5. "Gloomhaven" (from alisonarantes)
+8369579 ==> 6. "UNO Attack!" (from m4lk4v)
+!END-OFFICIAL-NAMES
+
+
+#pragma user "alisonarantes"
+# Confirmation code: EbT12gpk3JoOJ6EylBwIPQ
+# Sat Jul 10 08:27:55 2021
+
+
+# Puerto Rico
+(alisonarantes) 8369564 : 8369579
+
+# Gloomhaven
+(alisonarantes) 8369578 : 8369579 8369569
+
+
+#pragma user "lucascmedeiros"
+# Confirmation code: ZYk9oBomJPqHNrKR7/1VcQ
+# Sat Jul 10 08:27:55 2021
+
+
+# Five Tribes
+(lucascmedeiros) 8369567 : 8369564 8369578
+
+# Banco Imobiliário Júnior
+(lucascmedeiros) 8369569 : 8369564 8369575
+
+
+#pragma user "m4lk4v"
+# Confirmation code: jtxUzbsjnnpCyJZxHihzWg
+# Sat Jul 10 08:28:00 2021
+
+
+# Carcassonne
+(m4lk4v) 8369575 : 8369569
+
+# UNO Attack!
+(m4lk4v) 8369579 : 8369578
+
+# End of wants. If you don't see this line then this file may have
+# been truncated.  IMPORTANT: this comment block is also required to be
+# in the wants file when you upload the WANTS into the OLWLG.

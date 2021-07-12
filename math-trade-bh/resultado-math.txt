@@ -1,0 +1,25 @@
+TradeMaximizer Version 1.4aMT
+Options: ALLOW-DUMMIES REQUIRE-COLONS REQUIRE-USERNAMES HIDE-NONTRADES SHOW-ELAPSED-TIME SEED=123456 METRIC=USERS-TRADING
+
+Input Checksum: 891c4ae5b2de92431d64b221a331f1ff
+TRADE LOOPS (4 total trades):
+
+(ALISONARANTES) 8369578  receives (M4LK4V) 8369579
+(M4LK4V) 8369579         receives (ALISONARANTES) 8369578
+
+(LUCASCMEDEIROS) 8369569 receives (M4LK4V) 8369575
+(M4LK4V) 8369575         receives (LUCASCMEDEIROS) 8369569
+
+ITEM SUMMARY (4 total trades):
+
+(ALISONARANTES) 8369578  receives (M4LK4V) 8369579         and sends to (M4LK4V) 8369579
+(LUCASCMEDEIROS) 8369569 receives (M4LK4V) 8369575         and sends to (M4LK4V) 8369575
+(M4LK4V) 8369575         receives (LUCASCMEDEIROS) 8369569 and sends to (LUCASCMEDEIROS) 8369569
+(M4LK4V) 8369579         receives (ALISONARANTES) 8369578  and sends to (ALISONARANTES) 8369578
+
+Num trades  = 4 of 6 items (66,7%)
+Total cost  = 4 (avg 1,00)
+Num groups  = 2
+Group sizes = 2 2
+Sum squares = 8
+Elapsed time = 8ms

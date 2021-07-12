@@ -3,6 +3,9 @@
 }
 
 %textVariant {
+	&.primary {
+		color: $primaryColor;
+	}
 	&.secondary {
 		color: $secondaryColor;
 	}
