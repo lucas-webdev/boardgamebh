@@ -152,7 +152,7 @@
 	background: $darkColor;
 }
 
-.ultimosTorneios {
+.ultimosTorneios, .torneios-recentes {
 	.gray-filter {
 		@include grayFilter();
 	}
@@ -299,4 +299,54 @@
 			}
 		}
 	}
+
+	#tabsDicas {
+		border-bottom: 1px solid $secondaryColor;
+
+		.nav-link {
+			border: 1px solid transparent;
+			background-color: transparent;
+			font-weight: bold;
+
+			&:focus,
+			&:focus-visible,
+			&:active {
+				outline: none;
+			}
+
+			&.active {
+				border: 1px solid $successColor;
+				border-bottom-color: transparent;
+				background-color: white;
+				color: $successColor;
+			}
+		}
+	}
+
+	#siteFooter {
+		.instagram {
+			&:hover {
+				i {
+					color: transparent;
+					background: -webkit-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+					background: -o-radial-gradient(30% 107%, circle, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+					background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+					background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+					background-clip: text;
+					-webkit-background-clip: text;
+				}
+			}
+		}
+		.facebook {
+			&:hover {
+				i {
+					color: #1877f2;
+				}
+			}
+		}
+	}
+	#banner-ads--footer-duplo img {
+    	zoom: 70%;
+	}
+
 }
