@@ -244,9 +244,9 @@
 	}
 
 	.banner-ads {
-		background: transparentize($color: $infoColor, $amount: 0.95);
 
 		&.banner-duplo {
+			background: transparentize($color: $infoColor, $amount: 0.95);
 			a:first-child {
 				margin-right: 100px;
 			}
@@ -271,6 +271,10 @@
 				opacity: 1;
 				height: 100%;
 			}
+		}
+
+		@media screen and (max-width: 720px) {
+			margin-bottom: 10px;
 		}
 	}
 

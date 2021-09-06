@@ -166,7 +166,7 @@ $today = strtotime(date("Y-m-d"));
 
                 <a href="update.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                 <a tabindex="0" role="button" class="trash has-popover" data-bs-toggle="popover" title="Tem certeza que deseja remover este jogo?" data-bs-content='
-                        <a style="color: white; background-color: #0b655e padding: 6px;" class="confirm-delete" href="delete.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>&confirm=yes">Sim</a>
+                        <a style="color: white; background-color: #0b655e; padding: 6px;" class="confirm-delete" href="delete.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>&confirm=yes">Sim</a>
                         <a style="color: white; backgorund-color: #dc3545; padding: 6px;" class="cancel-delete" href="delete.php?sort=<?= $orderBy ?>&id=<?= $bg['id'] ?>&confirm=no">Não</a>
                     '>
                     <i class="fas fa-trash fa-xs"></i>
@@ -218,7 +218,7 @@ $today = strtotime(date("Y-m-d"));
                 <div style="flex: 4"><?= $bg['reason'] ?></div>
                 <div style="flex: 1">
                     <a class="has-popover trash" tabindex="0" role="button" data-bs-toggle="popover" data-bs-trigger="click" data-bs-html="true" title="Tem certeza que deseja remover este jogo?" data-bs-content='
-                            <a class="confirm-delete" href="delete_removed.php?id=<?= $bg['id'] ?>&confirm=yes" style="color: white; background-color: #0b655e padding: 6px;">Sim</a>
+                            <a class="confirm-delete" href="delete_removed.php?id=<?= $bg['id'] ?>&confirm=yes" style="color: white; background-color: #0b655e; padding: 6px;">Sim</a>
                             <a class="cancel-delete">Não</a>'>
                         <i class="fas fa-trash fa-xs"></i>
                     </a>

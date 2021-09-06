@@ -1,62 +1,84 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const gls = require('gulp-live-server');
-const webpack = require("webpack");
-const php = require('gulp-connect-php');
-const browserSync = require('browser-sync').create();
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const autoprefixer = require('gulp-autoprefixer')
+const gls = require('gulp-live-server')
+const webpack = require("webpack")
+const php = require('gulp-connect-php')
+const browserSync = require('browser-sync').create()
 
-gulp.task('php', function() {
-    php.server({ base: './', port: 8010, keepalive: true });
-});
+gulp.task('php', function ()
+{
+    php.server({ base: './', port: 8010, keepalive: true })
+})
 
-gulp.task('browserSync', gulp.series('php'), function() {
+gulp.task('browserSync', gulp.series('php'), function ()
+{
     browserSync.init({
         proxy: "localhost:8080",
         baseDir: "./",
         open: true,
         notify: false
 
-    });
-});
+    })
+})
 
-gulp.task('dev', gulp.series('browserSync'), function() {
-    gulp.watch('./lista/*.php', browserSync.reload);
-});
+gulp.task('dev', gulp.series('browserSync'), function ()
+{
+    gulp.watch('./lista/*.php', browserSync.reload)
+})
 
 
-gulp.task('sass', function() {
+gulp.task('sass', function ()
+{
     return gulp.src(['./assets/styles/styles.scss'])
         .pipe(sass({
             outputStyle: 'compressed',
             errLogToConsole: true,
-            onError: function(err) {}
+            onError: function (err) { }
         }))
         .pipe(autoprefixer('last 1 version'))
-        .pipe(gulp.dest('./public/css'));
-});
-gulp.task('server', gulp.series('browserSync'), function() {
+        .pipe(gulp.dest('./public/css'))
+})
+
+gulp.task('mtsass', function ()
+{
+    return gulp.src(['./assets/styles/mathtrade/styles.scss'])
+        .pipe(sass({
+            outputStyle: 'compressed',
+            errLogToConsole: true,
+            onError: function (err) { }
+        }))
+        .pipe(autoprefixer('last 1 version'))
+        .pipe(gulp.dest('./public/css/mathtrade'))
+})
+
+gulp.task('server', gulp.series('browserSync'), function ()
+{
     var sources = [
         './public/index.html',
         './public/**/*.css',
         './public/**/*.js'
-    ];
+    ]
 
-    var server = gls.static('./', '3001', process.env.IP);
-    server.start();
+    var server = gls.static('./', '3001', process.env.IP)
+    server.start()
 
     //use gulp.watch to trigger server actions(notify, start or stop)
-    return gulp.watch(sources, function(file) {
-        server.notify.apply(server, [file]);
-    });
-});
+    return gulp.watch(sources, function (file)
+    {
+        server.notify.apply(server, [file])
+    })
+})
 
-gulp.task('watch', function() {
-    gulp.watch(['./assets/styles/itcss/**/*.scss'], gulp.series("sass"));
-    gulp.watch(['./assets/scripts/**/*.js'], gulp.series("webpack"));
-});
+gulp.task('watch', function ()
+{
+    gulp.watch(['./assets/styles/itcss/**/*.scss'], gulp.series("sass"))
+    gulp.watch(['./assets/styles/itcss/mathtrade/style.scss'], gulp.series("mtsass"))
+    gulp.watch(['./assets/scripts/**/*.js'], gulp.series("webpack"))
+})
 
-gulp.task("webpack", function(callback) {
+gulp.task("webpack", function (callback)
+{
     webpack({
 
         entry: "./assets/scripts/app.js",
@@ -83,14 +105,15 @@ gulp.task("webpack", function(callback) {
             }]
         }
 
-    }, function(err, stats) {
-        if (err) throw new gutil.PluginError("webpack", err);
+    }, function (err, stats)
+    {
+        if (err) throw new gutil.PluginError("webpack", err)
         console.log("[webpack]", stats.toString({
             // output options
-        }));
-        callback();
-    });
-});
+        }))
+        callback()
+    })
+})
 
 
-gulp.task('serve', gulp.series('watch', 'server'));
+gulp.task('serve', gulp.series('watch', 'server'))
