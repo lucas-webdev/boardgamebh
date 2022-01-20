@@ -1,0 +1,88 @@
+.keyboard > .flex-column {
+  background-color: darkcyan;
+  padding: 10px 20px;
+}
+
+button.key {
+  background-color: azure;
+  border: 1px solid silver;
+  border-radius: 5px;
+  outline: none;
+  margin: 3px;
+  font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+}
+
+.key.longer {
+  width: 100px;
+}
+
+.letters {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 500;
+  color: #404248;
+  background-color: #efefef;
+  border: 2px solid gray;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.letters:last-child {
+    margin-right: 0;
+}
+
+.letters.not-present {
+  background-color: rgb(20, 20, 20);
+}
+
+.letters.misplaced {
+  background-color: rgb(160, 149, 1);
+}
+
+.letters.correct {
+  background-color: #6dad00;
+}
+
+.letters.submitted {
+  color: white;
+}
+
+.key.disabled {
+  background-color: #2f4f4f;
+  border-color: darkgreen;
+}
+
+.key.highlight {
+  background-color: lightgreen;
+  border-color: limegreen
+}
+
+#summary .summary-failure {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(20, 20, 20);
+  margin-right: 5px;
+}
+
+#summary .summary-warning {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(160, 149, 1);
+  margin-right: 5px;
+}
+
+#summary .summary-success {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #6dad00;
+  margin-right: 5px;
+}

@@ -18,3 +18,13 @@ RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 # Add trailing slash
 RewriteRule ^([a-zA-z0-9]+).html$ /$1/   [L,R=301]
 RewriteRule ^([a-zA-z0-9]+).php$ /$1/   [L,R=301]
+
+<Files ./lista/utils/functions.php>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files ./palavra-do-dia/pickWord.php>
+Order Allow,Deny
+Deny from all
+</Files>
