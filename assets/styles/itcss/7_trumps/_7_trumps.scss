@@ -93,6 +93,19 @@
 			}
 		}
 	}
+	.videos {
+		flex-direction: column;
+	}
+
+	.videos video {
+		margin-bottom: 5px;
+	}
+
+	.videos small:not(.no-border) {
+		border-bottom: 1px solid silver;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+	}
 }
 
 // home 1 ano
@@ -201,5 +214,9 @@
 				margin-right: 1.5em;
 			}
 		}
+	}
+	.videos video {
+		width: 480px !important;
+		height: 100%;
 	}
 }

@@ -1,5 +1,5 @@
 {
-    "name": "BoardgameBH",
+    "name": "boardgamebh",
     "version": "1.0.0",
     "description": "Web site for BoardgameBH portal",
     "scripts": {
@@ -22,12 +22,15 @@
         "gulp-livereload": "^4.0.2",
         "gulp-sass": "^5.0.0",
         "gulp-util": "^3.0.8",
-        "node-sass": "^6.0.1",
+        "http-server": "^14.1.0",
         "require-dir": "^1.2.0",
         "vinyl-buffer": "^1.0.1",
         "vinyl-source-stream": "^2.0.0",
         "vinyl-transform": "^1.0.0",
         "watchify": "^4.0.0",
         "webpack": "^5.52.0"
+    },
+    "dependencies": {
+        "sass": "^1.49.7"
     }
 }
