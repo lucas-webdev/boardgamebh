@@ -1,0 +1,39 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main # Executa o deploy sempre que houver um push/merge na branch main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clona o repositório
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Configura o Node.js e instala as dependências
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install
+
+      # Executa o build do projeto
+      - name: Build project
+        run: yarn build
+
+      # Faz o deploy via FTP
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/ # Diretório de build gerado pelo Vite
+          server-dir: /httpdocs/2025/ # Caminho remoto no FTP (ajuste conforme necessário)
