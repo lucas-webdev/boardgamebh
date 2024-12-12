@@ -15,8 +15,8 @@
 </head>
 
 <body>
-  <header class="sticky top-0 shadow-md z-50 header-home h-screen">
-    <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between h-14">
+  <header class="header-home h-[calc(100vh-56px)]">
+    <nav class="sticky top-0 shadow-md z-50 max-w-7xl mx-auto px-4 py-3 flex items-center justify-between h-14">
       <!-- Logo -->
       <div class="text-xl font-bold text-gray-400 h-full">
         <a href="/">
@@ -25,7 +25,7 @@
       </div>
 
       <!-- Menu -->
-      <div class="space-x-6 flex items-center text-white">
+      <div class="space-x-8 flex items-center text-white">
         <!-- Link para página inicial -->
         <a href="#" class="hover:text-gray-400">Início</a>
 
@@ -34,10 +34,10 @@
 
         <!-- Menu com submenu -->
         <div class="relative group">
-          <button type="menu" class="hover:text-gray-400">Iniciativas BGBH</button>
-          <div class="absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga no QG</a>
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Resenha com Jogatina</a>
+          <span class="hover:text-gray-400">Iniciativas BGBH</span>
+          <div class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
+            <a href="#" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga no QG</a>
+            <a href="#" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Resenha com Jogatina</a>
           </div>
         </div>
 
