@@ -1,35 +1,21 @@
 {
-  "name": "bgbh",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "boardgamebh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lucas-webdev/boardgamebh.git",
+  "author": "Lucas Medeiros <lucascmedeiros.dev@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "ftp-deploy": "^2.4.7",
     "path": "^0.12.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.0.2",
-    "sass": "^1.82.0"
+    "vite": "^6.0.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.15.0",
-    "@types/node": "^22.10.2",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.4",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^9.15.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^15.12.0",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.15.0",
-    "vite": "^6.0.3"
+    "sass": "^1.82.0"
   }
 }
