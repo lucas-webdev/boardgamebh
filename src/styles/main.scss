@@ -1,7 +1,15 @@
-.specialTitle {
-    font-size: 2rem;
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
+
+.parallax-effect {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
 }
 
-.text-success {
-    color: $mainGreen;
+.header-home {
+    background-image: url('@/img/geral/bgbh-topo-site.jpg');
+    @extend .parallax-effect
 }

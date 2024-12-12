@@ -1,14 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boardgame BH</title>
-    <link rel="stylesheet" href="src/styles/main.scss">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boardgame BH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles/main.scss" />
+</head>
+
+<body>
+  <header class="sticky top-0 shadow-md z-50 header-home h-screen">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between h-14">
+      <!-- Logo -->
+      <div class="text-xl font-bold text-gray-400 h-full">
+        <a href="/">
+          <img class="h-full w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+        </a>
+      </div>
+
+      <!-- Menu -->
+      <div class="space-x-6 flex items-center text-white">
+        <!-- Link para página inicial -->
+        <a href="#" class="hover:text-gray-400">Início</a>
+
+        <!-- Link para Math Trade BH -->
+        <a href="#" class="hover:text-gray-400">Math Trade BH</a>
+
+        <!-- Menu com submenu -->
+        <div class="relative group">
+          <button type="menu" class="hover:text-gray-400">Iniciativas BGBH</button>
+          <div class="absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga no QG</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Resenha com Jogatina</a>
+          </div>
+        </div>
+
+        <!-- Link para Eventos -->
+        <a href="#" class="hover:text-gray-400">Eventos</a>
+
+        <!-- Link para Contato -->
+        <a href="#" class="hover:text-gray-400">Contato</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>seçao 1</section>
+    <section>seçao 2</section>
+    <section>seçao 3</section>
+  </main>
+
+  <footer>
+    rodape
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>
