@@ -6,26 +6,51 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boardgame BH</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="src/styles/main.scss" />
+  <script src="src/js/main.js"></script>
 </head>
 
 <body>
-  <header class="header-home h-[calc(100vh-56px)]">
+  <header class="header-home h-[calc(100vh-56px)] relative">
+    <div class="bg-black absolute top-0 h-[calc(100vh-56px)] w-full opacity-65"></div>
     <nav class="sticky top-0 shadow-md z-50 max-w-7xl mx-auto px-4 py-3 flex items-center justify-between h-14">
       <!-- Logo -->
-      <div class="text-xl font-bold text-gray-400 h-full">
+      <div class="h-full">
         <a href="/">
           <img class="h-full w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
         </a>
       </div>
 
-      <!-- Menu -->
-      <div class="space-x-8 flex items-center text-white">
+      <!-- Botão Hambúrguer -->
+      <button id="menu-toggle" class="text-white block md:hidden">
+        <i class="bi bi-list text-3xl"></i>
+      </button>
+
+      <!-- Menu XS/SM -->
+      <div
+        class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
+        id="hamburger-menu">
+        <div class="flex justify-between">
+          <a href="/">
+            <img class="h-[40px] w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+          </a>
+          <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
+        </div>
+        <a href="#" class="hover:text-gray-400">Início</a>
+        <a href="#" class="hover:text-gray-400">Math Trade BH</a>
+        <a href="#" class="hover:text-gray-400">Iniciativas BGBH</a>
+        <a href="#" class="hover:text-gray-400">Eventos</a>
+        <a href="#" class="hover:text-gray-400">Contato</a>
+      </div>
+
+      <!-- Menu MD/LG -->
+      <div class="hidden text-white space-x-8 md:items-center md:flex">
         <!-- Link para página inicial -->
         <a href="#" class="hover:text-gray-400">Início</a>
 
@@ -48,6 +73,35 @@
         <a href="#" class="hover:text-gray-400">Contato</a>
       </div>
     </nav>
+
+    <!-- Hero elements -->
+    <div class="flex flex-col items-center justify-center relative h-[calc(80vh-56px)] text-white">
+      <img class="h-[150px]" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+      <span class="mt-5">O seu portal de jogos de tabuleiro</span>
+      <div class="flex justify-around px-5 w-full mt-20 font-[600] text-2xl">
+        <section class="flex flex-col items-center gap-5 px-2 text-center">
+          <i class="flex bi bi-arrow-repeat border border-white p-3 text-[30px] w-14 h-14"></i>
+          Math Trade BH
+          <span class="font-normal text-sm text-gray-400">
+            Organizamos a já tradicional Math Trade Belo Horizonte regularmente
+          </span>
+        </section>
+        <section class="flex flex-col items-center gap-5 px-2 text-center">
+          <i class="flex bi bi-dice-6 border border-white p-3 text-[30px] w-14 h-14"></i>
+          Encontros de Jogatina
+          <span class="font-normal text-sm text-gray-400">
+            Temos encontros regulares para confraternização e jogatina entre amigos
+          </span>
+        </section>
+        <section class="hidden flex-col items-center gap-5 px-2 text-center md:flex">
+          <i class="flex bi bi-chat-square-dots border border-white p-3 text-[30px] w-14 h-14"></i>
+          Grupos de discussão
+          <span class="font-normal text-sm text-gray-400">
+            Muita conversa, notícias, trocas e vendas e muito mais nos nossos grupos
+          </span>
+        </section>
+      </div>
+    </div>
   </header>
   <main>
     <section>seçao 1</section>

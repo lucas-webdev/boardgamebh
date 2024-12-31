@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Nunito Sans", "Roboto", "sans-serif"],
+        sans: ["Titillium Web", "Roboto", "sans-serif"],
       },
     },
   },
