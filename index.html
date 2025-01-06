@@ -13,60 +13,60 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="src/styles/main.scss" />
-  <script src="src/js/main.js"></script>
 </head>
 
 <body>
-  <header class="header-home h-[calc(100vh-56px)] relative">
-    <div class="bg-black absolute top-0 h-[calc(100vh-56px)] w-full opacity-65"></div>
-    <nav class="sticky top-0 shadow-md z-50 max-w-7xl mx-auto px-4 py-3 flex items-center justify-between h-14">
-      <!-- Logo -->
-      <div class="h-full">
+  <nav
+    class="sticky top-0 shadow-md z-50 px-4 py-3 flex items-center justify-between h-14 bg-black border-b-[#198754] border-b">
+    <!-- Logo -->
+    <div class="h-full">
+      <a href="/">
+        <img class="h-full w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+      </a>
+    </div>
+
+    <!-- Botão Hambúrguer -->
+    <button id="menu-toggle" class="text-white block md:hidden">
+      <i class="bi bi-list text-3xl"></i>
+    </button>
+
+    <!-- Menu XS/SM -->
+    <div
+      class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
+      id="hamburger-menu">
+      <div class="flex justify-between">
         <a href="/">
-          <img class="h-full w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+          <img class="h-[40px] w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
         </a>
+        <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
       </div>
+      <a href="/" class="hover:text-gray-400">Início</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Iniciativas BGBH</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
+    </div>
 
-      <!-- Botão Hambúrguer -->
-      <button id="menu-toggle" class="text-white block md:hidden">
-        <i class="bi bi-list text-3xl"></i>
-      </button>
-
-      <!-- Menu XS/SM -->
-      <div
-        class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
-        id="hamburger-menu">
-        <div class="flex justify-between">
-          <a href="/">
-            <img class="h-[40px] w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
-          </a>
-          <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
+    <!-- Menu MD/LG -->
+    <div class="hidden text-white space-x-8 md:items-center md:flex">
+      <a href="/" class="hover:text-gray-400">Início</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+      <div class="relative group">
+        <span class="hover:text-gray-400">Iniciativas BGBH</span>
+        <div class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
+          <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga no QG</a>
+          <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Resenha com
+            Jogatina</a>
         </div>
-        <a href="#" class="hover:text-gray-400">Início</a>
-        <a href="#" class="hover:text-gray-400">Sobre</a>
-        <a href="#" class="hover:text-gray-400">Math Trade BH</a>
-        <a href="#" class="hover:text-gray-400">Iniciativas BGBH</a>
-        <a href="#" class="hover:text-gray-400">Eventos</a>
-        <a href="#" class="hover:text-gray-400">Contato</a>
       </div>
-
-      <!-- Menu MD/LG -->
-      <div class="hidden text-white space-x-8 md:items-center md:flex">
-        <a href="#" class="hover:text-gray-400">Início</a>
-        <a href="#" class="hover:text-gray-400">Sobre</a>
-        <a href="#" class="hover:text-gray-400">Math Trade BH</a>
-        <div class="relative group">
-          <span class="hover:text-gray-400">Iniciativas BGBH</span>
-          <div class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
-            <a href="#" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga no QG</a>
-            <a href="#" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Resenha com Jogatina</a>
-          </div>
-        </div>
-        <a href="#" class="hover:text-gray-400">Eventos</a>
-        <a href="#" class="hover:text-gray-400">Contato</a>
-      </div>
-    </nav>
-
+      <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
+    </div>
+  </nav>
+  <header class="header-home h-[calc(100vh-56px)] relative flex flex-col items-center justify-evenly">
+    <div class="bg-black absolute top-0 h-[calc(100vh-56px)] w-full opacity-65"></div>
     <!-- BANNER PRINCIPAL -->
     <div class="flex flex-col items-center justify-center relative h-[calc(80vh-56px)] text-white">
       <img class="h-[150px]" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
@@ -94,6 +94,9 @@
           </span>
         </section>
       </div>
+    </div>
+    <div class="relative text-white text-center animate__animated animate__fadeInDown animate__infinite">
+      <i class="bi bi-chevron-down"></i>
     </div>
   </header>
 

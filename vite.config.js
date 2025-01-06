@@ -13,7 +13,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        "quem-somos": resolve(__dirname, "quem-somos/index.html"),
+        sobre: resolve(__dirname, "sobre/index.html"),
+        "em-breve": resolve(__dirname, "em-breve.html"),
         "mathtrade-bh/o-que-e": resolve(__dirname, "mathtrade-bh/o-que-e.html"),
         "mathtrade-bh/regras-gerais": resolve(
           __dirname,
