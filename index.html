@@ -137,13 +137,24 @@
         Promovemos encontros mensais de jogos em espaços reservados e o destaque do evento é a interação entre
         jogadores.
       </span>
-      <div class="flex w-full flex-wrap gap-3 mt-3">
-        <img class="w-1/4 h-auto" src="/src/img//geral/azul.png" alt="">
-        <img class="w-1/4 h-auto" src="/src/img//geral/azul.png" alt="">
-        <img class="w-1/4 h-auto" src="/src/img//geral/azul.png" alt="">
-        <img class="w-1/4 h-auto" src="/src/img//geral/azul.png" alt="">
-        <img class="w-1/4 h-auto" src="/src/img//geral/azul.png" alt="">
-        <img class="w-1/4 h-auto" src="/src/img//geral/azul.png" alt="">
+      <div id="carousel-container" class="relative overflow-hidden">
+        <!-- Carousel Content -->
+        <div id="carousel" class="flex gap-3 transition-transform duration-300">
+          <img src="/src/img/geral/azul.png" alt="Imagem 1" class="w-full md:w-1/2 object-cover">
+          <img src="/src/img/geral/azul.png" alt="Imagem 2" class="w-full md:w-1/2 object-cover">
+          <img src="/src/img/geral/azul.png" alt="Imagem 3" class="w-full md:w-1/2 object-cover">
+          <img src="/src/img/geral/azul.png" alt="Imagem 4" class="w-full md:w-1/2 object-cover">
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="prev"
+          class="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button id="next"
+          class="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full">
+          <i class="bi bi-chevron-right"></i>
+        </button>
       </div>
     </section>
     <section class="bg-lime-900 pt-6 pb-10 relative bg-[url('/src/img/geral/brass2.png')] text-white parallax-effect"
@@ -185,13 +196,11 @@
         </div>
       </div>
     </section>
-    <section class="py-10 bg-[url('/src/img/geral/carcassonne.png')] parallax-effect" id="parceiros">
-      <div class="max-w-[90vw] mx-auto text-white">
-        <h2 class="font-extrabold text-2xl">PARCEIROS</h2>
-        <div class="flex gap-10">
-          <img class="size-28" src="/src/img/parceiros/cuidadocomopanda.png" alt="Cuidado com o Panda">
-          <img class="size-28" src="/src/img/parceiros/logo_VJBG_fundo_transparente.png" alt="Vamos Jogar Boardgame">
-        </div>
+    <section class="py-5 max-w-[90vw] mx-auto" id="parceiros">
+      <h2 class="font-extrabold text-2xl text-gray-900">PARCEIROS</h2>
+      <div class="flex gap-10">
+        <img class="size-28" src="/src/img/parceiros/cuidadocomopanda.png" alt="Cuidado com o Panda">
+        <img class="size-28" src="/src/img/parceiros/logo_VJBG_fundo_transparente.png" alt="Vamos Jogar Boardgame">
       </div>
     </section>
   </main>
