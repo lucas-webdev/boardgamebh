@@ -14,3 +14,11 @@
   background-image: url("@/img/geral/bgbh-topo-site.jpg");
   @extend .parallax-effect;
 }
+
+.arrow-down {
+  display: inline-block;
+  width: 73.5px;
+  height: 80px;
+  background: #000000;
+  clip-path: polygon(0 54%, 31% 54%, 31% 0, 69% 0, 69% 54%, 100% 54%, 50% 100%);
+}

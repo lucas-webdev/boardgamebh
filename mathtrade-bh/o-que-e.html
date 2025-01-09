@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boardgame BH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+</head>
+
+<body>
+    <nav
+        class="sticky top-0 shadow-md z-50 px-4 py-3 flex items-center justify-between h-14 bg-black border-b-[#198754] border-b">
+        <!-- Logo -->
+        <div class="h-full">
+            <a href="/2025/">
+                <img class="h-full w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+            </a>
+        </div>
+
+        <!-- Botão Hambúrguer -->
+        <button id="menu-toggle" class="text-white block md:hidden">
+            <i class="bi bi-list text-3xl"></i>
+        </button>
+
+        <!-- Menu XS/SM -->
+        <div class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
+            id="hamburger-menu">
+            <div class="flex justify-between">
+                <a href="/2025/">
+                    <img class="h-[40px] w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+                </a>
+                <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
+            </div>
+            <a href="/2025/" class="hover:text-gray-400">Início</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Sobre</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Iniciativas BGBH</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Eventos</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Contato</a>
+        </div>
+
+        <!-- Menu MD/LG -->
+        <div class="hidden text-white space-x-8 md:items-center md:flex">
+            <a href="/2025/" class="hover:text-gray-400">Início</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Sobre</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+            <div class="relative group">
+                <span class="hover:text-gray-400">Iniciativas BGBH</span>
+                <div
+                    class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
+                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga
+                        no QG!</a>
+                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                        Resenha com Jogatina
+                    </a>
+                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                        Outras iniciativas
+                    </a>
+                </div>
+            </div>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Eventos</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Contato</a>
+        </div>
+    </nav>
+    <!-- BANNER PRINCIPAL -->
+    <header class="header_mathtrade">
+        <div class="imagemTopo">
+            <img src="/src/img/mathtrade/imagem-topo.png" alt="Math Trade BGBH" />
+        </div>
+    </header>
+
+    <!-- CONTEUDO PRINCIPAL -->
+    <main class="py-6 max-w-[90vw] mx-auto">
+        <section id="o_que_e">
+            <h1 class="text-green-900 font-extrabold text-3xl text-center mb-5">O QUE É UMA MATH TRADE?</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p>
+                        <strong class="font-bold">MATH TRADE</strong> é um evento voltado para troca de jogos. Uma
+                        grande oportunidade para trocar um jogo
+                        seu por um jogo de outra pessoa a partir de triangulações geradas por um algoritmo programado
+                        para maximizar a quantidade de trocas entre os participantes.
+                    </p>
+                    <p>
+                        A grande sacada de uma MATH TRADE é a utilização desse sistema automatizado que cria um "círculo
+                        de trocas" no qual você não estará trocando jogos diretamente com uma pessoa, mas com várias.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <video width="320" height="240" controls="" class="mx-auto">
+                        <source src="https://www.bgbh.com.br/public/videos/math-trade-bh/1-o-que-e-uma-math-trade.mp4"
+                            type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                    <small class="text-xs">
+                        Video retirado do
+                        <a href="https://www.youtube.com/channel/UCY4AO_6AUGiWmP3GocAdcFA" target="_blank">
+                            canal Mesa Secreta
+                        </a>. Para ficar por dentro de todo material produzido, não deixe de seguir o canal.
+                    </small>
+                </div>
+            </div>
+        </section>
+        <hr class="w-80vw mx-auto my-4">
+        <!-- FLUXOGRAMA -->
+        <section class="text-center">
+            <h2 class="text-gray-900 font-extrabold text-2xl">FLUXOGRAMA E EXEMPLO</h2>
+            <p>Veja um resumo das etapas e exemplo de execução de uma Math Trade</p>
+            <!-- ETAPA 1 -->
+            <div class="mt-3">
+                <div class="border border-gray-500 bg-gray-300 p-2">
+                    <p class="text-red-700 font-bold">ETAPA 1: INCLUSÃO DE JOGOS NA LISTA DE TROCAS</p>
+                    <p class="text-sm">Adicione jogos que você deseja trocar à lista oficial do evento</p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <span class="font-bold">Marcelo</span> adiciona um
+                            <span class="text-green-700 font-bold">TIKAL</span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Lucas</span> adiciona um
+                            <span class="text-blue-700 font-bold">SURVIVE</span> e um
+                            <span class="text-orange-700 font-bold">LHAMA</span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Felipe</span> adiciona um
+                            <span class="text-yellow-700 font-bold">PUERTO RICO</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="arrow-down mt-4"></div>
+            <!-- ETAPA 2 -->
+            <div class="mt-3">
+                <div class="border border-gray-500 bg-gray-300 p-2">
+                    <p class="text-red-700 font-bold">ETAPA 2: DEFINIÇÃO E ENVIO DA SUA LISTA DE DESEJOS</p>
+                    <p class="text-sm">
+                        Escolha os jogos que deseja, e faça marcações indicando todos os itens que aceita em troca do
+                        seu item.
+                    </p>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <span class="font-bold">Marcelo</span> marca que tem interesse no
+                            <span class="text-blue-700 font-bold">SURVIVE</span> em troca do seu
+                            <span class="text-green-700 font-bold">TIKAL</span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Lucas</span> marca que tem interesse no
+                            <span class="text-yellow-700 font-bold">PUERTO RICO</span> em troca do seu
+                            <span class="text-blue-700 font-bold">SURVIVE</span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Felipe</span> marca que tem interesse no
+                            <span class="text-green-700 font-bold">TIKAL</span> em troca do seu
+                            <span class="text-yellow-700 font-bold">PUERTO RICO</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="arrow-down mt-4"></div>
+            <!-- ETAPA 3 -->
+            <div class="mt-3">
+                <div class="border border-gray-500 bg-gray-300 p-2">
+                    <p class="text-red-700 font-bold">ETAPA 3: EXECUÇÃO DO ALGORITMO E RESULTADO</p>
+                    <p class="text-sm">
+                        A organização vai usar executar um algoritmo matemático para calcular cadeias de trocas e gerar
+                        o maior número de trocas possíveis entre todos os participantes, considerando as listas de
+                        desejos submetidas e dará o resultado
+                    </p>
+                </div>
+                <div>
+                    <p>Considerando o nosso exemplo, o resultado seria:</p>
+                    <ul>
+                        <li>
+                            <span class="font-bold">Marcelo</span> receberá o
+                            <span class="text-blue-700 font-bold">SURVIVE</span> do
+                            <span class="font-bold">Lucas</span> e entregará o
+                            <span class="text-green-700 font-bold">TIKAL</span> para o
+                            <span class="font-bold">Felipe</span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Lucas</span> receberá o
+                            <span class="text-yellow-700 font-bold">PUERTO RICO</span> do
+                            <span class="font-bold">Felipe</span> e entregará o
+                            <span class="text-blue-700 font-bold">SURVIVE</span>
+                            <span class="font-bold">Marcelo</span>
+                        </li>
+                        <li>
+                            <span class="font-bold">Felipe</span> receberá o
+                            <span class="text-green-700 font-bold">TIKAL</span> do
+                            <span class="font-bold">Marcelo</span> e entregará o
+                            <span class="text-yellow-700 font-bold">PUERTO RICO</span> para o
+                            <span class="font-bold">Lucas</span>
+                        </li>
+                    </ul>
+                    <p>
+                        O <span class="font-bold">Lucas</span> não marcou nenhum jogo para ser trocado pelo seu
+                        <span class="text-orange-700 font-bold">LHAMA</span>. Com isso, o jogo não foi considerado no
+                        algoritmo e não entrou em nenhuma cadeia de troca.
+                    </p>
+                </div>
+            </div>
+            <div class="arrow-down mt-4"></div>
+            <!-- ETAPA 4 -->
+            <div class="mt-3">
+                <div class="border border-gray-500 bg-gray-300 p-2">
+                    <p class="text-red-700 font-bold">ETAPA 4: ENTREGA DOS JOGOS</p>
+                    <p class="text-sm">
+                        Respeitando o resultado do algoritmo, cada participante fica responsável por fazer a entrega dos
+                        seus jogos trocados para o novo dono.
+                    </p>
+                </div>
+                <p>
+                    Cada Math Trade possui regras específicas para essa etapa, por isso fique atento ao participar.
+                </p>
+            </div>
+        </section>
+        <hr class="w-80vw mx-auto my-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <!-- O QUE É PRECISO PARA PARTICIPAR -->
+            <section class="text-left md:border-r-2">
+                <h2 class="text-gray-900 font-extrabold text-2xl text-center">O QUE É PRECISO PARA PARTICIPAR?</h2>
+                <p>Para participar de uma Math Trade é preciso:</p>
+                <ol class="list-decimal pl-6">
+                    <li>
+                        Ter cadastro no site
+                        <a class="text-blue-600" href="https://boardgamegeek.com/" target="_blank">
+                            BoardGameGeek (BGG)
+                        </a>
+                        para adicionar seus jogos na lista de trocas da MT
+                    </li>
+                    <li>
+                        Conhecer e estar de acordo com todas as regras da MATH TRADE
+                    </li>
+                    <li>
+                        Estar dentro da área de cobertura de cada Math Trade ou atender
+                        os requisitos de retirada/entrega dos jogos estabelecida de
+                        acordo com cada Math Trade <br />
+                        <small>(ex: MT Belo Horizonte, MT Sudeste, MT Brasil)</small>
+                    </li>
+                    <li>
+                        Se comprometer com os prazos e datas de cada etapa da Math
+                        Trade.
+                    </li>
+                </ol>
+            </section>
+            <hr class="w-80vw mx-auto my-4 md:hidden">
+            <!-- INFORMAÇÕES IMPORTANTES -->
+            <section>
+                <h2 class="text-gray-900 font-extrabold text-2xl text-center">INFORMAÇÕES IMPORTANTES</h2>
+                <ul class="mt-2 list-disc pl-5">
+                    <li class="mb-3">
+                        Você <span class="text-red-700 font-bold">NUNCA</span> será obrigado a
+                        trocar nenhum jogo que colocou na lista durante a primeira etapa.
+                        <b>
+                            Se não quiser trocá-lo, basta não marcar nenhum jogo para trocar por ele nas etapas
+                            seguintes.
+                        </b>
+                    </li>
+                    <li class="mb-3">
+                        Você só vai receber os jogos que escolheu. Não existe a possibilidade de receber algo que você
+                        não tenha marcado na etapa de escolha de jogos.
+                        <b>
+                            Então fique extremamente atento nas suas marcações durante esta etapa.
+                        </b>
+                    </li>
+                    <li class="mb-3">
+                        A troca é sempre um por um, ou seja um item seu por outro item de outra pessoa. Para aumentar o
+                        valor de um item, muitos participantes montam pacotes em um único item.
+                        <span class="small fst-italic">
+                            (Entenda melhor essa opção no tutorial).
+                        </span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="bg-yellow-200 font-bold p-2 mt-2">
+            <b>ATENÇÃO!</b>
+            Uma vez que você tenha participado de todas as etapas, feito seleções de trocas e o algoritimo de o
+            resultado com um de seus jogos. Você NÃO poderá desistir da troca.
+        </div>
+        <hr class="w-80vw mx-auto my-4">
+        <!-- MAIS DETALHES DAS ETAPAS -->
+        <section>
+            <h2 class="text-gray-900 font-extrabold text-2xl text-center">DETALHES DE CADA UMA DAS ETAPAS</h2>
+            <div class="flex flex-col gap-3 mt-4">
+                <!-- Links para abrir os modais -->
+                <ul class="list-disc list-inside text-gray-700 space-y-4">
+                    <li>
+                        <a href="#" class="text-blue-600 hover:underline" onclick="openModal(event, 'modalEtapa1')">
+                            PRIMEIRA ETAPA: INCLUSÃO DE JOGOS NA LISTA DE TROCAS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-blue-600 hover:underline" onclick="openModal(event, 'modalEtapa2')">
+                            SEGUNDA ETAPA: DEFINIÇÃO E ENVIO DA SUA LISTA DE DESEJOS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-blue-600 hover:underline" onclick="openModal(event, 'modalEtapa3')">
+                            TERCEIRA ETAPA: RESULTADO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-blue-600 hover:underline" onclick="openModal(event, 'modalEtapa4')">
+                            QUARTA ETAPA: ENTREGA DOS JOGOS
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr class="w-80vw mx-auto my-4">
+        <!-- PROXIMOS PASSOS -->
+        <section class="flex flex-col gap-6 items-center justify-center w-full">
+            <div class="flex flex-col gap-3 items-center w-full">
+                <h2 class="text-green-900 font-extrabold text-2xl text-center">
+                    AGORA QUE JÁ SABE O QUE É UMA MATH TRADE
+                    <br>
+                    CONHEÇA REGRAS GERAIS PARA OFERTAR SEUS JOGOS E FAZER SUAS TROCAS
+                </h2>
+                <a href="/mathtrade-bh/regras-gerais" class="text-center w-1/2 mt-2">
+                    <img src="/src/img/mathtrade/regras-gerais-math-trade.jpeg" alt="Regras Gerais de uma Math Trade" />
+                </a>
+            </div>
+            <div class="flex flex-col gap-3 items-center w-full">
+                <h2 class="text-green-900 font-extrabold text-2xl text-center">
+                    APÓS A LEITURA DAS REGRAS, CASO QUEIRA PARTICIPAR DA NOSSA PRÓXIMA MATH TRADE,
+                    <br>
+                    FIQUE POR DENTRO DE TUDO CLICANDO NA IMAGEM ABAIXO.
+                </h2>
+                <a href="/mathtrade-bh/edicao-novembro-2024" class="text-center w-1/2 mt-2">
+                    <img src="/src/img/mathtrade/615x330-MT9.png" alt="Regras Math Trade Nona Edição" />
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPE -->
+    <footer class="bg-gray-800 relative w-full bottom-0">
+        <div class="px-3 py-5 max-w-[90vw] mx-auto grid md:grid-flow-col md:grid-cols-2 text-gray-300 gap-4">
+            <div>
+                <strong class="font-bold block mb-3 text-white">SOBRE O PROJETO</strong>
+                <span class="text-sm">
+                    O <strong class="font-semibold text-white">BoardgameBH</strong> é um projeto que tem como foco o
+                    crescimento e
+                    a visibilidade do Boardgame no país. O portal tem Belo Horizonte e região como carro chefe, mas não
+                    possui
+                    fronteiras, promovendo e realizando ações de amplo interesse e com um público espalhado por todo
+                    país, como
+                    torneios online, divulgação de lançamentos e conteúdo digital. Diversos braços do projeto ainda
+                    estão em
+                    desenvolvimento e em breve serão apresentados para o grande público. Enquanto isso, aproveite todas
+                    as
+                    funcionalidades liberadas e não deixe de apoiar esse e os demais projetos voltados para o nosso
+                    hobby.
+                    <strong class="font-semibold">Let’s Play!</strong>
+                </span>
+            </div>
+            <div class="flex flex-col justify-between">
+                <div>
+                    <strong class="block mb-3 text-white">APOIE</strong>
+                    <span class="text-sm">Entre em contato para ser um parceiro ou apoiador do projeto!</span>
+                </div>
+                <div>
+                    <div class="font-bold mt-4 mb-3 text-white">SIGA</div>
+                    <ul class="flex gap-4">
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/boardgamebh/" aria-label="Instagram">
+                                <i class="bi bi-instagram text-[24px] block hover:scale-125"></i>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a target="_blank" href="https://www.facebook.com/boardgamebh/" aria-label="Facebook">
+                                <i class="bi bi-facebook text-[24px] block hover:scale-125"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4 font-semibold">
+                    © BGBH 2020 - Todos os direitos reservados
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Modais -->
+    <div id="modalEtapa1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative">
+            <button class="absolute top-3 right-3 text-gray-500" onclick="closeModal('modalEtapa1')">✖</button>
+            <h3 class="text-xl font-bold text-green-600 mb-4">PRIMEIRA ETAPA</h3>
+            <p>Conteúdo da Primeira Etapa: INCLUSÃO DE JOGOS NA LISTA DE TROCAS...</p>
+        </div>
+    </div>
+
+    <div id="modalEtapa2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative">
+            <button class="absolute top-3 right-3 text-gray-500" onclick="closeModal('modalEtapa2')">✖</button>
+            <h3 class="text-xl font-bold text-blue-600 mb-4">SEGUNDA ETAPA</h3>
+            <p>Conteúdo da Segunda Etapa: DEFINIÇÃO E ENVIO DA SUA LISTA DE DESEJOS...</p>
+        </div>
+    </div>
+
+    <div id="modalEtapa3" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative">
+            <button class="absolute top-3 right-3 text-gray-500" onclick="closeModal('modalEtapa3')">✖</button>
+            <h3 class="text-xl font-bold text-yellow-600 mb-4">TERCEIRA ETAPA</h3>
+            <p>Conteúdo da Terceira Etapa: RESULTADO...</p>
+        </div>
+    </div>
+
+    <div id="modalEtapa4" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative">
+            <button class="absolute top-3 right-3 text-gray-500" onclick="closeModal('modalEtapa4')">✖</button>
+            <h3 class="text-xl font-bold text-red-600 mb-4">QUARTA ETAPA</h3>
+            <p>Conteúdo da Quarta Etapa: ENTREGA DOS JOGOS...</p>
+        </div>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script>
+        let scrollPosition = 0;
+
+        function openModal(event, modalId) {
+            event.preventDefault(); // Evita que o link redirecione a página
+            scrollPosition = window.pageYOffset; // Salva a posição atual do scroll
+            document.body.style.position = 'fixed'; // Impede o scroll
+            document.body.style.top = `-${scrollPosition}px`; // Ajusta a posição do body
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.body.style.position = ''; // Restaura o scroll
+            document.body.style.top = ''; // Remove a posição ajustada
+            window.scrollTo(0, scrollPosition); // Retorna à posição original do scroll
+            document.getElementById(modalId).classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
