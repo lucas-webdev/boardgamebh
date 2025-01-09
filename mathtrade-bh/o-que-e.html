@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/src/styles/main.scss" />
+    <link rel="icon" type="image/png" href="./favicon.ico">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
         class="sticky top-0 shadow-md z-50 px-4 py-3 flex items-center justify-between h-14 bg-black border-b-[#198754] border-b">
         <!-- Logo -->
         <div class="h-full">
-            <a href="/2025/">
+            <a href="/">
                 <img class="h-full w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
             </a>
         </div>
@@ -34,40 +35,40 @@
         <div class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
             id="hamburger-menu">
             <div class="flex justify-between">
-                <a href="/2025/">
+                <a href="/">
                     <img class="h-[40px] w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
                 </a>
                 <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
             </div>
-            <a href="/2025/" class="hover:text-gray-400">Início</a>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Sobre</a>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Iniciativas BGBH</a>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Eventos</a>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Contato</a>
+            <a href="/" class="hover:text-gray-400">Início</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Iniciativas BGBH</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
         </div>
 
         <!-- Menu MD/LG -->
         <div class="hidden text-white space-x-8 md:items-center md:flex">
-            <a href="/2025/" class="hover:text-gray-400">Início</a>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Sobre</a>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+            <a href="/" class="hover:text-gray-400">Início</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
             <div class="relative group">
                 <span class="hover:text-gray-400">Iniciativas BGBH</span>
                 <div
                     class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
-                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga
+                    <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga
                         no QG!</a>
-                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                    <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
                         Resenha com Jogatina
                     </a>
-                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                    <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
                         Outras iniciativas
                     </a>
                 </div>
             </div>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Eventos</a>
-            <a href="/2025/em-breve.html" class="hover:text-gray-400">Contato</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
+            <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
         </div>
     </nav>
     <!-- BANNER PRINCIPAL -->
@@ -399,34 +400,248 @@
 
     <!-- Modais -->
     <div id="modalEtapa1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative">
+        <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative overflow-y-auto max-h-[80vh]">
             <button class="absolute top-3 right-3 text-gray-500" onclick="closeModal('modalEtapa1')">✖</button>
-            <h3 class="text-xl font-bold text-green-600 mb-4">PRIMEIRA ETAPA</h3>
-            <p>Conteúdo da Primeira Etapa: INCLUSÃO DE JOGOS NA LISTA DE TROCAS...</p>
+            <h3 class="text-xl font-bold text-green-600 mb-4">PRIMEIRA ETAPA: INCLUSÃO DE JOGOS NA LISTA DE TROCAS</h3>
+            <p>
+                Durante a primeira etapa você preenche a lista com os seus jogos que deseja trocar. Lembrando que,
+                colocar os jogos na lista ainda não significa que você tem obrigação de trocá-los. É apenas um cadastro
+                do que você pretende ofertar.
+            </p>
+            <div class="flex justify-center items-center flex-col my-2">
+                <video width="320" height="240" controls="">
+                    <source src="https://www.bgbh.com.br/public/videos/math-trade-bh/2-como-adicionar-jogos.mp4"
+                        type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+                <small class="text-muted ms-3">
+                    Video retirado do
+                    <a href="https://www.youtube.com/channel/UCY4AO_6AUGiWmP3GocAdcFA" target="_blank">
+                        canal
+                    </a>
+                    Mesa Secreta. Para ficar por dentro de todo material produzido,
+                    não deixe de seguir o canal.
+                </small>
+            </div>
+            <p>
+                A inclusão pode ser feita diretamente na <b>GeekList do BGG</b>, no botão
+                <span class="italic">Add Item</span>
+            </p>
+            <p>
+                É super importante
+                <span class="font-bold">
+                    descrever completamente as características e condições do jogo.
+                </span>
+            </p>
+            <p>
+                Além disso, informe também:
+                <span class="font-bold">
+                    Edição/Versão, Idioma, Estado do jogo (lacrado, novo, usado) e outras informações relevantes.
+                </span>
+                <span class="italic">
+                    (Se está sleevado, se possui insert, se tem algum dano na
+                    caixa, quinas esbranquiçadas, mofo (tratado ou não), cartas
+                    amassadas, dados danificados, minis pintadas, componentes 3D, etc.)
+                </span>
+            </p>
+            <p class="mt-3">
+                Como explicado no vídeo, você também tem a opção de agrupar jogos em um único item, tentando aumentar o
+                seu valor de troca. Caso tenha dúvidas, procure os organizadores da MT.
+            </p>
         </div>
     </div>
 
     <div id="modalEtapa2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-        <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative">
+        <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative overflow-y-auto max-h-[80vh]">
             <button class="absolute top-3 right-3 text-gray-500" onclick="closeModal('modalEtapa2')">✖</button>
-            <h3 class="text-xl font-bold text-blue-600 mb-4">SEGUNDA ETAPA</h3>
-            <p>Conteúdo da Segunda Etapa: DEFINIÇÃO E ENVIO DA SUA LISTA DE DESEJOS...</p>
+            <h3 class="text-xl font-bold text-green-600 mb-4">
+                SEGUNDA ETAPA: DEFINIÇÃO E ENVIO DA SUA LISTA DE DESEJOS
+            </h3>
+            <p>
+                É o momento de <b>selecionar os jogos que deseja</b> e marcar por qual da sua lista você aceita trocar.
+                <br>
+                Não necessariamente <b>todos</b> os seus jogos serão trocados. Isso dependerá da
+                <b>escolha dos outros</b> participantes e do <b>algoritmo da Math Trade</b>.
+            </p>
+            <p class="mt-4">Exemplo:</p>
+            <p>
+                Você selecionará o jogo X, Y, W e Z que deseja receber. Depois irá indicar quais desses
+                <b>deseja receber em troca dos que cadastrou na PRIMEIRA ETAPA</b>.
+            </p>
+            <ul class="pl-6 list-disc">
+                <li>
+                    Para o seu <b>jogo A</b> você marcará que aceita receber os <b>jogos X e Y</b>.
+                </li>
+                <li>
+                    Para o seu <b>jogo B</b> nenhum foi compatível para você, logo você não
+                    marca nenhuma opção e ele não será trocado.
+                </li>
+                <li>
+                    Para o seu <b>jogo C</b> você marcará que aceita receber os jogos
+                    <b>jogos Y, W e Z</b>.
+                </li>
+            </ul>
+            <p class="font-bold mt-3">
+                Essa etapa tem 3 fases e todas essas fases são feitas no OLWLG, uma página que serve de ferramenta para
+                auxiliar a execução da Math Trade.
+                <br>
+                Nele são feitas a submissão da lista de desejos e também é onde o resultado das trocas é exibido.
+            </p>
+            <hr class="my-3">
+            <div id="fase_2.1">
+                <h4 class="font-bold text-blue-950 text-lg">
+                    FASE 2.1 - Seleção dos jogos que deseja receber
+                </h4>
+                <p>Nessa etapa você escolhe os jogos que pretende receber. Para isso: </p>
+                <ul class="list-disc pl-6">
+                    <li>
+                        Vá até a lista dos jogos sincronizados, clicando no ícone
+                        <img src="/img/math-trade/step3.jpeg" alt="step 3" class=" h-6 inline-block">
+                    </li>
+                    <li>
+                        Clique no ícone
+                        <img src="/img/math-trade/1click.png" alt="add item" class=" h-6 inline-block">
+                        para cada jogo que deseja incluir na lista dos jogos que pretende
+                        receber. (Pode também clicar no botão "Add")
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-3">
+            <div id="fase_2.2">
+                <h4 class="font-bold text-blue-950 text-lg">
+                    FASE 2.2 - Marcar os jogos que deseja trocar pelos seus
+                </h4>
+                <p>
+                    Nessa fase você faz marcações indicando quais jogos aceitaria em uma eventual troca pelos jogos que
+                    você cadastrou na primeira etapa.
+                </p>
+                <p class="mt-3">
+                    A tabela abaixo apresenta um exemplo de como funciona a essa marcação.
+                    <br>
+                    As <b>linhas</b> correspondem aos jogos que você adicionou na lista na fase 2.1 e que <b>gostaria de
+                        receber</b>.
+                    <br>
+                    As <b>colunas</b> correspondem aos seus jogos que você adicionou na <b>GeekList</b> durante a
+                    primeira etapa.
+                    <img src="/img/math-trade/exemplo-tabela.png" alt="tabela de trocas">
+                </p>
+                <p class="mt-2">
+                    Marcar o quadradinho indica que:
+                    <b>
+                        aceita enviar o seu jogo da coluna correspondente para receber o jogo da linha correspondente
+                    </b>. Em outras palavras, que você aceita uma possível troca do seu jogo (da coluna) pelo jogo
+                    marcado na linha.
+                    <br>
+                    <span class="text-sm">
+                        Nesse exemplo significa que aceito enviar o Pulsar 2849 para receber o Chaos in the Old
+                        World.
+                    </span>
+                </p>
+                <p class="my-4 bg-red-300 font-bold text-red-800 px-4 py-2">
+                    Tenha muita atenção nessa fase para não marcar jogos por engano! Esta é a seleção usada pelo
+                    algoritmo de trocas.
+                </p>
+                <p>
+                    Veja no vídeo abaixo um tutorial de como fazer a marcação dos jogos que você tem interesse.
+                </p>
+                <div class="flex justify-start items-center flex-col mb-2" id="escolher_jogos_interesse">
+                    <video width="320" height="240" controls="">
+                        <source
+                            src="https://www.bgbh.com.br/public/videos/math-trade-bh/3-escolhendo-jogos-que-tenho-interesse.mp4"
+                            type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                    <small class="text-muted ms-3">
+                        Video retirado do
+                        <a href="https://www.youtube.com/channel/UCY4AO_6AUGiWmP3GocAdcFA" target="_blank">
+                            canal
+                        </a>
+                        Mesa Secreta. Para ficar por dentro de todo material produzido,
+                        não deixe de seguir o canal.
+                    </small>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div id="fase_2.3">
+                <h4 class="font-bold text-blue-950 text-lg">
+                    FASE 2.3 - Confirmar suas escolhas e submeter a lista de desejos
+                </h4>
+                <p>
+                    É o momento de submeter a sua lista de desejos, confirmando o envio das marcações feitas na fase
+                    anterior.
+                </p>
+                <p>
+                    Para isso é preciso:
+                </p>
+                <ul class="list-disc pl-6 mb-3">
+                    <li>
+                        Clicar no botão verde
+                        <span class="bg-green-600 text-white font-semibold px-1">How to Submit Your Lists</span>
+                    </li>
+                    <li>
+                        Em seguida, clicar no botão <span class="italic font-semibold">"Submit My Wants"</span> .
+                    </li>
+                </ul>
+                <img src="/img/math-trade/how-to-submit.png" alt="submiter lista de trocas">
+                <p>
+                    Após clicar no "Submit My Wants" é apresentada uma
+                    <b>mensagem de confirmação</b> de envio da sua lista e você receberá uma mensagem no
+                    <b>BGG (BoardGameGeek)</b>.
+                </p>
+                <p>
+                    Entre no BGG e confira se recebeu a mensagem para ter a certeza de que
+                    <b>realizou o envio/submissão da sua lista de desejos corretamente</b> e ela foi identificada pelo
+                    sistema.
+                </p>
+            </div>
         </div>
     </div>
 
     <div id="modalEtapa3" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
         <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative">
             <button class="absolute top-3 right-3 text-gray-500" onclick="closeModal('modalEtapa3')">✖</button>
-            <h3 class="text-xl font-bold text-yellow-600 mb-4">TERCEIRA ETAPA</h3>
-            <p>Conteúdo da Terceira Etapa: RESULTADO...</p>
+            <h3 class="text-xl font-bold text-green-600 mb-4">TERCEIRA ETAPA: RESULTADO</h3>
+            <p>
+                A terceira etapa consiste no seguinte:
+            </p>
+            <ul class="list-disc pl-6 mt-2">
+                <li>
+                    A organização da Math Trade irá executar o algoritmo de trocas, com auxílio da plataforma do OLWLG.
+                </li>
+                <li>
+                    O sistema irá interpretar o resultado do algoritmo e definir o resultado, exibindo uma lista com
+                    todas as trocas.
+                </li>
+                <li>
+                    Após esse resultado é <b>obrigatório</b> o envio dos jogos. Não é possível desistir de alguma troca
+                    descrita no resultado final.
+                </li>
+            </ul>
+            <p class="mt-3 font-semibold text-red-900">
+                Essa é uma etapa feita somente pelos administradores da Math Trade e o link com o resultado é enviado
+                para todos do grupo, ficando também disponível diretamente no OLWLG.
+            </p>
+
         </div>
     </div>
 
     <div id="modalEtapa4" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
         <div class="bg-white rounded-lg shadow-lg w-3/4 p-6 relative">
             <button class="absolute top-3 right-3 text-gray-500" onclick="closeModal('modalEtapa4')">✖</button>
-            <h3 class="text-xl font-bold text-red-600 mb-4">QUARTA ETAPA</h3>
-            <p>Conteúdo da Quarta Etapa: ENTREGA DOS JOGOS...</p>
+            <h3 class="text-xl font-bold text-green-600 mb-4">QUARTA ETAPA: ENTREGA DOS JOGOS</h3>
+            <p class="mb-2">
+                Após a divulgação do resultado oficial é chegado o momento da entrega dos jogos.
+            </p>
+            <p class="mb-2">
+                <span class="font-semibold">Cada Math Trade possui regras específicas para essa etapa.</span>
+                Algumas definem um dia e local para que todos façam as trocas presencialmente, outras definem um prazo
+                para o envio utilizando algum serviço de entrega, como transportadoras e correios.
+            </p>
+            <p class="font-semibold">
+                Por esse motivo fique atento às especificações de entrega que cada MATH TRADE possui.
+            </p>
         </div>
     </div>
 

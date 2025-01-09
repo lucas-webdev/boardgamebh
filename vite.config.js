@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-  base: "2025/",
+  base: "/",
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
