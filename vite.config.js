@@ -14,6 +14,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         sobre: resolve(__dirname, "sobre/index.html"),
+        "bgbh-masters": resolve(__dirname, "bgbh-masters/index.html"),
         "em-breve": resolve(__dirname, "em-breve.html"),
         "mathtrade-bh/o-que-e": resolve(__dirname, "mathtrade-bh/o-que-e.html"),
         "mathtrade-bh/regras-gerais": resolve(
