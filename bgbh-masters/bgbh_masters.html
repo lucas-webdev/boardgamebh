@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://bgbh.com.br/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boardgame BH (BGBH)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+</head>
+
+<body>
+    <nav
+        class="sticky top-0 shadow-md z-50 px-4 py-3 flex items-center justify-between h-14 bg-black border-b-[#198754] border-b">
+        <!-- Logo -->
+        <div class="h-full">
+            <a href="/">
+                <img class="h-full w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+            </a>
+        </div>
+
+        <!-- Botão Hambúrguer -->
+        <button id="menu-toggle" class="text-white block md:hidden">
+            <i class="bi bi-list text-3xl"></i>
+        </button>
+
+        <!-- Menu XS/SM -->
+        <div class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
+            id="hamburger-menu">
+            <div class="flex justify-between">
+                <a href="/">
+                    <img class="h-[40px] w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+                </a>
+                <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
+            </div>
+            <a href="/" class="hover:text-gray-400">Início</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Sobre</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Iniciativas BGBH</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Eventos</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Contato</a>
+        </div>
+
+        <!-- Menu MD/LG -->
+        <div class="hidden text-white space-x-8 md:items-center md:flex">
+            <a href="/" class="hover:text-gray-400">Início</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Sobre</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+            <div class="relative group">
+                <span class="hover:text-gray-400">Iniciativas BGBH</span>
+                <div
+                    class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
+                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga
+                        no
+                        QG!</a>
+                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                        Resenha com Jogatina
+                    </a>
+                    <a href="/2025/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                        Outras iniciativas
+                    </a>
+                </div>
+            </div>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Eventos</a>
+            <a href="/2025/em-breve.html" class="hover:text-gray-400">Contato</a>
+        </div>
+    </nav>
+    <header class="header-home h-[calc(90vh-56px)] relative flex flex-col items-center justify-evenly">
+        <div class="bg-black absolute top-0 h-[calc(90vh-56px)] w-full opacity-65"></div>
+        <!-- BANNER PRINCIPAL -->
+        <div class="flex flex-col items-center justify-center relative h-[calc(80vh-56px)] text-white">
+            <img class="h-[150px]" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+            <span class="mt-5">O seu portal de jogos de tabuleiro</span>
+            <div class="flex justify-around px-5 w-full mt-20 font-[600] text-2xl">
+                <section class="flex flex-col items-center gap-5 px-2 text-center">
+                    <i class="flex bi bi-arrow-repeat border border-white p-3 text-[30px] w-14 h-14"></i>
+                    Math Trade BH
+                    <span class="font-normal text-sm text-gray-400">
+                        Organizamos a já tradicional Math Trade Belo Horizonte regularmente
+                    </span>
+                </section>
+                <section class="flex flex-col items-center gap-5 px-2 text-center">
+                    <i class="flex bi bi-dice-6 border border-white p-3 text-[30px] w-14 h-14"></i>
+                    Encontros de Jogatina
+                    <span class="font-normal text-sm text-gray-400">
+                        Temos encontros regulares para confraternização e jogatina entre amigos
+                    </span>
+                </section>
+                <section class="hidden flex-col items-center gap-5 px-2 text-center md:flex">
+                    <i class="flex bi bi-chat-square-dots border border-white p-3 text-[30px] w-14 h-14"></i>
+                    Grupos de discussão
+                    <span class="font-normal text-sm text-gray-400">
+                        Muita conversa, notícias, trocas e vendas e muito mais nos nossos grupos
+                    </span>
+                </section>
+            </div>
+        </div>
+        <div class="relative text-white text-center animate__animated animate__fadeInDown animate__infinite">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- CONTEUDO PRINCIPAL -->
+    <main class="py-6">
+        <section class="py-6 max-w-[90vw] mx-auto">
+            <h1 class="text-green-900 font-extrabold text-3xl text-center">BGBH MASTERS - BGA</h1>
+            <p>
+                O BGBH Masters - BGA consiste em temporadas de torneios online, disputados no
+                <a href="https://boardgamearena.com/lobby" target="_blank">Board Game Arena (BGA)</a>
+            </p>
+            <p>
+                Para você que gosta de jogar torneios em modo turnos, interagir com outros jogadores, conhecer jogos
+                novos e se desafiar, essa é uma excelente oportunidade.
+            </p>
+        </section>
+        <section class="py-6 max-w-[90vw] mx-auto">
+            <h2 class="text-2xl text-center font-bold">COMO PARTICIPAR</h2>
+            <p>
+                Para participar é preciso:
+            </p>
+            <ul class="list-disc pl-6">
+                <li>
+                    Ter conta no
+                    <a class="text-blue-600" href="https://boardgamearena.com/lobby" target="_blank">
+                        Board Game Arena (BGA)
+                    </a>
+                </li>
+                <li>
+                    Estar atento e de acordo com as regras descritas nesta página
+                </li>
+                <li>
+                    Se registrar nos torneios de interesse após receber o convite ou o link para acesso.
+                </li>
+            </ul>
+        </section>
+        <section class="bg-slate-800 py-6">
+            <div class="text-white mx-auto max-w-[90vw]">
+                <h2 class="text-2xl text-center font-bold mb-5">REGRAS GERAIS</h2>
+                <ol class="list-decimal list-inside space-y-4">
+                    <li>
+                        O <strong>BGBH Masters</strong> poderá ser disputado por todos os jogadores que tenham
+                        interesse, sem limite de idade,
+                        que se registrarem em pelo menos 1 torneio, preenchendo a planilha da <strong>temporada
+                            atual</strong>.
+                    </li>
+                    <li>
+                        Serão enviados por e-mail os convites de todos os torneios que farão parte do
+                        calendário de jogos do <strong class="text-green-400">BGBH Masters</strong> em cada temporada.
+                    </li>
+                    <li>
+                        Cada jogador poderá efetuar o registro nos torneios que desejar mesmo que não os tenha escolhido
+                        na fase inicial de pré-inscrição.
+                    </li>
+                    <li>
+                        Cada torneio será disputado em modo por turnos, com a duração total de 10 a 30 dias (5 a 10 dias
+                        por jogador).
+                    </li>
+                    <li>
+                        As horas de jogo serão entre 12h00 e 00h00 (Horário de Brasília).
+                        Nas outras 12 horas (entre 00h00 e 12h00), os jogadores podem continuar a jogar, mas o relógio
+                        mantém-se parado.
+                    </li>
+                    <li>
+                        Cada torneio será disputado em sistema suíço, com um número de rodadas
+                        correspondente ao número de jogadores esperados, de acordo com a pré-inscrição e
+                        torneios anteriores.
+                    </li>
+                    <li>
+                        Caso um torneio não cumpra o estipulado no ponto anterior, precisando de mais uma
+                        rodada, devido a ter mais jogadores do que o esperado, no final do torneio, e caso haja
+                        jogadores com vitórias em todas as partidas, será realizada uma final entre os jogadores
+                        nessas circunstâncias.
+                    </li>
+                    <li>
+                        Caso o tempo limite de um jogador se esgote, ficando a vermelho, em contagem negativa, o
+                        jogador <strong class="text-yellow-700"> NÃO DEVE</strong> ser expulso da mesa.
+                        Um jogador só pode ser expulso com autorização da Organização.
+                    </li>
+                    <li>
+                        Nos jogos com 3 ou mais jogadores em que o tempo limite para a conclusão da partida está
+                        a acabar (quando faltarem 2 ou menos dias para o final e parecer óbvio que, ao ritmo em
+                        que está, a partida não vai acabar), os jogadores devem primeiro
+                        <strong class="text-yellow-700"> contactar a ORGANIZAÇÃO</strong>
+                        para pedir permissão para expulsar o jogador, a fim de evitar que as posições finais sejam
+                        atribuídas pelo BGA com base no tempo restante.
+                    </li>
+                    <li>
+                        Qualquer expulsão de uma partida
+                        <strong class="text-yellow-700">não autorizada pela Organização</strong>
+                        deverá ser justificada à Organização pelo jogador que expulsou. A ausência de justificação ou
+                        uma justificação não aceita pela Organização poderá implicar uma penalização para o autor da
+                        expulsão.
+                    </li>
+                    <li>
+                        Os jogadores inscritos que causarem o não término das mesas dentro do tempo limite, devido à
+                        <strong class="text-yellow-700">ausência de jogadas ou baixo número de jogadas</strong>,
+                        e forem expulsos das mesas serão impedidos de participar na temporada seguinte.
+                        <br>
+                        Exceção: Jogadores que forem expulsos e apresentarem justificativas plausíveis terão o caso
+                        analisado pela organização e podem receber um parecer favorável a participação na próxima
+                        temporada.
+                    </li>
+                    <li>
+                        O conhecimento das regras e mecânicas de cada jogo no BGA é de
+                        <strong>total responsabilidadedos jogadores.</strong>
+                    </li>
+                    <li>
+                        Qualquer falha ou erro ocorrido durante um jogo/torneio será analisado pela Organização.
+                    </li>
+                    <li>
+                        Caso se verifiquem situações em que a Organização considere que algum jogador teve um
+                        comportamento incorreto, como utilizar a gestão do tempo de jogo a seu favor para ganhar
+                        pela falta de tempo do adversário, os resultados do jogador infrator nesse torneio não
+                        serão considerados, ficando como se ele não tivesse participado.
+                    </li>
+                    <li>
+                        Abusos graves ou repetidos por parte de um jogador na comunidade, ou um comportamento
+                        fora dos valores do <strong class="text-green-400">BGBH</strong> e
+                        respectivas regras, poderão resultar na desqualificação desse jogador e no impedimento
+                        de participação em futuras competições.
+                    </li>
+                    <!-- <li>
+                        A classificação para o apuramento do Vencedor do <strong>BGBH Masters - Temporada
+                            1</strong> e demais posições será definida pelo somatório das até 10 melhores
+                        pontuações obtidas entre todos os torneios disputados.
+                    </li>
+                    <li>As pontuações referidas no ponto anterior são calculadas aplicando a seguinte fórmula:
+                        <br>
+                        <code>Pontuação BGBH Masters de cada torneio = 100 x [(N + 5) / (N + 6)] x [(N – P) / (N – 1)]</code>
+                        <br>Onde: <br>
+                        <strong>N</strong> = Número de jogadores registrados no torneio<br>
+                        <strong>P</strong> = Posição final do jogador no evento. Caso o jogador termine empatado
+                        em pontuação com outro(s) jogador(es), então <strong>P</strong> será a média das
+                        posições finais com as quais ele empatou (por exemplo, 3 jogadores terminando empatados
+                        nas posições 10 a 12, P = (10+11+12) / 3 = 11).
+                    </li>
+                    <li>
+                        As pontuações e classificações poderão ser consultadas em <a
+                            href="https://tinyurl.com/BGBH-FILES-1" class="text-blue-500 underline"
+                            target="_blank">https://tinyurl.com/BGBH-FILES-1</a>.
+                    </li> -->
+                    <li>
+                        A Organização,
+                        <strong>
+                            no caso de erros ou omissões no Regulamento ou situações inesperadas que aconteçam durante a
+                            Temporada,
+                            reserva-se o direito de revisar o Regulamento ou corrigir algo que não esteja adequado,
+                        </strong>
+                        informando a comunidade do <strong class="text-green-400">BGBH Masters</strong>
+                        dessas alterações pelos meios de contato à nossa disposição.
+                    </li>
+                </ol>
+            </div>
+        </section>
+        <section class="py-6 max-w-[90vw] mx-auto">
+            <h2 class="text-2xl text-center font-bold">REGRAS E CALENDÁRIO DA TEMPORADA 1</h2>
+            <div class="flex flex-col gap-3">
+                <div>
+                    <p class="font-bold">PRÉ INSCRIÇÃO NOS TORNEIOS</p>
+                    <p>
+                        <i class="bi bi-calendar"></i>
+                        20/01/2025 a 03/02/2025
+                    </p>
+                </div>
+                <div>
+                    <p class="font-bold mt-3">INÍCIO DOS TORNEIOS</p>
+                    <p>
+                        <i class="bi bi-calendar"></i>
+                        10/02/2025 - 19 horas
+                    </p>
+                </div>
+                <hr>
+                <p>
+                    - Cada torneio terá início em um dia da semana, sempre as 19 horas.
+                    <br>
+                    <small>
+                        (Exemplo: Um torneio terá inicio na segunda-feira, outro na terça-feira, outro na quarta-feira
+                        etc)
+                    </small>
+                </p>
+                <p>
+                    - Durante os finais de semana não haverá início de novos torneios, mas as partidas em andamento
+                    continuam.
+                </p>
+                <hr>
+                <p class="font-bold">
+                    LINK PARA PLANILHA DE PRÉ-INSCRIÇÃO DA TEMPORADA 1
+                    <span class="text-red-600 block">
+                        Leia a aba de regras da planilha para ver mais detalhes desta temporada
+                    </span>
+                    <a class="text-white bg-green-700 block px-3 py-2 max-w-[250px] text-center hover:bg-green-800"
+                        href="https://docs.google.com/spreadsheets/d/1uIPg3T1aEjvhLgt3iOupPAqbk6y0zkIyN5s27_-Ua9s/edit?gid=2019419401#gid=2019419401"
+                        target="_blank">
+                        QUERO ME INSCREVER
+                    </a>
+                </p>
+            </div>
+            <hr class="my-5">
+            <div class="flex flex-col md:flex-row gap-5">
+                <div>
+                    <p class="font-bold">ORGANIZAÇÃO</p>
+                    <p>
+                        <a href="https://www.instagram.com/boardgamebh/" target="_blank">
+                            <img class="size-24" src="../src/img/logo/bgbh-negativo.png" alt="BGBH">
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <p class="font-bold">APOIO</p>
+                    <p>
+                        <a href="https://www.instagram.com/vamosjogarboardgame/" target="_blank">
+                            <img class="size-20" src="/src/img/parceiros/logo_VJBG_fundo_transparente.png"
+                                alt="Vamos Jogar Boardgame">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPE -->
+    <footer class="bg-gray-800 bottom-0 relative w-full">
+        <div class="px-3 py-5 max-w-[90vw] mx-auto grid md:grid-flow-col md:grid-cols-2 text-gray-300 gap-4">
+            <div>
+                <strong class="font-bold block mb-3 text-white">SOBRE O PROJETO</strong>
+                <span class="text-sm">
+                    O <strong class="font-semibold text-white">BoardgameBH</strong> é um projeto que tem como foco o
+                    crescimento e
+                    a visibilidade do Boardgame no país. O portal tem Belo Horizonte e região como carro chefe, mas não
+                    possui
+                    fronteiras, promovendo e realizando ações de amplo interesse e com um público espalhado por todo
+                    país, como
+                    torneios online, divulgação de lançamentos e conteúdo digital. Diversos braços do projeto ainda
+                    estão em
+                    desenvolvimento e em breve serão apresentados para o grande público. Enquanto isso, aproveite todas
+                    as
+                    funcionalidades liberadas e não deixe de apoiar esse e os demais projetos voltados para o nosso
+                    hobby.
+                    <strong class="font-semibold">Let’s Play!</strong>
+                </span>
+            </div>
+            <div class="flex flex-col justify-between">
+                <div>
+                    <strong class="block mb-3 text-white">APOIE</strong>
+                    <span class="text-sm">Entre em contato para ser um parceiro ou apoiador do projeto!</span>
+                </div>
+                <div>
+                    <div class="font-bold mt-4 mb-3 text-white">SIGA</div>
+                    <ul class="flex gap-4">
+                        <li>
+                            <a target="_blank" href="https://www.instagram.com/boardgamebh/" aria-label="Instagram">
+                                <i class="bi bi-instagram text-[24px] block hover:scale-125"></i>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a target="_blank" href="https://www.facebook.com/boardgamebh/" aria-label="Facebook">
+                                <i class="bi bi-facebook text-[24px] block hover:scale-125"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4 font-semibold">
+                    © BGBH 2020 - Todos os direitos reservados
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/home.js"></script>
+</body>
+
+</html>
