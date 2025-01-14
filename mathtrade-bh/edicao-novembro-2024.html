@@ -1,498 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="MATH TRADE BELO HORIZONTE - 9a edição by BoardgameBH [BGBH].">
-    <meta property="og:title" content="MATH TRADE BGBH - BGBH" />
-    <meta property="og:site_name" content="BoardgameBH [BGBH]" />
-    <meta property="og:url" content="https://bgbh.com.br/mathtradebh.html" />
-    <meta property="og:description" content="MATH TRADE BELO HORIZONTE - 9a edição" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://bgbh.com.br/public/images/math-trade/logo.jpg" />
-    <link rel="canonical" href="https://bgbh.com.br/mathtradebh.html">
-    <title>BoardgameBH [BGBH]</title>
-    <link rel="icon" type="image/png" href="./favicon.ico" />
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <!-- External CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-..." crossorigin="anonymous" />
-    <link href="https://unpkg.com/aos@latest/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../public/css/styles.css" />
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-187241035-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-187241035-1');
-    </script>
-  </head>
 
-  <body class="mathtrade-page bg-white">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"> MATH TRADE BGBH </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_blank">BGBH</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="https://bgbh.com.br/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoardgameBH [BGBH]</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="canonical" href="https://bgbh.com.br/mathtradebh/edicao-novembro-2024.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/src/styles/main.scss" />
+  <!-- OG Tags -->
+  <meta name="description" content="MATH TRADE BELO HORIZONTE - 9a edição por BoardgameBH [BGBH].">
+  <meta property="og:title" content="MATH TRADE BGBH - BGBH" />
+  <meta property="og:site_name" content="BoardgameBH [BGBH]" />
+  <meta property="og:url" content="https://bgbh.com.br/mathtradebh.html" />
+  <meta property="og:description" content="MATH TRADE BELO HORIZONTE - 9a edição" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bgbh.com.br/public/images/math-trade/logo.jpg" />
+</head>
+
+<body class="mathtrade-page bg-white">
+  <nav
+    class="sticky top-0 shadow-md z-50 px-4 py-3 flex items-center justify-between h-14 bg-black border-b-[#198754] border-b">
+    <!-- Logo -->
+    <div class="h-full">
+      <a href="/">
+        <img class="h-full w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+      </a>
+    </div>
+
+    <!-- Botão Hambúrguer -->
+    <button id="menu-toggle" class="text-white block md:hidden">
+      <i class="bi bi-list text-3xl"></i>
+    </button>
+
+    <!-- Menu XS/SM -->
+    <div
+      class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
+      id="hamburger-menu">
+      <div class="flex justify-between">
+        <a href="/">
+          <img class="h-[40px] w-auto" src="src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+        </a>
+        <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
+      </div>
+      <a href="/" class="hover:text-gray-400">Início</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Iniciativas BGBH</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
+    </div>
+
+    <!-- Menu MD/LG -->
+    <div class="hidden text-white space-x-8 md:items-center md:flex">
+      <a href="/" class="hover:text-gray-400">Início</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+      <div class="relative group">
+        <span class="hover:text-gray-400">Iniciativas BGBH</span>
+        <div class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
+          <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga no QG!</a>
+          <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Resenha com Jogatina
+          </a>
+          <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Outras iniciativas
+          </a>
+        </div>
+      </div>
+      <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
+    </div>
+  </nav>
+  <!-- imagem topo -->
+  <div class="imagemTopo">
+    <img src="/img/math-trade/imagem-topo.png" alt="Math Trade BGBH" />
+  </div>
+  <!-- ./imagem topo -->
+
+  <main class="pt-6">
+    <section class="py-6 max-w-[90vw] mx-auto" id="nona_edicao">
+      <h1 class="text-green-900 font-extrabold text-3xl text-center mb-5">
+        MATH TRADE BGBH - 9ª Edição - Novembro 2024
+      </h1>
+      <p>
+        É hora de trocar aqueles jogos parados na estante na 9ª edição da nossa MathTrade!
+      </p>
+      <div class="border border-red-500 px-3 py-2 font-bold mt-2">
+        <span class="text-red-700">IMPORTANTE!</span>
+        Se for a sua primeira Math Trade, é imprescindível ler, se ainda não o fez, as nossas páginas explicativas:
+        <a class="text-blue-700 hover:text-blue-900" href="/mathtrade-bh/o-que-e.html">O que é uma Math Trade</a> e
+        <a class="text-blue-700 hover:text-blue-900" href="/mathtrade-bh/regras-gerais.html">Regras Gerais de uma Math
+          Trade</a>
+      </div>
+    </section>
+    <section class="py-6 max-w-[90vw] mx-auto" id="regras_especificas">
+      <h2 class="text-2xl text-center font-bold mb-5">REGRAS ESPECÍFICAS DA MATH TRADE BGBH - 9ª EDIÇÃO</h2>
+      <div>
+        <ul class="list-disc pl-6 flex flex-col gap-3">
+          <li>
+            É <strong>imprescindível</strong> que os participantes da Math Trade BGBH possam
+            <strong>entregar e retirar seus jogos em Belo Horizonte.</strong>
+            Não é vetada a participação de pessoas de fora da cidade desde que elas consigam
+            atender as regras de entrega dentro do prazo estabelecido.
+          </li>
+          <li>
+            Os participantes que
+            <strong>NÃO possuírem cadastro para a Math Trade</strong>
+            serão removidos da geeklist.
+          </li>
+          <li>
+            Ao adicionar uma <strong>EXPANSÃO</strong>, antes de
+            descrevê-la, indique já na <b>PRIMEIRA FRASE</b> do item essa
+            informação com a frase
+            <br>
+            <span class="bg-yellow-300 text-red-500 font-bold">
+              ESTE ITEM É UMA EXPANSÃO, SENDO NECESSÁRIO O JOGO BASE PARA UTILIZÁ-LO
+            </span>
+            , grifando-o de amarelo e o texto de cor vermelha, como no
+            exemplo abaixo:
+            <figure class="mt-2">
+              <img src="/img/math-trade/exemplo-expansao.png" alt="exemplo expansao grifada">
+              <figcaption>Fig.1 - Exemplo de expansão adicionada. Expansões sem essa informação poderão ser removidas
+                sem aviso prévio pelos moderadores antes da liberação da segunda etapa no momento da revisão, no entanto
+                caso algum item passe despercebido nessa revisão, os moderadores não serão responsabilizados por
+                eventuais trocas realizadas por esses itens.
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            Participantes que
+            <strong>NÃO estiverem no grupo de informações SEM CHAT</strong>
+            da MathTrade serão removidos da geeklist.
+            <span class="block">
+              (O Grupo COM Chat, embora muito útil para algumas pessoas durante o processo, é opcional)
+            </span>
+          </li>
+          <li>
+            Fique atento ao cronograma de entrega dos jogos que estabelece que nesta edição os jogos devem ser
+            <strong>entregues até as 17h de sábado, dia 23 de Novembro.</strong>
+            e que sofre pequenas alterações em cada edição.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="bg-green-950 py-6">
+      <div class="text-white mx-auto max-w-[90vw] grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="border border-gray-300 px-3 py-2">
+          <h2 class="text-2xl text-center font-bold mb-5">O QUE SERÁ PERMITIDO NESTA EDIÇÃO</h2>
+          <ul class="list-disc flex flex-col gap-3 pl-6">
+            <li>
+              Até <b>TRÊS</b> ofertas em <b>DINHEIRO</b> serão permitidas como
+              itens de troca nesta edição. Esses itens deverão ser cadastrados
+              individualmente como <span class="italic">OUTSIDE SCOPE OF BGG</span> (código 23953)
+              e o pagamento deverá ser realizado por <b>PIX</b>.
+              <span class="block mt-2">
+                obs: O BGG exige o pagamento de taxas para o site em caso de trocas em dinheiro. Consulte o site ou nos
+                grupos de whatsapp como essa taxa deve ser paga.
+              </span>
             </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://www.instagram.com.br/ludocafebh"
-                target="_blank"
-                >LudoCafe</a
-              >
+            <li>
+              <b>Livros de RPG e acessórios relacionados a boardgame</b>
+              poderão ser adicionados apenas nas <b>últimas 12 horas</b> da
+              primeira etapa e devem ser cadastrados através do código 23953
+              ("Outside the scope of BGG"). Itens cadastrados descumprindo
+              essa regra serão removidos da geeklist sem aviso prévio.
+            </li>
+          </ul>
+        </div>
+        <div class="border border-gray-300 px-3 py-2">
+          <h2 class="text-2xl text-center font-bold mb-5">
+            O QUE <span class="bold text-red-500">NÃO</span> SERÁ PERMITIDO NESTA EDIÇÃO
+          </h2>
+          <ul class="list-disc pl-6 flex flex-col gap-3">
+            <li>
+              Não é permitido a criação de pacotes contendo DINHEIRO + JOGOS.
+            </li>
+            <li>
+              É <b class="text-red-500">PROIBIDO</b> fazer a seleção de
+              <b>DINHEIRO por DINHEIRO</b>. Caso uma troca dessa natureza seja
+              identificada, <span class="danger">o responsável será excluído da próxima MathTrade</span>
+              e receberá o mesmo valor que ofertou, impossibilitando qualquer tipo de lucro com essa prática.
+            </li>
+            <li>
+              Não será permitido o cadastro de <b>cartas promocionais</b> como itens isolados. Os mesmos ainda poderão
+              ser ofertados dentro de pacotes de jogos.
+            </li>
+            <li>
+              Não será permitido o cadastro de cartas avulsas ou decks dos
+              seguintes cardgames nesta edição:
+              <br />
+              <b>
+                Magic: The Gathering, Keyforge, Star Wars Destiny, Pokemon,
+                Yu-Gi-Oh!, Battle Scenes, VTES e Flash and Blood
+              </b>
+              <br />
+              Os demais cardgames seguem permitidos na geeklist.
             </li>
           </ul>
         </div>
       </div>
-    </nav>
-    <!-- imagem topo -->
-    <div class="imagemTopo">
-      <img
-        src="../public/images/math-trade/imagem-topo.png"
-        alt="Math Trade BGBH - BGBH e Ludocafe"
-      />
-    </div>
-    <!-- ./imagem topo -->
-
-    <div class="pattern-default">
-      <div class="container boxed-container py-4">
-        <div class="row mt-4">
-          <div class="col-12">
-            <h1 class="specialTitle text-center text-success">
-              MATH TRADE BGBH - 9ª Edição - Novembro 2024
-            </h1>
-            <p>
-              É hora de trocar aqueles jogos parados na estante na 8ª edição da
-              nossa MathTrade!
-            </p>
-            <p class="bold border border-danger p-2 mb-4">
-              <span class="text-danger">IMPORTANTE!</span> Antes de ir adiante,
-              precisamos saber se é a sua primeira Math Trade. Caso seja, não
-              deixe de conferir primeiro as páginas que explicam
-              <a
-                href="/mathtrade-bh/o-que-e.html"
-                class="badge bg-danger text-decoration-none button-link-on-text"
-                target="_blank"
-              >
-                O QUE É UMA MATH TRADE
-              </a>
-              e também a página de
-              <a
-                href="/mathtrade-bh/regras-gerais.html"
-                target="_blank"
-                class="badge bg-danger text-decoration-none button-link-on-text"
-              >
-                REGRAS GERAIS DE UMA MATH TRADE
-              </a>
-            </p>
-          </div>
-          <div class="col-12" id="regras-especificas">
-            <h5 class="bold">REGRAS ESPECÍFICAS DA MATH TRADE BGBH (9ª Ed.)</h5>
-            <ul class="mt-3">
-              <li>
-                É <b>imprescindível</b> que os participantes da Math Trade BGBH
-                possam <b>entregar e retirar seus jogos em Belo Horizonte </b>.
-                Não é vetada a participação de pessoas de fora da cidade desde
-                que elas consigam atender as regras de entrega dentro do prazo
-                estabelecido.
-              </li>
-              <li>
-                Ao adicionar uma <span class="bold">EXPANSÃO</span>, antes de
-                descrevê-la, indique já na <b>PRIMEIRA FRASE</b> do item essa
-                informação com a frase
-                <span class="yellow-highlight bold danger">
-                  ESTE ITEM É UMA EXPANSÃO, SENDO NECESSÁRIO O JOGO BASE PARA
-                  UTILIZÁ-LO </span
-                >, grifando-o de amarelo e o texto de cor vermelha, como no
-                exemplo abaixo:
-                <br />
-                <img
-                  src="../public/images/math-trade/exemplo-expansao.png"
-                  alt="exemplo expansao grifada"
-                />
-                <br />
-                <em>
-                  Expansões sem essa informação poderão ser removidas sem aviso prévio pelos moderadores antes da liberação da segunda
-                  etapa no momento da revisão, no entanto caso algum item passe despercebido nessa revisão, os moderadores não serão
-                  responsabilizados por eventuais trocas realizadas por esses itens.
-                </em>
-              </li>
-              <li>
-                Os participantes que
-                <b>NÃO possuírem cadastro para a Math Trade</b> serão removidos
-                da geeklist.
-              </li>
-              <li>
-                Participantes que
-                <b>NÃO estiverem no grupo de informações SEM CHAT</b>
-                da MathTrade serão removidos da geeklist. (O Grupo <b>COM</b>
-                Chat, embora muito útil para algumas pessoas durante o processo,
-                é opcional)
-              </li>
-              <li>
-                Fique atento ao cronograma de entrega dos jogos que estabelece
-                que nesta edição os jogos
-                <b
-                  >devem ser entregues até as 17h de sábado, dia 23 de
-                  Novembro</b
-                >
-                e que sofre pequenas alterações em cada edição.
-              </li>
-            </ul>
-            <hr />
-            <h5 class="bold mt-3">O QUE SERÁ PERMITIDO NESTA EDIÇÃO</h5>
-            <ul class="mt-3">
-              <li>
-                Até <b>TRÊS</b> ofertas em <b>DINHEIRO</b> serão permitidas como
-                itens de troca nesta edição. Esses itens deverão ser cadastrados
-                individualmente como <b>OUTSIDE SCOPE OF BGG</b> (código 23953)
-                e o pagamento deverá ser realizado por PIX.
-                <b
-                  >Não será permitida a criação de pacotes contendo dinheiro +
-                  jogos.</b
-                >
-                <br />
-                <em>
-                  obs: O BGG exige o pagamento de taxas para o site em caso de
-                  trocas em dinheiro. Consulte o site ou nos grupos de whatsapp
-                  como essa taxa deve ser paga.
-                </em>
-                <br />
-                Atenção: É <b class="danger">PROIBIDO</b> fazer a seleção de
-                <b>DINHEIRO por DINHEIRO</b>. Caso uma troca dessa natureza seja
-                identificada,
-                <span class="danger"
-                  >o responsável será excluído da próxima MathTrade</span
-                >
-                e receberá o mesmo valor que ofertou, impossibilitando qualquer
-                tipo de lucro com essa prática.
-              </li>
-              <li>
-                <b>Livros de RPG e acessórios relacionados a boardgame</b>
-                poderão ser adicionados apenas nas <b>últimas 12 horas</b> da
-                primeira etapa e devem ser cadastrados através do código 23953
-                ("Outside the scope of BGG"). Itens cadastrados descumprindo
-                essa regra serão removidos da geeklist sem aviso prévio.
-              </li>
-            </ul>
-            <hr />
-            <h5 class="bold mt-3">
-              O QUE <span class="danger">NÃO</span> SERÁ PERMITIDO NESTA EDIÇÃO
-            </h5>
-            <ul class="mt-3">
-              <li>
-                Não será permitido o cadastro de <b>cartas promocionais</b> como
-                itens isolados. Os mesmos ainda poderão ser ofertados dentro de
-                pacotes de jogos.
-              </li>
-              <li>
-                Não será permitido o cadastro de cartas avulsas ou decks dos
-                seguintes cardgames nesta edição:
-                <br />
-                <b>
-                  Magic: The Gathering, Keyforge, Star Wars Destiny, Pokemon,
-                  Yu-Gi-Oh!, Battle Scenes, VTES e Flash and Blood
-                </b>
-                <br />
-                Os demais cardgames seguem permitidos na geeklist.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid py-4 pattern-green text-white" id="cronograma">
-      <div class="container boxed-container cronograma-mt">
-        <div class="row mt-4">
-          <div class="col-12">
-            <h5 class="bold text-white">
-              CRONOGRAMA MATH TRADE BGBH (8ª Ed.):
-            </h5>
-          </div>
-          <div class="primeira-etapa mt-3">
-            <p class="bold mb-0">
-              PRIMEIRA ETAPA: Adicionando seus jogos na lista de trocas
-            </p>
-            <small>
-              (ainda tem dúvidas sobre como funciona a primeira etapa? Então
-              <a
-                href="/mathtrade-bh/o-que-e#etapas_primeira_etapa"
-                target="_blank"
-                class="text-warning"
-                >clique aqui</a
-              >.)
-            </small>
-            <p class="mt-2">
-              13/11/2024 (Quarta-Feira) 0h até <br />
-              18/11/2024 (Segunda-Feira) 22h
-            </p>
-          </div>
-          <div class="segunda-etapa">
-            <p class="bold mb-0">
-              SEGUNDA ETAPA: Definição e envio da lista de desejos (wantlist)
-            </p>
-            <small>
-              (ainda tem dúvidas sobre como funciona a segunda etapa? Então
-              <a
-                href="/mathtrade-bh/o-que-e#etapas_segunda_etapa"
-                target="_blank"
-                class="text-warning"
-                >clique aqui</a
-              >.)
-            </small>
-            <p class="mt-2">
-              18/11/2024 (Segunda-Feira) 22h até <br />
-              21/11/2024 (Quinta-Feira) 22h
-            </p>
-          </div>
-          <div class="terceira-etapa">
-            <p class="bold">
-              TERCEIRA ETAPA: Resultado Oficial após execução do algoritmo
-            </p>
-            <p class="mt-2">22/06/2024 (Sexta-Feira) 00h</p>
-          </div>
-          <div class="quarta-etapa">
-            <p class="bold">QUARTA ETAPA: Entrega dos jogos</p>
-            <p class="mt-2">
-              Entre 22/11/2024 (Sexta-Feira) a 23/11/2024 (Sábado) até 17h
-              <br />
-              Confira abaixo as informações sobre as entregas desta edição.
-            </p>
-          </div>
-        </div>
-        <hr />
-        <div class="mt-3">
-          <p>
-            A realização da Leftovers só será confirmada caso a meta de trocas
-            na MathTrade regular seja atingida ao termino das etapas regulares.
+    </section>
+    <section id="cronograma_mathtrade">
+      <div class="text-white mx-auto max-w-[90vw]">
+        <h2 class="text-2xl text-center font-bold mb-5">CRONOGRAMA MATH TRADE BGBH (9ª Ed.)</h2>
+        <div class="primeira-etapa mt-3">
+          <h4 class="font-bold">PRIMEIRA ETAPA: Adicionando seus jogos na lista de trocas</h4>
+          <small>
+            (ainda tem dúvidas sobre como funciona a primeira etapa? Então
+            <a href="/mathtrade-bh/o-que-e#etapas_primeira_etapa" target="_blank"
+              class="text-yellow-400 hover:text-yellow-500">clique aqui</a>.)
+          </small>
+          <p class="mt-1">
+            13/11/2024 (Quarta-Feira) 0h até <br />
+            18/11/2024 (Segunda-Feira) 22h
           </p>
         </div>
-        <!-- <div class="row mt-4" id="cronograma-leftovers">
-          <div class="col-12">
-            <h5 class="bold">
-              CRONOGRAMA <span class="text-warning">LEFTOVERS</span> MATH TRADE
-              BH (8ª Ed.):
-            </h5>
-          </div>
-          <div class="primeira-etapa mt-3">
-            <p class="bold mb-0 text-white">
-              PRIMEIRA ETAPA: Adicionando seus jogos na lista de trocas
-            </p>
-            <small>
-              (ainda tem dúvidas sobre como funciona a primeira etapa? Então
-              <a
-                href="/mathtrade-bh/o-que-e#etapas_primeira_etapa"
-                target="_blank"
-                class="text-warning"
-                >clique aqui</a
-              >.)
-            </small>
-            <p class="mt-2 text-white">
-              25/01/2024 (Quinta-Feira) 00:00h até <br />
-              29/01/2024 (Segunda-feira) 23:00h
-            </p>
-          </div>
-          <div class="segunda-etapa">
-            <p class="bold mb-0 text-white">
-              SEGUNDA ETAPA: Definição e envio da lista de desejos (wantlist)
-            </p>
-            <small>
-              (ainda tem dúvidas sobre como funciona a segunda etapa? Então
-              <a
-                href="/mathtrade-bh/o-que-e#etapas_segunda_etapa"
-                target="_blank"
-                class="text-warning"
-                >clique aqui</a
-              >.)
-            </small>
-            <p class="mt-2 text-white">
-              29/01/2024 (Segunda-Feira) 14:00h até <br />
-              31/01/2024 (Quarta-Feira) 22:00h
-            </p>
-          </div>
-          <div class="terceira-etapa">
-            <p class="bold text-white">
-              TERCEIRA ETAPA: Resultado Oficial após execução do algoritmo
-            </p>
-            <p class="mt-2 text-white">
-              01/02/2024 (Quinta-Feira) 00:00h
-            </p>
-          </div>
-          <div class="quarta-etapa">
-            <p class="bold text-white">QUARTA ETAPA: Entrega dos jogos</p>
-            <p class="mt-2 text-white">
-              Entre 01/02/2024 (Quinta-Feira) e 03/02/2024 (Sábado) <br />
-              Confira abaixo as informações sobre as entregas desta edição.
-            </p>
-          </div>
-        </div> -->
-      </div>
-    </div>
-
-    <div class="pattern-default" id="entregas">
-      <div class="container boxed-container py-4">
-        <h5 class="bold">ENTREGAS MATH TRADE BGBH (9ª Ed.):</h5>
-        <p class="mt-3">
-          A Math Trade BGBH (9ª ed.) - Novembro 2024 terá mais uma vez os
-          parceiros do LUDOCAFÉ como ponto de apoio para entrega e retirada de
-          jogos.
-          <br />
-          Além do ponto de entrega realizaremos um
-          <b>encontro oficial de trocas</b>, mas não se preocupe, caso não tenha
-          disponibilidade no dia do encontro você ainda poderá participar e
-          entregar normalmente seus jogos.
-        </p>
-        <p>
-          A primeira opção que cada participante tem é a de entregar jogos e
-          retirá-los no LudoCafé. Dessa forma a casa será um ponto de entrega e
-          retirada com a proposta de diminuir o trabalho que todos podem ter
-          quando possuem muitas trocas. Assim, no lugar de ter que fazer várias
-          viagens para entregar e receber jogos você pode concentrar tudo em um
-          só local. Criaremos um sistema seguro de senhas, que será utilizado de
-          acordo com a necessidade para que não haja confusões nas entregas.
-        </p>
-        <p>
-          <b>
-            Não existe a obrigatoriedade que os jogos sejam entregues no ponto
-            de apoio, elas podem ser realizadas de forma independente e
-            combinadas diretamente entre os envolvidos. No entanto, todos
-            aqueles que optarem por não utilizar o ponto de apoio serão
-            responsáveis pela entrega em mãos dos seus jogos para os novos
-            donos.
-          </b>
-        </p>
-        <p>
-          <span class="bold text-danger">ATENÇÃO!</span> Todos aqueles com jogos
-          a receber poderão sugerir a entrega direta. Caso os envolvidos não
-          entrem em um acordo, os jogos deverão ser entregues na Ludocafé e
-          retirados também na luderia. Todos poderão optar por utilizar algum
-          serviço de entrega por aplicativo. Nesses casos os custos do envio é
-          de responsabilidade de quem deveria entregar e o de retirada daquele
-          que irá receber. Caso queira utilizar algum serviço de entrega, entre
-          em contato com antecedência com a LudoCafé, que irá autorizar e
-          informar o horário de envio caso possua algum funcionário no momento
-          para receber o jogo com o motorista do aplicativo.
-        </p>
-        <p class="fst-italic">
-          Exemplo: Marcelo deve entregar um jogo para Lucas. Ao entrar em
-          contato com ele, uma das partes não concorda com o proposto e não
-          chegam em um acordo. Marcelo deve então deixar o jogo no ponto de
-          apoio, arcando com os os custos da entrega e Lucas deverá buscar o
-          jogo também no pornto de apoio, arcando com os custos da retirada.
-          Ambos poderão utilizar aplicativos de entrega/retirada.
-        </p>
-        <p>
-          <b>Identificação dos jogos</b>
-          <br />
-          Todos os jogos que serão entregues no ponto de apoio deverão conter
-          uma etiqueta de sinalização contendo: <br />
-          <span class="bold">
-            - NOME E USER DO BGG DE QUEM ESTÁ ENTREGANDO
-          </span>
-          <br />
-          <span class="bold"> - NOME E USER DO BGG DE QUEM IRÁ RECEBER </span>
-          <br />
-          <span class="bold"> - SENHA PARA RETIRADA DO JOGO </span> (que deverá
-          ser passada ao novo dono por mensagem direta no BGG) <br />
-          Tenha cuidado ao adicionar a etiqueta, não fixando-as nos jogos de uma
-          forma que pode danificá-los no processo de retirada.
-        </p>
-        <p class="danger">
-          <b>ATENÇÃO!</b>
-          A pedido da casa, a identificação dos jogos deverá ser individual, não
-          utilize a identificação de diversos jogos em uma folha, dificultando o
-          processo de acomodação e separação dos mesmos nas estantes.
-        </p>
-        <p>Horários de Entrega no LudoCafé:</p>
-        <p>
-          Devido às alterações de horários que a casa possui em determinadas épocas do ano, os horários de entrega dos jogos serão confirmados e informados no grupo MATH TRADE INFO do WhatsApp
-        </p>
-        <h5 class="bold">ENCONTRO OFICIAL DE ENTREGA DOS JOGOS:</h5>
-        <p class="mt-3">
-          As informações sobre um eventual Encontro Oficial de Entrega que possa ser combinado será passada diretamente nos nossos
-          grupos da Math Trade no WhatsApp
-        </p>
-        <p class="bold">SEJA BEM VINDO A NOSSA MATH TRADE E BOAS TROCAS!</p>
-      </div>
-    </div>
-
-    <div class="container-fluid py-4 pattern-green">
-      <div class="container boxed-container">
-        <div class="row mt-4">
-          <div class="col-12">
-            <h5 class="text-center bold text-white">
-              NÃO DEIXE DE PARTICIPAR DOS NOSSOS GRUPOS NO WHATSAPP
-            </h5>
-            <p class="mt-4 text-white">
-              <b>MATH TRADE INFO - SEM CHAT</b>
-              <br />
-              (grupo sem chat, voltado para informações e tudo aquilo que você
-              precisa saber pra ficar sempre por dentro das nossas Math Trades)
-              <br />
-              <a
-                target="_blank"
-                class="btn primaryButton"
-                href="https://chat.whatsapp.com/LVnSpPk5GWt5jTh6eH8vQR"
-                onclick="ga('send', 'event', 'Grupo MT Info', 'click', 'trocas e vendas');"
-                >Entrar</a
-              >
-            </p>
-            <p class="mt-4 text-white">
-              <b>MATH TRADE - COM CHAT</b>
-              <br />
-              (grupo onde os participantes das Math Trades interagem, tiram suas
-              dúvidas e também recebem informações variadas sobre as Math
-              Trades)
-              <br />
-              <a
-                target="_blank"
-                class="btn primaryButton"
-                href="https://chat.whatsapp.com/CbhqNqTqj7OAnIJgou7bUs"
-                onclick="ga('send', 'event', 'Grupo MT Chat', 'click', 'trocas e vendas');"
-                >Entrar</a
-              >
-            </p>
-            <p class="mt-4 text-white">
-              <b>MATH TRADE NOVATOS</b>
-              <br />
-              (grupo voltado para tirar dúvidas e acompanhar de perto a
-              participação daqueles que estão pela primeira vez na nossa
-              mathtrade)
-              <br />
-              <a
-                target="_blank"
-                class="btn primaryButton"
-                href="https://chat.whatsapp.com/FMoWYohbaEtHQHqB71CuO9"
-                onclick="ga('send', 'event', 'Grupo MT Info', 'click', 'trocas e vendas');"
-                >Entrar</a
-              >
-            </p>
-          </div>
+        <hr class="my-2">
+        <div class="segunda-etapa">
+          <h4 class="font-bold">SEGUNDA ETAPA: Definição e envio da lista de desejos (wantlist)</h4>
+          <small>
+            (ainda tem dúvidas sobre como funciona a segunda etapa? Então
+            <a href="/mathtrade-bh/o-que-e#etapas_segunda_etapa" target="_blank"
+              class="text-yellow-400 hover:text-yellow-500">clique aqui</a>.)
+          </small>
+          <p class="mt-1">
+            18/11/2024 (Segunda-Feira) 22h até <br />
+            21/11/2024 (Quinta-Feira) 22h
+          </p>
+        </div>
+        <hr class="my-2">
+        <div class="terceira-etapa">
+          <h4 class="font-bold">
+            TERCEIRA ETAPA: Resultado Oficial após execução do algoritmo
+          </h4>
+          <p class="mt-1">22/06/2024 (Sexta-Feira) 00h</p>
+        </div>
+        <hr class="my-2">
+        <div class="quarta-etapa">
+          <h4 class="font-bold">QUARTA ETAPA: Entrega dos jogos</h4>
+          <p class="mt-1">
+            Entre 22/11/2024 (Sexta-Feira) a 23/11/2024 (Sábado) até 17h
+          </p>
+          <p class="mt-2">
+            Confira abaixo as informações sobre as entregas desta edição.
+          </p>
+        </div>
+        <div class="mt-6">
+          <h3 class="text-xl text-center font-bold">LEFTOVERS MATH TRADE BGBH (9ª Ed.)</h3>
+          <p>
+            A realização da Leftovers só será confirmada caso a meta de trocas na MathTrade regular seja atingida ao
+            termino das etapas regulares.
+          </p>
         </div>
       </div>
+    </section>
+    <section class="py-6 max-w-[90vw] mx-auto" id="regras_entregas">
+      <h2 class="text-2xl text-center font-bold mb-5">ENTREGAS MATH TRADE BGBH (9ª Ed.)</h2>
+      <p>
+        Realizaremos um <b>encontro oficial de trocas</b>, mas não se preocupe, caso não tenha
+        disponibilidade no dia do encontro, você ainda poderá participar e entregar normalmente seus jogos.
+      </p>
+      <p class="mt-2">
+        A Math Trade BGBH (9ª ed.) - Novembro 2024 terá mais uma vez a parceria do LUDOCAFÉ como ponto de apoio. A casa
+        será um ponto de entrega e retirada com a proposta de diminuir o trabalho que todos podem ter quando possuem
+        muitas trocas. Assim, no lugar de ter que fazer várias viagens para entregar e receber jogos você pode
+        concentrar tudo em um só local. Criaremos um sistema seguro de senhas, que será utilizado de acordo com a
+        necessidade para que não haja confusões nas entregas.
+      </p>
+      <p class="mt-2">
+        Sendo assim, cada participante tem a opção de entregar jogos e retirá-los no LudoCafé.
+      </p>
+      <p class="my-3 font-bold">
+        IMPORTANTE! Não existe a obrigatoriedade que os jogos sejam entregues no ponto de apoio! Cada entrega pode ser
+        realizada de forma independente e combinada diretamente entre os envolvidos. No entanto, todos aqueles que
+        optarem por não utilizar o ponto de apoio serão responsáveis pela entrega em mãos dos seus jogos para os novos
+        donos.
+      </p>
+      <p>
+        <strong class="text-red-500">ATENÇÃO!</strong>
+        Todos aqueles com jogos a receber poderão sugerir a entrega direta.
+        <strong>
+          Caso os envolvidos não entrem em um acordo, os jogos deverão ser entregues na Ludocafé e retirados também na
+          luderia.
+        </strong>
+        Todos poderão optar por utilizar algum serviço de entrega por aplicativo. Nesses casos os custos do envio é de
+        responsabilidade de quem deveria entregar e o de retirada daquele que irá receber.
+      </p>
+      <p>
+        Caso queira utilizar algum serviço de entrega, entre em contato com antecedência com a LudoCafé, que irá
+        autorizar e informar o horário de envio caso possua algum funcionário no momento para receber o jogo com o
+        motorista do aplicativo.
+      </p>
+      <em class="block mt-2 italic">
+        Exemplo: Marcelo deve entregar um jogo para Lucas. Ao entrar em contato com ele, uma das partes não concorda
+        com o proposto e não chegam em um acordo. Marcelo deve então deixar o jogo no ponto de apoio, arcando com os
+        os custos da entrega e Lucas deverá buscar o jogo também no pornto de apoio, arcando com os custos da
+        retirada. Ambos poderão utilizar aplicativos de entrega/retirada.
+      </em>
+      <div class="border border-gray-300 px-4 py-2 mt-4 bg-gray-200">
+        <h3 class="font-bold text-center text-xl">IDENTIFICAÇÃO DOS JOGOS</h3>
+        <p>
+          Todos os jogos que serão entregues no ponto de apoio deverão conter uma etiqueta de sinalização contendo:
+        </p>
+        <ul class="list-disc pl-6 flex flex-col gap-2 font-bold">
+          <li>
+            NOME E USER DO BGG DE QUEM ESTÁ ENTREGANDO
+          </li>
+          <li>
+            NOME E USER DO BGG DE QUEM IRÁ RECEBER
+          </li>
+          <li>
+            SENHA PARA RETIRADA DO JOGO (que deverá ser passada ao novo dono por mensagem direta no BGG)
+          </li>
+        </ul>
+        <p>
+          Tenha cuidado ao adicionar a etiqueta, não fixando-as nos jogos de uma forma que pode danificá-los no processo
+          de retirada.
+        </p>
+        <p class="mt-3 text-red-600">
+          ATENÇÃO! A pedido da casa, a identificação dos jogos deverá ser individual, não utilize a identificação de
+          diversos jogos em uma folha, dificultando o processo de acomodação e separação dos mesmos nas estantes.
+        </p>
+      </div>
+      <div class="mt-5">
+        <h3 class="font-bold text-center text-xl">HORÁRIOS DE ENTREGA NO LUDOCAFÉ</h3>
+        <p>
+          Devido às alterações de horários que a casa possui em determinadas épocas do ano, os horários de entrega dos
+          jogos serão confirmados e informados no grupo MATH TRADE INFO do WhatsApp
+        </p>
+        <h3 class="font-bold text-center text-xl">ENCONTRO OFICIAL DE ENTREGA DOS JOGOS</h3>
+        <p>
+          As informações sobre um eventual Encontro Oficial de Entrega que possa ser combinado será passada
+          diretamente nos nossos grupos da Math Trade no WhatsApp
+        </p>
+      </div>
+      <div class="text-green-900 font-bold text-2xl text-center mt-5">
+        SEJA BEM VINDO A NOSSA MATH TRADE E BOAS TROCAS!
+      </div>
+    </section>
+    <section id="grupos_mathtrade" class="text-white">
+      <div class="text-white mx-auto max-w-[90vw]">
+        <h3 class="font-bold text-center text-xl">
+          NÃO DEIXE DE PARTICIPAR DOS NOSSOS GRUPOS NO WHATSAPP
+        </h3>
+        <div class="flex flex-col gap-6">
+          <p class="mt-4">
+            <strong class="block">MATH TRADE INFO - SEM CHAT</strong>
+            Grupo sem chat, voltado para informações e tudo aquilo que você
+            precisa saber pra ficar sempre por dentro das nossas Math Trades
+            <a target="_blank" class="block w-20 text-center rounded-md mt-2 bg-slate-700 px-2 py-1 hover:bg-slate-900"
+              href="https://chat.whatsapp.com/LVnSpPk5GWt5jTh6eH8vQR">Entrar</a>
+          </p>
+          <p>
+            <strong class="block">MATH TRADE - COM CHAT</strong>
+            Grupo onde os participantes das Math Trades interagem, tiram suas dúvidas e também recebem informações
+            variadas sobre as Math Trades
+            <a target="_blank" class="block w-20 text-center rounded-md mt-2 bg-slate-700 px-2 py-1 hover:bg-slate-900"
+              href="https://chat.whatsapp.com/CbhqNqTqj7OAnIJgou7bUs">Entrar</a>
+          </p>
+          <p>
+            <strong class="block">MATH TRADE NOVATOS</strong>
+            Grupo voltado para tirar dúvidas e acompanhar de perto a participação daqueles que estão pela primeira vez
+            na nossa mathtrade
+            <a target="_blank" class="block w-20 text-center rounded-md mt-2 bg-slate-700 px-2 py-1 hover:bg-slate-900"
+              href="https://chat.whatsapp.com/FMoWYohbaEtHQHqB71CuO9">Entrar</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- RODAPE -->
+  <footer class="bg-gray-800 bottom-0 relative w-full">
+    <div class="px-3 py-5 max-w-[90vw] mx-auto grid md:grid-flow-col md:grid-cols-2 text-gray-300 gap-4">
+      <div>
+        <strong class="font-bold block mb-3 text-white">SOBRE O PROJETO</strong>
+        <span class="text-sm">
+          O <strong class="font-semibold text-white">BoardgameBH</strong> é um projeto que tem como foco o crescimento e
+          a visibilidade do Boardgame no país. O portal tem Belo Horizonte e região como carro chefe, mas não possui
+          fronteiras, promovendo e realizando ações de amplo interesse e com um público espalhado por todo país, como
+          torneios online, divulgação de lançamentos e conteúdo digital. Diversos braços do projeto ainda estão em
+          desenvolvimento e em breve serão apresentados para o grande público. Enquanto isso, aproveite todas as
+          funcionalidades liberadas e não deixe de apoiar esse e os demais projetos voltados para o nosso hobby.
+          <strong class="font-semibold">Let’s Play!</strong>
+        </span>
+      </div>
+      <div class="flex flex-col justify-between">
+        <div>
+          <strong class="block mb-3 text-white">APOIE</strong>
+          <span class="text-sm">Entre em contato para ser um parceiro ou apoiador do projeto!</span>
+        </div>
+        <div>
+          <div class="font-bold mt-4 mb-3 text-white">SIGA</div>
+          <ul class="flex gap-4">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/boardgamebh/" aria-label="Instagram">
+                <i class="bi bi-instagram text-[24px] block hover:scale-125"></i>
+              </a>
+            </li>
+            <li class="group">
+              <a target="_blank" href="https://www.facebook.com/boardgamebh/" aria-label="Facebook">
+                <i class="bi bi-facebook text-[24px] block hover:scale-125"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-4 font-semibold">
+          © BGBH 2020 - Todos os direitos reservados
+        </div>
+      </div>
+
     </div>
-  </body>
+  </footer>
+</body>
+
 </html>

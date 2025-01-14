@@ -17,6 +17,10 @@ export default defineConfig({
         "bgbh-masters/": resolve(__dirname, "bgbh-masters/index.html"),
         "em-breve": resolve(__dirname, "em-breve.html"),
         "mathtrade-bh/o-que-e": resolve(__dirname, "mathtrade-bh/o-que-e.html"),
+        "mathtrade-bh/edicao-novembro-2024": resolve(
+          __dirname,
+          "mathtrade-bh/edicao-novembro-2024.html"
+        ),
         "mathtrade-bh/regras-gerais": resolve(
           __dirname,
           "mathtrade-bh/regras-gerais.html"
