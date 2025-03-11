@@ -329,7 +329,7 @@
                 <h2 class="text-green-900 font-extrabold text-2xl text-center">
                     ACESSE O NOSSO FAQ PARA TIRAR MAIS DÚVIDAS SOBRE MATH TRADES
                 </h2>
-                <a href="/mathtrade-bh/faq" class="text-center w-1/2 mt-2 px-6 py-4 bg-green-700 text-white">
+                <a href="/mathtrade-bh/faq" class="text-center w-auto mt-2 px-6 py-4 bg-green-700 text-white">
                     IR PARA PÁGINA DE DÚVIDAS
                 </a>
             </div>
@@ -339,7 +339,7 @@
                     <br>
                     CONHEÇA REGRAS GERAIS PARA OFERTAR SEUS JOGOS E FAZER SUAS TROCAS
                 </h2>
-                <a href="/2025/mathtrade-bh/regras-gerais" class="text-center w-1/2 mt-2">
+                <a href="/2025/mathtrade-bh/regras-gerais" class="text-center w-auto mt-2">
                     <img src="/src/img/mathtrade/regras-gerais-math-trade.jpeg" alt="Regras Gerais de uma Math Trade" />
                 </a>
             </div>
@@ -349,7 +349,7 @@
                     <br>
                     FIQUE POR DENTRO DE TUDO CLICANDO NA IMAGEM ABAIXO.
                 </h2>
-                <a href="/mathtrade-bh/edicao-novembro-2024" class="text-center w-1/2 mt-2">
+                <a href="/mathtrade-bh/edicao-novembro-2024" class="text-center w-auto mt-2">
                     <img src="/src/img/mathtrade/615x330-MT9.png" alt="Regras Math Trade Nona Edição" />
                 </a>
             </div>
@@ -657,19 +657,28 @@
         let scrollPosition = 0;
 
         function openModal(event, modalId) {
-            event.preventDefault(); // Evita que o link redirecione a página
-            scrollPosition = window.pageYOffset; // Salva a posição atual do scroll
-            document.body.style.position = 'fixed'; // Impede o scroll
-            document.body.style.top = `-${scrollPosition}px`; // Ajusta a posição do body
-            document.getElementById(modalId).classList.remove('hidden');
+            event.preventDefault();
+            scrollPosition = window.pageYOffset;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPosition}px`;
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('hidden');
+
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModal(modalId);
+                }
+            });
         }
 
         function closeModal(modalId) {
-            document.body.style.position = ''; // Restaura o scroll
-            document.body.style.top = ''; // Remove a posição ajustada
-            window.scrollTo(0, scrollPosition); // Retorna à posição original do scroll
+            document.body.style.position = '';
+            document.body.style.top = '';
+            window.scrollTo(0, scrollPosition);
             document.getElementById(modalId).classList.add('hidden');
         }
+
     </script>
 </body>
 
