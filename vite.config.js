@@ -22,6 +22,10 @@ export default defineConfig({
           __dirname,
           "mathtrade-bh/edicao-novembro-2024.html"
         ),
+        "mathtrade-bh/edicao-novatos": resolve(
+          __dirname,
+          "mathtrade-bh/edicao-novatos.html"
+        ),
         "mathtrade-bh/regras-gerais": resolve(
           __dirname,
           "mathtrade-bh/regras-gerais.html"
