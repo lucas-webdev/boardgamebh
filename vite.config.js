@@ -30,6 +30,10 @@ export default defineConfig({
           __dirname,
           "mathtrade-bh/regras-gerais.html"
         ),
+        "mathtrade-bh/edicao-setembro-2025": resolve(
+          __dirname,
+          "mathtrade-bh/edicao-setembro-2025.html"
+        ),
       },
     },
   },
