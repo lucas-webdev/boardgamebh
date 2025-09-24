@@ -36,4 +36,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/ # Diretório de build gerado pelo Vite
-          server-dir: /httpdocs/2025/ # Caminho remoto no FTP (ajuste conforme necessário)
+          server-dir: /httpdocs/ # Caminho remoto no FTP (ajuste conforme necessário)
