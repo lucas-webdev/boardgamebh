@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:\\\\Users\\\\Lucas\\\\.claude-worktrees\\\\boardgamebh\\\\vigorous-albattani\\\\src\\\\img\\\\parceiros\"\" 2>/dev/null; ls \"C:UsersLucas.claude-worktreesboardgamebhvigorous-albattanisrcimglogo\"\")",
+      "Bash(yarn build)",
+      "Bash(yarn install)",
+      "Bash(timeout 5 yarn dev:*)"
+    ]
+  }
+}

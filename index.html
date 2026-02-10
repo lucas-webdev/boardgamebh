@@ -2,322 +2,293 @@
 <html lang="pt-BR">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BoardgameBH [BGBH]</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoardgameBH [BGBH] - O seu portal de jogos de tabuleiro</title>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-187241035-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
-		gtag("config", "UA-187241035-1");
-	</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K2MBCJ50J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-1K2MBCJ50J");
+  </script>
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-1K2MBCJ50J"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
-		gtag("config", "G-1K2MBCJ50J");
-	</script>
+  <!-- meta -->
+  <meta property="og:title" content="BoardgameBH [BGBH]">
+  <meta property="og:site_name" content="BoardgameBH [BGBH]">
+  <meta property="og:url" content="https://bgbh.com.br/">
+  <meta property="og:description" content="O seu portal de jogos de tabuleiro em Belo Horizonte.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://bgbh.com.br/src/img/geral/og-image.jpg">
 
-	<!-- Google Analytics -->
-	<script>
-		window.ga = window.ga || function () {
-			(ga.q = ga.q || []).push(arguments);
-		};
-		ga.l = +new Date();
-		ga("create", "UA-187241035-1", "auto");
-		ga("send", "pageview");
-	</script>
-	<script async src="https://www.google-analytics.com/analytics.js"></script>
+  <!-- fonts -->
+  <link rel="icon" type="image/png" href="https://bgbh.com.br/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
 
-	<!-- meta -->
-	<meta property="og:title" content="BoardgameBH [BGBH]">
-	<meta property="og:site_name" content="BoardgameBH [BGBH]">
-	<meta property="og:url" content="https://bgbh.com.br/">
-	<meta property="og:description" content="Um portal feito para você que ama boardgame.">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="https://bgbh.com.br/src/img/og-image.jpg">
+  <!-- icons + animations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-	<!-- fonts -->
-	<link rel="icon" type="image/png" href="https://lucascmedeiros.com.br/bgbh/favicon.ico">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-		rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.gstatic.com/">
-
-	<!-- external css -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="" crossorigin="anonymous">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
-	<!-- Main SCSS -->
-	<link rel="stylesheet" href="/src/styles/main.scss">
+  <!-- Main SCSS -->
+  <link rel="stylesheet" href="/src/styles/main.scss">
 </head>
 
-<body class="min-h-screen bg-gray-50 font-sans" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB466ZC" height="0" width="0"
-			style="display: none; visibility: hidden"></iframe></noscript>
+<body class="min-h-screen bg-gray-50 font-sans">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB466ZC" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
 
-	<div class="min-h-screen flex flex-col">
-		<!-- NAVBAR - HIDDEN -->
-		<nav class="fixed top-0 left-0 w-full bg-gray-900 text-white z-50 hidden" id="mainNavbar">
-			<div class="container mx-auto px-4">
-				<div class="flex items-center justify-between py-4">
-					<a class="flex items-center space-x-2" href="#">
-						<img src="/src/img/logo/bgbh-com-sombra.png" alt="logo BGBH" class="h-8">
-						<span class="font-bold text-lg">BoardgameBH</span>
-					</a>
-					<button class="md:hidden flex flex-col space-y-1" type="button" aria-label="Toggle navigation">
-						<span class="block w-6 h-0.5 bg-white"></span>
-						<span class="block w-6 h-0.5 bg-white"></span>
-						<span class="block w-6 h-0.5 bg-white"></span>
-					</button>
-					<ul class="hidden md:flex space-x-8">
-						<li>
-							<a class="font-bold text-sm hover:text-gray-300 transition-colors" href="#topoSite"
-								onclick="ga('send', 'event', 'Menu', 'click', 'inicio');">
-								INÍCIO
-							</a>
-						</li>
-						<li>
-							<a class="font-bold text-sm hover:text-gray-300 transition-colors" href="#math_trade"
-								onclick="ga('send', 'event', 'Menu', 'click', 'math trade');">
-								MATH TRADE
-							</a>
-						</li>
-						<li>
-							<a class="font-bold text-sm hover:text-gray-300 transition-colors" href="#grupos_anchor"
-								onclick="ga('send', 'event', 'Menu', 'click', 'grupos');">
-								NOSSOS GRUPOS
-							</a>
-						</li>
-						<li>
-							<a class="font-bold text-sm hover:text-gray-300 transition-colors" href="#contato"
-								onclick="ga('send', 'event', 'Menu', 'click', 'contato');">
-								CONTATO
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+  <!-- NAVBAR -->
+  <div id="navbar-root"></div>
 
-		<!-- MAIN CONTENT -->
-		<main class="flex-1">
-			<!-- TOPO -->
-			<div id="topoSite" class="relative w-full h-screen md:h-[80vh] overflow-hidden">
-				<div class="absolute inset-0">
-					<img src="/src/img/geral/bgbh-topo-site.jpg" class="w-full h-full object-cover" alt="BGBH">
-					<div class="absolute inset-0 bg-black bg-opacity-30"></div>
-				</div>
-				<div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-					<img class="w-48 md:w-60 lg:w-72 h-auto mx-auto mb-8 md:mb-12" src="/src/img/logo/bgbh-logo.png"
-						alt="logo BGBH">
-					<p class="text-lg md:text-xl lg:text-2xl font-light">O seu portal de jogos de tabuleiro</p>
-				</div>
-			</div>
+  <!-- HERO COMPACTO -->
+  <header class="header-home h-[40vh] md:h-[45vh] relative flex items-center justify-center">
+    <div class="bg-black absolute inset-0 opacity-50"></div>
+    <div class="relative text-center text-white px-4">
+      <img class="h-[100px] md:h-[120px] mx-auto mb-4" src="/src/img/logo/bgbh-logo.png" alt="Logo BGBH">
+      <p class="text-lg md:text-xl font-light">O seu portal de jogos de tabuleiro</p>
+    </div>
+  </header>
 
-			<!-- CHAMADA INICIAL -->
-			<div class="container mx-auto px-4 py-8 md:py-6">
-				<div class="flex flex-col items-center text-center max-w-4xl mx-auto">
-					<h1 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-						NOSSO PORTAL ESTÁ EM REFORMULAÇÃO
-					</h1>
-					<h3 class="text-lg md:text-xl font-normal px-4 text-gray-600 leading-relaxed">
-						Mas você continua podendo acompanhar nossas iniciativas, dentre elas,
-						<span class="font-bold text-gray-800">MATH TRADE BH</span>,
-						<br class="hidden sm:block">
-						e outras <span class="font-bold text-gray-800">novidades e eventos</span> que
-						organizamos e apoiamos.
-					</h3>
-				</div>
-			</div>
+  <!-- CONTEUDO PRINCIPAL -->
+  <main class="py-8 max-w-[90vw] md:max-w-[1080px] mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
-			<div class="border-t-4 border-gray-300 mx-auto max-w-4xl"></div>
-			<div class="border-t-4 border-gray-300 mx-auto max-w-4xl mt-1"></div>
+      <!-- MAIN CONTENT (2/3) -->
+      <div class="lg:col-span-2">
+        <!-- Post Destaque -->
+        <section class="mb-8" data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">
+            <i class="bi bi-newspaper text-green-700 mr-2"></i>Destaque
+          </h2>
+          <div id="post-destaque">
+            <!-- Renderizado via posts.js -->
+          </div>
+        </section>
 
-			<!-- MATH TRADE SECTION -->
-			<div class="container mx-auto px-4 py-10">
-				<div id="math_trade" class="anchor-spacer -mt-20 pt-20"></div>
-				<div data-aos-duration="10000" data-aos="fade-down-right" class="aos-init mb-8">
-					<div class="flex items-center mb-4">
-						<i class="text-blue-600 text-4xl mr-3">↔</i>
-						<h1 class="text-2xl md:text-3xl lg:text-3xl font-bold text-gray-800">
-							MATH TRADE BELO HORIZONTE - SETEMBRO 2025
-						</h1>
-					</div>
-					<p class="text-lg text-gray-700 leading-relaxed">
-						<b>A 10ª edição da nossa MathTrade vem aí para você renovar sua coleção!</b>
-						<br>
-						Clique nas imagens abaixo para conhecer o que é, para ver as regras
-						gerais ou para saber os detalhes específicos dessa edição.
-					</p>
-				</div>
-				<div class="aos-init" data-aos-duration="15000" data-aos="fade-right" data-aos-delay="500">
-					<div class="bg-white rounded-lg shadow-lg overflow-hidden">
-						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
-							<a href="/mathtrade-bh/o-que-e.html" target="_self"
-								onclick="ga('send', 'event', 'O que é MT', 'click-imagem');"
-								class="block transform hover:scale-105 transition-transform duration-300">
-								<img src="/src/img/mathtrade/o-que-e-uma-math-trade.jpeg"
-									class="w-full h-auto rounded-lg shadow-md" alt="Math Trade Belo Horizonte">
-							</a>
-							<a href="/mathtrade-bh/regras-gerais.html" target="_self"
-								onclick="ga('send', 'event', 'Regras Gerais MT', 'click-imagem');"
-								class="block transform hover:scale-105 transition-transform duration-300">
-								<img src="/src/img/mathtrade/regras-gerais-math-trade.jpeg"
-									class="w-full h-auto rounded-lg shadow-md" alt="Math Trade Belo Horizonte">
-							</a>
-							<a href="/mathtrade-bh/edicao-setembro-2025.html" target="_self"
-								onclick="ga('send', 'event', 'Regras Edição atual', 'click-imagem');"
-								class="block transform hover:scale-105 transition-transform duration-300">
-								<img src="/src/img/mathtrade/615x330-MT10.png"
-									class="w-full h-auto rounded-lg shadow-md" alt="Math Trade Belo Horizonte">
-							</a>
-						</div>
-					</div>
-				</div>
+        <!-- Grid de Posts Recentes -->
+        <section data-aos="fade-up" data-aos-delay="100">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">
+            <i class="bi bi-grid text-green-700 mr-2"></i>Artigos Recentes
+          </h2>
+          <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <!-- Renderizado via posts.js -->
+          </div>
+          <a href="/posts/"
+            class="inline-flex items-center gap-2 text-green-700 font-semibold hover:text-green-800 transition-colors">
+            Ver todos os artigos <i class="bi bi-arrow-right"></i>
+          </a>
+        </section>
+      </div>
 
-				<div class="border-t-4 border-gray-300 mx-auto max-w-4xl my-12"></div>
+      <!-- SIDEBAR (1/3) -->
+      <aside class="space-y-6">
 
-				<div data-aos-duration="10000" data-aos="fade-down-right" class="aos-init mb-8">
-					<div class="flex items-center mb-4">
-						<i class="text-yellow-600 text-4xl mr-3">🏆</i>
-						<h1 class="text-2xl md:text-3xl lg:text-3xl font-bold text-gray-800">INICIATIVAS E EVENTOS</h1>
-					</div>
-					<p class="text-lg text-gray-700 leading-relaxed">
-						Além da Math Trade, o BoardgameBH também promove outras iniciativas e apoia eventos de jogos de
-						tabuleiro, tanto online quanto presenciais. Fique de olho em nossas redes sociais para não
-						perder
-						nenhuma novidade.
-					</p>
-				</div>
+        <!-- Widget: Math Trade BH -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-left">
+          <div class="bg-green-700 text-white px-4 py-2 font-bold text-sm">
+            <i class="bi bi-arrow-repeat mr-1"></i> MATH TRADE BH
+          </div>
+          <div class="p-4">
+            <a href="/mathtrade-bh/edicao-setembro-2025.html"
+              class="block hover:scale-[1.02] transition-transform">
+              <img src="/src/img/mathtrade/615x330-MT10.png" alt="Math Trade BH - 10ª Edição"
+                class="w-full rounded-md mb-3">
+            </a>
+            <p class="text-sm text-gray-700 mb-3">
+              <strong>10ª Edição</strong> — Setembro 2025. Renove sua coleção!
+            </p>
+            <div class="flex flex-col gap-2">
+              <a href="/mathtrade-bh/edicao-setembro-2025.html"
+                class="block text-center bg-green-700 text-white text-sm py-2 rounded hover:bg-green-800 transition-colors">
+                Edição Atual
+              </a>
+              <a href="/mathtrade-bh/o-que-e.html"
+                class="block text-center border border-green-700 text-green-700 text-sm py-2 rounded hover:bg-green-50 transition-colors">
+                O que é Math Trade?
+              </a>
+            </div>
+          </div>
+        </div>
 
+        <!-- Widget: Iniciativas & Eventos -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-left" data-aos-delay="100">
+          <div class="bg-gray-800 text-white px-4 py-2 font-bold text-sm">
+            <i class="bi bi-calendar-event mr-1"></i> INICIATIVAS & EVENTOS
+          </div>
+          <div class="p-4">
+            <ul class="space-y-3">
+              <li>
+                <a href="/em-breve.html" class="flex items-center gap-3 text-gray-700 hover:text-green-700 transition-colors">
+                  <i class="bi bi-dice-6 text-lg text-green-700"></i>
+                  <div>
+                    <span class="font-semibold text-sm block">Joga no QG!</span>
+                    <span class="text-xs text-gray-500">Encontros presenciais de jogatina</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/em-breve.html" class="flex items-center gap-3 text-gray-700 hover:text-green-700 transition-colors">
+                  <i class="bi bi-mic text-lg text-green-700"></i>
+                  <div>
+                    <span class="font-semibold text-sm block">Resenha com Jogatina</span>
+                    <span class="text-xs text-gray-500">Reviews e bate-papo sobre jogos</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/bgbh-masters/" class="flex items-center gap-3 text-gray-700 hover:text-green-700 transition-colors">
+                  <i class="bi bi-trophy text-lg text-green-700"></i>
+                  <div>
+                    <span class="font-semibold text-sm block">BGBH Masters</span>
+                    <span class="text-xs text-gray-500">Torneios online no Board Game Arena</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/p/DOYg4BuAP1T/?img_index=1" target="_blank"
+                  class="flex items-center gap-3 text-gray-700 hover:text-green-700 transition-colors">
+                  <i class="bi bi-star text-lg text-yellow-600"></i>
+                  <div>
+                    <span class="font-semibold text-sm block">Nerd Experience 2025</span>
+                    <span class="text-xs text-gray-500">Setembro — Estaremos lá!</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-				<!-- INICIATIVAS E EVENTOS -->
-				<div>
-					<a class="block w-[300px] h-auto mx-auto mb-4"
-						href="https://www.instagram.com/p/DOYg4BuAP1T/?img_index=1" target="_blank"
-						class="text-blue-600 underline" onclick="ga('send', 'event', 'Nerd Experience', 'click-img');">
-						<img src="/src/img/geral/nxp-2025.png" alt="Nerd Experience 2025">
-					</a>
-					Em Setembro temos muita coisa acontecendo! Além da nossa Math Trade, participe também do
-					<a href="https://www.instagram.com/p/DOYg4BuAP1T/?img_index=1" target="_blank"
-						class="text-blue-600 underline"
-						onclick="ga('send', 'event', 'Nerd Experience', 'click-link');">Nerd Experience 2025</a>, um
-					evento
-					incrível para os amantes de cultura pop, jogos e muito mais. Estaremos lá com um stand cheio de
-					jogos e atividades para você se divertir. Não perca essa oportunidade de conhecer novas pessoas e
-					aproveitar tudo o que o mundo geek tem a oferecer!
-				</div>
+        <!-- Widget: Grupos de WhatsApp -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-left" data-aos-delay="200">
+          <div class="bg-green-600 text-white px-4 py-2 font-bold text-sm">
+            <i class="bi bi-whatsapp mr-1"></i> GRUPOS DE WHATSAPP
+          </div>
+          <div class="p-4">
+            <ul class="space-y-2">
+              <li>
+                <a href="https://chat.whatsapp.com/placeholder-info" target="_blank"
+                  class="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors">
+                  <i class="bi bi-chat-dots text-green-600"></i>
+                  Math Trade — Info (sem chat)
+                </a>
+              </li>
+              <li>
+                <a href="https://chat.whatsapp.com/placeholder-chat" target="_blank"
+                  class="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors">
+                  <i class="bi bi-chat-dots text-green-600"></i>
+                  Math Trade — Com Chat
+                </a>
+              </li>
+              <li>
+                <a href="https://chat.whatsapp.com/placeholder-novatos" target="_blank"
+                  class="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors">
+                  <i class="bi bi-chat-dots text-green-600"></i>
+                  Math Trade — Novatos
+                </a>
+              </li>
+              <li>
+                <a href="https://chat.whatsapp.com/placeholder-geral" target="_blank"
+                  class="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors">
+                  <i class="bi bi-people text-green-600"></i>
+                  BoardgameBH — Geral
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-				<div class="border-t-4 border-gray-300 mx-auto max-w-4xl my-12"></div>
+        <!-- Widget: Parcerias -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-left" data-aos-delay="300">
+          <div class="bg-gray-800 text-white px-4 py-2 font-bold text-sm">
+            <i class="bi bi-handshake mr-1"></i> PARCERIAS
+          </div>
+          <div class="p-4">
+            <div class="grid grid-cols-2 gap-4 items-center">
+              <a href="https://www.instagram.com/vamosjogarboardgame/" target="_blank"
+                class="hover:opacity-80 transition-opacity">
+                <img src="/src/img/parceiros/logo_VJBG_fundo_transparente.png" alt="Vamos Jogar Boardgame"
+                  class="w-full h-auto">
+              </a>
+              <a href="https://www.instagram.com/ludocafebh/" target="_blank"
+                class="hover:opacity-80 transition-opacity">
+                <img src="/src/img/parceiros/1_Ludocafe_colorida_positiva.png" alt="LudoCafé"
+                  class="w-full h-auto">
+              </a>
+            </div>
+            <div class="mt-4 text-center">
+              <a href="/em-breve.html"
+                class="text-sm text-green-700 font-semibold hover:text-green-800 transition-colors">
+                Seja um parceiro <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
 
-				<!-- BANNER CENTRAL -->
-				<div class="bg-gradient-to-r from-green-600 to-blue-600 text-white py-8 px-4 rounded-lg text-center">
-					<span class="text-xl md:text-2xl font-extrabold">
-						ENTRE EM CONTATO CONOSCO E SEJA UM APOIADOR OU PARCEIRO DO NOSSO
-						PROJETO
-					</span>
-				</div>
-			</div>
-		</main>
+        <!-- Widget: Todos os Artigos -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-left" data-aos-delay="400">
+          <div class="bg-green-700 text-white px-4 py-2 font-bold text-sm">
+            <i class="bi bi-journal-text mr-1"></i> ARTIGOS
+          </div>
+          <div class="p-4">
+            <div id="posts-sidebar">
+              <!-- Renderizado via posts.js -->
+            </div>
+            <a href="/posts/"
+              class="mt-3 block text-center border border-green-700 text-green-700 text-sm py-2 rounded hover:bg-green-50 transition-colors">
+              Ver todos os artigos <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
 
-		<!-- RODAPÉ -->
-		<footer class="bg-gray-800 text-white py-12">
-			<div class="container mx-auto px-4">
-				<!-- SOBRE O PROJETO - Full Width -->
-				<div class="mb-8">
-					<h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold mb-4">SOBRE O PROJETO</h2>
-					<p class="text-gray-300 text-sm md:text-base leading-relaxed">
-						O <span class="font-extrabold text-white">BoardgameBH</span> é um
-						projeto que tem como foco o crescimento e a visibilidade do
-						Boardgame no país. O portal tem Belo Horizonte e região como
-						carro chefe, mas não possui fronteiras, promovendo e
-						realizando ações de amplo interesse e com um público espalhado
-						por todo país, como torneios online, divulgação de lançamentos
-						e conteúdo digital. Diversos braços do projeto ainda estão em
-						desenvolvimento e em breve serão apresentados para o grande
-						público. Enquanto isso, aproveite todas as funcionalidades
-						liberadas e não deixe de apoiar esse e os demais projetos
-						voltados para o nosso hobby.
-						<span class="font-bold text-white">Let's Play!</span>
-					</p>
-				</div>
+      </aside>
+    </div>
+  </main>
 
-				<!-- APOIE E SIGA - Side by side on large screens -->
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-					<div>
-						<h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold mb-4">APOIE</h2>
-						<p class="text-gray-300 text-sm md:text-base">
-							Entre em contato conosco e seja um apoiador do projeto
-						</p>
-					</div>
-					<div>
-						<h2 class="text-xl md:text-2xl lg:text-3xl font-extrabold mb-4">SIGA</h2>
-						<div class="flex space-x-4">
-							<a target="_blank" href="https://www.instagram.com/boardgamebh/" aria-label="Instagram"
-								class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full transition-colors duration-300">
-								<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-									<path
-										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-								</svg>
-							</a>
-							<a target="_blank" href="https://www.facebook.com/boardgamebh/" aria-label="Facebook"
-								class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition-colors duration-300">
-								<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-									<path
-										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
+  <!-- CTA Banner -->
+  <section class="bg-gradient-to-r from-green-700 to-emerald-600 text-white py-10 px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Faça parte do BoardgameBH!</h2>
+      <p class="text-lg mb-5 opacity-90">Entre em contato e seja um apoiador ou parceiro do nosso projeto.</p>
+      <a href="/em-breve.html"
+        class="inline-block bg-white text-green-700 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+        Entre em contato
+      </a>
+    </div>
+  </section>
 
-				<!-- Copyright -->
-				<div class="mt-8 pt-8 border-t border-gray-700">
-					<p class="text-gray-400 text-sm text-center">© BGBH 2020 - Todos os direitos reservados</p>
-				</div>
-			</div>
-		</footer>
-	</div>
+  <!-- FOOTER -->
+  <div id="footer-root"></div>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity=""
-		crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script>
-		AOS.init();
-	</script>
-	<script type="module" src="/public/js/scripts.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 600, once: true });</script>
+  <script type="module" src="/src/js/navbar.js"></script>
+  <script type="module" src="/src/js/footer.js"></script>
+  <script type="module" src="/src/js/posts.js"></script>
 
-	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
-	<script>
-		var firebaseConfig = {
-			apiKey: "AIzaSyDSkax_bQZESW9EJf3lsWcScjVG3W1RglI",
-			authDomain: "site-bgbh.firebaseapp.com",
-			projectId: "site-bgbh",
-			storageBucket: "site-bgbh.appspot.com",
-			messagingSenderId: "55901407241",
-			appId: "1:55901407241:web:31b7dfb0296a5e8b6b50d8",
-			measurementId: "G-SZ4NX75M8X",
-		};
-		firebase.initializeApp(firebaseConfig);
-		firebase.analytics();
-	</script>
+  <!-- Firebase Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDSkax_bQZESW9EJf3lsWcScjVG3W1RglI",
+      authDomain: "site-bgbh.firebaseapp.com",
+      projectId: "site-bgbh",
+      storageBucket: "site-bgbh.appspot.com",
+      messagingSenderId: "55901407241",
+      appId: "1:55901407241:web:31b7dfb0296a5e8b6b50d8",
+      measurementId: "G-SZ4NX75M8X",
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </body>
 
 </html>

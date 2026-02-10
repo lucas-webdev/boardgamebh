@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "tailwindcss/base";
 @use "tailwindcss/components";
 @use "tailwindcss/utilities";
@@ -30,4 +31,40 @@
   background-repeat: repeat;
   background-attachment: fixed;
   padding: 24px 12px;
+}
+
+/* Post content typography */
+.post-content {
+  h2 {
+    border-bottom: 2px solid $mainGreen;
+    padding-bottom: 0.5rem;
+  }
+
+  a {
+    color: $mainGreen;
+    text-decoration: underline;
+
+    &:hover {
+      color: color.adjust($mainGreen, $lightness: -10%);
+    }
+  }
+
+  ul, ol {
+    margin-left: 1rem;
+  }
+
+  blockquote {
+    border-left: 4px solid $mainGreen;
+    padding-left: 1rem;
+    color: #6b7280;
+    font-style: italic;
+  }
+}
+
+/* Line clamp utility (for older browsers) */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
