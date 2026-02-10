@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindos ao novo portal BoardgameBH! — BGBH</title>
+
+  <link rel="icon" type="image/png" href="https://bgbh.com.br/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/src/styles/main.scss">
+</head>
+
+<body class="min-h-screen bg-gray-50 font-sans">
+  <!-- NAVBAR -->
+  <div id="navbar-root"></div>
+
+  <!-- HERO DO POST -->
+  <header class="relative h-[35vh] md:h-[40vh] overflow-hidden">
+    <img src="/src/img/geral/bgbh-topo-site.jpg" alt="BoardgameBH" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+    <div class="absolute inset-0 flex items-end">
+      <div class="max-w-[800px] mx-auto px-4 pb-8 text-white w-full">
+        <div class="flex gap-2 mb-2">
+          <span class="bg-green-700 text-xs font-medium px-2 py-0.5 rounded">novidades</span>
+          <span class="bg-green-700 text-xs font-medium px-2 py-0.5 rounded">portal</span>
+        </div>
+        <h1 class="text-2xl md:text-4xl font-extrabold leading-tight">
+          Bem-vindos ao novo portal BoardgameBH!
+        </h1>
+        <div class="flex items-center gap-3 mt-3 text-sm text-gray-300">
+          <span>15 de julho de 2025</span>
+          <span>•</span>
+          <span>Por Lucas</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEUDO DO POST -->
+  <main class="py-8 max-w-[800px] mx-auto px-4">
+    <article class="post-content text-gray-700 leading-relaxed space-y-4">
+      <p class="text-lg">
+        Depois de meses de trabalho, estamos felizes em apresentar o novo portal do <strong>BoardgameBH</strong>!
+        O site foi completamente repensado para ser mais dinâmico, organizado e informativo.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-3">O que mudou?</h2>
+
+      <p>
+        O portal agora funciona como um hub central para todas as nossas iniciativas. Na página inicial
+        você encontra os artigos mais recentes, acesso rápido à Math Trade BH, nossas iniciativas, grupos
+        de WhatsApp e parcerias — tudo organizado em uma interface limpa e moderna.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-3">Artigos e notícias</h2>
+
+      <p>
+        Uma das grandes novidades é a seção de artigos. Agora a equipe do BGBH vai publicar regularmente:
+      </p>
+
+      <ul class="list-disc pl-6 space-y-1">
+        <li>Novidades sobre nossas iniciativas e eventos</li>
+        <li>Reviews e opiniões sobre jogos de tabuleiro</li>
+        <li>Dicas para quem está começando no hobby</li>
+        <li>Cobertura de eventos como o Nerd Experience</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-3">O que vem por aí</h2>
+
+      <p>
+        Estamos planejando muitas novidades para os próximos meses. A 10ª edição da Math Trade BH
+        está chegando em setembro, o BGBH Masters continua com torneios online no Board Game Arena,
+        e temos novos eventos presenciais no radar.
+      </p>
+
+      <p>
+        Fique ligado nas nossas redes sociais e no portal para não perder nenhuma novidade.
+        <strong>Let's Play!</strong>
+      </p>
+    </article>
+
+    <!-- Voltar -->
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <a href="/"
+        class="inline-flex items-center gap-2 text-green-700 font-semibold hover:text-green-800 transition-colors">
+        <i class="bi bi-arrow-left"></i> Voltar para o início
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer-root"></div>
+
+  <script type="module" src="/src/js/navbar.js"></script>
+  <script type="module" src="/src/js/footer.js"></script>
+</body>
+
+</html>

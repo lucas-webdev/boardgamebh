@@ -16,61 +16,8 @@
 </head>
 
 <body>
-    <nav
-        class="sticky top-0 shadow-md z-50 px-4 py-3 flex items-center justify-between h-14 bg-black border-b-[#198754] border-b">
-        <!-- Logo -->
-        <div class="h-full">
-            <a href="/">
-                <img class="h-full w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
-            </a>
-        </div>
-
-        <!-- Botão Hambúrguer -->
-        <button id="menu-toggle" class="text-white block md:hidden">
-            <i class="bi bi-list text-3xl"></i>
-        </button>
-
-        <!-- Menu XS/SM -->
-        <div class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
-            id="hamburger-menu">
-            <div class="flex justify-between">
-                <a href="/">
-                    <img class="h-[40px] w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
-                </a>
-                <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
-            </div>
-            <a href="/" class="hover:text-gray-400">Início</a>
-            <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
-            <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
-            <a href="/em-breve.html" class="hover:text-gray-400">Iniciativas BGBH</a>
-            <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
-            <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
-        </div>
-
-        <!-- Menu MD/LG -->
-        <div class="hidden text-white space-x-8 md:items-center md:flex">
-            <a href="/" class="hover:text-gray-400">Início</a>
-            <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
-            <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
-            <div class="relative group">
-                <span class="hover:text-gray-400">Iniciativas BGBH</span>
-                <div
-                    class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
-                    <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga
-                        no
-                        QG!</a>
-                    <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
-                        Resenha com Jogatina
-                    </a>
-                    <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
-                        Outras iniciativas
-                    </a>
-                </div>
-            </div>
-            <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
-            <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
-        </div>
-    </nav>
+    <!-- NAVBAR -->
+    <div id="navbar-root"></div>
     <header class="header-home h-[calc(90vh-56px)] relative flex flex-col items-center justify-evenly">
         <div class="bg-black absolute top-0 h-[calc(90vh-56px)] w-full opacity-65"></div>
         <!-- BANNER PRINCIPAL -->
@@ -322,56 +269,11 @@
         </section>
     </main>
 
-    <!-- RODAPE -->
-    <footer class="bg-gray-800 bottom-0 relative w-full">
-        <div class="px-3 py-5 max-w-[90vw] mx-auto grid md:grid-flow-col md:grid-cols-2 text-gray-300 gap-4">
-            <div>
-                <strong class="font-bold block mb-3 text-white">SOBRE O PROJETO</strong>
-                <span class="text-sm">
-                    O <strong class="font-semibold text-white">BoardgameBH</strong> é um projeto que tem como foco o
-                    crescimento e
-                    a visibilidade do Boardgame no país. O portal tem Belo Horizonte e região como carro chefe, mas não
-                    possui
-                    fronteiras, promovendo e realizando ações de amplo interesse e com um público espalhado por todo
-                    país, como
-                    torneios online, divulgação de lançamentos e conteúdo digital. Diversos braços do projeto ainda
-                    estão em
-                    desenvolvimento e em breve serão apresentados para o grande público. Enquanto isso, aproveite todas
-                    as
-                    funcionalidades liberadas e não deixe de apoiar esse e os demais projetos voltados para o nosso
-                    hobby.
-                    <strong class="font-semibold">Let’s Play!</strong>
-                </span>
-            </div>
-            <div class="flex flex-col justify-between">
-                <div>
-                    <strong class="block mb-3 text-white">APOIE</strong>
-                    <span class="text-sm">Entre em contato para ser um parceiro ou apoiador do projeto!</span>
-                </div>
-                <div>
-                    <div class="font-bold mt-4 mb-3 text-white">SIGA</div>
-                    <ul class="flex gap-4">
-                        <li>
-                            <a target="_blank" href="https://www.instagram.com/boardgamebh/" aria-label="Instagram">
-                                <i class="bi bi-instagram text-[24px] block hover:scale-125"></i>
-                            </a>
-                        </li>
-                        <li class="group">
-                            <a target="_blank" href="https://www.facebook.com/boardgamebh/" aria-label="Facebook">
-                                <i class="bi bi-facebook text-[24px] block hover:scale-125"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mt-4 font-semibold">
-                    © BGBH 2020 - Todos os direitos reservados
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- FOOTER -->
+    <div id="footer-root"></div>
 
-    <script type="module" src="/src/js/main.js"></script>
-    <script type="module" src="/src/js/home.js"></script>
+    <script type="module" src="/src/js/navbar.js"></script>
+    <script type="module" src="/src/js/footer.js"></script>
 </body>
 
 </html>
