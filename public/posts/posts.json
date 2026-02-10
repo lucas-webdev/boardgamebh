@@ -5,7 +5,7 @@
     "date": "2025-07-15",
     "author": "Lucas",
     "summary": "O BoardgameBH está de cara nova! Conheça o novo portal, as funcionalidades que estão chegando e como acompanhar tudo sobre o mundo dos jogos de tabuleiro em BH.",
-    "image": "/src/img/geral/bgbh-topo-site.jpg",
+    "image": "/img/geral/bgbh-topo-site.jpg",
     "tags": ["novidades", "portal"]
   },
   {
@@ -14,7 +14,7 @@
     "date": "2025-07-10",
     "author": "Lucas",
     "summary": "A décima edição da Math Trade Belo Horizonte está chegando! Confira as datas, regras e como participar dessa que é uma das maiores Math Trades do Brasil.",
-    "image": "/src/img/mathtrade/615x330-MT10.png",
+    "image": "/img/mathtrade/615x330-MT10.png",
     "tags": ["math-trade", "eventos"]
   },
   {
@@ -23,7 +23,7 @@
     "date": "2025-06-20",
     "author": "Lucas",
     "summary": "Lançamos o BGBH Masters, uma série de torneios online disputados no Board Game Arena. Saiba como participar e disputar a primeira temporada.",
-    "image": "/src/img/geral/brass.png",
+    "image": "/img/geral/brass.png",
     "tags": ["torneios", "bgbh-masters"]
   }
 ]
