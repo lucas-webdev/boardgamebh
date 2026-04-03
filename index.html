@@ -24,7 +24,15 @@
   <meta property="og:image" content="https://bgbh.com.br/src/img/geral/og-image.jpg">
 
   <!-- fonts -->
-  <link rel="icon" type="image/png" href="https://bgbh.com.br/favicon.ico">
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#198754">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="BGBH">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -289,6 +297,11 @@
     };
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
   </script>
 </body>
 
