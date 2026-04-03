@@ -53,7 +53,15 @@
     <meta property="og:image" content="https://bgbh.com.br/public/images/math-trade/logo.jpg" />
     <meta property="og:image:secure_url" content="https://bgbh.com.br/public/images/math-trade/logo.jpg" />
     <!-- fonts -->
-    <link rel="icon" type="image/png" href="./favicon.ico" />
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#198754">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="BGBH">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet" />
@@ -360,6 +368,11 @@
             const collapseButton = document.getElementById('headingFourButton')
             collapseButton.click()
         })
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
     </script>
 </body>
 

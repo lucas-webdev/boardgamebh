@@ -3,7 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="https://bgbh.com.br/favicon.ico" />
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#198754">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="BGBH">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BoardgameBH [BGBH] - Troca envolvendo dinheiro em Math Trades</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -61,6 +69,11 @@
     <li>O pagamento das taxas é obrigatório para quem recebeu dinheiro.</li>
     <li>Os organizadores da Math Trade não se responsabilizam por pagamentos, entregas ou estado dos jogos.</li>
   </ul>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 
 </html>
