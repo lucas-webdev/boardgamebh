@@ -1,0 +1,27 @@
+RewriteEngine On
+RewriteBase /
+
+RedirectMatch 301 /resenha/ https://chat.whatsapp.com/Kbza3fTR9OWD87IIDWggUM
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^index.html$ / [L,R=301]
+RewriteRule ^([a-zA-z0-9]+).html$ /$1   [L,R=301] # Remove all .html extension / Redirect 301 from non-trailing slash
+RewriteRule ^/regras/([a-zA-z0-9]+).html$ /regras/$1   [L,R=301] # Remove all .html extension / Redirect 301 from non-trailing slash
+RewriteRule ^/mathtrade-bh/([a-zA-z0-9]+).html$ /mathtrade-bh/$1   [L,R=301] # Remove all .html extension / Redirect 301 from non-trailing slash
+Redirect /whatsapp https://chat.whatsapp.com/J19b6Rw3GzPGqZgsZ9tEgx
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+# Add trailing slash
+RewriteRule ^([a-zA-z0-9]+).html$ /$1/   [L,R=301]
+
+# Protect log.txt
+<Files ./lista/utils/functions.php>
+Order Allow,Deny
+Deny from all
+</Files>
