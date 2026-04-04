@@ -83,7 +83,7 @@ function renderNavbar() {
       <!-- Logo -->
       <div class="h-full">
         <a href="/">
-          <img class="h-full w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+          <img class="h-full w-auto" src="/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
         </a>
       </div>
 
@@ -97,7 +97,7 @@ function renderNavbar() {
            id="hamburger-menu">
         <div class="flex justify-between items-center mb-2">
           <a href="/">
-            <img class="h-[40px] w-auto" src="/src/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+            <img class="h-[40px] w-auto" src="/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
           </a>
           <i class="bi bi-x-lg cursor-pointer text-xl" id="close-menu"></i>
         </div>

@@ -13,43 +13,43 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        "sobre/": resolve(__dirname, "sobre/index.html"),
+        "sobre/": resolve(__dirname, "em-breve.html"),
         "bgbh-masters/": resolve(__dirname, "bgbh-masters/index.html"),
         "em-breve": resolve(__dirname, "em-breve.html"),
         "mathtrade-bh/o-que-e": resolve(__dirname, "mathtrade-bh/o-que-e.html"),
         "mathtrade-bh/faq/": resolve(__dirname, "mathtrade-bh/faq.html"),
         "mathtrade-bh/edicao-novembro-2024": resolve(
           __dirname,
-          "mathtrade-bh/edicao-novembro-2024.html"
+          "mathtrade-bh/edicao-novembro-2024.html",
         ),
         "mathtrade-bh/edicao-novatos": resolve(
           __dirname,
-          "mathtrade-bh/edicao-novatos.html"
+          "mathtrade-bh/edicao-novatos.html",
         ),
         "mathtrade-bh/regras-gerais": resolve(
           __dirname,
-          "mathtrade-bh/regras-gerais.html"
+          "mathtrade-bh/regras-gerais.html",
         ),
         "mathtrade-bh/edicao-setembro-2025": resolve(
           __dirname,
-          "mathtrade-bh/edicao-setembro-2025.html"
+          "mathtrade-bh/edicao-setembro-2025.html",
         ),
         "mathtrade-bh/trocas-em-dinheiro": resolve(
           __dirname,
-          "mathtrade-bh/trocas-em-dinheiro.html"
+          "mathtrade-bh/trocas-em-dinheiro.html",
         ),
         "posts/": resolve(__dirname, "posts/index.html"),
         "posts/boas-vindas-ao-novo-portal": resolve(
           __dirname,
-          "posts/boas-vindas-ao-novo-portal.html"
+          "posts/boas-vindas-ao-novo-portal.html",
         ),
         "posts/math-trade-10-edicao": resolve(
           __dirname,
-          "posts/math-trade-10-edicao.html"
+          "posts/math-trade-10-edicao.html",
         ),
         "posts/bgbh-masters-temporada-1": resolve(
           __dirname,
-          "posts/bgbh-masters-temporada-1.html"
+          "posts/bgbh-masters-temporada-1.html",
         ),
       },
     },
