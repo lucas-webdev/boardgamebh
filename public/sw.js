@@ -21,6 +21,20 @@ self.addEventListener('fetch', (event) => {
   if (request.method !== 'GET') return;
   if (!request.url.startsWith(self.location.origin)) return;
 
+  // API: network-first (respostas sempre frescas)
+  if (request.url.includes('/api/')) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          return response;
+        })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
+
   // HTML pages: network-first (fresh content online, cache fallback offline)
   if (request.headers.get('accept')?.includes('text/html')) {
     event.respondWith(

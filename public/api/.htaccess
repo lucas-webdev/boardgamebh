@@ -1,0 +1,8 @@
+# Bloqueia acesso direto ao config.php
+<Files "config.php">
+  Require all denied
+</Files>
+
+<Files "config.example.php">
+  Require all denied
+</Files>

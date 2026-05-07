@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BoardgameBH [BGBH] - Troca envolvendo dinheiro em Math Trades</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="canonical" href="https://bgbh.com.br/mathtradebh/trocas-em-dinheiro.html">
   <!-- PWA -->
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#198754">
@@ -12,10 +16,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="BGBH">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BoardgameBH [BGBH] - Troca envolvendo dinheiro em Math Trades</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <link rel="canonical" href="https://bgbh.com.br/mathtradebh/trocas-em-dinheiro.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -27,48 +27,306 @@
   <meta name="description" content="MATH TRADE BELO HORIZONTE - Trocas envolvendo dinheiro.">
   <meta property="og:title" content="MATH TRADE BGBH - BGBH" />
   <meta property="og:site_name" content="BoardgameBH [BGBH]" />
-  <meta property="og:url" content="https://bgbh.com.br/mathtradebh.html" />
+  <meta property="og:url" content="https://bgbh.com.br/mathtradebh/trocas-em-dinheiro" />
   <meta property="og:description" content="MATH TRADE BELO HORIZONTE - Trocas envolvendo dinheiro" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://bgbh.com.br/src/img/geral/og-image.jpg">
 </head>
 
 <body>
-  <h1 class="text-green-900 font-extrabold text-3xl text-center mb-5">TROCA ENVOLVENDO DINHEIRO EM MATH TRADES</h1>
-  <p class="text-red-700 font-semibold">
-    <strong>TODA</strong> troca envolvendo dinheiro em Math Trades é considerada uma
-    <strong>venda</strong> no BGG, e como tal, está sujeita a uma comissão do site. Atualmente, 3% do valor recebido.
-  </p>
-  <h2 class="mt-3 text-2xl text-center font-bold">O que fazer se você recebeu dinheiro em uma troca?</h2>
-  <ol>
-    <li>Crie uma venda no <a href="https://boardgamegeek.com/market?pageid=1" target="_blank">Geek Market</a> para o
-      jogo que trocou.</li>
-    <li>Preencha os detalhes da venda:
-      <ul>
-        <li>Selecione o jogo (campo "Select Item").</li>
-        <li>Escolha a moeda (sugerimos U.S. Dollars).</li>
-        <li>Coloque o valor recebido convertido para dólar.</li>
-        <li>Em "Condition", selecione qualquer opção.</li>
-        <li>Em "Quantity", mantenha "One time".</li>
-        <li>Em "Notes", escreva que foi um item trocado por dinheiro em uma Math Trade.</li>
-        <li>Em "Payments", marque "See Notes".</li>
-        <li>Em "Ship to Location", selecione "will ship worldwide".</li>
-      </ul>
-    </li>
-    <li>Após cadastrar, marque o item como <strong>VENDIDO</strong> ("Mark Sold").</li>
-    <li>O Geek Market irá calcular a taxa de 3% e indicar o valor a ser pago via PayPal.</li>
-    <li>Você só poderá pagar as taxas quando a soma delas atingir pelo menos $2.00.</li>
-  </ol>
-  <h2>Exemplo</h2>
-  <p>Se você trocou um item por R$200, converta para dólar (exemplo: $40,00). A taxa será de $1.20. Se fizer outra venda
-    de $50,00, a taxa será de $1.50. Quando a soma das taxas for $2.00 ou mais, o botão para pagamento ficará
-    disponível.</p>
-  <h2>Atenção</h2>
-  <ul>
-    <li>O Geek Market não aceita vendas em reais.</li>
-    <li>O pagamento das taxas é obrigatório para quem recebeu dinheiro.</li>
-    <li>Os organizadores da Math Trade não se responsabilizam por pagamentos, entregas ou estado dos jogos.</li>
-  </ul>
+  <nav
+    class="sticky top-0 shadow-md z-50 px-4 py-3 hidden items-center justify-between h-14 bg-black border-b-[#198754] border-b">
+    <!-- Logo -->
+    <div class="h-full">
+      <a href="/">
+        <img class="h-full w-auto" src="/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+      </a>
+    </div>
+
+    <!-- Botão Hambúrguer -->
+    <button id="menu-toggle" class="text-white block md:hidden">
+      <i class="bi bi-list text-3xl"></i>
+    </button>
+
+    <!-- Menu XS/SM -->
+    <div class="absolute w-full bg-black p-5 flex-col gap-5 top-0 left-0 hidden animate__animated animate__slideInDown text-white md:hidden"
+      id="hamburger-menu">
+      <div class="flex justify-between">
+        <a href="/">
+          <img class="h-[40px] w-auto" src="/img/logo/bgbh-com-sombra.png" alt="Logo BGBH">
+        </a>
+        <i class="bi bi-x-lg cursor-pointer" id="close-menu"></i>
+      </div>
+      <a href="/" class="hover:text-gray-400">Início</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Iniciativas BGBH</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
+    </div>
+
+    <!-- Menu MD/LG -->
+    <div class="hidden text-white space-x-8 md:items-center md:flex">
+      <a href="/" class="hover:text-gray-400">Início</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Sobre</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Math Trade BH</a>
+      <div class="relative group">
+        <span class="hover:text-gray-400">Iniciativas BGBH</span>
+        <div class="w-36 absolute left-0 hidden mt-0 space-y-2 bg-white shadow-md group-hover:block hover:block">
+          <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">Joga
+            no QG!</a>
+          <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Resenha com Jogatina
+          </a>
+          <a href="/em-breve.html" class="text-sm block px-4 py-2 text-gray-800 hover:bg-gray-200">
+            Outras iniciativas
+          </a>
+        </div>
+      </div>
+      <a href="/em-breve.html" class="hover:text-gray-400">Eventos</a>
+      <a href="/em-breve.html" class="hover:text-gray-400">Contato</a>
+    </div>
+  </nav>
+
+  <!-- BANNER PRINCIPAL -->
+  <header class="header_mathtrade">
+    <div class="imagemTopo">
+      <img src="/src/img/mathtrade/imagem-topo.png" alt="Math Trade BGBH" />
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="py-6">
+    <!-- INTRODUÇÃO -->
+    <section class="pb-10 max-w-[90vw] md:max-w-[1080px] mx-auto">
+      <h1 class="text-green-900 font-extrabold text-3xl text-center mb-5">TROCA ENVOLVENDO DINHEIRO EM MATH TRADES</h1>
+      <p class="text-red-700 font-semibold">
+        <strong>TODA</strong> troca envolvendo dinheiro em Math Trades é considerada uma
+        <strong>venda</strong> no BGG, e como tal, está sujeita a uma comissão do site. Atualmente, 3% do valor
+        recebido.
+      </p>
+      <p class="mt-3">
+        Vamos explicar o processo do que deve ser feito caso você tenha <strong>RECEBIDO</strong> um item de dinheiro em
+        alguma de suas trocas.
+      </p>
+    </section>
+
+    <!-- COMO FAZER UMA VENDA -->
+    <section class="bg-slate-100 py-10">
+      <div class="max-w-[90vw] md:max-w-[1080px] mx-auto">
+        <h2 class="text-2xl text-center font-bold mb-5">COMO FAZER UMA VENDA NO BOARD GAME GEEK (BGG)</h2>
+        <p>
+          O BGG tem uma plataforma própria para seu mercado de jogos (compra e venda), é o
+          <a href="https://boardgamegeek.com/market?pageid=1" target="_blank" rel="noopener"
+            class="text-blue-600 font-bold hover:underline">Geek Market</a>.
+        </p>
+        <p class="mt-2">
+          Existem diferentes formas de colocar itens a venda no Geek Market. Aqui, vamos focar no processo da Math Trade
+          e fazer uma simulação seguindo um processo que consideramos mais rápido e prático, feito pelo computador.
+        </p>
+        <p class="mt-2">
+          Em resumo, o usuário que RECEBER um item de dinheiro em uma Math Trade <strong>DEVE</strong> criar uma venda
+          no Geek Market e imediatamente marcar o item como VENDIDO. A plataforma irá calcular a taxa de 3% do valor e
+          indicará o montante que deverá ser pago pelo usuário - atualmente, a única forma de fazer esse pagamento é via
+          PayPal.
+        </p>
+      </div>
+    </section>
+
+    <!-- PASSO 1 -->
+    <section class="py-10 max-w-[90vw] md:max-w-[1080px] mx-auto">
+      <h3 class="text-xl font-bold mb-4">1. Criar uma venda no Geek Market</h3>
+      <p>Vá para a página do jogo que trocou e clique em "Shopping"</p>
+      <!-- TODO: substituir placeholder pela imagem real -->
+      <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+        <span class="text-gray-500 text-sm">[Imagem: página do jogo - clique em Shopping]</span>
+      </div>
+
+      <p>Depois, clique no botão azul "+ Sell", no canto direito.</p>
+      <!-- TODO: substituir placeholder pela imagem real -->
+      <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+        <span class="text-gray-500 text-sm">[Imagem: botão +Sell no Geek Market]</span>
+      </div>
+    </section>
+
+    <!-- PASSO 1.1 -->
+    <section class="bg-slate-100 py-10">
+      <div class="max-w-[90vw] md:max-w-[1080px] mx-auto">
+        <h3 class="text-xl font-bold mb-4">1.1 Preencher os detalhes da venda</h3>
+        <p>
+          Agora você estará dentro do Geek Market. Perceba que o jogo já estará selecionado
+          (Campo <strong>"Select Item"</strong>).
+        </p>
+        <p class="mt-2">
+          Clique em <strong>"Select Currency"</strong> para escolher a moeda. Sugerimos U.S. Dollars.
+          <br>
+          No campo ao lado, <strong>"Price"</strong>, coloque o valor que recebeu convertido de real para dólar.
+          <br>
+          <em>Ex. Considerando a conversão do momento do print, R$200 = $38,70.</em>
+        </p>
+        <!-- TODO: substituir placeholder pela imagem real -->
+        <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+          <span class="text-gray-500 text-sm">[Imagem: campos Select Item, Select Currency e Price]</span>
+        </div>
+
+        <p>Em "Condition", selecione qualquer opção.</p>
+        <p>Em "Quantity", não é preciso alteração. Mantenha a opção "One time" que já vai estar selecionada.</p>
+        <p class="mt-2">
+          Em <strong>"Notes"</strong>, escreva que foi um <em>item trocado por dinheiro em uma Math Trade.</em>
+        </p>
+        <p class="mt-2">
+          No campo <strong>"Payments"</strong>, marque a opção <strong>"See Notes".</strong>
+        </p>
+        <p class="mt-2">
+          Na caixa de seleção <strong>"Ship to Location"</strong>, selecione <strong>"will ship worldwide".</strong>
+        </p>
+        <p class="mt-2">
+          Depois, clique no botão azul <strong>"Submit"</strong>
+        </p>
+        <!-- TODO: substituir placeholder pela imagem real -->
+        <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+          <span class="text-gray-500 text-sm">[Imagem: campos Notes, Payments, Ship to Location e botão Submit]</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PASSO 2 -->
+    <section class="py-10 max-w-[90vw] md:max-w-[1080px] mx-auto">
+      <h3 class="text-xl font-bold mb-4">2. Marcar o item como vendido</h3>
+      <p>
+        Pronto. Sua venda está criada e você verá uma página semelhante a imagem abaixo.
+        <br>
+        Confira os dados e clique no botão <strong>"Mark Sold"</strong> para marcar o item como
+        <strong>VENDIDO</strong>.
+      </p>
+      <!-- TODO: substituir placeholder pela imagem real -->
+      <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+        <span class="text-gray-500 text-sm">[Imagem: página da venda criada com botão Mark Sold]</span>
+      </div>
+
+      <p>Confirme a venda, clicando no botão <strong>"Mark Sold"</strong> no popup que abrir.</p>
+      <!-- TODO: substituir placeholder pela imagem real -->
+      <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+        <span class="text-gray-500 text-sm">[Imagem: popup de confirmação Mark Sold]</span>
+      </div>
+
+      <p>
+        A simulação da venda foi concretizada. Você verá os detalhes da venda <em>(total)</em> e o valor da comissão
+        que deverá ser paga <em>(Advertising fee)</em>
+      </p>
+      <!-- TODO: substituir placeholder pela imagem real -->
+      <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+        <span class="text-gray-500 text-sm">[Imagem: detalhes da venda e Advertising fee]</span>
+      </div>
+    </section>
+
+    <!-- PASSO 3 -->
+    <section class="bg-slate-100 py-10">
+      <div class="max-w-[90vw] md:max-w-[1080px] mx-auto">
+        <h3 class="text-xl font-bold mb-4">3. Visualizar as taxas</h3>
+        <p>No menu lateral, clique em <strong>"Ad Fees"</strong> e você verá as taxas que tem que pagar.</p>
+        <!-- TODO: substituir placeholder pela imagem real -->
+        <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+          <span class="text-gray-500 text-sm">[Imagem: menu Ad Fees com taxas listadas]</span>
+        </div>
+
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 px-4 py-3 mt-4">
+          <p class="font-bold text-yellow-800">ATENÇÃO!</p>
+          <p>
+            Somente quando a soma de todas as suas taxas for igual ou maior do que <strong>$2.00</strong> (dois dólares)
+            será disponibilizado um botão para pagamento delas.
+          </p>
+          <p class="mt-2">
+            Perceba que não é o valor de uma taxa superar os $2.00 mas sim a soma de todas.
+          </p>
+        </div>
+
+        <div class="mt-6">
+          <p class="font-bold">Exemplo:</p>
+          <p class="mt-2">
+            Vamos considerar um exemplo, e para simplificar, consideremos <strong>$1,00 = R$5,00.</strong>
+          </p>
+          <p class="mt-2">
+            Manuel trocou um item na Math Trade por um <strong>PIX de R$200</strong>. Ele vai criar uma venda no valor
+            de <strong>$40,00</strong> e a taxa de comissão do BGG vai ser <strong>$1.20</strong>.
+            <br>
+            <strong>Ele ainda não terá que fazer o pagamento dessa taxa.</strong>
+          </p>
+          <p class="mt-2">
+            Posteriormente, em outra Math Trade ele fez outra troca, dessa vez por um <strong>PIX de R$250.</strong>
+            Ele irá criar uma nova venda, agora de <strong>$50,00</strong>, que irá gerar uma taxa de
+            <strong>$1.50</strong>.
+          </p>
+          <p class="mt-2">
+            Ao consultar a página de taxas, ele verá duas taxas diferentes, que totalizam <strong>$2.70</strong>.
+            <br>
+            Agora sim, ele terá que fazer o pagamento, através do botão <strong>"Pay with PayPal"</strong> que irá estar
+            visível ao lado do valor das taxas, em <strong>Pay Fees.</strong>
+          </p>
+        </div>
+
+        <!-- TODO: substituir placeholder pela imagem real -->
+        <div class="my-4 bg-gray-200 border border-gray-300 flex items-center justify-center h-48 md:h-72">
+          <span class="text-gray-500 text-sm">[Imagem: botão Pay with PayPal visível em Pay Fees]</span>
+        </div>
+
+        <p>
+          Quando o botão <strong>Pay with PayPal</strong> estiver visível, clique nele e siga as instruções do PayPal
+          para o pagamento.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-gray-800 relative w-full bottom-0">
+    <div class="px-3 py-5 max-w-[90vw] mx-auto grid md:grid-flow-col md:grid-cols-2 text-gray-300 gap-4">
+      <div>
+        <strong class="font-bold block mb-3 text-white">SOBRE O PROJETO</strong>
+        <span class="text-sm">
+          O <strong class="font-semibold text-white">BoardgameBH</strong> é um projeto que tem como foco o
+          crescimento e
+          a visibilidade do Boardgame no país. O portal tem Belo Horizonte e região como carro chefe, mas não
+          possui
+          fronteiras, promovendo e realizando ações de amplo interesse e com um público espalhado por todo
+          país, como
+          torneios online, divulgação de lançamentos e conteúdo digital. Diversos braços do projeto ainda
+          estão em
+          desenvolvimento e em breve serão apresentados para o grande público. Enquanto isso, aproveite todas
+          as
+          funcionalidades liberadas e não deixe de apoiar esse e os demais projetos voltados para o nosso
+          hobby.
+          <strong class="font-semibold">Let's Play!</strong>
+        </span>
+      </div>
+      <div class="flex flex-col justify-between">
+        <div>
+          <strong class="block mb-3 text-white">APOIE</strong>
+          <span class="text-sm">Entre em contato para ser um parceiro ou apoiador do projeto!</span>
+        </div>
+        <div>
+          <div class="font-bold mt-4 mb-3 text-white">SIGA</div>
+          <ul class="flex gap-4">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/boardgamebh/" aria-label="Instagram">
+                <i class="bi bi-instagram text-[24px] block hover:scale-125"></i>
+              </a>
+            </li>
+            <li class="group">
+              <a target="_blank" href="https://www.facebook.com/boardgamebh/" aria-label="Facebook">
+                <i class="bi bi-facebook text-[24px] block hover:scale-125"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-4 font-semibold">
+          &copy; BGBH 2020 - Todos os direitos reservados
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');

@@ -37,3 +37,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/ # Diretório de build gerado pelo Vite
           server-dir: /httpdocs/ # Caminho remoto no FTP (ajuste conforme necessário)
+          exclude: |
+            **/.git*
+            **/node_modules/**
+            api/config.php

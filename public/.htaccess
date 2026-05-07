@@ -14,6 +14,12 @@ Redirect /whatsapp https://chat.whatsapp.com/J19b6Rw3GzPGqZgsZ9tEgx
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R]
 
+# Posts dinâmicos: /posts/{slug} → /posts/post.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html !-f
+RewriteRule ^posts/([a-zA-Z0-9_-]+)/?$ /posts/post.html [L]
+
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 

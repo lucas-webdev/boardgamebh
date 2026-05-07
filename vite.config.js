@@ -39,18 +39,7 @@ export default defineConfig({
           "mathtrade-bh/trocas-em-dinheiro.html",
         ),
         "posts/": resolve(__dirname, "posts/index.html"),
-        "posts/boas-vindas-ao-novo-portal": resolve(
-          __dirname,
-          "posts/boas-vindas-ao-novo-portal.html",
-        ),
-        "posts/math-trade-10-edicao": resolve(
-          __dirname,
-          "posts/math-trade-10-edicao.html",
-        ),
-        "posts/bgbh-masters-temporada-1": resolve(
-          __dirname,
-          "posts/bgbh-masters-temporada-1.html",
-        ),
+        "posts/post": resolve(__dirname, "posts/post.html"),
       },
     },
   },

@@ -14,13 +14,20 @@
 
 async function loadPosts() {
   try {
-    const response = await fetch("/posts/posts.json");
+    const response = await fetch("/api/posts.php");
+    if (!response.ok) throw new Error("API indisponível");
     const posts = await response.json();
-    // Ordena por data, mais recente primeiro
     return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-  } catch (error) {
-    console.error("Erro ao carregar posts:", error);
-    return [];
+  } catch {
+    // Fallback para JSON estático
+    try {
+      const response = await fetch("/posts/posts.json");
+      const posts = await response.json();
+      return posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    } catch (error) {
+      console.error("Erro ao carregar posts:", error);
+      return [];
+    }
   }
 }
 
@@ -45,7 +52,7 @@ function renderTagChips(tags) {
 /** Card destaque — post principal na homepage */
 function renderFeaturedPost(post) {
   return `
-    <a href="/posts/${post.slug}.html" class="block group">
+    <a href="/posts/${post.slug}" class="block group">
       <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
         <div class="aspect-video overflow-hidden">
           <img src="${post.image}" alt="${post.title}"
@@ -71,7 +78,7 @@ function renderFeaturedPost(post) {
 /** Card menor — posts secundários na homepage */
 function renderPostCard(post) {
   return `
-    <a href="/posts/${post.slug}.html" class="block group">
+    <a href="/posts/${post.slug}" class="block group">
       <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full">
         <div class="aspect-video overflow-hidden">
           <img src="${post.image}" alt="${post.title}"
@@ -95,7 +102,7 @@ function renderPostCard(post) {
 /** Lista compacta para sidebar */
 function renderSidebarPost(post) {
   return `
-    <a href="/posts/${post.slug}.html" class="block hover:text-green-700 transition-colors">
+    <a href="/posts/${post.slug}" class="block hover:text-green-700 transition-colors">
       <div class="py-2 border-b border-gray-100 last:border-0">
         <p class="font-medium text-sm text-gray-800 leading-tight">${post.title}</p>
         <span class="text-xs text-gray-500">${formatDate(post.date)}</span>

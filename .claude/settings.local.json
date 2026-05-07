@@ -6,7 +6,8 @@
       "Bash(yarn install)",
       "Bash(timeout 5 yarn dev:*)",
       "Bash(node:*)",
-      "Bash(yarn add:*)"
+      "Bash(yarn add:*)",
+      "Bash(curl -v --max-time 10 https://bgbh.com.br)"
     ]
   }
 }
